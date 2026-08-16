@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u07",
+  "questions": [
+    {
+      "id": "q-s1-u07-001",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "決算日3月31日のハルカ商事は、決算にあたり売掛金の期末残高400,000円に対して2%の貸倒れを見積もった。貸倒引当金の残高はゼロである。差額補充法により貸倒引当金を設定した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 8000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "見積額は400,000円×2%＝8,000円です。貸倒引当金の残高がゼロなので、見積額8,000円をそのまま貸倒引当金繰入（費用）として計上します。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-002",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "決算日3月31日のミナト製作所は、決算にあたり売掛金の期末残高500,000円に対して2%の貸倒れを見積もった。貸倒引当金の残高は6,000円である。差額補充法により貸倒引当金を設定した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 4000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "見積額は500,000円×2%＝10,000円です。差額補充法では見積額と現在の貸倒引当金残高との差額だけを繰り入れるため、10,000円－6,000円＝4,000円が貸倒引当金繰入額です。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-003",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算日3月31日のアオイ物産は、決算にあたり売掛金の期末残高600,000円に対して1%の貸倒れを見積もった。貸倒引当金の残高は2,000円である。差額補充法により貸倒引当金を設定した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 4000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "見積額は600,000円×1%＝6,000円です。すでに貸倒引当金残高が2,000円あるため、差額の6,000円－2,000円＝4,000円だけを貸倒引当金繰入として計上します。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-004",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "決算日3月31日のノゾミ商会は、決算にあたり売掛金の期末残高300,000円に対して2%の貸倒れを見積もった。貸倒引当金の残高は9,000円である。差額補充法により貸倒引当金を設定した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_modoshiire", "amt": 3000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "見積額は300,000円×2%＝6,000円です。現在の貸倒引当金残高9,000円は見積額6,000円より多いため、超過している3,000円を貸倒引当金戻入（収益）として取り崩し、貸倒引当金を減らします。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-005",
+      "type": "mc",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "差額補充法による貸倒引当金の設定に関する説明として正しいものはどれですか。",
+      "choices": [
+        "期末売掛金残高に貸倒実績率を掛けた見積額と、貸倒引当金の残高との差額を貸倒引当金繰入として計上する",
+        "毎期、見積額の全額を貸倒引当金繰入として計上し、前期の残高は考慮しない",
+        "貸倒引当金は将来の利益を見積もって計上する勘定である",
+        "貸倒引当金の設定は決算時ではなく、貸倒れが発生した時にのみ行う"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "差額補充法では「期末売掛金残高×貸倒実績率－貸倒引当金残高」で求めた差額だけを貸倒引当金繰入として計上します。前期からの残高を無視して全額を繰り入れるわけではありません。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-006",
+      "type": "mc",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "貸倒引当金をあらかじめ決算で見積り計上する考え方の背景にある会計上の姿勢として最も適切なものはどれですか。",
+      "choices": [
+        "将来発生しうる損失は早めに認識しておくという保守主義の考え方",
+        "できるだけ利益を大きく見せるための会計処理",
+        "税金を減らすためだけに行う任意の処理",
+        "貸倒れは絶対に発生しないという前提に基づく処理"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "将来の貸倒れという損失をあらかじめ見積もって計上しておくのは、予想される損失は早めに認識しておこうという保守主義の考え方にもとづいています。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-007",
+      "type": "tf",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "貸倒引当金は資産のマイナスを表す評価勘定であり、貸借対照表では売掛金などの資産から控除する形で表示される。",
+      "answer": true,
+      "explanation": "そのとおりです。貸倒引当金は売掛金などの回収見込額を示すための評価勘定（contra勘定）であり、資産のマイナスとして表示されます。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-008",
+      "type": "fill_number",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-settei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "期末売掛金残高700,000円、貸倒実績率2%、貸倒引当金残高5,000円のとき、差額補充法による貸倒引当金繰入額はいくらですか。",
+      "answer": { "value": 9000, "unit": "円" },
+      "explanation": "見積額は700,000円×2%＝14,000円です。現在の貸倒引当金残高5,000円との差額14,000円－5,000円＝9,000円が貸倒引当金繰入額です。",
+      "lessonRef": "s1-u07-sec1"
+    },
+    {
+      "id": "q-s1-u07-009",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、前期に発生した売掛金5,000円が得意先の倒産により回収不能となったため、貸倒れとして処理した。貸倒引当金の残高は8,000円である。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 5000 }],
+        "cr": [{ "acc": "urikake", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "前期以前に発生した売掛金の貸倒れは、まず貸倒引当金を取り崩して充当します。貸倒引当金残高8,000円は貸倒れ額5,000円を上回るため、貸倒引当金5,000円を減らすだけで処理は完了します。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-010",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、前期に発生した売掛金7,000円が得意先の倒産により回収不能となったため、貸倒れとして処理した。貸倒引当金の残高は3,000円である。",
+      "answer": {
+        "dr": [
+          { "acc": "kashidaore_hikiatekin", "amt": 3000 },
+          { "acc": "kashidaore_sonshitsu", "amt": 4000 }
+        ],
+        "cr": [{ "acc": "urikake", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "貸倒れ額7,000円が貸倒引当金残高3,000円を上回るため、まず貸倒引当金3,000円をすべて取り崩し、不足する差額7,000円－3,000円＝4,000円を貸倒損失（費用）として処理します。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-011",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、前期に発生した売掛金6,000円が得意先の倒産により回収不能となったため、貸倒れとして処理した。貸倒引当金の残高は6,000円である。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 6000 }],
+        "cr": [{ "acc": "urikake", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "貸倒れ額6,000円と貸倒引当金残高6,000円がちょうど一致するため、貸倒引当金6,000円を全額取り崩すだけで処理が完了し、貸倒損失は発生しません。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-012",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ノゾミ商会は、前期に発生した売掛金10,000円が得意先の倒産により回収不能となったため、貸倒れとして処理した。貸倒引当金の残高は4,000円である。",
+      "answer": {
+        "dr": [
+          { "acc": "kashidaore_hikiatekin", "amt": 4000 },
+          { "acc": "kashidaore_sonshitsu", "amt": 6000 }
+        ],
+        "cr": [{ "acc": "urikake", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "貸倒引当金残高4,000円をすべて取り崩したうえで、不足する10,000円－4,000円＝6,000円を貸倒損失として計上します。引当金残高が不足する場合の典型パターンです。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-013",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、前期に発生した売掛金3,000円が得意先の倒産により回収不能となったため、貸倒れとして処理した。貸倒引当金の残高はゼロである。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 3000 }],
+        "cr": [{ "acc": "urikake", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "前期発生分の貸倒れであっても、貸倒引当金の残高がゼロであれば取り崩せる金額がないため、貸倒れ額の全額3,000円を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-014",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、取引先が破産し、前期に発生した売掛金9,000円の回収の見込みが立たなくなったため、貸倒れとして処理した。貸倒引当金の残高は5,000円である。",
+      "answer": {
+        "dr": [
+          { "acc": "kashidaore_hikiatekin", "amt": 5000 },
+          { "acc": "kashidaore_sonshitsu", "amt": 4000 }
+        ],
+        "cr": [{ "acc": "urikake", "amt": 9000 }],
+        "alt": []
+      },
+      "explanation": "貸倒引当金残高5,000円を取り崩し、不足する9,000円－5,000円＝4,000円を貸倒損失として計上します。破産や倒産など理由の表現が変わっても、処理の考え方は同じです。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-015",
+      "type": "mc",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "前期以前に発生した売掛金が当期に貸倒れた場合の処理として正しいものはどれですか。",
+      "choices": [
+        "貸倒引当金の残高の範囲内でこれを取り崩し、不足する金額があれば貸倒損失として処理する",
+        "貸倒引当金の残高にかかわらず、常に売掛金の全額を貸倒損失として処理する",
+        "貸倒れが生じても、決算まで何も仕訳をしない",
+        "貸倒引当金を用いず、常に貸倒引当金繰入で処理する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "前期以前に発生した売掛金の貸倒れは、まず貸倒引当金の残高を取り崩し、それでも足りない場合にのみ不足分を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-016",
+      "type": "tf",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "前期以前に発生した売掛金が貸倒れた場合、貸倒引当金の残高が不足していても常に貸倒引当金の残高だけで処理し、不足分は無視してよい。",
+      "answer": false,
+      "explanation": "誤りです。貸倒引当金の残高で不足する部分は、貸倒損失（費用）として追加で計上しなければなりません。無視することはできません。",
+      "lessonRef": "s1-u07-sec2"
+    },
+    {
+      "id": "q-s1-u07-017",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、当期に商品を掛けで販売した際に生じた売掛金4,000円が、当期中に得意先の倒産により回収不能となったため、貸倒れとして処理した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 4000 }],
+        "cr": [{ "acc": "urikake", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "当期に発生した売掛金が同一期中に貸倒れた場合は、貸倒引当金を使わず、貸倒れ額の全額を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-018",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、当期に商品を掛けで販売した際に生じた売掛金7,000円が、当期中に得意先の倒産により回収不能となったため、貸倒れとして処理した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 7000 }],
+        "cr": [{ "acc": "urikake", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "当期発生分の債権は、まだ貸倒引当金の見積り対象になっていないため、貸倒れ額7,000円の全額を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-019",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "ノゾミ商会は、当期に商品を掛けで販売した際に生じた売掛金5,000円が、当期中に得意先の倒産により回収不能となったため、貸倒れとして処理した。なお、貸倒引当金の残高は10,000円である。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 5000 }],
+        "cr": [{ "acc": "urikake", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "貸倒引当金の残高が十分にあっても、当期発生分の債権については引当金を使いません。全額5,000円を貸倒損失として処理します。貸倒引当金の残高10,000円はそのまま変わりません。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-020",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、当期に商品を掛けで販売した際に生じた売掛金8,000円が、当期中に得意先の倒産により回収不能となったため、貸倒れとして処理した。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 8000 }],
+        "cr": [{ "acc": "urikake", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "当期に発生した売掛金が同一期中に貸倒れた場合は、貸倒引当金を使わず、貸倒れ額8,000円の全額を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-021",
+      "type": "mc",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "当期に発生した売掛金が同一会計期間中に貸倒れた場合の処理として正しいものはどれですか。",
+      "choices": [
+        "貸倒引当金の残高があっても使用せず、貸倒れた金額の全額を貸倒損失として処理する",
+        "貸倒引当金の残高がある限り、必ずその範囲内で充当する",
+        "当期発生分の貸倒れは仕訳をせず、翌期にまとめて処理する",
+        "貸倒引当金繰入を計上して対応する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "貸倒引当金は前期以前に発生した債権の貸倒れに備えて設定したものなので、当期発生分の貸倒れには使わず、全額を貸倒損失として処理します。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-022",
+      "type": "fill_number",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-hassei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "当期に販売した商品の売掛金9,000円が、当期中に貸倒れとなった。貸倒引当金の残高は5,000円である。このとき計上すべき貸倒損失の金額はいくらですか。",
+      "answer": { "value": 9000, "unit": "円" },
+      "explanation": "当期発生分の債権が貸倒れた場合は、貸倒引当金の残高があっても使わず、貸倒れ額の全額を貸倒損失とします。したがって貸倒損失は9,000円です。",
+      "lessonRef": "s1-u07-sec3"
+    },
+    {
+      "id": "q-s1-u07-023",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、前期に貸倒れとして処理した売掛金のうち3,000円を、当期になって現金で回収した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 3000 }],
+        "cr": [{ "acc": "shokyaku_saiken_toritateeki", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "すでに貸倒れとして帳簿から消えている債権を回収できたときは、回収額を償却債権取立益（収益）として計上します。売掛金や貸倒引当金は経由しません。",
+      "lessonRef": "s1-u07-sec4"
+    },
+    {
+      "id": "q-s1-u07-024",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、前々期に貸倒れとして処理した売掛金のうち5,000円を、当期になって普通預金口座への振込みで回収した。",
+      "answer": {
+        "dr": [{ "acc": "futsu_yokin", "amt": 5000 }],
+        "cr": [{ "acc": "shokyaku_saiken_toritateeki", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "回収した年度が前々期の貸倒れであっても、考え方は同じです。回収した5,000円は償却債権取立益として計上します。回収方法が普通預金であれば借方は普通預金です。",
+      "lessonRef": "s1-u07-sec4"
+    },
+    {
+      "id": "q-s1-u07-025",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "アオイ物産は、前期に貸倒れとして処理した売掛金のうち7,000円を、当期になって現金で回収した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 7000 }],
+        "cr": [{ "acc": "shokyaku_saiken_toritateeki", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "前期に貸倒れ処理した債権を当期に回収できたときは、回収額7,000円を償却債権取立益（収益）として計上します。",
+      "lessonRef": "s1-u07-sec4"
+    },
+    {
+      "id": "q-s1-u07-026",
+      "type": "journal",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は、前期に貸倒れとして処理した売掛金8,000円のうち、取引先の経営再建により4,000円を当期になって現金で回収した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 4000 }],
+        "cr": [{ "acc": "shokyaku_saiken_toritateeki", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "貸倒れとして処理した債権の一部だけが回収できた場合でも、実際に回収できた金額だけを償却債権取立益として計上します。回収できなかった残り4,000円については仕訳しません。",
+      "lessonRef": "s1-u07-sec4"
+    },
+    {
+      "id": "q-s1-u07-027",
+      "type": "mc",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "償却債権取立益に関する説明として正しいものはどれですか。",
+      "choices": [
+        "前期以前に貸倒れとして処理した債権を、当期以降に回収できたときに計上する収益",
+        "当期に発生した売掛金を現金で回収したときに計上する収益",
+        "貸倒引当金を設定したときに計上する収益",
+        "固定資産を売却して得た利益を表す勘定科目"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "償却債権取立益は、過去に貸倒れとして処理し帳簿から消えていた債権を、あとから回収できたときに計上する収益です。",
+      "lessonRef": "s1-u07-sec4"
+    },
+    {
+      "id": "q-s1-u07-028",
+      "type": "fill_number",
+      "unitId": "s1-u07",
+      "topics": ["t-kashidaore-toritate"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "前期に貸倒れとして処理した売掛金6,000円のうち、当期に現金で4,500円回収した。このとき計上する償却債権取立益の金額はいくらですか。",
+      "answer": { "value": 4500, "unit": "円" },
+      "explanation": "実際に回収できた金額だけを償却債権取立益として計上します。売掛金6,000円のうち回収できたのは4,500円なので、償却債権取立益は4,500円です。",
+      "lessonRef": "s1-u07-sec4"
+    }
+  ]
+}

@@ -35,6 +35,10 @@
     { "id": "t-kotei-shisan-shutoku", "name": "有形固定資産の取得原価", "unitId": "s1-u06" },
     { "id": "t-genka-shokyaku", "name": "減価償却（定額法・間接法）", "unitId": "s1-u06" },
     { "id": "t-kotei-shisan-baikyaku", "name": "固定資産の売却", "unitId": "s1-u06" },
-    { "id": "t-shihonteki-shishutsu", "name": "資本的支出と収益的支出", "unitId": "s1-u06" }
+    { "id": "t-shihonteki-shishutsu", "name": "資本的支出と収益的支出", "unitId": "s1-u06" },
+
+    { "id": "t-kashidaore-settei", "name": "貸倒引当金の設定・差額補充法", "unitId": "s1-u07" },
+    { "id": "t-kashidaore-hassei", "name": "貸倒れの発生（前期発生分・当期発生分）", "unitId": "s1-u07" },
+    { "id": "t-kashidaore-toritate", "name": "償却債権取立益", "unitId": "s1-u07" }
   ]
 }
