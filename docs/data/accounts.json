@@ -94,6 +94,61 @@
     { "id": "chozohin", "name": "貯蔵品", "cat": "asset", "grade": 3, "introducedIn": "s1-u11" },
     { "id": "kurikoshi_shohin", "name": "繰越商品", "cat": "asset", "grade": 3, "introducedIn": "s1-u11" },
     { "id": "shiire_genka", "name": "売上原価", "cat": "expense", "grade": 3, "introducedIn": "s1-u11" },
-    { "id": "soneki", "name": "損益", "cat": "other", "grade": 3, "introducedIn": "s1-u08" }
+    { "id": "soneki", "name": "損益", "cat": "other", "grade": 3, "introducedIn": "s1-u08" },
+
+    { "id": "uriage_wari_biki", "name": "売上割戻", "cat": "expense", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "shiire_wari_biki", "name": "仕入割戻", "cat": "revenue", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "keiyaku_shisan", "name": "契約資産", "cat": "asset", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "henkin_fusai", "name": "返金負債", "cat": "liability", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "yakumu_shueki", "name": "役務収益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "yakumu_genka", "name": "役務原価", "cat": "expense", "grade": 2, "introducedIn": "s2-u01" },
+    { "id": "shikakari_hin", "name": "仕掛品", "cat": "asset", "grade": 2, "introducedIn": "s2-u01" },
+
+    { "id": "baibai_yukashoken", "name": "売買目的有価証券", "cat": "asset", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "manki_hoyu_saiken", "name": "満期保有目的債券", "cat": "asset", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "kogaisha_kabushiki", "name": "子会社株式", "cat": "asset", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "sonota_yukashoken", "name": "その他有価証券", "cat": "asset", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "yukashoken_riso_eki", "name": "有価証券利息", "cat": "revenue", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "yukashoken_baikyakueki", "name": "有価証券売却益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "yukashoken_baikyakuson", "name": "有価証券売却損", "cat": "expense", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "yukashoken_hyoka_eki", "name": "有価証券評価益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "yukashoken_hyoka_son", "name": "有価証券評価損", "cat": "expense", "grade": 2, "introducedIn": "s2-u04" },
+    { "id": "sonota_yukashoken_hyokasabaku", "name": "その他有価証券評価差額金", "cat": "equity", "grade": 2, "introducedIn": "s2-u04" },
+
+    { "id": "kensetsu_kari_kanjo", "name": "建設仮勘定", "cat": "asset", "grade": 2, "introducedIn": "s2-u05" },
+    { "id": "atsuhen_shisan_baikyakuson", "name": "圧縮損", "cat": "expense", "grade": 2, "introducedIn": "s2-u05" },
+    { "id": "kokko_hojokin_shunyu", "name": "国庫補助金受贈益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u05" },
+
+    { "id": "lease_shisan", "name": "リース資産", "cat": "asset", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "lease_saimu", "name": "リース債務", "cat": "liability", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "shiharai_lease_ryo", "name": "支払リース料", "cat": "expense", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "software", "name": "ソフトウェア", "cat": "asset", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "software_shokyakuhi", "name": "ソフトウェア償却", "cat": "expense", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "kenkyu_kaihatsuhi", "name": "研究開発費", "cat": "expense", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "goodwill", "name": "のれん", "cat": "asset", "grade": 2, "introducedIn": "s2-u06" },
+    { "id": "goodwill_shokyakuhi", "name": "のれん償却", "cat": "expense", "grade": 2, "introducedIn": "s2-u06" },
+
+    { "id": "shuzen_hikiatekin", "name": "修繕引当金", "cat": "liability", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "shuzen_hikiatekin_kurire", "name": "修繕引当金繰入", "cat": "expense", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "taishoku_kyufu_hikiatekin", "name": "退職給付引当金", "cat": "liability", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "taishoku_kyufu_hiyo", "name": "退職給付費用", "cat": "expense", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "shohin_hosho_hikiatekin", "name": "商品保証引当金", "cat": "liability", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "shohin_hosho_hikiatekin_kurire", "name": "商品保証引当金繰入", "cat": "expense", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "shoyo_hikiatekin", "name": "賞与引当金", "cat": "liability", "grade": 2, "introducedIn": "s2-u07" },
+    { "id": "shoyo_hikiatekin_kurire", "name": "賞与引当金繰入", "cat": "expense", "grade": 2, "introducedIn": "s2-u07" },
+
+    { "id": "gaika_kawase_sabaku_son", "name": "為替差損", "cat": "expense", "grade": 2, "introducedIn": "s2-u08" },
+    { "id": "gaika_kawase_sabaku_eki", "name": "為替差益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u08" },
+    { "id": "gaika_urikake", "name": "外貨建売掛金", "cat": "asset", "grade": 2, "introducedIn": "s2-u08" },
+
+    { "id": "sonota_shihon_jyoyokin", "name": "その他資本剰余金", "cat": "equity", "grade": 2, "introducedIn": "s2-u09" },
+    { "id": "shinkabu_yoyakuken", "name": "新株予約権", "cat": "equity", "grade": 2, "introducedIn": "s2-u09" },
+
+    { "id": "zeikoka_kaikei_shisan", "name": "繰延税金資産", "cat": "asset", "grade": 2, "introducedIn": "s2-u10" },
+    { "id": "zeikoka_kaikei_fusai", "name": "繰延税金負債", "cat": "liability", "grade": 2, "introducedIn": "s2-u10" },
+    { "id": "hojinzeito_chosei", "name": "法人税等調整額", "cat": "expense", "grade": 2, "introducedIn": "s2-u10" },
+
+    { "id": "honten", "name": "本店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" },
+    { "id": "shiten", "name": "支店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" }
   ]
 }
