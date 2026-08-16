@@ -79,6 +79,12 @@
     { "id": "t-tegata-uragaki-2", "name": "手形の裏書譲渡の応用", "unitId": "s2-u03" },
     { "id": "t-tegata-waribiki-2", "name": "手形の割引の応用", "unitId": "s2-u03" },
     { "id": "t-denshi-saiken-jyoto", "name": "電子記録債権の譲渡", "unitId": "s2-u03" },
-    { "id": "t-fuwatari-tegata", "name": "不渡手形の応用", "unitId": "s2-u03" }
+    { "id": "t-fuwatari-tegata", "name": "不渡手形の応用", "unitId": "s2-u03" },
+
+    { "id": "t-yukashoken-shurui", "name": "有価証券の保有目的4分類", "unitId": "s2-u04" },
+    { "id": "t-yukashoken-baibai", "name": "売買目的有価証券の取得・売却・期末評価", "unitId": "s2-u04" },
+    { "id": "t-yukashoken-manki", "name": "満期保有目的債券の取得・償却原価法", "unitId": "s2-u04" },
+    { "id": "t-yukashoken-kogaisha-sonota", "name": "子会社株式・その他有価証券の期末評価", "unitId": "s2-u04" },
+    { "id": "t-hasuriso", "name": "端数利息の処理", "unitId": "s2-u04" }
   ]
 }

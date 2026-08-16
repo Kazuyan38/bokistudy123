@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u04",
+  "questions": [
+    {
+      "id": "q-s2-u04-001",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-shurui"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち、短期的な値上がり益を得る目的で保有する有価証券が分類される勘定科目はどれですか。",
+      "choices": ["売買目的有価証券", "満期保有目的債券", "子会社株式", "その他有価証券"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "短期的な時価の値上がり益を狙って保有する有価証券は売買目的有価証券に分類され、期末に時価評価し評価差額を当期の損益に計上します。",
+      "lessonRef": "s2-u04-sec1"
+    },
+    {
+      "id": "q-s2-u04-002",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-shurui"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "満期まで保有し利息を受け取る目的で保有する社債などが分類される勘定科目はどれですか。",
+      "choices": ["満期保有目的債券", "売買目的有価証券", "子会社株式", "その他有価証券"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "満期保有目的債券は、満期まで保有し利息を得る目的で保有する社債等に用いる勘定科目です。原則として取得原価のまま据え置きますが、額面と取得原価に差額があれば償却原価法により評価します。",
+      "lessonRef": "s2-u04-sec1"
+    },
+    {
+      "id": "q-s2-u04-003",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-shurui"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "他社を支配する目的、または重要な影響力を及ぼす目的で保有する株式が分類される勘定科目として正しいものはどれですか。",
+      "choices": ["子会社株式（関連会社株式）", "売買目的有価証券", "満期保有目的債券", "その他有価証券"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "他社の意思決定を支配・影響する目的の保有株式は子会社株式（関連会社株式）に分類され、期末評価は行わず取得原価のまま据え置きます。",
+      "lessonRef": "s2-u04-sec1"
+    },
+    {
+      "id": "q-s2-u04-004",
+      "type": "tf",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-shurui"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "その他有価証券は、期末に時価評価するが、評価差額は当期の損益ではなく純資産の部に計上する。",
+      "answer": true,
+      "explanation": "そのとおりです。その他有価証券は全部純資産直入法により、時価評価した差額を「その他有価証券評価差額金」として純資産の部に計上し、損益には計上しません。",
+      "lessonRef": "s2-u04-sec1"
+    },
+    {
+      "id": "q-s2-u04-005",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、売買目的でA社株式100株を1株につき600円で購入し、購入手数料2,000円とあわせて代金は現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "baibai_yukashoken", "amt": 62000 }],
+        "cr": [{ "acc": "cash", "amt": 62000 }],
+        "alt": []
+      },
+      "explanation": "取得原価は、購入代価60,000円（600円×100株）に付随費用である購入手数料2,000円を加えた62,000円です。付随費用は取得原価に含める点に注意しましょう。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-006",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、売買目的有価証券（帳簿価額50,000円）を55,000円で売却し、代金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 55000 }],
+        "cr": [{ "acc": "baibai_yukashoken", "amt": 50000 }, { "acc": "yukashoken_baikyakueki", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "売却価額55,000円が帳簿価額50,000円を5,000円上回るため、差額を「有価証券売却益」として貸方に計上します。貸方合計は帳簿価額と売却益の合計で、借方の当座預金55,000円と一致します。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-007",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、売買目的有価証券（帳簿価額40,000円）を36,000円で売却し、代金は現金で受け取った。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 36000 }, { "acc": "yukashoken_baikyakuson", "amt": 4000 }],
+        "cr": [{ "acc": "baibai_yukashoken", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "売却価額36,000円が帳簿価額40,000円を4,000円下回るため、差額を「有価証券売却損」として借方に計上します。貸方は売買目的有価証券（資産）の減少40,000円です。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-008",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事が保有する売買目的有価証券の帳簿価額は30,000円である。決算にあたり、期末の時価33,000円に評価替えを行った。",
+      "answer": {
+        "dr": [{ "acc": "baibai_yukashoken", "amt": 3000 }],
+        "cr": [{ "acc": "yukashoken_hyoka_eki", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "期末時価33,000円が帳簿価額30,000円を3,000円上回るため、売買目的有価証券（資産）を3,000円増加させ、貸方に「有価証券評価益」を計上します。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-009",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所が保有する売買目的有価証券の帳簿価額は80,000円である。決算にあたり、期末の時価76,000円に評価替えを行った。",
+      "answer": {
+        "dr": [{ "acc": "yukashoken_hyoka_son", "amt": 4000 }],
+        "cr": [{ "acc": "baibai_yukashoken", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "期末時価76,000円が帳簿価額80,000円を4,000円下回るため、借方に「有価証券評価損」を計上し、貸方で売買目的有価証券（資産）を4,000円減少させます。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-010",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、売買目的でB社株式200株を1株につき300円で購入し、購入手数料1,500円とあわせて代金は現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "baibai_yukashoken", "amt": 61500 }],
+        "cr": [{ "acc": "cash", "amt": 61500 }],
+        "alt": []
+      },
+      "explanation": "取得原価は、購入代価60,000円（300円×200株）に購入手数料1,500円を加えた61,500円です。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-011",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "売買目的有価証券の期末評価として正しいものはどれですか。",
+      "choices": [
+        "時価に評価替えし、評価差額を当期の損益として計上する",
+        "取得原価のまま据え置く",
+        "償却原価法により算定した価額で評価する",
+        "取得原価と時価のいずれか低い方で評価する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "売買目的有価証券は、期末に時価評価し、時価と帳簿価額との差額を有価証券評価益・評価損として当期の損益に計上します。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-012",
+      "type": "fill_number",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-baibai"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "帳簿価額45,000円の売買目的有価証券を48,500円で売却した場合の有価証券売却益はいくらですか。",
+      "answer": { "value": 3500, "unit": "円" },
+      "explanation": "売却価額48,500円－帳簿価額45,000円＝3,500円が有価証券売却益です。",
+      "lessonRef": "s2-u04-sec2"
+    },
+    {
+      "id": "q-s2-u04-013",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、満期保有目的でB社社債（額面100,000円、償還期間5年）を額面100円につき95円で取得し、代金は当座預金口座から支払った。",
+      "answer": {
+        "dr": [{ "acc": "manki_hoyu_saiken", "amt": 95000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 95000 }],
+        "alt": []
+      },
+      "explanation": "取得原価は、額面100,000円に取得価格の割合95%（100円につき95円）を掛けた95,000円です。満期保有目的債券として計上します。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-014",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ハルカ商事が保有するB社社債（額面100,000円、取得原価95,000円、償還期間5年）について、決算にあたり償却原価法（定額法）による当期償却額を計上した。",
+      "answer": {
+        "dr": [{ "acc": "manki_hoyu_saiken", "amt": 1000 }],
+        "cr": [{ "acc": "yukashoken_riso_eki", "amt": 1000 }],
+        "alt": []
+      },
+      "explanation": "額面100,000円と取得原価95,000円の差額5,000円を償還期間5年で均等に配分すると、当期の償却額は1,000円（5,000円÷5年）です。満期保有目的債券を1,000円増加させ、貸方は有価証券利息とします。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-015",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "ミナト製作所が保有するC社社債（額面200,000円、取得原価188,000円、償還期間4年）について、決算にあたり償却原価法（定額法）による当期償却額を計上した。",
+      "answer": {
+        "dr": [{ "acc": "manki_hoyu_saiken", "amt": 3000 }],
+        "cr": [{ "acc": "yukashoken_riso_eki", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "額面200,000円と取得原価188,000円の差額12,000円を償還期間4年で均等に配分すると、当期の償却額は3,000円（12,000円÷4年）です。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-016",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産が保有する満期保有目的債券（償却原価200,000円）が満期を迎え、額面金額が当座預金口座に振り込まれた。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 200000 }],
+        "cr": [{ "acc": "manki_hoyu_saiken", "amt": 200000 }],
+        "alt": []
+      },
+      "explanation": "満期時には、償却原価法により額面金額と一致した帳簿価額（償却原価）200,000円で満期保有目的債券が減少し、同額が当座預金に入金されます。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-017",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "償却原価法の説明として正しいものはどれですか。",
+      "choices": [
+        "額面金額と取得原価との差額を、取得日から償還日までの期間で毎期均等に配分し帳簿価額に加減する方法",
+        "時価の変動を毎期末に評価損益として計上する方法",
+        "取得原価をそのまま据え置く方法",
+        "取得原価と時価のいずれか低い方で評価する方法"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "償却原価法は、額面金額と取得原価の差額が金利の調整と認められる場合に、その差額を取得日から満期日までの期間で毎期均等に配分し、帳簿価額に加減する方法です。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-018",
+      "type": "fill_number",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-manki"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "額面150,000円、取得原価144,000円、償還期間6年の社債を満期保有目的で保有している。償却原価法（定額法）による当期の償却額はいくらですか。",
+      "answer": { "value": 1000, "unit": "円" },
+      "explanation": "額面150,000円と取得原価144,000円の差額6,000円を償還期間6年で均等に配分すると、当期の償却額は1,000円（6,000円÷6年）です。",
+      "lessonRef": "s2-u04-sec3"
+    },
+    {
+      "id": "q-s2-u04-019",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、C社の発行済株式の80%を取得して支配する目的で、C社株式400,000円を購入し、代金は当座預金口座から支払った。",
+      "answer": {
+        "dr": [{ "acc": "kogaisha_kabushiki", "amt": 400000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 400000 }],
+        "alt": []
+      },
+      "explanation": "他社を支配する目的で株式を取得したため、勘定科目「子会社株式」で処理します。取得原価は購入代価400,000円です。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-020",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、その他有価証券として保有するC社株式（取得原価60,000円）の期末時価が65,000円であったため、全部純資産直入法により評価替えを行った。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken", "amt": 5000 }],
+        "cr": [{ "acc": "sonota_yukashoken_hyokasabaku", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "時価65,000円が取得原価60,000円を5,000円上回るため、その他有価証券（資産）を5,000円増加させます。評価差額は損益に計上せず、純資産の部の「その他有価証券評価差額金」で処理します。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-021",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、その他有価証券として保有するD社株式（取得原価90,000円）の期末時価が84,000円であったため、全部純資産直入法により評価替えを行った。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken_hyokasabaku", "amt": 6000 }],
+        "cr": [{ "acc": "sonota_yukashoken", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "時価84,000円が取得原価90,000円を6,000円下回るため、その他有価証券（資産）を6,000円減少させます。借方は「その他有価証券評価差額金」で、こちらも損益ではなく純資産の部の項目です。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-022",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、翌期首に、前期末に計上したその他有価証券評価差額金5,000円（評価益）について、洗い替え（再振替）の仕訳を行った。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken_hyokasabaku", "amt": 5000 }],
+        "cr": [{ "acc": "sonota_yukashoken", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "前期末の評価替え仕訳（その他有価証券／その他有価証券評価差額金）の逆仕訳を翌期首に行い、取得原価に戻します。これにより翌期末には再び取得原価を基準に時価評価が行われます。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-023",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、翌期首に、前期末に計上したその他有価証券評価差額金6,000円（評価損）について、洗い替え（再振替）の仕訳を行った。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken", "amt": 6000 }],
+        "cr": [{ "acc": "sonota_yukashoken_hyokasabaku", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "前期末の評価替え仕訳（その他有価証券評価差額金／その他有価証券）の逆仕訳を翌期首に行い、その他有価証券の帳簿価額を取得原価に戻します。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-024",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、子会社株式500,000円とその他有価証券120,000円をそれぞれ現金で取得した。",
+      "answer": {
+        "dr": [{ "acc": "kogaisha_kabushiki", "amt": 500000 }, { "acc": "sonota_yukashoken", "amt": 120000 }],
+        "cr": [{ "acc": "cash", "amt": 620000 }],
+        "alt": []
+      },
+      "explanation": "保有目的が異なる2種類の有価証券を同時に取得しているため、それぞれ別の勘定科目（子会社株式・その他有価証券）で借方に計上します。貸方は現金の減少620,000円です。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-025",
+      "type": "tf",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "子会社株式は、期末に時価評価を行い評価差額を計上する。",
+      "answer": false,
+      "explanation": "誤りです。子会社株式は他社を支配する目的で保有するものであり、値上がり・値下がりにかかわらず期末評価は行わず、取得原価のまま据え置きます。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-026",
+      "type": "mc",
+      "unitId": "s2-u04",
+      "topics": ["t-yukashoken-kogaisha-sonota"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "その他有価証券の評価差額（全部純資産直入法）の処理として正しいものはどれですか。",
+      "choices": [
+        "評価差額を当期の損益に計上せず、純資産の部に「その他有価証券評価差額金」として計上する",
+        "評価差額を当期の営業外損益として計上する",
+        "評価差額を取得原価に加減せず、注記のみ行う",
+        "評価差額を売買目的有価証券に振り替える"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "全部純資産直入法では、その他有価証券の評価差額を当期の損益には計上せず、純資産の部に「その他有価証券評価差額金」として計上します。",
+      "lessonRef": "s2-u04-sec4"
+    },
+    {
+      "id": "q-s2-u04-027",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-hasuriso"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ハルカ商事は、満期保有目的でD社社債（額面100,000円）を額面100円につき98円で購入し、購入代金に加えて前回利払日の翌日から購入日までの端数利息600円をあわせて当座預金から支払った。",
+      "answer": {
+        "dr": [{ "acc": "manki_hoyu_saiken", "amt": 98000 }, { "acc": "yukashoken_riso_eki", "amt": 600 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 98600 }],
+        "alt": []
+      },
+      "explanation": "社債本体の取得原価は98,000円（額面100,000円×98%）です。端数利息600円は取得原価には含めず、借方の「有価証券利息」で別建て処理します。貸方は当座預金の減少98,600円です。",
+      "lessonRef": "s2-u04-sec5"
+    },
+    {
+      "id": "q-s2-u04-028",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-hasuriso"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ミナト製作所は、保有する売買目的有価証券（帳簿価額80,000円）を82,000円で売却するとともに、前回利払日の翌日から売却日までの端数利息400円を受け取り、代金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 82400 }],
+        "cr": [{ "acc": "baibai_yukashoken", "amt": 80000 }, { "acc": "yukashoken_baikyakueki", "amt": 2000 }, { "acc": "yukashoken_riso_eki", "amt": 400 }],
+        "alt": []
+      },
+      "explanation": "売却損益は本体価額82,000円と帳簿価額80,000円の差額2,000円（有価証券売却益）で計算し、端数利息400円は売却損益に含めず貸方の「有価証券利息」で別建て処理します。",
+      "lessonRef": "s2-u04-sec5"
+    },
+    {
+      "id": "q-s2-u04-029",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-hasuriso"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "アオイ物産は、売買目的でE社社債（額面200,000円）を額面100円につき99円で購入し、購入代金に加えて前回利払日の翌日から購入日までの端数利息800円をあわせて現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "baibai_yukashoken", "amt": 198000 }, { "acc": "yukashoken_riso_eki", "amt": 800 }],
+        "cr": [{ "acc": "cash", "amt": 198800 }],
+        "alt": []
+      },
+      "explanation": "社債本体の取得原価は198,000円（額面200,000円×99%）です。端数利息800円は取得原価に含めず、借方の「有価証券利息」で別建て処理します。貸方は現金の減少198,800円です。",
+      "lessonRef": "s2-u04-sec5"
+    },
+    {
+      "id": "q-s2-u04-030",
+      "type": "journal",
+      "unitId": "s2-u04",
+      "topics": ["t-hasuriso"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "カエデ商事は、保有する満期保有目的債券（償却原価150,000円）を額面100円につき101円（151,500円）で中途売却するとともに、前回利払日の翌日から売却日までの端数利息300円を受け取り、代金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 151800 }],
+        "cr": [{ "acc": "manki_hoyu_saiken", "amt": 150000 }, { "acc": "yukashoken_baikyakueki", "amt": 1500 }, { "acc": "yukashoken_riso_eki", "amt": 300 }],
+        "alt": []
+      },
+      "explanation": "売却価額151,500円と償却原価150,000円との差額1,500円は「有価証券売却益」です。端数利息300円は売却損益に含めず、貸方の「有価証券利息」で別建て処理します。当座預金の入金合計は151,800円です。",
+      "lessonRef": "s2-u04-sec5"
+    }
+  ]
+}
