@@ -91,6 +91,12 @@
     { "id": "t-kensetsu-kari", "name": "建設仮勘定", "unitId": "s2-u05" },
     { "id": "t-jokyaku-baikae", "name": "固定資産の除却・廃棄・買換え", "unitId": "s2-u05" },
     { "id": "t-teiritsuho-seisan", "name": "定率法・生産高比例法", "unitId": "s2-u05" },
-    { "id": "t-atsushuku-kicho", "name": "圧縮記帳（直接減額方式）", "unitId": "s2-u05" }
+    { "id": "t-atsushuku-kicho", "name": "圧縮記帳（直接減額方式）", "unitId": "s2-u05" },
+
+    { "id": "t-lease-finance", "name": "ファイナンス・リース取引", "unitId": "s2-u06" },
+    { "id": "t-lease-operating", "name": "オペレーティング・リース取引", "unitId": "s2-u06" },
+    { "id": "t-software", "name": "自社利用目的のソフトウェア", "unitId": "s2-u06" },
+    { "id": "t-kenkyu-kaihatsu", "name": "研究開発費", "unitId": "s2-u06" },
+    { "id": "t-goodwill", "name": "のれんの計上・償却", "unitId": "s2-u06" }
   ]
 }

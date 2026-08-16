@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u06",
+  "questions": [
+    {
+      "id": "q-s2-u06-001",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance", "t-lease-operating"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ファイナンス・リース取引に分類されるための要件として正しい組み合わせはどれですか。",
+      "choices": [
+        "中途解約不能（ノンキャンセラブル）であり、借手が資産使用のコストを実質的に負担する（フルペイアウト）",
+        "契約期間が1年以内であること",
+        "リース料総額が取得原価の50％未満であること",
+        "貸手が資産を自由に使用できること"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "ファイナンス・リース取引は、契約期間の途中で解約できない(ノンキャンセラブル)ことと、借手が資産使用のコストを実質的に負担する(フルペイアウト)ことの2要件を満たす取引です。この2要件を満たすと、実質的に売買取引と同様とみなされます。",
+      "lessonRef": "s2-u06-sec1"
+    },
+    {
+      "id": "q-s2-u06-002",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-operating"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "オペレーティング・リース取引の会計処理として正しいものはどれですか。",
+      "choices": [
+        "リース資産・リース債務を計上せず、リース料支払時に支払リース料として費用処理する",
+        "リース資産・リース債務をリース料総額で計上する",
+        "取得時に一括で固定資産に計上し、減価償却は行わない",
+        "リース料をすべて前払費用として資産計上する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "オペレーティング・リースは通常の賃貸借取引として扱うため、資産・負債を計上しません。リース料を支払った都度、支払リース料(費用)として処理するだけのシンプルな処理です。",
+      "lessonRef": "s2-u06-sec1"
+    },
+    {
+      "id": "q-s2-u06-003",
+      "type": "tf",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ファイナンス・リース取引は、実質的に固定資産を購入して代金を分割払いしているのと同様の取引とみなされ、借手はリース資産・リース債務を貸借対照表に計上する。",
+      "answer": true,
+      "explanation": "そのとおりです。ファイナンス・リースは中途解約不能かつフルペイアウトの要件を満たすため、実質的な売買取引とみなされ、リース資産・リース債務を計上します。",
+      "lessonRef": "s2-u06-sec1"
+    },
+    {
+      "id": "q-s2-u06-004",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、備品のリース契約を結び、リース料総額300,000円(年間60,000円×5年、利子込み法により処理)をリース資産・リース債務として計上した。",
+      "answer": {
+        "dr": [{ "acc": "lease_shisan", "amt": 300000 }],
+        "cr": [{ "acc": "lease_saimu", "amt": 300000 }],
+        "alt": []
+      },
+      "explanation": "利子込み法では、リース料総額をそのままリース資産(資産)・リース債務(負債)として計上します。支払利息は区別しません。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-005",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、機械装置のリース契約を結び、リース料総額500,000円(年間100,000円×5年、利子込み法により処理)をリース資産・リース債務として計上した。",
+      "answer": {
+        "dr": [{ "acc": "lease_shisan", "amt": 500000 }],
+        "cr": [{ "acc": "lease_saimu", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "利子込み法では、リース料総額500,000円をそのままリース資産・リース債務として計上します。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-006",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、上記の備品のリース契約について、第1回のリース料60,000円を現金で支払った。利子込み法により処理しているため、支払額の全額をリース債務の減少として処理する。",
+      "answer": {
+        "dr": [{ "acc": "lease_saimu", "amt": 60000 }],
+        "cr": [{ "acc": "cash", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "利子込み法では支払利息を区別せず、支払ったリース料の全額をリース債務の減少として処理します。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-007",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、上記の機械装置のリース契約について、第1回のリース料100,000円を当座預金から支払った。",
+      "answer": {
+        "dr": [{ "acc": "lease_saimu", "amt": 100000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "利子込み法では、支払ったリース料100,000円の全額をリース債務の減少として処理します。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-008",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、決算にあたり、上記のリース資産(取得原価300,000円、リース期間5年、残存価額ゼロ、定額法、間接法で記帳)について、当期1年分の減価償却費を計上した。",
+      "answer": {
+        "dr": [{ "acc": "genka_shokyakuhi", "amt": 60000 }],
+        "cr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "リース期間をそのまま耐用年数とし、残存価額ゼロの定額法で計算します。300,000円÷5年＝60,000円です。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-009",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、決算にあたり、上記のリース資産(取得原価500,000円、リース期間5年、残存価額ゼロ、定額法、間接法で記帳)について、当期1年分の減価償却費を計上した。",
+      "answer": {
+        "dr": [{ "acc": "genka_shokyakuhi", "amt": 100000 }],
+        "cr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "500,000円÷5年＝100,000円が当期の減価償却費です。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-010",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ファイナンス・リース取引の利子込み法の説明として正しいものはどれですか。",
+      "choices": [
+        "リース料総額をそのままリース資産・リース債務として計上し、支払時に利息を区別しない",
+        "リース料総額から利息相当額を控除した現金購入価額でリース資産・リース債務を計上する",
+        "リース資産のみを計上し、リース債務は計上しない",
+        "リース料はすべて支払時に支払リース料として費用処理する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "利子込み法は、リース料総額をそのままリース資産・リース債務とする簡便な方法で、支払時に利息を区別して計上しません。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-011",
+      "type": "fill_number",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-finance"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "取得原価400,000円、リース期間5年、残存価額ゼロ、定額法で減価償却するリース資産がある。当期1年分の減価償却費はいくらですか。",
+      "answer": { "value": 80000, "unit": "円" },
+      "explanation": "400,000円÷5年＝80,000円です。",
+      "lessonRef": "s2-u06-sec2"
+    },
+    {
+      "id": "q-s2-u06-012",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-operating"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "アオイ物産は、コピー機のオペレーティング・リース契約にもとづき、当期分のリース料40,000円を現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_lease_ryo", "amt": 40000 }],
+        "cr": [{ "acc": "cash", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "オペレーティング・リースでは、資産・負債を計上せず、支払ったリース料をそのまま支払リース料(費用)として処理します。",
+      "lessonRef": "s2-u06-sec3"
+    },
+    {
+      "id": "q-s2-u06-013",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-operating"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ハルカ商事は、事務機器のオペレーティング・リース契約にもとづき、当期分のリース料25,000円を当座預金から支払った。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_lease_ryo", "amt": 25000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 25000 }],
+        "alt": []
+      },
+      "explanation": "支払ったリース料25,000円を支払リース料(費用)として処理します。",
+      "lessonRef": "s2-u06-sec3"
+    },
+    {
+      "id": "q-s2-u06-014",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-operating"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミナト製作所は、倉庫用フォークリフトのオペレーティング・リース契約にもとづき、当期分のリース料36,000円を現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_lease_ryo", "amt": 36000 }],
+        "cr": [{ "acc": "cash", "amt": 36000 }],
+        "alt": []
+      },
+      "explanation": "オペレーティング・リースでは、支払った都度、支払リース料(費用)として計上するだけです。",
+      "lessonRef": "s2-u06-sec3"
+    },
+    {
+      "id": "q-s2-u06-015",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-lease-operating"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "オペレーティング・リース取引について、減価償却の要否として正しいものはどれですか。",
+      "choices": [
+        "資産を計上しないため、減価償却は行わない",
+        "リース資産を計上し、耐用年数5年の定額法で減価償却を行う",
+        "リース資産を計上するが、減価償却は行わない",
+        "リース料総額を一括で減価償却費として計上する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "オペレーティング・リースは賃貸借取引として扱い、そもそもリース資産を計上しないため、減価償却も行いません。",
+      "lessonRef": "s2-u06-sec3"
+    },
+    {
+      "id": "q-s2-u06-016",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-software"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、自社利用目的の業務システム用ソフトウェア500,000円を購入し、代金は現金で支払った。将来の費用削減効果が確実であるため、資産として計上する。",
+      "answer": {
+        "dr": [{ "acc": "software", "amt": 500000 }],
+        "cr": [{ "acc": "cash", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "自社利用目的のソフトウェアは、将来の収益獲得や費用削減効果が確実であれば、取得原価を「ソフトウェア」(資産)として計上します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-017",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-software"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算にあたり、上記ソフトウェア(取得原価500,000円、利用可能期間5年、残存価額ゼロ、定額法)について、当期1年分の償却費を直接控除方式で計上した。",
+      "answer": {
+        "dr": [{ "acc": "software_shokyakuhi", "amt": 100000 }],
+        "cr": [{ "acc": "software", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "500,000円÷5年＝100,000円です。ソフトウェアは減価償却累計額のような控除項目を用いず、帳簿価額から直接控除する方式で記帳します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-018",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-software"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は、自社利用目的の顧客管理システム用ソフトウェア300,000円を購入し、代金は当座預金から支払った。",
+      "answer": {
+        "dr": [{ "acc": "software", "amt": 300000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 300000 }],
+        "alt": []
+      },
+      "explanation": "自社利用目的のソフトウェアを取得したときは、取得原価を「ソフトウェア」(資産)として計上します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-019",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-software"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "アオイ物産は、当期の10月1日に自社利用目的のソフトウェア240,000円を現金で取得した。決算日は3月31日であり、利用可能期間5年、残存価額ゼロ、定額法(直接控除方式)で償却する。当期分(6か月分)の償却費を計上した。",
+      "answer": {
+        "dr": [{ "acc": "software_shokyakuhi", "amt": 24000 }],
+        "cr": [{ "acc": "software", "amt": 24000 }],
+        "alt": []
+      },
+      "explanation": "年間償却額は240,000円÷5年＝48,000円です。取得日10月1日から決算日3月31日までは6か月のため、48,000円×6/12＝24,000円を月割で計上します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-020",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-kenkyu-kaihatsu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は、新製品の研究開発のために、研究員の人件費や実験材料費など合計450,000円を現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "kenkyu_kaihatsuhi", "amt": 450000 }],
+        "cr": [{ "acc": "cash", "amt": 450000 }],
+        "alt": []
+      },
+      "explanation": "研究開発費は資産計上せず、発生時に全額を費用として処理します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-021",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-kenkyu-kaihatsu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "アオイ物産は、新技術の開発活動にともなう費用280,000円を当座預金から支払った。",
+      "answer": {
+        "dr": [{ "acc": "kenkyu_kaihatsuhi", "amt": 280000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 280000 }],
+        "alt": []
+      },
+      "explanation": "研究開発にともなう支出は、発生時に全額「研究開発費」(費用)として処理します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-022",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-software", "t-kenkyu-kaihatsu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ソフトウェアと研究開発費の会計処理の違いに関する説明として正しいものはどれですか。",
+      "choices": [
+        "自社利用のソフトウェアは資産計上し利用可能期間で償却するが、研究開発費は発生時に全額費用処理する",
+        "ソフトウェアも研究開発費も、どちらも発生時に全額費用処理する",
+        "ソフトウェアも研究開発費も、どちらも資産計上して償却する",
+        "研究開発費は資産計上し、ソフトウェアは発生時に全額費用処理する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "自社利用目的のソフトウェアは資産計上し、利用可能期間にわたり定額法で償却しますが、研究開発費は資産計上せず発生時に全額費用処理します。",
+      "lessonRef": "s2-u06-sec4"
+    },
+    {
+      "id": "q-s2-u06-023",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、ミナト製作所の事業(引き継いだ資産は土地400,000円のみ)を600,000円で買収し、代金は現金で支払った。買収価額600,000円と引き継いだ純資産(時価)400,000円との差額をのれんとして計上する。",
+      "answer": {
+        "dr": [
+          { "acc": "tochi", "amt": 400000 },
+          { "acc": "goodwill", "amt": 200000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 600000 }],
+        "alt": []
+      },
+      "explanation": "買収価額600,000円と引き継いだ純資産(時価)400,000円との差額200,000円は、超過収益力を表す「のれん」(資産)として計上します。",
+      "lessonRef": "s2-u06-sec5"
+    },
+    {
+      "id": "q-s2-u06-024",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、アオイ物産の事業(引き継いだ資産は建物700,000円のみ)を900,000円で買収し、代金は当座預金から支払った。買収価額900,000円と引き継いだ純資産(時価)700,000円との差額をのれんとして計上する。",
+      "answer": {
+        "dr": [
+          { "acc": "tatemono", "amt": 700000 },
+          { "acc": "goodwill", "amt": 200000 }
+        ],
+        "cr": [{ "acc": "toza_yokin", "amt": 900000 }],
+        "alt": []
+      },
+      "explanation": "買収価額900,000円と引き継いだ純資産(時価)700,000円との差額200,000円をのれんとして計上します。",
+      "lessonRef": "s2-u06-sec5"
+    },
+    {
+      "id": "q-s2-u06-025",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、決算にあたり、上記で計上したのれん200,000円について、償却期間20年、定額法(直接控除方式)により、当期1年分の償却額を計上した。",
+      "answer": {
+        "dr": [{ "acc": "goodwill_shokyakuhi", "amt": 10000 }],
+        "cr": [{ "acc": "goodwill", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "200,000円÷20年＝10,000円です。のれんは効果の及ぶ期間(20年以内)にわたり定額法で償却します。",
+      "lessonRef": "s2-u06-sec5"
+    },
+    {
+      "id": "q-s2-u06-026",
+      "type": "journal",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、決算にあたり、上記で計上したのれん200,000円について、償却期間10年、定額法(直接控除方式)により、当期1年分の償却額を計上した。",
+      "answer": {
+        "dr": [{ "acc": "goodwill_shokyakuhi", "amt": 20000 }],
+        "cr": [{ "acc": "goodwill", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "200,000円÷10年＝20,000円が当期の償却額です。",
+      "lessonRef": "s2-u06-sec5"
+    },
+    {
+      "id": "q-s2-u06-027",
+      "type": "mc",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "のれんに関する説明として正しいものはどれですか。",
+      "choices": [
+        "買収価額が取得した純資産(時価)を上回る額であり、その効果が及ぶ期間(20年以内)にわたり定額法で償却する",
+        "のれんは無形固定資産ではなく、繰延資産として扱われる",
+        "のれんは一度計上したら、その後いっさい償却しない",
+        "のれんは買収価額が取得した純資産(時価)を下回る場合にのみ計上される"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "のれんは、買収価額が取得した純資産(時価)を上回る額として計上される無形固定資産であり、その効果が及ぶと見積もられる期間(20年以内)にわたり定額法で償却します。",
+      "lessonRef": "s2-u06-sec5"
+    },
+    {
+      "id": "q-s2-u06-028",
+      "type": "tf",
+      "unitId": "s2-u06",
+      "topics": ["t-goodwill"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "のれんの償却期間は、その効果が及ぶと見積もられる期間で、20年以内と定められている。",
+      "answer": true,
+      "explanation": "そのとおりです。のれんは、その効果の及ぶ期間(20年以内)にわたり、定額法などにより規則的に償却します。",
+      "lessonRef": "s2-u06-sec5"
+    }
+  ]
+}
