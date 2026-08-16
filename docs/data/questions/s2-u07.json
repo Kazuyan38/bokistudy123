@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u07",
+  "questions": [
+    {
+      "id": "q-s2-u07-001",
+      "type": "mc",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "引当金を計上するための要件として正しいものはどれですか。",
+      "choices": [
+        "将来の特定の費用・損失に関するものであり、発生の可能性が高く、金額を合理的に見積もれること",
+        "どのような費用・損失であっても、決算日に見積もれば引当金を計上できること",
+        "現金支出をともなう費用のみが引当金の対象となること",
+        "過去に発生した費用を、翌期にまとめて計上するために用いること"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "引当金の計上には、将来の特定の費用・損失に関するものであること、発生の可能性が高いこと、金額を合理的に見積もれることの3要件をすべて満たす必要があります。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-002",
+      "type": "mc",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次の引当金のうち、貸借対照表の「負債の部」に計上されるものはどれですか。",
+      "choices": [
+        "修繕引当金",
+        "貸倒引当金",
+        "減価償却累計額",
+        "該当するものはない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "修繕引当金は負債として計上されます。貸倒引当金や減価償却累計額は、資産のマイナスを表す評価勘定（contra勘定）であり、負債ではありません。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-003",
+      "type": "tf",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "引当金を計上するためには、その金額を1円単位まで正確に確定できなければならない。",
+      "answer": false,
+      "explanation": "誤りです。引当金の計上要件は「金額を合理的に見積もることができること」であり、正確な金額の確定までは求められません。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-004",
+      "type": "tf",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "2級で新たに学ぶ修繕引当金・退職給付引当金・商品保証引当金・賞与引当金は、いずれも貸借対照表の負債の部に計上される。",
+      "answer": true,
+      "explanation": "そのとおりです。これら4つの引当金はいずれも将来の費用・損失に備えて負債として計上します。貸倒引当金だけは資産のマイナスを表す評価勘定である点に注意しましょう。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-005",
+      "type": "mc",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "次のうち、引当金の計上対象として適切でないものはどれですか。",
+      "choices": [
+        "将来発生する可能性が高く、金額を合理的に見積もれる修繕費用",
+        "発生の可能性がほとんどない偶発的な損失",
+        "決算日時点で合理的に見積もれる商品保証費用",
+        "当期の負担に属すると合理的に見積もれる賞与の金額"
+      ],
+      "answer": 1,
+      "shuffle": true,
+      "explanation": "発生の可能性が低いものは、引当金の計上要件（発生の可能性が高いこと）を満たさないため、引当金の対象にはなりません。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-006",
+      "type": "mc",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "貸倒引当金と、2級で新たに学ぶ4つの引当金に共通する目的として、最も適切なものはどれですか。",
+      "choices": [
+        "将来発生する可能性が高い特定の費用・損失をあらかじめ見積もり、当期の費用として計上することで、期間損益を適正に計算するため",
+        "将来の税負担を減らすためだけに設定するため",
+        "会社の現金を積み立てておくため",
+        "純資産を増加させるため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "引当金は、将来発生する可能性の高い費用・損失を、その原因が生じた当期の費用としてあらかじめ計上することで、収益と費用を対応させ、期間損益を適正に計算するために設定します。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-007",
+      "type": "mc",
+      "unitId": "s2-u07",
+      "topics": ["t-hikiatekin-gainen"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "次の引当金と、その対象となる費用・損失の組み合わせとして誤っているものはどれですか。",
+      "choices": [
+        "修繕引当金 ― 定期的な設備の修繕費用",
+        "退職給付引当金 ― 従業員の将来の退職金",
+        "商品保証引当金 ― 販売した商品の保証・修理費用",
+        "賞与引当金 ― 得意先に対する売上割戻し"
+      ],
+      "answer": 3,
+      "shuffle": true,
+      "explanation": "賞与引当金は、翌期に支給予定の賞与のうち当期の負担に属する部分に備えるものです。売上割戻しとは関係がありません。",
+      "lessonRef": "s2-u07-sec1"
+    },
+    {
+      "id": "q-s2-u07-008",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shuzen-hikiatekin"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、決算にあたり、翌期に予定している定期修繕について、修繕費用400,000円を見積もり、修繕引当金として計上した。",
+      "answer": {
+        "dr": [{ "acc": "shuzen_hikiatekin_kurire", "amt": 400000 }],
+        "cr": [{ "acc": "shuzen_hikiatekin", "amt": 400000 }],
+        "alt": []
+      },
+      "explanation": "将来の修繕に備える金額を見積もり、修繕引当金繰入（費用）と修繕引当金（負債）に計上します。修繕引当金は毎期積み立てていくもので、差額補充法は用いません。",
+      "lessonRef": "s2-u07-sec2"
+    },
+    {
+      "id": "q-s2-u07-009",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shuzen-hikiatekin"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミナト製作所は、実際に修繕を行い、修繕費用400,000円を現金で支払った。修繕引当金の残高は400,000円である。",
+      "answer": {
+        "dr": [{ "acc": "shuzen_hikiatekin", "amt": 400000 }],
+        "cr": [{ "acc": "cash", "amt": 400000 }],
+        "alt": []
+      },
+      "explanation": "実際の修繕費用400,000円と修繕引当金の残高400,000円がちょうど一致するため、修繕引当金を全額取り崩すだけで処理が完了し、修繕費は発生しません。",
+      "lessonRef": "s2-u07-sec2"
+    },
+    {
+      "id": "q-s2-u07-010",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shuzen-hikiatekin"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、実際に修繕を行い、修繕費用350,000円を現金で支払った。修繕引当金の残高は300,000円である。",
+      "answer": {
+        "dr": [
+          { "acc": "shuzen_hikiatekin", "amt": 300000 },
+          { "acc": "shuzenhi", "amt": 50000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 350000 }],
+        "alt": []
+      },
+      "explanation": "実際費用350,000円が修繕引当金残高300,000円を上回るため、まず修繕引当金300,000円をすべて取り崩し、不足する差額350,000円－300,000円＝50,000円を修繕費（費用）として処理します。",
+      "lessonRef": "s2-u07-sec2"
+    },
+    {
+      "id": "q-s2-u07-011",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shuzen-hikiatekin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ノゾミ商会は、決算にあたり、翌期に予定している大規模修繕について、修繕費用200,000円を見積もり、修繕引当金として計上した。",
+      "answer": {
+        "dr": [{ "acc": "shuzen_hikiatekin_kurire", "amt": 200000 }],
+        "cr": [{ "acc": "shuzen_hikiatekin", "amt": 200000 }],
+        "alt": []
+      },
+      "explanation": "翌期に予定している修繕費用を見積もり、修繕引当金繰入（費用）と修繕引当金（負債）として計上します。",
+      "lessonRef": "s2-u07-sec2"
+    },
+    {
+      "id": "q-s2-u07-012",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shuzen-hikiatekin"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、実際に修繕を行い、修繕費用220,000円を現金で支払った。修繕引当金の残高は250,000円である。",
+      "answer": {
+        "dr": [{ "acc": "shuzen_hikiatekin", "amt": 220000 }],
+        "cr": [{ "acc": "cash", "amt": 220000 }],
+        "alt": []
+      },
+      "explanation": "修繕引当金の残高250,000円のほうが実際費用220,000円より多いケースです。使った分220,000円だけを取り崩し、残る30,000円は追加処理をせずそのまま次回の修繕に備えて残しておきます。",
+      "lessonRef": "s2-u07-sec2"
+    },
+    {
+      "id": "q-s2-u07-013",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-taishoku-kyufu"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、決算にあたり、当期の負担に属する退職給付費用を800,000円と見積もり計上した。",
+      "answer": {
+        "dr": [{ "acc": "taishoku_kyufu_hiyo", "amt": 800000 }],
+        "cr": [{ "acc": "taishoku_kyufu_hikiatekin", "amt": 800000 }],
+        "alt": []
+      },
+      "explanation": "退職金の負担は在職期間にわたって費用配分します。当期の負担に属する金額を退職給付費用（費用）として見積もり、退職給付引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec3"
+    },
+    {
+      "id": "q-s2-u07-014",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-taishoku-kyufu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は、決算にあたり、当期の負担に属する退職給付費用を600,000円と見積もり計上した。",
+      "answer": {
+        "dr": [{ "acc": "taishoku_kyufu_hiyo", "amt": 600000 }],
+        "cr": [{ "acc": "taishoku_kyufu_hikiatekin", "amt": 600000 }],
+        "alt": []
+      },
+      "explanation": "当期の負担に属する退職給付費用を見積もり、退職給付費用（費用）と退職給付引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec3"
+    },
+    {
+      "id": "q-s2-u07-015",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-taishoku-kyufu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、従業員が退職し、退職金1,200,000円を現金で支払った。退職給付引当金の残高で全額をまかなった。",
+      "answer": {
+        "dr": [{ "acc": "taishoku_kyufu_hikiatekin", "amt": 1200000 }],
+        "cr": [{ "acc": "cash", "amt": 1200000 }],
+        "alt": []
+      },
+      "explanation": "退職金を支払ったときは、積み立ててきた退職給付引当金を取り崩します。引当金の残高で全額をまかなえるため、退職給付費用は発生しません。",
+      "lessonRef": "s2-u07-sec3"
+    },
+    {
+      "id": "q-s2-u07-016",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-taishoku-kyufu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は、従業員が退職し、退職金900,000円を普通預金口座から支払った。退職給付引当金の残高で全額をまかなった。",
+      "answer": {
+        "dr": [{ "acc": "taishoku_kyufu_hikiatekin", "amt": 900000 }],
+        "cr": [{ "acc": "futsu_yokin", "amt": 900000 }],
+        "alt": []
+      },
+      "explanation": "退職金の支払い手段が普通預金であっても、考え方は同じです。積み立ててきた退職給付引当金900,000円を取り崩します。",
+      "lessonRef": "s2-u07-sec3"
+    },
+    {
+      "id": "q-s2-u07-017",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-taishoku-kyufu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は、決算にあたり、当期の負担に属する退職給付費用を450,000円と見積もり計上した。",
+      "answer": {
+        "dr": [{ "acc": "taishoku_kyufu_hiyo", "amt": 450000 }],
+        "cr": [{ "acc": "taishoku_kyufu_hikiatekin", "amt": 450000 }],
+        "alt": []
+      },
+      "explanation": "決算時には、当期の負担に属する退職給付費用を見積もり、退職給付費用（費用）と退職給付引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec3"
+    },
+    {
+      "id": "q-s2-u07-018",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、決算にあたり、当期に販売した商品について、翌期以降に発生すると見込まれる保証費用を80,000円と見積もり、商品保証引当金を計上した。",
+      "answer": {
+        "dr": [{ "acc": "shohin_hosho_hikiatekin_kurire", "amt": 80000 }],
+        "cr": [{ "acc": "shohin_hosho_hikiatekin", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "販売時ではなく決算時に、将来の保証費用をあらかじめ見積もり、商品保証引当金繰入（費用）と商品保証引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-019",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は、決算にあたり、当期に販売した商品について、翌期以降に発生すると見込まれる保証費用を60,000円と見積もり、商品保証引当金を計上した。",
+      "answer": {
+        "dr": [{ "acc": "shohin_hosho_hikiatekin_kurire", "amt": 60000 }],
+        "cr": [{ "acc": "shohin_hosho_hikiatekin", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "当期に販売した商品にかかる将来の保証費用を見積もり、商品保証引当金繰入（費用）と商品保証引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-020",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、販売した商品について保証にもとづく修理費用50,000円が発生し、現金で支払った。商品保証引当金の残高は80,000円である。",
+      "answer": {
+        "dr": [{ "acc": "shohin_hosho_hikiatekin", "amt": 50000 }],
+        "cr": [{ "acc": "cash", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "実際の保証費用50,000円は商品保証引当金の残高80,000円の範囲内であるため、使った分だけを取り崩すだけで処理が完了します。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-021",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は、販売した商品について保証にもとづく修理費用90,000円が発生し、現金で支払った。商品保証引当金の残高は70,000円である。",
+      "answer": {
+        "dr": [
+          { "acc": "shohin_hosho_hikiatekin", "amt": 70000 },
+          { "acc": "shohin_hosho_hikiatekin_kurire", "amt": 20000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 90000 }],
+        "alt": []
+      },
+      "explanation": "実際費用90,000円が商品保証引当金残高70,000円を上回るため、まず引当金70,000円をすべて取り崩し、不足する差額90,000円－70,000円＝20,000円を商品保証引当金繰入として追加計上します。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-022",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、販売した商品について保証にもとづく修理費用40,000円が発生し、現金で支払った。商品保証引当金の残高は60,000円である。",
+      "answer": {
+        "dr": [{ "acc": "shohin_hosho_hikiatekin", "amt": 40000 }],
+        "cr": [{ "acc": "cash", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "商品保証引当金の残高60,000円のほうが実際費用40,000円より多いケースです。使った分40,000円だけを取り崩し、残る20,000円は追加処理をせずそのまま残しておきます。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-023",
+      "type": "fill_number",
+      "unitId": "s2-u07",
+      "topics": ["t-shohin-hosho"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "商品保証引当金の残高が120,000円のとき、実際の保証費用150,000円が発生し、全額を現金で支払った。このとき追加で計上すべき商品保証引当金繰入の金額はいくらですか。",
+      "answer": { "value": 30000, "unit": "円" },
+      "explanation": "実際費用150,000円が商品保証引当金残高120,000円を上回るため、その差額150,000円－120,000円＝30,000円を商品保証引当金繰入として追加計上します。",
+      "lessonRef": "s2-u07-sec4"
+    },
+    {
+      "id": "q-s2-u07-024",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shoyo-hikiatekin"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "決算日3月31日のハルカ商事は、翌期6月に支給予定の賞与のうち、当期1月から3月分に対応する360,000円を賞与引当金として見積もり計上した。",
+      "answer": {
+        "dr": [{ "acc": "shoyo_hikiatekin_kurire", "amt": 360000 }],
+        "cr": [{ "acc": "shoyo_hikiatekin", "amt": 360000 }],
+        "alt": []
+      },
+      "explanation": "支給対象期間のうち当期に含まれる月数分だけを、あらかじめ賞与引当金繰入（費用）と賞与引当金（負債）として見積り計上します。",
+      "lessonRef": "s2-u07-sec5"
+    },
+    {
+      "id": "q-s2-u07-025",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shoyo-hikiatekin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "決算日3月31日のミナト製作所は、翌期6月に支給予定の賞与のうち、当期分に対応する280,000円を賞与引当金として見積もり計上した。",
+      "answer": {
+        "dr": [{ "acc": "shoyo_hikiatekin_kurire", "amt": 280000 }],
+        "cr": [{ "acc": "shoyo_hikiatekin", "amt": 280000 }],
+        "alt": []
+      },
+      "explanation": "翌期支給予定の賞与のうち、当期の負担に属する部分をあらかじめ見積もり、賞与引当金繰入（費用）と賞与引当金（負債）に計上します。",
+      "lessonRef": "s2-u07-sec5"
+    },
+    {
+      "id": "q-s2-u07-026",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shoyo-hikiatekin"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、6月に賞与840,000円を現金で支給した。このうち前期末に賞与引当金として計上していた640,000円を取り崩し、残額は当期（4月〜6月）の新規発生分として賞与引当金繰入で処理した。",
+      "answer": {
+        "dr": [
+          { "acc": "shoyo_hikiatekin", "amt": 640000 },
+          { "acc": "shoyo_hikiatekin_kurire", "amt": 200000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 840000 }],
+        "alt": []
+      },
+      "explanation": "支給総額840,000円のうち、前期末計上分640,000円は賞与引当金の取り崩しで、残り840,000円－640,000円＝200,000円は当期新規発生分として賞与引当金繰入で処理します。",
+      "lessonRef": "s2-u07-sec5"
+    },
+    {
+      "id": "q-s2-u07-027",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shoyo-hikiatekin"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は、6月に賞与500,000円を現金で支給した。このうち前期末に賞与引当金として計上していた400,000円を取り崩し、残額は当期の新規発生分として賞与引当金繰入で処理した。",
+      "answer": {
+        "dr": [
+          { "acc": "shoyo_hikiatekin", "amt": 400000 },
+          { "acc": "shoyo_hikiatekin_kurire", "amt": 100000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "支給総額500,000円のうち、前期末計上分400,000円は賞与引当金の取り崩しで、残り500,000円－400,000円＝100,000円は当期新規発生分として賞与引当金繰入で処理します。",
+      "lessonRef": "s2-u07-sec5"
+    },
+    {
+      "id": "q-s2-u07-028",
+      "type": "journal",
+      "unitId": "s2-u07",
+      "topics": ["t-shoyo-hikiatekin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は、6月に賞与800,000円を現金で支給した。前期末に賞与引当金として計上していた金額はちょうど800,000円であったため、全額を賞与引当金の取り崩しで充当した。",
+      "answer": {
+        "dr": [{ "acc": "shoyo_hikiatekin", "amt": 800000 }],
+        "cr": [{ "acc": "cash", "amt": 800000 }],
+        "alt": []
+      },
+      "explanation": "支給総額800,000円と前期末計上分800,000円がちょうど一致するため、賞与引当金を全額取り崩すだけで処理が完了し、当期新規発生分は発生しません。",
+      "lessonRef": "s2-u07-sec5"
+    }
+  ]
+}

@@ -97,6 +97,12 @@
     { "id": "t-lease-operating", "name": "オペレーティング・リース取引", "unitId": "s2-u06" },
     { "id": "t-software", "name": "自社利用目的のソフトウェア", "unitId": "s2-u06" },
     { "id": "t-kenkyu-kaihatsu", "name": "研究開発費", "unitId": "s2-u06" },
-    { "id": "t-goodwill", "name": "のれんの計上・償却", "unitId": "s2-u06" }
+    { "id": "t-goodwill", "name": "のれんの計上・償却", "unitId": "s2-u06" },
+
+    { "id": "t-hikiatekin-gainen", "name": "引当金の計上要件と考え方", "unitId": "s2-u07" },
+    { "id": "t-shuzen-hikiatekin", "name": "修繕引当金", "unitId": "s2-u07" },
+    { "id": "t-taishoku-kyufu", "name": "退職給付引当金", "unitId": "s2-u07" },
+    { "id": "t-shohin-hosho", "name": "商品保証引当金", "unitId": "s2-u07" },
+    { "id": "t-shoyo-hikiatekin", "name": "賞与引当金", "unitId": "s2-u07" }
   ]
 }
