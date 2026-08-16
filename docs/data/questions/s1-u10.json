@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u10",
+  "questions": [
+    {
+      "id": "q-s1-u10-001",
+      "type": "mc",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-maeuke-shueki", "t-mishu-shueki", "t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち、経過勘定に関する記述として正しいものはどれですか。",
+      "choices": [
+        "前払費用は、代金を先に支払ったが、まだ役務（サービス）の提供を受けていない部分を資産として計上する",
+        "未払費用は、代金を先に受け取ったが、まだ役務の提供を行っていない部分を計上する勘定である",
+        "未収収益は、代金を先に受け取ったが、まだ収益として計上していない部分である",
+        "前受収益は、まだ代金を受け取っていないが、すでに提供したサービスにかかる収益である"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "前払費用は、代金の支払いが先で、サービスの提供が後になる部分を資産として計上します。未払費用はサービス提供が先で代金の支払いが後、未収収益はサービス提供が先で代金の受取りが後、前受収益は代金の受取りが先でサービス提供が後になる勘定です。",
+      "lessonRef": "s1-u10-sec1"
+    },
+    {
+      "id": "q-s1-u10-002",
+      "type": "mc",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-maeuke-shueki", "t-mishu-shueki", "t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次の勘定科目のうち、貸借対照表上「負債」に分類されるものはどれですか。",
+      "choices": ["前払費用", "未収収益", "未払費用", "受取利息"],
+      "answer": 2,
+      "shuffle": true,
+      "explanation": "前払費用・未収収益は資産の勘定、未払費用は負債の勘定です。受取利息は収益の勘定科目であり、資産・負債のどちらにも分類されません。",
+      "lessonRef": "s1-u10-sec1"
+    },
+    {
+      "id": "q-s1-u10-003",
+      "type": "tf",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-maeuke-shueki", "t-mishu-shueki", "t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "経過勘定を用いた決算整理は、収益・費用を現金の受け渡しの時点ではなく、その発生した期間に正しく対応させるために行う。",
+      "answer": true,
+      "explanation": "そのとおりです。発生主義にもとづき、当期に対応する収益・費用だけを損益計算書に計上するために、前払費用・前受収益・未収収益・未払費用を用いて期間を調整します。",
+      "lessonRef": "s1-u10-sec1"
+    },
+    {
+      "id": "q-s1-u10-004",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は8月1日、向こう1年分の保険料24,000円を現金で支払い、支払時に全額を保険料として計上した。決算日（3月31日）にあたり、次期4月から7月までの4か月分を前払費用に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maebarai_hiyo", "amt": 8000 }],
+        "cr": [{ "acc": "hokenryo", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "月額保険料は24,000円÷12か月＝2,000円です。次期にあたる4月～7月の4か月分2,000円×4＝8,000円が当期に対応しない前払分となるため、前払費用（資産）に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-005",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は11月1日、向こう1年分の保険料36,000円を現金で支払い、支払時に全額を保険料として計上した。決算日（3月31日）にあたり、次期分を前払費用に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maebarai_hiyo", "amt": 21000 }],
+        "cr": [{ "acc": "hokenryo", "amt": 21000 }],
+        "alt": []
+      },
+      "explanation": "月額保険料は36,000円÷12か月＝3,000円です。次期にあたる4月～10月の7か月分3,000円×7＝21,000円を前払費用に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-006",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ノゾミ商会は8月1日、向こう1年分の手数料18,000円を現金で受け取り、受取時に全額を受取手数料として計上した。決算日（3月31日）にあたり、次期4月から7月までの4か月分を前受収益に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uketori_tesuryo", "amt": 6000 }],
+        "cr": [{ "acc": "maeuke_shueki", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "月額の手数料は18,000円÷12か月＝1,500円です。次期にあたる4月～7月の4か月分1,500円×4＝6,000円が当期未提供分となるため、負債の勘定である前受収益に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-007",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は10月1日、向こう1年分の手数料30,000円を現金で受け取り、受取時に全額を受取手数料として計上した。決算日（3月31日）にあたり、次期分を前受収益に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uketori_tesuryo", "amt": 15000 }],
+        "cr": [{ "acc": "maeuke_shueki", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "月額の手数料は30,000円÷12か月＝2,500円です。次期にあたる4月～9月の6か月分2,500円×6＝15,000円を前受収益に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-008",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mishu-shueki"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は6月1日、取引先に240,000円を貸し付けた（年利率3%、利息は年1回5月末にまとめて受け取る契約）。決算日（3月31日）にあたり、当期対応分の利息を未収収益として計上する決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "mishu_shueki", "amt": 6000 }],
+        "cr": [{ "acc": "uketori_risoku", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "1年分の利息は240,000円×3%＝7,200円、月額は7,200円÷12か月＝600円です。貸付日6月1日から決算日3月31日までの10か月分600円×10＝6,000円が当期に対応する利息であるため、未収収益として計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-009",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mishu-shueki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は12月1日、取引先に600,000円を貸し付けた（年利率2%、利息は年1回11月末にまとめて受け取る契約）。決算日（3月31日）にあたり、当期対応分の利息を未収収益として計上する決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "mishu_shueki", "amt": 4000 }],
+        "cr": [{ "acc": "uketori_risoku", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "1年分の利息は600,000円×2%＝12,000円、月額は1,000円です。貸付日12月1日から決算日3月31日までの4か月分1,000円×4＝4,000円を未収収益として計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-010",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ノゾミ商会の家賃は月額30,000円で、支払いは翌月10日払いの契約となっている。決算日（3月31日）時点で、3月分の家賃がまだ支払われていない。必要な決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_yachin", "amt": 30000 }],
+        "cr": [{ "acc": "mibarai_hiyo", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "3月分の家賃30,000円は、サービス（建物の使用）をすでに受けているのに代金を支払っていない状態です。当期の費用として支払家賃を計上するとともに、未払費用（負債）を計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-011",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事の家賃は月額20,000円で、支払いは翌月10日払いの契約となっている。決算日（3月31日）時点で、2月分と3月分の家賃2か月分がまだ支払われていない。必要な決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_yachin", "amt": 40000 }],
+        "cr": [{ "acc": "mibarai_hiyo", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "2月分・3月分の家賃20,000円×2か月＝40,000円がまだ支払われていないため、当期の費用として支払家賃を計上するとともに、未払費用（負債）を計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-012",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は前期の決算（3月31日）において、保険料8,000円を前払費用として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "hokenryo", "amt": 8000 }],
+        "cr": [{ "acc": "maebarai_hiyo", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "再振替仕訳は決算整理仕訳の借方・貸方を入れ替えます。前払費用（資産）を減少させ、保険料（費用）を増加させます。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-013",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ノゾミ商会は前期の決算（3月31日）において、受取手数料6,000円を前受収益として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maeuke_shueki", "amt": 6000 }],
+        "cr": [{ "acc": "uketori_tesuryo", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "再振替仕訳は決算整理仕訳の借方・貸方を入れ替えます。前受収益（負債）を減少させ、受取手数料（収益）を増加させます。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-014",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mishu-shueki"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は前期の決算（3月31日）において、受取利息6,000円を未収収益として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uketori_risoku", "amt": 6000 }],
+        "cr": [{ "acc": "mishu_shueki", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "再振替仕訳は決算整理仕訳の借方・貸方を入れ替えます。未収収益（資産）を減少させ、受取利息（収益）を減少させる形で振り戻します。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-015",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ノゾミ商会は前期の決算（3月31日）において、支払家賃30,000円を未払費用として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "mibarai_hiyo", "amt": 30000 }],
+        "cr": [{ "acc": "shiharai_yachin", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "再振替仕訳は決算整理仕訳の借方・貸方を入れ替えます。未払費用（負債）を減少させ、支払家賃（費用）を増加させます。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-016",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-mibarai-hiyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ヒナタ商事は決算日（3月31日）にあたり、次の2つの決算整理を同時に行う。①保険料のうち次期分3,000円を前払費用に振り替える。②家賃の未払分5,000円を未払費用として計上する。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "maebarai_hiyo", "amt": 3000 },
+          { "acc": "shiharai_yachin", "amt": 5000 }
+        ],
+        "cr": [
+          { "acc": "hokenryo", "amt": 3000 },
+          { "acc": "mibarai_hiyo", "amt": 5000 }
+        ],
+        "alt": []
+      },
+      "explanation": "①保険料の次期分3,000円を前払費用に振り替え、②家賃の未払分5,000円を未払費用として計上します。2つの経過勘定を1つの仕訳にまとめても、それぞれの対応関係は変わりません。",
+      "lessonRef": "s1-u10-sec5"
+    },
+    {
+      "id": "q-s1-u10-017",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki", "t-mishu-shueki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ物産は決算整理として、①受取手数料のうち次期分2,000円を前受収益に振り替え、②貸付金にかかる未収利息1,500円を計上した。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "uketori_tesuryo", "amt": 2000 },
+          { "acc": "mishu_shueki", "amt": 1500 }
+        ],
+        "cr": [
+          { "acc": "maeuke_shueki", "amt": 2000 },
+          { "acc": "uketori_risoku", "amt": 1500 }
+        ],
+        "alt": []
+      },
+      "explanation": "①受取手数料の次期分2,000円を前受収益に振り替え、②未収の利息1,500円を未収収益として計上し、同額の受取利息を増加させます。",
+      "lessonRef": "s1-u10-sec5"
+    },
+    {
+      "id": "q-s1-u10-018",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo", "t-maeuke-shueki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "テトラ商事は決算日（3月31日）にあたり、①家賃の未払分4,000円を未払費用として計上し、②手数料のうち次期分2,500円を前受収益に振り替える決算整理仕訳をまとめて答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shiharai_yachin", "amt": 4000 },
+          { "acc": "uketori_tesuryo", "amt": 2500 }
+        ],
+        "cr": [
+          { "acc": "mibarai_hiyo", "amt": 4000 },
+          { "acc": "maeuke_shueki", "amt": 2500 }
+        ],
+        "alt": []
+      },
+      "explanation": "①家賃の未払分4,000円を未払費用として計上し、②手数料の次期分2,500円を前受収益に振り替えます。異なる種類の経過勘定でも、1論点ずつ整理すれば同時に処理できます。",
+      "lessonRef": "s1-u10-sec5"
+    },
+    {
+      "id": "q-s1-u10-019",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "オリオン商事は2月1日、向こう1年分の保険料6,000円を現金で支払い、支払時に全額を保険料として計上した。決算日（3月31日）にあたり、次期分を前払費用に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maebarai_hiyo", "amt": 5000 }],
+        "cr": [{ "acc": "hokenryo", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "月額保険料は6,000円÷12か月＝500円です。決算日時点で保険期間のうち、次期にあたる4月～翌1月までの10か月分500円×10＝5,000円が前払いとなるため、前払費用に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-020",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ツバサ商会は1月1日、向こう1年分の手数料12,000円を現金で受け取り、受取時に全額を受取手数料として計上した。決算日（3月31日）にあたり、次期分を前受収益に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uketori_tesuryo", "amt": 9000 }],
+        "cr": [{ "acc": "maeuke_shueki", "amt": 9000 }],
+        "alt": []
+      },
+      "explanation": "月額の手数料は12,000円÷12か月＝1,000円です。次期にあたる4月～12月までの9か月分1,000円×9＝9,000円を、負債の勘定である前受収益に振り替えます。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-021",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mishu-shueki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "フジ物産は2月1日、取引先に360,000円を貸し付けた（年利率5%、利息は年1回1月末にまとめて受け取る契約）。決算日（3月31日）にあたり、必要な決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "mishu_shueki", "amt": 3000 }],
+        "cr": [{ "acc": "uketori_risoku", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "1年分の利息は360,000円×5%＝18,000円、月額は1,500円です。貸付日2月1日から決算日3月31日までの2か月分1,500円×2＝3,000円が当期に対応する利息であるため、未収収益として計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-022",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "コスモ商事の家賃は月額25,000円で、支払いは翌月10日払いの契約となっている。決算日（3月31日）時点で、3月分の家賃がまだ支払われていない。必要な決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_yachin", "amt": 25000 }],
+        "cr": [{ "acc": "mibarai_hiyo", "amt": 25000 }],
+        "alt": []
+      },
+      "explanation": "3月分の家賃25,000円は、サービス（建物の使用）をすでに受けているのに代金を支払っていない状態です。当期の費用として支払家賃を計上するとともに、未払費用（負債）を計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-023",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は前期の決算（3月31日）において、保険料21,000円を前払費用として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "hokenryo", "amt": 21000 }],
+        "cr": [{ "acc": "maebarai_hiyo", "amt": 21000 }],
+        "alt": []
+      },
+      "explanation": "再振替仕訳は決算整理仕訳の借方・貸方を入れ替えます。前払費用を減少させ、保険料を増加させます。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-024",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-maeuke-shueki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は前期の決算（3月31日）において、受取手数料15,000円を前受収益として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maeuke_shueki", "amt": 15000 }],
+        "cr": [{ "acc": "uketori_tesuryo", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "前受収益を減少させ、受取手数料を増加させます。決算整理仕訳の借方・貸方を入れ替えるだけです。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-025",
+      "type": "journal",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は前期の決算（3月31日）において、支払家賃40,000円を未払費用として計上していた。翌期首（4月1日）における再振替仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "mibarai_hiyo", "amt": 40000 }],
+        "cr": [{ "acc": "shiharai_yachin", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "未払費用を減少させ、支払家賃を増加させます。決算整理仕訳の借方・貸方を入れ替えるだけです。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-026",
+      "type": "mc",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-maeuke-shueki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "前払費用と前受収益に共通する点として、正しいものはどれですか。",
+      "choices": [
+        "どちらも、代金の受け渡しはすでに完了しているが、それに対応するサービスの提供はまだ完了していない点で共通する",
+        "どちらも当期の損益計算書に含めるべき収益・費用である",
+        "どちらも貸借対照表の負債の部に計上される",
+        "どちらも再振替仕訳を行わない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "前払費用（資産）・前受収益（負債）は、いずれも代金の受け渡しがサービス提供より先に行われる点で共通します。次期分はいったん当期の損益から除き、翌期首に再振替仕訳で戻します。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-027",
+      "type": "mc",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo", "t-maeuke-shueki", "t-mishu-shueki", "t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "決算整理で計上した経過勘定を、翌期首に再振替仕訳で振り戻す目的として、最も適切なものはどれですか。",
+      "choices": [
+        "費用・収益の勘定を通常の記帳に戻し、翌期の取引を正しく処理できるようにするため",
+        "資産・負債の勘定残高を二重に計上するため",
+        "決算整理仕訳そのものを取り消して、なかったことにするため",
+        "消費税の仮払い・仮受けを相殺するため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "再振替仕訳は、決算整理で一時的に資産・負債として計上した経過勘定を、翌期首に元の費用・収益の勘定へ振り戻す処理です。これにより翌期の取引を通常どおり記帳できます。",
+      "lessonRef": "s1-u10-sec4"
+    },
+    {
+      "id": "q-s1-u10-028",
+      "type": "tf",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "未払費用は、サービスの提供をすでに受けているが、まだ代金を支払っていない場合に計上する負債の勘定である。",
+      "answer": true,
+      "explanation": "そのとおりです。未払費用は負債の勘定であり、当期に発生した費用のうち未払いの部分を計上します。",
+      "lessonRef": "s1-u10-sec3"
+    },
+    {
+      "id": "q-s1-u10-029",
+      "type": "fill_number",
+      "unitId": "s1-u10",
+      "topics": ["t-maebarai-hiyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は9月1日、向こう1年分の保険料48,000円を現金で支払い、支払時に全額を保険料として計上した。決算日（3月31日）における前払費用の金額はいくらですか。",
+      "answer": { "value": 20000, "unit": "円" },
+      "explanation": "月額保険料は48,000円÷12か月＝4,000円です。決算日から保険期間終了（8月31日）までの5か月分（4月～8月）4,000円×5＝20,000円が前払費用となります。",
+      "lessonRef": "s1-u10-sec2"
+    },
+    {
+      "id": "q-s1-u10-030",
+      "type": "fill_number",
+      "unitId": "s1-u10",
+      "topics": ["t-mibarai-hiyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ物産は12月1日に500,000円を借り入れた（年利率6%、利息は元本返済時にまとめて支払う契約）。決算日（3月31日）における未払利息の金額はいくらですか。",
+      "answer": { "value": 10000, "unit": "円" },
+      "explanation": "1年分の利息は500,000円×6%＝30,000円、月額は2,500円です。借入日12月1日から決算日3月31日までの4か月分2,500円×4＝10,000円が当期に対応する未払利息となります。",
+      "lessonRef": "s1-u10-sec3"
+    }
+  ]
+}

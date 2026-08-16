@@ -47,6 +47,11 @@
 
     { "id": "t-sozei-koka", "name": "租税公課", "unitId": "s1-u09" },
     { "id": "t-hojinzei", "name": "法人税、住民税及び事業税", "unitId": "s1-u09" },
-    { "id": "t-shohizei", "name": "消費税（税抜方式）", "unitId": "s1-u09" }
+    { "id": "t-shohizei", "name": "消費税（税抜方式）", "unitId": "s1-u09" },
+
+    { "id": "t-maebarai-hiyo", "name": "前払費用の計上・再振替", "unitId": "s1-u10" },
+    { "id": "t-maeuke-shueki", "name": "前受収益の計上・再振替", "unitId": "s1-u10" },
+    { "id": "t-mishu-shueki", "name": "未収収益の計上・再振替", "unitId": "s1-u10" },
+    { "id": "t-mibarai-hiyo", "name": "未払費用の計上・再振替", "unitId": "s1-u10" }
   ]
 }

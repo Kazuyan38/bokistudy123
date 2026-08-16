@@ -14,7 +14,7 @@
         { "id": "s1-u07", "title": "貸倒れと貸倒引当金", "prereq": ["s1-u06"], "estMinutes": 50, "status": "available" },
         { "id": "s1-u08", "title": "株式会社の資本", "prereq": ["s1-u07"], "estMinutes": 50, "status": "available" },
         { "id": "s1-u09", "title": "税金", "prereq": ["s1-u08"], "estMinutes": 60, "status": "available" },
-        { "id": "s1-u10", "title": "経過勘定", "prereq": ["s1-u09"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u10", "title": "経過勘定", "prereq": ["s1-u09"], "estMinutes": 60, "status": "available" },
         { "id": "s1-u11", "title": "決算手続", "prereq": ["s1-u10"], "estMinutes": 90, "status": "planned" },
         { "id": "s1-u12", "title": "帳簿と伝票", "prereq": ["s1-u11"], "estMinutes": 60, "status": "planned" },
         { "id": "s1-u13", "title": "3級総合演習・卒業判定", "prereq": ["s1-u12"], "estMinutes": 120, "status": "planned" }
