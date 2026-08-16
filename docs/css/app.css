@@ -340,6 +340,22 @@ input, select { font-family: inherit; font-size: 1rem; }
 }
 .wrong-list .q-row { border-top: 1px solid var(--c-line); padding: 11px 2px; font-size: .85rem; }
 
+/* ---------- 模試 ---------- */
+.mock-head { position: sticky; top: 0; z-index: 30; background: var(--c-bg); padding-top: 4px; margin: -20px -18px 14px; padding: 12px 18px 8px; box-shadow: 0 2px 8px rgba(27,42,74,.05); }
+.mock-timer-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.mock-timer { font-size: 1.3rem; font-weight: 700; color: var(--c-primary); letter-spacing: .02em; }
+.mock-timer.ng { color: var(--c-ng); animation: pulse-ng 1s infinite; }
+@keyframes pulse-ng { 50% { opacity: .5; } }
+.mock-sec-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; }
+.mock-sec-tab { flex-shrink: 0; font-size: .76rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: #EDEAE2; color: var(--c-sub); }
+.mock-sec-tab.active { background: var(--c-primary); color: #fff; }
+.mock-q-nav { display: flex; gap: 5px; overflow-x: auto; padding-bottom: 2px; }
+.mock-q-dot { flex-shrink: 0; width: 30px; height: 30px; border-radius: 8px; font-size: .78rem; font-weight: 700; background: #F1EEE7; color: var(--c-sub); border: 1.5px solid transparent; position: relative; }
+.mock-q-dot.cur { border-color: var(--c-primary); }
+.mock-q-dot.done { background: var(--c-ok-soft); color: var(--c-ok); }
+.mock-q-dot.flag::after { content: ""; position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%; background: var(--c-accent); }
+.mock-nav-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+
 /* ---------- 分析 ---------- */
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
 .stat-tile { background: var(--c-card); border-radius: var(--r-card); box-shadow: var(--shadow-1); padding: 15px; border: 1px solid rgba(231,226,216,.6); }

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "mocks": [
+    { "id": "mock-201", "title": "2級模試 第1回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-202", "title": "2級模試 第2回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-203", "title": "2級模試 第3回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-204", "title": "2級模試 第4回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-205", "title": "2級模試 第5回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-206", "title": "2級模試 第6回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-207", "title": "2級模試 第7回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-208", "title": "2級模試 第8回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-209", "title": "2級模試 第9回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-210", "title": "2級模試 第10回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" }
+  ]
+}

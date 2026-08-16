@@ -11,7 +11,7 @@ const numpadEl = () => document.getElementById("numpad");
 let numpadTarget = null;
 let numpadOnDone = null;
 
-function openNumpad(input, { allowNegative = false, onDone = null } = {}) {
+export function openNumpad(input, { allowNegative = false, onDone = null } = {}) {
   numpadTarget = input;
   numpadOnDone = onDone;
   const el = numpadEl();
@@ -53,7 +53,7 @@ export function closeNumpad() {
 
 const CAT_LABELS = { asset: "資産", liability: "負債", equity: "純資産", revenue: "収益", expense: "費用", other: "その他" };
 
-function openAccountSheet(accounts, onPick) {
+export function openAccountSheet(accounts, onPick) {
   const cats = [...new Set(accounts.map((a) => a.cat))];
   let activeCat = cats[0];
   const backdrop = document.createElement("div");
@@ -82,7 +82,7 @@ function openAccountSheet(accounts, onPick) {
 
 /* ============================== 採点 ============================== */
 
-function parseAmount(input) {
+export function parseAmount(input) {
   const raw = (input.dataset.raw ?? input.value ?? "").replace(/[,，円\s]/g, "").replace(/△/g, "-");
   if (raw === "" || raw === "-") return null;
   const n = Number(raw);

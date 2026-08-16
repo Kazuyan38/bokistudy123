@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s4-u03",
+  "questions": [
+    {
+      "id": "q-s4-u03-001", "type": "mc", "unitId": "s4-u03",
+      "topics": ["t-cbt-gaiyo"], "difficulty": 1, "srs": false,
+      "stem": "2級模試の配点で、第4問・第5問（工業簿記）の合計は何点ですか。",
+      "choices": ["28点", "32点", "40点", "48点"], "answer": 2, "shuffle": true,
+      "explanation": "第4問28点＋第5問12点＝40点です。工業簿記は配点が高く得点源になりやすい分野です。",
+      "lessonRef": "s4-u03-sec1"
+    },
+    {
+      "id": "q-s4-u03-002", "type": "tf", "unitId": "s4-u03",
+      "topics": ["t-cbt-gaiyo"], "difficulty": 1, "srs": false,
+      "stem": "模試モードでは、解答するたびに正誤がその場で表示される。",
+      "answer": false,
+      "explanation": "模試モードは本番のCBTに近い形式のため、解答中は正誤を表示せず、すべて解答し終えて提出した後にまとめて採点されます。",
+      "lessonRef": "s4-u03-sec1"
+    }
+  ]
+}

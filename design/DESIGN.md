@@ -263,7 +263,9 @@ ID規則: 問題 `q-{unitId}-{連番3桁}`／模試 `mock-{級}{連番2桁}`／�
 - `fill_number`: カンマ入力許容、負数は△入力対応、`tolerance` 省略時0
 - v0.2以降: `table_fill`（表内複数ブランク・部分点）、v0.4: `multi_fill`（複合小問）を追加定義する
 
-### 4.7 mocks/{mockId}.json（模試）
+### 4.7 mocks/{mockId}.json（模試）／mocks/index.json（模試一覧）
+
+模試は他の単元と異なり、レッスンではなく**タイマー付き・非線形ナビゲーション・提出後まとめて採点**の専用モード（`docs/js/mock.js`、v0.1後期で実装）。各問題オブジェクトは通常の questions/*.json と同じ型（journal/mc/tf/fill_number）に `pts`（配点）を加えたものを、大問ごとに**ファイル内へ直接埋め込む**（別ファイルへの qid 参照は行わない。生成・検証のしやすさを優先）。
 
 ```json
 {
@@ -271,13 +273,20 @@ ID規則: 問題 `q-{unitId}-{連番3桁}`／模試 `mock-{級}{連番2桁}`／�
   "timeLimitMin": 90, "passScore": 70,
   "sections": [
     { "no": 1, "label": "第1問 仕訳", "points": 20,
-      "questions": [{ "qid": "qm-201-1-1", "pts": 4 }] }
+      "questions": [
+        { "id": "qm-201-1-1", "type": "journal", "pts": 4, "unitId": "s1-u02",
+          "topics": ["t-sanbunpo"], "stem": "…", "answer": { "dr": [...], "cr": [...] },
+          "explanation": "…" }
+      ] }
   ]
 }
 ```
 
-2級: 90分・大問5（20/20/20/28/12点）。3級形式（卒業判定用 mock-301〜）: 60分・第1問仕訳45点/第2問20点/第3問35点。
-模試UI: タイマー常時表示、大問タブ、「後で見直す」フラグ、終了時に大問別スコア・弱点論点を保存。
+- `docs/data/mocks/index.json`: `{ "mocks": [{ "id", "title", "grade", "timeLimitMin", "passScore", "status": "available"|"planned" }] }`。curriculum.jsonのunitと同様、コンテンツ未作成の回は `planned` としてマップ的に一覧表示する
+- 2級: 90分・大問5（20/20/20/28/12点）。第1問は仕訳5問×4点が基本形。3級形式（卒業判定用 mock-301〜、v0.3で追加予定）: 60分・第1問仕訳45点/第2問20点/第3問35点
+- journal の `acc` は accounts.json の ID（grade制約なし、2級全範囲を使用可）。他の問題タイプと同じ採点ロジック（quiz.jsの gradeJournal/gradeFill を再利用）
+- 模試UI: タイマー常時表示（残り5分で警告色）、大問タブ＋設問ナビ（未回答/回答済み/見直しフラグを色分け）、時間切れで自動提出、終了時に大問別スコア・合格ライン判定をlocalStorageへ保存（`boki.v1.mocks`）
+- 単元 s4-u03 のレッスンページから「2級模試に挑戦する」ボタンで模試一覧（`#mocks`）へ遷移する導線
 
 ### 4.8 localStorage 設計
 

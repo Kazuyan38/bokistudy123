@@ -5,6 +5,7 @@ import { Store, todayStr } from "./store.js";
 import { dueQueue, dueCount } from "./srs.js";
 import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
+import { renderMockList, renderMockIntro } from "./mock.js";
 import { renderStats } from "./stats.js";
 import { initCalc, renderCalcPage, closeCalc } from "./calc.js";
 import { esc } from "./render/figures.js";
@@ -174,6 +175,8 @@ function route() {
   else if (path === "drill") startDrill(s, args[0]);
   else if (path === "review") startReview(s);
   else if (path === "test") startTest(s, args[0]);
+  else if (path === "mocks") renderMockList(app, s);
+  else if (path === "mock-intro") renderMockIntro(app, s, args[0]);
   else if (path === "stats") renderStats(app, s);
   else if (path === "calc") { renderCalcPage(s); }
   else if (path === "settings") renderSettings(s);
@@ -321,7 +324,8 @@ function renderUnit(container, unitId) {
       <button class="btn btn-accent" id="u-test" ${lessonComplete ? "" : "disabled"}>単元テスト</button>
     </div>
     ${!lessonComplete ? `<p class="muted center mt-8">レッスンを全て終えるとドリルとテストが開きます</p>` : ""}
-    ${passed ? "" : `<p class="muted center mt-8">単元テストで80%以上とると次の単元が開きます</p>`}`;
+    ${passed ? "" : `<p class="muted center mt-8">単元テストで80%以上とると次の単元が開きます</p>`}
+    ${unitId === "s4-u03" && lessonComplete ? `<button class="btn btn-accent btn-block mt-16" onclick="location.hash='#mocks'">2級模試に挑戦する</button>` : ""}`;
 
   container.querySelector("#u-drill").onclick = () => (location.hash = `#drill/unit-${unitId}`);
   container.querySelector("#u-test").onclick = () => (location.hash = `#test/${unitId}`);
