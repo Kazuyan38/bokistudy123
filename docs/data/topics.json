@@ -129,6 +129,10 @@
     { "id": "t-renketsu-gainen", "name": "連結財務諸表の目的・親会社と子会社の考え方", "unitId": "s2-u13" },
     { "id": "t-shihon-renketsu", "name": "資本連結（投資と資本の相殺消去）", "unitId": "s2-u13" },
     { "id": "t-goodwill-renketsu", "name": "のれんの計上と償却", "unitId": "s2-u13" },
-    { "id": "t-hishihai-kabunushi", "name": "非支配株主持分の計上", "unitId": "s2-u13" }
+    { "id": "t-hishihai-kabunushi", "name": "非支配株主持分の計上", "unitId": "s2-u13" },
+
+    { "id": "t-naibu-torihiki-shokyo", "name": "内部取引高の相殺消去（売上・仕入、債権・債務）", "unitId": "s2-u14" },
+    { "id": "t-mijitsugen-rieki", "name": "未実現利益の消去", "unitId": "s2-u14" },
+    { "id": "t-renketsu-seisanhyo", "name": "連結精算表の基礎", "unitId": "s2-u14" }
   ]
 }

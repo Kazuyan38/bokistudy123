@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u14",
+  "questions": [
+    {
+      "id": "q-s2-u14-001",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "当期、P社はS社に商品500,000円を掛けで販売した（S社側では仕入として計上している）。連結修正仕訳（内部取引高の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uriage", "amt": 500000 }],
+        "cr": [{ "acc": "shiire", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "P社の売上高とS社の仕入高は、企業集団内部だけのやり取りにすぎません。連結財務諸表を作成する際には、この内部取引高を同額だけ相殺消去します。売上高（貸方科目）を借方に、仕入高（借方科目）を貸方に記入します。",
+      "lessonRef": "s2-u14-sec1"
+    },
+    {
+      "id": "q-s2-u14-002",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "当期のP社からS社への商品販売高（S社側の仕入高）は800,000円であった。連結修正仕訳（内部取引高の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "uriage", "amt": 800000 }],
+        "cr": [{ "acc": "shiire", "amt": 800000 }],
+        "alt": []
+      },
+      "explanation": "内部取引による売上高・仕入高は、合算後に同額だけ相殺消去します。売上高を借方に、仕入高を貸方に記入し、双方をゼロにします。",
+      "lessonRef": "s2-u14-sec1"
+    },
+    {
+      "id": "q-s2-u14-003",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "親会社と子会社の間で行われた商品売買（内部取引）を、連結財務諸表の作成にあたって相殺消去する理由として、最も適切なものはどれですか。",
+      "choices": [
+        "企業集団内部でのやり取りにすぎず、外部との取引ではないため",
+        "税負担を軽減するため",
+        "子会社の売上を過大に見せるため",
+        "個別財務諸表の作成を省略するため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "連結財務諸表は企業集団を1つの会社とみなして作成します。P社・S社間の売買は集団の内部だけのやり取りであり、外部との取引ではないため相殺消去します。",
+      "lessonRef": "s2-u14-sec1"
+    },
+    {
+      "id": "q-s2-u14-004",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "内部取引高（P社の売上高とS社の仕入高）を相殺消去する連結修正仕訳が、連結損益計算書の当期純利益に与える影響として正しいものはどれですか。",
+      "choices": [
+        "売上高・仕入高が同額減少するため、当期純利益への影響はない",
+        "売上高のみが減少するため当期純利益が減少する",
+        "仕入高のみが減少するため当期純利益が増加する",
+        "のれんが追加で計上される"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "内部取引高の相殺消去は、売上高（収益）と仕入高（費用）を同額だけ減少させる仕訳です。両者の減少額が一致するため、当期純利益には影響しません。",
+      "lessonRef": "s2-u14-sec1"
+    },
+    {
+      "id": "q-s2-u14-005",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "P社の売掛金のうちS社に対するもの300,000円、S社の買掛金のうちP社に対するもの300,000円がある。連結修正仕訳（債権・債務の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 300000 }],
+        "cr": [{ "acc": "urikake", "amt": 300000 }],
+        "alt": []
+      },
+      "explanation": "企業集団内部の売掛金・買掛金は、外部に対する債権・債務ではないため相殺消去します。S社側の買掛金を借方に、P社側の売掛金を貸方に記入します。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-006",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "受取手形のうちS社振出しのもの250,000円、支払手形のうちP社宛のもの250,000円がある。連結修正仕訳（債権・債務の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_tegata", "amt": 250000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 250000 }],
+        "alt": []
+      },
+      "explanation": "受取手形・支払手形も内部取引によって生じたものであれば、企業集団内部の関係にすぎないため相殺消去します。支払手形を借方に、受取手形を貸方に記入します。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-007",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "上記の売掛金300,000円（S社に対するもの）に対して、P社は差額補充法により2%の貸倒引当金を設定していた。連結上、この売掛金を相殺消去したことに伴い、貸倒引当金を修正する連結修正仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 6000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "相殺消去した売掛金300,000円に対する貸倒引当金300,000円×2％＝6,000円は、企業集団内部の売掛金に対するものであり不要になります。貸倒引当金を借方に計上して減少させ、対応する貸倒引当金繰入を貸方に計上して減少させます。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-008",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の受取手形250,000円（S社振出しのもの）に対して、P社は3%の貸倒引当金を設定していた。連結修正仕訳（貸倒引当金の修正）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 7500 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 7500 }],
+        "alt": []
+      },
+      "explanation": "相殺消去した受取手形250,000円に対する貸倒引当金250,000円×3％＝7,500円は不要になるため、貸倒引当金を借方に、貸倒引当金繰入を貸方に計上して取り崩します。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-009",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "企業集団内部の売掛金と買掛金を相殺消去した場合、あわせて連結修正が必要になる可能性がある項目はどれですか。",
+      "choices": [
+        "その売掛金に設定されていた貸倒引当金",
+        "子会社株式",
+        "のれん",
+        "非支配株主持分"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "相殺消去した売掛金はグループ内には存在しないことになるため、その売掛金に対して個別財務諸表で設定していた貸倒引当金も取り崩す修正が必要です。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-010",
+      "type": "tf",
+      "unitId": "s2-u14",
+      "topics": ["t-naibu-torihiki-shokyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "相殺消去した内部の売掛金に対して貸倒引当金を設定していた場合、連結上は個別財務諸表の貸倒引当金をそのまま合算した金額を用いればよく、修正の必要はない。",
+      "answer": false,
+      "explanation": "誤りです。相殺消去した売掛金はグループ内には存在しないことになるため、対応する貸倒引当金も取り崩す連結修正仕訳が必要です。",
+      "lessonRef": "s2-u14-sec2"
+    },
+    {
+      "id": "q-s2-u14-011",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社に対し、売価に対する利益の割合（売上総利益率）20%で商品を継続的に販売している。S社の期末商品棚卸高300,000円は、すべてP社から仕入れた商品である。連結修正仕訳（未実現利益の消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire_genka", "amt": 60000 }],
+        "cr": [{ "acc": "urijyoukyaku_riekiyoku", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "期末棚卸資産のうちP社から仕入れた部分300,000円に売上総利益率20%を掛けると、まだ実現していない利益300,000円×20％＝60,000円が求められます。この分だけ売上原価を増加させ、未実現利益として棚卸資産の価値を減らします。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-012",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社に対し売上総利益率25%で商品を販売している。S社の期末商品棚卸高のうちP社から仕入れた商品は200,000円である。連結修正仕訳（未実現利益の消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire_genka", "amt": 50000 }],
+        "cr": [{ "acc": "urijyoukyaku_riekiyoku", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "200,000円×25％＝50,000円が期末棚卸資産に含まれる未実現利益です。売上原価を借方に、未実現利益を貸方に計上して消去します。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-013",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "P社はS社に対し、原価に25%の利益を加算した価格で商品を販売している。S社の期末商品棚卸高のうちP社から仕入れた商品（売価ベース）は150,000円である。連結修正仕訳（未実現利益の消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire_genka", "amt": 30000 }],
+        "cr": [{ "acc": "urijyoukyaku_riekiyoku", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "原価に25%の利益を加算しているので、売価を100とすると原価は100÷1.25＝80、利益は売価の20％にあたります。期末棚卸高150,000円×20％＝30,000円が未実現利益です。「原価に対する加算率」と「売価に対する利益率」を混同しないよう注意しましょう。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-014",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "未実現利益の消去について、本単元で基本形として扱う内容の説明として正しいものはどれですか。",
+      "choices": [
+        "親会社から子会社への販売（ダウンストリーム）に伴い、期末棚卸資産に残る利益を消去の対象とする",
+        "子会社から親会社への販売（アップストリーム）のみを対象とする",
+        "グループ外部への売却分も消去の対象に含める",
+        "商品がすべて外部に販売済みであっても利益を消去する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "本単元では、親会社が子会社に利益を付加して販売するケース（ダウンストリーム）を基本形として扱います。対象となるのは、期末時点でまだ相手先の棚卸資産として残っている部分です。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-015",
+      "type": "tf",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "親会社が子会社に利益を付加して販売した商品が、期末時点で子会社の棚卸資産として残っている場合、その利益は連結上まだ実現していないとみなし消去する。",
+      "answer": true,
+      "explanation": "そのとおりです。企業集団全体としてはまだ外部に販売されていないため、その利益は実現しておらず、連結修正仕訳で消去します。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-016",
+      "type": "journal",
+      "unitId": "s2-u14",
+      "topics": ["t-mijitsugen-rieki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社に対し売上総利益率10%で商品を販売している。S社の期末商品棚卸高のうちP社から仕入れた商品は400,000円である。連結修正仕訳（未実現利益の消去）を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire_genka", "amt": 40000 }],
+        "cr": [{ "acc": "urijyoukyaku_riekiyoku", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "400,000円×10％＝40,000円が期末棚卸資産に含まれる未実現利益です。売上原価を借方に、未実現利益を貸方に計上して消去します。",
+      "lessonRef": "s2-u14-sec3"
+    },
+    {
+      "id": "q-s2-u14-017",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-renketsu-seisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結精算表の基本構造として正しいものはどれですか。",
+      "choices": [
+        "P社・S社の個別財務諸表を合算し、連結修正欄で加減算して連結財務諸表欄を作成する",
+        "P社の個別財務諸表をそのまま連結財務諸表欄に写す",
+        "S社の個別財務諸表のみを用いて作成する",
+        "連結修正欄には資産の金額だけを記入する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "連結精算表は、P社とS社の個別財務諸表を合算した金額に、連結修正欄で連結修正仕訳の借方・貸方を加減算し、連結財務諸表欄を完成させる構造になっています。",
+      "lessonRef": "s2-u14-sec4"
+    },
+    {
+      "id": "q-s2-u14-018",
+      "type": "mc",
+      "unitId": "s2-u14",
+      "topics": ["t-renketsu-seisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結精算表で、内部取引高の相殺消去や未実現利益の消去といった連結修正仕訳を記入する欄はどこですか。",
+      "choices": [
+        "個別財務諸表の合算額と連結財務諸表欄の間にある連結修正欄",
+        "個別財務諸表欄そのもの",
+        "連結財務諸表欄の外側の余白",
+        "連結精算表には記入欄を設けない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "連結修正仕訳は、個別財務諸表の合算額と連結財務諸表欄との間にある連結修正欄に、借方・貸方に分けて記入します。",
+      "lessonRef": "s2-u14-sec4"
+    },
+    {
+      "id": "q-s2-u14-019",
+      "type": "tf",
+      "unitId": "s2-u14",
+      "topics": ["t-renketsu-seisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結精算表は、個別財務諸表を単純に合算した金額をそのまま連結財務諸表として用いるものであり、連結修正欄への記入は不要である。",
+      "answer": false,
+      "explanation": "誤りです。連結精算表は合算額に連結修正欄の加減算を行ってはじめて連結財務諸表欄が完成します。単純合算だけでは連結財務諸表にはなりません。",
+      "lessonRef": "s2-u14-sec4"
+    },
+    {
+      "id": "q-s2-u14-020",
+      "type": "fill_number",
+      "unitId": "s2-u14",
+      "topics": ["t-renketsu-seisanhyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社の個別損益計算書の売上高は3,000,000円、S社の個別損益計算書の売上高は1,200,000円である。このうち、P社からS社への内部売上高が500,000円含まれている。連結精算表上の連結売上高はいくらですか。",
+      "answer": { "value": 3700000, "unit": "円" },
+      "explanation": "P社とS社の売上高を合算すると3,000,000円＋1,200,000円＝4,200,000円です。ここから内部売上高500,000円を連結修正欄で相殺消去すると、連結売上高は4,200,000円－500,000円＝3,700,000円になります。",
+      "lessonRef": "s2-u14-sec4"
+    }
+  ]
+}
