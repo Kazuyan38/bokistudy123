@@ -85,6 +85,12 @@
     { "id": "t-yukashoken-baibai", "name": "売買目的有価証券の取得・売却・期末評価", "unitId": "s2-u04" },
     { "id": "t-yukashoken-manki", "name": "満期保有目的債券の取得・償却原価法", "unitId": "s2-u04" },
     { "id": "t-yukashoken-kogaisha-sonota", "name": "子会社株式・その他有価証券の期末評価", "unitId": "s2-u04" },
-    { "id": "t-hasuriso", "name": "端数利息の処理", "unitId": "s2-u04" }
+    { "id": "t-hasuriso", "name": "端数利息の処理", "unitId": "s2-u04" },
+
+    { "id": "t-kappu-kounyu", "name": "割賦購入（利息相当額の区別）", "unitId": "s2-u05" },
+    { "id": "t-kensetsu-kari", "name": "建設仮勘定", "unitId": "s2-u05" },
+    { "id": "t-jokyaku-baikae", "name": "固定資産の除却・廃棄・買換え", "unitId": "s2-u05" },
+    { "id": "t-teiritsuho-seisan", "name": "定率法・生産高比例法", "unitId": "s2-u05" },
+    { "id": "t-atsushuku-kicho", "name": "圧縮記帳（直接減額方式）", "unitId": "s2-u05" }
   ]
 }

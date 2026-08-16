@@ -118,6 +118,8 @@
     { "id": "kensetsu_kari_kanjo", "name": "建設仮勘定", "cat": "asset", "grade": 2, "introducedIn": "s2-u05" },
     { "id": "atsuhen_shisan_baikyakuson", "name": "圧縮損", "cat": "expense", "grade": 2, "introducedIn": "s2-u05" },
     { "id": "kokko_hojokin_shunyu", "name": "国庫補助金受贈益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u05" },
+    { "id": "maebarai_risoku", "name": "前払利息", "cat": "asset", "grade": 2, "introducedIn": "s2-u05" },
+    { "id": "kotei_shisan_jokyakuson", "name": "固定資産除却損", "cat": "expense", "grade": 2, "introducedIn": "s2-u05" },
 
     { "id": "lease_shisan", "name": "リース資産", "cat": "asset", "grade": 2, "introducedIn": "s2-u06" },
     { "id": "lease_saimu", "name": "リース債務", "cat": "liability", "grade": 2, "introducedIn": "s2-u06" },
