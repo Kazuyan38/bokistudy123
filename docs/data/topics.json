@@ -164,6 +164,10 @@
     { "id": "t-koteibetsu-sogo", "name": "工程別総合原価計算の基礎", "unitId": "s3-u07" },
     { "id": "t-kumibetsu-sogo", "name": "組別総合原価計算の基礎", "unitId": "s3-u07" },
     { "id": "t-toukyubetsu-sogo", "name": "等級別総合原価計算の基礎", "unitId": "s3-u07" },
-    { "id": "t-shison-genson", "name": "仕損・減損の処理（度外視法の基礎）", "unitId": "s3-u07" }
+    { "id": "t-shison-genson", "name": "仕損・減損の処理（度外視法の基礎）", "unitId": "s3-u07" },
+
+    { "id": "t-seizo-genka-hokokusho", "name": "製造原価報告書の作成", "unitId": "s3-u08" },
+    { "id": "t-kogyo-zaimu-shohyo", "name": "工業簿記の損益計算書・貸借対照表", "unitId": "s3-u08" },
+    { "id": "t-honsha-kojo-kaikei", "name": "本社工場会計（本社勘定・工場勘定による記帳）", "unitId": "s3-u08" }
   ]
 }
