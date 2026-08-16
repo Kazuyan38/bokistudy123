@@ -116,6 +116,10 @@
 
     { "id": "t-zeikoka-gainen", "name": "税効果会計の基本的な考え方", "unitId": "s2-u10" },
     { "id": "t-shonin-sagaku", "name": "将来減算一時差異と繰延税金資産", "unitId": "s2-u10" },
-    { "id": "t-sonota-yukashoken-zeikoka", "name": "その他有価証券評価差額金の税効果会計", "unitId": "s2-u10" }
+    { "id": "t-sonota-yukashoken-zeikoka", "name": "その他有価証券評価差額金の税効果会計", "unitId": "s2-u10" },
+
+    { "id": "t-2kyu-kessan-seiri", "name": "2級レベルの決算整理事項の総合", "unitId": "s2-u11" },
+    { "id": "t-kabunushi-shihon-tou", "name": "株主資本等変動計算書の作成", "unitId": "s2-u11" },
+    { "id": "t-2kyu-zaimu-shohyo", "name": "2級レベルの財務諸表（B/S・P/L）の様式", "unitId": "s2-u11" }
   ]
 }

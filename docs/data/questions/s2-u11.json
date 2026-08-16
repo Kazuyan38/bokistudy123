@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u11",
+  "questions": [
+    {
+      "id": "q-s2-u11-001",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち、3級ではなく2級で新たに学ぶ決算整理事項はどれですか。",
+      "choices": ["その他有価証券の評価替え", "貸倒引当金の差額補充法による設定", "減価償却費の計上（定額法）", "経過勘定（前払費用等）の計上"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "その他有価証券の評価替えは2級（s2-u04・s2-u10）で新たに学ぶ内容です。貸倒引当金・減価償却・経過勘定はいずれも3級（s1-u07・s1-u06・s1-u10）で学習済みです。",
+      "lessonRef": "s2-u11-sec1"
+    },
+    {
+      "id": "q-s2-u11-002",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "2級で新たに学ぶ引当金として当てはまらないものはどれですか。",
+      "choices": ["貸倒引当金", "修繕引当金", "退職給付引当金", "商品保証引当金"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "貸倒引当金は3級（s1-u07）で学習済みの引当金です。2級で新たに学ぶのは修繕引当金・退職給付引当金・商品保証引当金・賞与引当金の4つです。",
+      "lessonRef": "s2-u11-sec1"
+    },
+    {
+      "id": "q-s2-u11-003",
+      "type": "tf",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "税効果会計は3級の範囲ではなく、2級で新たに学ぶ内容である。",
+      "answer": true,
+      "explanation": "そのとおりです。税効果会計（s2-u10）は2級で新たに学ぶ決算整理事項で、3級の出題範囲には含まれません。",
+      "lessonRef": "s2-u11-sec1"
+    },
+    {
+      "id": "q-s2-u11-004",
+      "type": "fill_number",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は決算整理として、貸倒引当金繰入80,000円、有価証券評価損50,000円、修繕引当金繰入30,000円を計上した。このうち2級で新たに学んだ決算整理事項の金額の合計はいくらですか。",
+      "answer": { "value": 80000, "unit": "円" },
+      "explanation": "貸倒引当金繰入は3級で学習済みの決算整理です。2級で新たに学んだのは有価証券評価損50,000円と修繕引当金繰入30,000円で、合計は50,000円＋30,000円＝80,000円です。",
+      "lessonRef": "s2-u11-sec1"
+    },
+    {
+      "id": "q-s2-u11-005",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は決算にあたり、次の2つの決算整理を同時に行う。①売買目的有価証券（取得原価300,000円）を時価330,000円に評価替えする。②売掛金に対する貸倒引当金を差額補充法で設定し、不足額3,000円を追加繰入する。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "baibai_yukashoken", "amt": 30000 },
+          { "acc": "kashidaore_hikiatekin_kurire", "amt": 3000 }
+        ],
+        "cr": [
+          { "acc": "yukashoken_hyoka_eki", "amt": 30000 },
+          { "acc": "kashidaore_hikiatekin", "amt": 3000 }
+        ],
+        "alt": []
+      },
+      "explanation": "①評価差額330,000円－300,000円＝30,000円（評価益）を有価証券評価益として計上します。②不足額3,000円を貸倒引当金繰入として計上します。異なる論点を1つずつ整理し、まとめて1本の仕訳にします。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-006",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ミナト製作所は決算にあたり、次の2つの決算整理を同時に行う。①その他有価証券（取得原価400,000円）を時価460,000円に評価替えし、全部純資産直入法により実効税率30%を適用した税効果会計を行う。②備品（取得原価500,000円、残存価額ゼロ、耐用年数10年、定額法、間接法）の当期分の減価償却費を計上する。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "sonota_yukashoken", "amt": 60000 },
+          { "acc": "genka_shokyakuhi", "amt": 50000 }
+        ],
+        "cr": [
+          { "acc": "zeikoka_kaikei_fusai", "amt": 18000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 42000 },
+          { "acc": "genka_shokyaku_ruikeigaku", "amt": 50000 }
+        ],
+        "alt": []
+      },
+      "explanation": "①評価差額460,000円－400,000円＝60,000円（評価益）のうち60,000円×30%＝18,000円が繰延税金負債、残り42,000円がその他有価証券評価差額金です。②減価償却費は500,000円÷10年＝50,000円です。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-007",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "カエデ商事は決算にあたり、次の2つの引当金を設定する。①修繕引当金80,000円を見積計上する。②商品保証引当金50,000円を見積計上する。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shuzen_hikiatekin_kurire", "amt": 80000 },
+          { "acc": "shohin_hosho_hikiatekin_kurire", "amt": 50000 }
+        ],
+        "cr": [
+          { "acc": "shuzen_hikiatekin", "amt": 80000 },
+          { "acc": "shohin_hosho_hikiatekin", "amt": 50000 }
+        ],
+        "alt": []
+      },
+      "explanation": "それぞれの引当金繰入（費用）を借方に、引当金（負債）を貸方に計上します。異なる引当金でも、論点ごとに整理すれば同時に処理できます。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-008",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ノゾミ商会は決算にあたり、次の2つの引当金を設定する。①翌期支給予定の賞与のうち当期負担分60,000円を賞与引当金として見積計上する。②退職給付費用40,000円を見積計上し、退職給付引当金を増加させる。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shoyo_hikiatekin_kurire", "amt": 60000 },
+          { "acc": "taishoku_kyufu_hiyo", "amt": 40000 }
+        ],
+        "cr": [
+          { "acc": "shoyo_hikiatekin", "amt": 60000 },
+          { "acc": "taishoku_kyufu_hikiatekin", "amt": 40000 }
+        ],
+        "alt": []
+      },
+      "explanation": "賞与引当金繰入60,000円と退職給付費用40,000円をそれぞれ借方に、賞与引当金・退職給付引当金を貸方に計上します。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-009",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "テトラ商事は株式を発行して増資を行い、払込金額1,000,000円が当座預金に入金された。会社法が規定する最低額を資本金とし、残額は資本準備金とする仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 1000000 }],
+        "cr": [
+          { "acc": "shihonkin", "amt": 500000 },
+          { "acc": "shihon_junbikin", "amt": 500000 }
+        ],
+        "alt": []
+      },
+      "explanation": "会社法の規定により、最低でも払込金額の2分の1を資本金とすればよく、残額は資本準備金にできます。払込金額1,000,000円の2分の1である500,000円ずつを資本金・資本準備金とします。",
+      "lessonRef": "s2-u11-sec3"
+    },
+    {
+      "id": "q-s2-u11-010",
+      "type": "fill_number",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ物産の繰越利益剰余金の期首残高は300,000円である。当期中に配当120,000円を実施し、あわせて利益準備金12,000円を積み立てた（いずれも繰越利益剰余金の減少）。さらに当期純利益180,000円を計上した。繰越利益剰余金の期末残高はいくらですか。",
+      "answer": { "value": 348000, "unit": "円" },
+      "explanation": "配当120,000円と利益準備金積立12,000円はいずれも繰越利益剰余金を減少させ、当期純利益は増加させます。300,000円－120,000円－12,000円＋180,000円＝348,000円です。",
+      "lessonRef": "s2-u11-sec3"
+    },
+    {
+      "id": "q-s2-u11-011",
+      "type": "fill_number",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所の資本準備金の期首残高は200,000円である。当期中に増資を行い、払込金額600,000円のうち300,000円を資本準備金に計上した。資本準備金の期末残高はいくらですか。",
+      "answer": { "value": 500000, "unit": "円" },
+      "explanation": "資本準備金の期末残高は、期首残高に当期の増加額を加えて求めます。200,000円＋300,000円＝500,000円です。",
+      "lessonRef": "s2-u11-sec3"
+    },
+    {
+      "id": "q-s2-u11-012",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "売買目的有価証券は貸借対照表上、どの区分に表示されますか。",
+      "choices": ["流動資産", "固定資産（有形固定資産）", "固定負債", "純資産の部"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "売買目的有価証券は時価の変動を利用して短期的に売買を繰り返すことを目的として保有するため、流動資産に表示します。",
+      "lessonRef": "s2-u11-sec4"
+    },
+    {
+      "id": "q-s2-u11-013",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "退職給付引当金は貸借対照表上、どの区分に表示されますか。",
+      "choices": ["固定負債", "流動負債", "流動資産", "純資産の部"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "退職給付引当金は将来の退職金支払いに備える長期的な引当金であるため、固定負債に表示します。",
+      "lessonRef": "s2-u11-sec4"
+    },
+    {
+      "id": "q-s2-u11-014",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-zaimu-shohyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "繰延税金資産は貸借対照表上、どの区分に表示されますか。",
+      "choices": ["投資その他の資産（固定資産）", "流動負債", "無形固定資産", "純資産の部"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "繰延税金資産は、その他有価証券などと同様に投資その他の資産（固定資産の区分）に表示します。",
+      "lessonRef": "s2-u11-sec4"
+    },
+    {
+      "id": "q-s2-u11-015",
+      "type": "tf",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "その他有価証券評価差額金は、損益計算書を経由せず貸借対照表の純資産の部に直接表示される。",
+      "answer": true,
+      "explanation": "そのとおりです。全部純資産直入法では、その他有価証券の評価差額は損益計算書を経由せず、純資産の部にその他有価証券評価差額金として直接計上されます。",
+      "lessonRef": "s2-u11-sec4"
+    },
+    {
+      "id": "q-s2-u11-016",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "アオイ物産は決算にあたり、次の3つの決算整理を同時に行う。①売掛金に対する貸倒引当金を差額補充法で設定し、不足額5,000円を追加繰入する。②備品（取得原価400,000円、残存価額ゼロ、耐用年数8年、定額法、間接法）の当期分の減価償却費を計上する。③その他有価証券（取得原価250,000円）を時価280,000円に評価替えし、全部純資産直入法により実効税率30%を適用した税効果会計を行う。この3つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "kashidaore_hikiatekin_kurire", "amt": 5000 },
+          { "acc": "genka_shokyakuhi", "amt": 50000 },
+          { "acc": "sonota_yukashoken", "amt": 30000 }
+        ],
+        "cr": [
+          { "acc": "kashidaore_hikiatekin", "amt": 5000 },
+          { "acc": "genka_shokyaku_ruikeigaku", "amt": 50000 },
+          { "acc": "zeikoka_kaikei_fusai", "amt": 9000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 21000 }
+        ],
+        "alt": []
+      },
+      "explanation": "①貸倒引当金繰入5,000円。②減価償却費は400,000円÷8年＝50,000円。③評価差額280,000円－250,000円＝30,000円（評価益）のうち30,000円×30%＝9,000円が繰延税金負債、残り21,000円がその他有価証券評価差額金です。借方合計・貸方合計はともに85,000円で一致します。",
+      "lessonRef": "s2-u11-sec5"
+    },
+    {
+      "id": "q-s2-u11-017",
+      "type": "fill_number",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事の決算整理前の収益合計は800,000円、費用合計は650,000円であった。決算整理により、貸倒引当金繰入8,000円、減価償却費20,000円、修繕引当金繰入12,000円を追加費用計上した（他に収益の変動はない）。決算整理後の当期純利益はいくらですか。",
+      "answer": { "value": 110000, "unit": "円" },
+      "explanation": "決算整理で追加された費用の合計は8,000円＋20,000円＋12,000円＝40,000円です。決算整理後の費用合計は650,000円＋40,000円＝690,000円となり、当期純利益は800,000円－690,000円＝110,000円です。",
+      "lessonRef": "s2-u11-sec5"
+    },
+    {
+      "id": "q-s2-u11-018",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算整理を経て作成される財務諸表について、正しい説明はどれですか。",
+      "choices": [
+        "株主資本等変動計算書は、純資産の各項目について期首残高から期末残高までの変動を一覧にする",
+        "貸借対照表は当期純利益の増減理由を説明する書類である",
+        "損益計算書には純資産の変動のみが記載される",
+        "精算表は財務諸表そのものであり別途作成は不要である"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "株主資本等変動計算書は、資本金・資本準備金・利益準備金・繰越利益剰余金などの純資産の各項目について、期首残高に増加・減少を加減して期末残高を示す計算書です。",
+      "lessonRef": "s2-u11-sec5"
+    },
+    {
+      "id": "q-s2-u11-019",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は決算にあたり、売買目的有価証券（取得原価250,000円）を時価220,000円に評価替えする決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "yukashoken_hyoka_son", "amt": 30000 }],
+        "cr": [{ "acc": "baibai_yukashoken", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "時価が取得原価を下回る場合は評価損です。250,000円－220,000円＝30,000円を有価証券評価損として計上し、売買目的有価証券を減少させます。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-020",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は決算にあたり、その他有価証券（取得原価350,000円）を時価300,000円に評価替えし、全部純資産直入法により実効税率30%を適用した税効果会計の仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "zeikoka_kaikei_shisan", "amt": 15000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 35000 }
+        ],
+        "cr": [{ "acc": "sonota_yukashoken", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "評価差額は350,000円－300,000円＝50,000円（評価損）です。評価損の場合は繰延税金資産を計上します。50,000円×30%＝15,000円が繰延税金資産、残り35,000円がその他有価証券評価差額金（借方）です。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-021",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "テトラ商事は前期末に修繕引当金60,000円を計上していたが、当期に実際の修繕を行い、修繕費用75,000円を現金で支払った。引当金残高を取り崩し、不足額を修繕費として計上する仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shuzen_hikiatekin", "amt": 60000 },
+          { "acc": "shuzenhi", "amt": 15000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 75000 }],
+        "alt": []
+      },
+      "explanation": "修繕引当金の残高60,000円をすべて取り崩し、実際の費用75,000円との不足額15,000円は修繕費として計上します。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-022",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "サクラ物産は前期末に商品保証引当金40,000円を計上していたが、当期に実際の商品保証費用25,000円が発生し、現金で支払った。引当金を取り崩す仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shohin_hosho_hikiatekin", "amt": 25000 }],
+        "cr": [{ "acc": "cash", "amt": 25000 }],
+        "alt": []
+      },
+      "explanation": "実際の商品保証費用25,000円の分だけ商品保証引当金を取り崩します。引当金残高40,000円のうち残り15,000円は取り崩されずそのまま残ります。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-023",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "アオイ物産は前期末に賞与引当金50,000円を計上していた。当期に賞与90,000円（前期末計上分50,000円＋当期新規発生分40,000円）を現金で支給した。この支給に伴う仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shoyo_hikiatekin", "amt": 50000 },
+          { "acc": "shoyo_hikiatekin_kurire", "amt": 40000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 90000 }],
+        "alt": []
+      },
+      "explanation": "前期末計上分50,000円は賞与引当金を取り崩して充当し、当期新規発生分40,000円は当期の賞与引当金繰入として新たに費用計上します。両者を区別することがポイントです。",
+      "lessonRef": "s2-u11-sec2"
+    },
+    {
+      "id": "q-s2-u11-024",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ハルカ商事は株主総会において、繰越利益剰余金を財源として配当100,000円を行うことを決議した。あわせて会社法の規定により利益準備金10,000円を積み立てる。決議時の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 110000 }],
+        "cr": [
+          { "acc": "mibarai_haitokin", "amt": 100000 },
+          { "acc": "rieki_junbikin", "amt": 10000 }
+        ],
+        "alt": []
+      },
+      "explanation": "配当100,000円は未払配当金として、利益準備金の積立10,000円は利益準備金として貸方に計上し、あわせて繰越利益剰余金110,000円を減少させます。",
+      "lessonRef": "s2-u11-sec3"
+    },
+    {
+      "id": "q-s2-u11-025",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-kabunushi-shihon-tou"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は株主総会の決議により、資本金150,000円を減少させ、同額を資本準備金に振り替えた。この仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shihonkin", "amt": 150000 }],
+        "cr": [{ "acc": "shihon_junbikin", "amt": 150000 }],
+        "alt": []
+      },
+      "explanation": "株主資本の計数変動では、純資産の総額を変えずに項目間で振り替えます。資本金を150,000円減少させ、同額を資本準備金に振り替えます。",
+      "lessonRef": "s2-u11-sec3"
+    },
+    {
+      "id": "q-s2-u11-026",
+      "type": "journal",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事は決算にあたり、売掛金期末残高500,000円に対して2%の貸倒引当金を差額補充法で設定する。貸倒引当金の決算整理前残高は6,000円である。決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 4000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "設定すべき金額は500,000円×2%＝10,000円です。すでに6,000円あるため、差額補充法により不足分4,000円のみを貸倒引当金繰入として追加計上します。3級から続く基本的な処理です。",
+      "lessonRef": "s2-u11-sec1"
+    },
+    {
+      "id": "q-s2-u11-027",
+      "type": "mc",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "のれんは貸借対照表上、どの区分に表示されますか。",
+      "choices": ["無形固定資産", "流動資産", "投資その他の資産", "繰延資産"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "のれんはソフトウェアと同様に、形のない資産として無形固定資産に表示します。",
+      "lessonRef": "s2-u11-sec4"
+    },
+    {
+      "id": "q-s2-u11-028",
+      "type": "tf",
+      "unitId": "s2-u11",
+      "topics": ["t-2kyu-kessan-seiri"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "複数の決算整理事項が同一決算で発生する場合でも、1論点ずつ整理してから合算すれば、複合仕訳を組み立てることができる。",
+      "answer": true,
+      "explanation": "そのとおりです。論点ごとに金額を計算し、最後にまとめて1本の仕訳にすることで、複雑に見える複合問題も確実に解けます。",
+      "lessonRef": "s2-u11-sec2"
+    }
+  ]
+}
