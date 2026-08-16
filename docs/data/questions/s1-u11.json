@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u11",
+  "questions": [
+    {
+      "id": "q-s1-u11-001",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-shisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "各勘定の借方合計・貸方合計をそのまま集計して一覧にした試算表を何といいますか。",
+      "choices": ["合計試算表", "残高試算表", "合計残高試算表", "精算表"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "各勘定の借方・貸方の合計額をそのまま集計するのが合計試算表です。残高試算表は各勘定の残高だけを一覧にしたものです。",
+      "lessonRef": "s1-u11-sec1"
+    },
+    {
+      "id": "q-s1-u11-002",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-shisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "試算表を作成する一番の目的として、最も適切なものはどれですか。",
+      "choices": ["仕訳から総勘定元帳への転記が正しく行われたかを検証するため", "当期の税金の金額を計算するため", "翌期の予算を立てるため", "株主への配当額を決定するため"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "試算表は、複式簿記の貸借一致の性質を利用して、転記に誤りがないかを検証するために作成します。決算整理・精算表・財務諸表作成の土台にもなります。",
+      "lessonRef": "s1-u11-sec1"
+    },
+    {
+      "id": "q-s1-u11-003",
+      "type": "tf",
+      "unitId": "s1-u11",
+      "topics": ["t-shisanhyo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "転記に誤りがなければ、試算表全体の借方合計と貸方合計は必ず一致する。",
+      "answer": true,
+      "explanation": "複式簿記ではすべての取引で借方金額と貸方金額が一致するため、転記が正しく行われていれば試算表の借方合計と貸方合計も必ず一致します。一致しない場合は転記ミスが疑われます。",
+      "lessonRef": "s1-u11-sec1"
+    },
+    {
+      "id": "q-s1-u11-004",
+      "type": "fill_number",
+      "unitId": "s1-u11",
+      "topics": ["t-shisanhyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産の残高試算表の貸方合計は430,000円である。借方には現金150,000円、売掛金120,000円、繰越商品40,000円のほか、備品が計上されており、他に借方項目はない。備品の金額はいくらですか。",
+      "answer": { "value": 120000, "unit": "円" },
+      "explanation": "残高試算表は貸借が一致するため、借方合計も430,000円になります。既知の借方項目150,000円＋120,000円＋40,000円＝310,000円を差し引くと、備品は430,000円－310,000円＝120,000円です。",
+      "lessonRef": "s1-u11-sec1"
+    },
+    {
+      "id": "q-s1-u11-005",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事の期首商品棚卸高は30,000円、期末商品棚卸高は40,000円である。三分法における決算整理仕訳（しーくり・くりしー）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shiire", "amt": 30000 },
+          { "acc": "kurikoshi_shohin", "amt": 40000 }
+        ],
+        "cr": [
+          { "acc": "kurikoshi_shohin", "amt": 30000 },
+          { "acc": "shiire", "amt": 40000 }
+        ],
+        "alt": []
+      },
+      "explanation": "期首商品棚卸高30,000円を繰越商品から仕入へ振り替え（しーくり）、期末商品棚卸高40,000円を仕入から繰越商品へ振り替えます（くりしー）。この整理を経て、仕入勘定の残高が当期の売上原価を表します。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-006",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所の期首商品棚卸高は50,000円、期末商品棚卸高は35,000円である。三分法における決算整理仕訳（しーくり・くりしー）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shiire", "amt": 50000 },
+          { "acc": "kurikoshi_shohin", "amt": 35000 }
+        ],
+        "cr": [
+          { "acc": "kurikoshi_shohin", "amt": 50000 },
+          { "acc": "shiire", "amt": 35000 }
+        ],
+        "alt": []
+      },
+      "explanation": "期首商品棚卸高50,000円を繰越商品から仕入へ振り替え、期末商品棚卸高35,000円を仕入から繰越商品へ振り替えます。金額が変わっても振替の考え方は同じです。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-007",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産の期首商品棚卸高・期末商品棚卸高は、いずれも20,000円で同額であった。三分法における決算整理仕訳（しーくり・くりしー）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shiire", "amt": 20000 },
+          { "acc": "kurikoshi_shohin", "amt": 20000 }
+        ],
+        "cr": [
+          { "acc": "kurikoshi_shohin", "amt": 20000 },
+          { "acc": "shiire", "amt": 20000 }
+        ],
+        "alt": []
+      },
+      "explanation": "期首と期末の棚卸高が同額であっても、期首分を仕入へ、期末分を繰越商品へ振り替える2本の仕訳は省略できません。金額が同じだけで、処理そのものは通常どおり必要です。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-008",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "カエデ商事の期首商品棚卸高は60,000円である。期首商品棚卸高を繰越商品から仕入勘定へ振り替える仕訳（しーくり）のみを答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 60000 }],
+        "cr": [{ "acc": "kurikoshi_shohin", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "期首商品棚卸高は前期末の繰越商品です。これを当期の仕入勘定へ振り替えることで、当期の売上原価計算に組み込みます。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-009",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ノゾミ商会の期末商品棚卸高は45,000円である。期末商品棚卸高を仕入勘定から繰越商品勘定へ振り替える仕訳（くりしー）のみを答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kurikoshi_shohin", "amt": 45000 }],
+        "cr": [{ "acc": "shiire", "amt": 45000 }],
+        "alt": []
+      },
+      "explanation": "期末商品棚卸高は当期末にまだ売れ残っている商品です。これを仕入勘定から除き、次期に繰り越す資産として繰越商品勘定に計上します。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-010",
+      "type": "fill_number",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事の期首商品棚卸高は30,000円、当期商品仕入高は200,000円、期末商品棚卸高は40,000円である。当期の売上原価はいくらですか。",
+      "answer": { "value": 190000, "unit": "円" },
+      "explanation": "売上原価は「期首商品棚卸高＋当期仕入高－期末商品棚卸高」で求めます。30,000円＋200,000円－40,000円＝190,000円です。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-011",
+      "type": "fill_number",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所の期首商品棚卸高は50,000円、当期商品仕入高は180,000円、期末商品棚卸高は35,000円である。当期の売上原価はいくらですか。",
+      "answer": { "value": 195000, "unit": "円" },
+      "explanation": "売上原価は「期首商品棚卸高＋当期仕入高－期末商品棚卸高」で求めます。50,000円＋180,000円－35,000円＝195,000円です。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-012",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-uriage-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "「しーくり・くりしー」と呼ばれる決算整理仕訳の目的として、最も適切なものはどれですか。",
+      "choices": ["仕入勘定の残高を当期の売上原価に一致させるため", "繰越商品勘定の残高を常にゼロにするため", "当期の売上高を修正するため", "貸倒引当金を設定するため"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "期首商品棚卸高を仕入へ、期末商品棚卸高を繰越商品へ振り替えることで、仕入勘定の残高が「期首＋当期仕入－期末」＝当期の売上原価と一致するようになります。",
+      "lessonRef": "s1-u11-sec2"
+    },
+    {
+      "id": "q-s1-u11-013",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ノゾミ商会は期中に現金の不足5,000円を発見し、現金過不足勘定（借方）に計上していた。決算日を迎えても原因が判明しなかったため、雑損として処理する決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "zasson", "amt": 5000 }],
+        "cr": [{ "acc": "genkin_kabusoku", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "現金過不足（借方残高＝現金不足）の原因が決算日までに判明しない場合、雑損（費用）に振り替えて現金過不足勘定の残高をゼロにします。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-014",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "カエデ商事は決算にあたり、売掛金期末残高200,000円に対して3%の貸倒引当金を差額補充法で設定する。貸倒引当金の決算整理前残高は2,000円である。決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 4000 }],
+        "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "設定すべき金額は200,000円×3%＝6,000円です。すでに2,000円計上されているため、差額補充法により不足分4,000円のみを貸倒引当金繰入として追加計上します。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-015",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "アオイ物産が保有する備品（取得原価300,000円、残存価額ゼロ、耐用年数10年、定額法、間接法記帳）について、当期分の減価償却費を計上する決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "genka_shokyakuhi", "amt": 30000 }],
+        "cr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "定額法の年間減価償却費は300,000円÷10年＝30,000円です。間接法では、備品を直接減らさず減価償却累計額（評価勘定）を増加させます。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-016",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ノゾミ商会は決算にあたり、購入時に通信費として処理していた郵便切手のうち未使用分2,000円と、租税公課として処理していた収入印紙のうち未使用分3,000円が残っていることが判明した。決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "chozohin", "amt": 5000 }],
+        "cr": [
+          { "acc": "tsushinhi", "amt": 2000 },
+          { "acc": "sozei_koka", "amt": 3000 }
+        ],
+        "alt": []
+      },
+      "explanation": "未使用の郵便切手・収入印紙はまだ費用として確定していないため、資産の勘定である貯蔵品に振り替えます。通信費2,000円と租税公課3,000円をそれぞれ減少させます。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-017",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "サクラ物産は決算にあたり、保険料のうち次期分4,000円を前払費用に振り替える決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "maebarai_hiyo", "amt": 4000 }],
+        "cr": [{ "acc": "hokenryo", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "前払費用は経過勘定の1つで、代金の支払いがサービス提供より先に行われる場合に用います。次期分の保険料4,000円を当期の費用から除き、前払費用（資産）に振り替えます。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-018",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "テトラ商事は決算にあたり、次の2つの決算整理を同時に行う。①現金過不足（貸方残高）1,500円の原因が判明しなかったため雑益に振り替える。②売掛金に対する貸倒引当金を差額補充法で設定し、不足額1,500円を追加繰入する。この2つをまとめた決算整理仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "genkin_kabusoku", "amt": 1500 },
+          { "acc": "kashidaore_hikiatekin_kurire", "amt": 1500 }
+        ],
+        "cr": [
+          { "acc": "zatsueki", "amt": 1500 },
+          { "acc": "kashidaore_hikiatekin", "amt": 1500 }
+        ],
+        "alt": []
+      },
+      "explanation": "①現金過不足（貸方残高＝現金過剰）を雑益に振り替えます。②貸倒引当金の不足額1,500円を貸倒引当金繰入として計上します。異なる決算整理事項でも、1論点ずつ整理すれば同時に処理できます。",
+      "lessonRef": "s1-u11-sec3"
+    },
+    {
+      "id": "q-s1-u11-019",
+      "type": "fill_number",
+      "unitId": "s1-u11",
+      "topics": ["t-seisanhyo"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ある会社の精算表の損益計算書欄で、収益合計が500,000円、費用合計が430,000円であった。当期純利益はいくらですか。",
+      "answer": { "value": 70000, "unit": "円" },
+      "explanation": "損益計算書欄の貸借差額（収益合計－費用合計）が当期純利益です。500,000円－430,000円＝70,000円となります。",
+      "lessonRef": "s1-u11-sec4"
+    },
+    {
+      "id": "q-s1-u11-020",
+      "type": "fill_number",
+      "unitId": "s1-u11",
+      "topics": ["t-seisanhyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "精算表の貸借対照表欄に、現金80,000円、売掛金120,000円、繰越商品40,000円、備品140,000円（取得原価200,000円－減価償却累計額60,000円）が記入されている。資産合計はいくらですか。",
+      "answer": { "value": 380000, "unit": "円" },
+      "explanation": "貸借対照表欄に記入された資産の金額を合計します。80,000円＋120,000円＋40,000円＋140,000円＝380,000円です。",
+      "lessonRef": "s1-u11-sec4"
+    },
+    {
+      "id": "q-s1-u11-021",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-seisanhyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "8桁精算表の欄の並び順として正しいものはどれですか。",
+      "choices": [
+        "残高試算表→修正記入→損益計算書→貸借対照表",
+        "損益計算書→貸借対照表→残高試算表→修正記入",
+        "修正記入→残高試算表→貸借対照表→損益計算書",
+        "貸借対照表→損益計算書→修正記入→残高試算表"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "8桁精算表は、左から残高試算表→修正記入→損益計算書→貸借対照表の順で構成されます。決算整理前の残高に修正を加え、収益・費用を損益計算書欄へ、資産・負債・純資産を貸借対照表欄へ書き写します。",
+      "lessonRef": "s1-u11-sec4"
+    },
+    {
+      "id": "q-s1-u11-022",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "精算表の「繰越商品」は、貸借対照表上では何という表示科目名になりますか。",
+      "choices": ["繰越商品", "商品", "仕入", "貯蔵品"],
+      "answer": 1,
+      "shuffle": true,
+      "explanation": "繰越商品は決算整理の過程で用いる勘定名ですが、貸借対照表上では「商品」という表示科目名に読み替えます。",
+      "lessonRef": "s1-u11-sec5"
+    },
+    {
+      "id": "q-s1-u11-023",
+      "type": "mc",
+      "unitId": "s1-u11",
+      "topics": ["t-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "精算表の「仕入」は、損益計算書上では何という表示科目名になりますか。",
+      "choices": ["仕入", "売上原価", "商品", "費用"],
+      "answer": 1,
+      "shuffle": true,
+      "explanation": "決算整理後の仕入勘定の残高は当期の売上原価を表すため、損益計算書上では「売上原価」という表示科目名に読み替えます。",
+      "lessonRef": "s1-u11-sec5"
+    },
+    {
+      "id": "q-s1-u11-024",
+      "type": "tf",
+      "unitId": "s1-u11",
+      "topics": ["t-zaimu-shohyo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "貸借対照表では、売掛金を貸倒引当金控除後の金額（純額）で表示することがある。",
+      "answer": true,
+      "explanation": "そのとおりです。貸倒引当金は売掛金から回収不能見込額を控除するための評価勘定であり、貸借対照表では売掛金の下にマイナス表示し、差引額を示すことがあります。",
+      "lessonRef": "s1-u11-sec5"
+    },
+    {
+      "id": "q-s1-u11-025",
+      "type": "tf",
+      "unitId": "s1-u11",
+      "topics": ["t-zaimu-shohyo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "精算表の損益計算書欄で計算された当期純利益と、貸借対照表欄に反映される当期純利益の金額は必ず一致する。",
+      "answer": true,
+      "explanation": "そのとおりです。損益計算書欄の貸借差額として求めた当期純利益は、貸借対照表欄にも同額を記入して貸借を一致させるため、両者の金額は必ず一致します。",
+      "lessonRef": "s1-u11-sec5"
+    },
+    {
+      "id": "q-s1-u11-026",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "決算にあたり、売上300,000円・受取手数料5,000円を損益勘定に振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "uriage", "amt": 300000 },
+          { "acc": "uketori_tesuryo", "amt": 5000 }
+        ],
+        "cr": [{ "acc": "soneki", "amt": 305000 }],
+        "alt": []
+      },
+      "explanation": "収益の勘定は貸方残高なので、それを減少させる借方に記入し、貸方に損益305,000円を記入して振り替えます。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-027",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "決算にあたり、仕入200,000円・給料50,000円・減価償却費10,000円を損益勘定に振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 260000 }],
+        "cr": [
+          { "acc": "shiire", "amt": 200000 },
+          { "acc": "kyuryo", "amt": 50000 },
+          { "acc": "genka_shokyakuhi", "amt": 10000 }
+        ],
+        "alt": []
+      },
+      "explanation": "費用の勘定は借方残高なので、それを減少させる貸方に記入し、借方に損益260,000円を記入して振り替えます。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-028",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "決算にあたり、収益・費用を振り替えた結果、損益勘定の貸方合計は305,000円、借方合計は260,000円となった。差額45,000円（当期純利益）を繰越利益剰余金へ振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 45000 }],
+        "cr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 45000 }],
+        "alt": []
+      },
+      "explanation": "損益勘定の貸方が多い＝当期純利益です。損益勘定を減少させる借方に損益、繰越利益剰余金（純資産）を増加させる貸方に記入します。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-029",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算にあたり、収益・費用を振り替えた結果、損益勘定の借方合計が貸方合計を10,000円上回り、当期純損失10,000円が生じた。この差額を繰越利益剰余金へ振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 10000 }],
+        "cr": [{ "acc": "soneki", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "損益勘定の借方が多い＝当期純損失です。当期純利益の場合とは逆に、繰越利益剰余金（純資産）を減少させる借方、損益勘定を減少させる貸方に記入します。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-030",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "決算にあたり、売上450,000円・受取利息3,000円を損益勘定に振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "uriage", "amt": 450000 },
+          { "acc": "uketori_risoku", "amt": 3000 }
+        ],
+        "cr": [{ "acc": "soneki", "amt": 453000 }],
+        "alt": []
+      },
+      "explanation": "収益の勘定はすべて借方に記入して減少させ、貸方に損益453,000円を記入して振り替えます。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-031",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算にあたり、仕入310,000円・支払家賃60,000円・貸倒引当金繰入4,000円を損益勘定に振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 374000 }],
+        "cr": [
+          { "acc": "shiire", "amt": 310000 },
+          { "acc": "shiharai_yachin", "amt": 60000 },
+          { "acc": "kashidaore_hikiatekin_kurire", "amt": 4000 }
+        ],
+        "alt": []
+      },
+      "explanation": "費用の勘定はすべて貸方に記入して減少させ、借方に損益374,000円を記入して振り替えます。",
+      "lessonRef": "s1-u11-sec6"
+    },
+    {
+      "id": "q-s1-u11-032",
+      "type": "journal",
+      "unitId": "s1-u11",
+      "topics": ["t-kessan-seiri-sougou"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算にあたり、収益・費用を振り替えた結果、損益勘定の貸方合計が借方合計を78,000円上回った。この当期純利益78,000円を繰越利益剰余金へ振り替える仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 78000 }],
+        "cr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 78000 }],
+        "alt": []
+      },
+      "explanation": "損益勘定の貸方が多い＝当期純利益です。損益勘定を減少させる借方に損益、繰越利益剰余金（純資産）を増加させる貸方に記入します。",
+      "lessonRef": "s1-u11-sec6"
+    }
+  ]
+}

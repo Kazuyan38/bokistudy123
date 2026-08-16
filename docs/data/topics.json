@@ -52,6 +52,12 @@
     { "id": "t-maebarai-hiyo", "name": "前払費用の計上・再振替", "unitId": "s1-u10" },
     { "id": "t-maeuke-shueki", "name": "前受収益の計上・再振替", "unitId": "s1-u10" },
     { "id": "t-mishu-shueki", "name": "未収収益の計上・再振替", "unitId": "s1-u10" },
-    { "id": "t-mibarai-hiyo", "name": "未払費用の計上・再振替", "unitId": "s1-u10" }
+    { "id": "t-mibarai-hiyo", "name": "未払費用の計上・再振替", "unitId": "s1-u10" },
+
+    { "id": "t-shisanhyo", "name": "試算表の作成・検証", "unitId": "s1-u11" },
+    { "id": "t-uriage-genka", "name": "売上原価の算定（繰越商品の決算整理）", "unitId": "s1-u11" },
+    { "id": "t-kessan-seiri-sougou", "name": "決算整理事項の総合処理", "unitId": "s1-u11" },
+    { "id": "t-seisanhyo", "name": "精算表の作成", "unitId": "s1-u11" },
+    { "id": "t-zaimu-shohyo", "name": "財務諸表（B/S・P/L）の作成", "unitId": "s1-u11" }
   ]
 }
