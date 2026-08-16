@@ -17,7 +17,7 @@
         { "id": "s1-u10", "title": "経過勘定", "prereq": ["s1-u09"], "estMinutes": 60, "status": "available" },
         { "id": "s1-u11", "title": "決算手続", "prereq": ["s1-u10"], "estMinutes": 90, "status": "available" },
         { "id": "s1-u12", "title": "帳簿と伝票", "prereq": ["s1-u11"], "estMinutes": 60, "status": "available" },
-        { "id": "s1-u13", "title": "3級総合演習・卒業判定", "prereq": ["s1-u12"], "estMinutes": 120, "status": "planned" }
+        { "id": "s1-u13", "title": "3級総合演習・卒業判定", "prereq": ["s1-u12"], "estMinutes": 120, "status": "available" }
       ]
     },
     {

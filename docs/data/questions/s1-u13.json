@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u13",
+  "questions": [
+    {
+      "id": "q-s1-u13-001", "type": "mc", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "次のうち、決算手続（試算表・精算表・財務諸表の作成）を扱った単元はどれですか。",
+      "choices": ["商品売買", "決算手続", "手形・電子記録債権", "税金"], "answer": 1, "shuffle": true,
+      "explanation": "s1-u11「決算手続」で、試算表・精算表・財務諸表の作成を学びました。",
+      "lessonRef": "s1-u13-sec1"
+    },
+    {
+      "id": "q-s1-u13-002", "type": "tf", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "3級範囲では、仕訳帳・総勘定元帳だけでなく、伝票制についても学習した。",
+      "answer": true,
+      "explanation": "s1-u12「帳簿と伝票」で、3伝票制（入金伝票・出金伝票・振替伝票）と仕訳日計表を学びました。",
+      "lessonRef": "s1-u13-sec1"
+    },
+    {
+      "id": "q-s1-u13-003", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ハルカ商事は商品30,000円を仕入れ、代金のうち10,000円は現金で支払い、残額は掛けとした。",
+      "answer": { "dr": [{ "acc": "shiire", "amt": 30000 }], "cr": [{ "acc": "cash", "amt": 10000 }, { "acc": "kaikake", "amt": 20000 }], "alt": [] },
+      "explanation": "商品売買（三分法）の基本パターンです。仕入30,000円を計上し、支払方法に応じて現金と買掛金に分けます。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-004", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ミナト製作所は、事務用の備品（帳簿価額80,000円）を80,000円で売却し、代金は月末受取りとした。",
+      "answer": { "dr": [{ "acc": "mishunyukin", "amt": 80000 }], "cr": [{ "acc": "bihin", "amt": 80000 }], "alt": [] },
+      "explanation": "商品以外の物品（備品）の売却なので、売掛金ではなく未収入金を使います。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-005", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "アオイ物産は、保険料のうち次期分3,000円を前もって支払っていたことに気づき、決算整理仕訳を行った。",
+      "answer": { "dr": [{ "acc": "maebarai_hiyo", "amt": 3000 }], "cr": [{ "acc": "hokenryo", "amt": 3000 }], "alt": [] },
+      "explanation": "次期分の費用を前払費用（資産）に振り替え、当期の保険料を減らします。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-006", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 2, "srs": false,
+      "stem": "決算にあたり、期首商品棚卸高6,000円、期末商品棚卸高9,000円であった。売上原価算定の決算整理仕訳（しーくり・くりしー）を行う。",
+      "answer": { "dr": [{ "acc": "shiire", "amt": 6000 }, { "acc": "kurikoshi_shohin", "amt": 9000 }], "cr": [{ "acc": "kurikoshi_shohin", "amt": 6000 }, { "acc": "shiire", "amt": 9000 }], "alt": [] },
+      "explanation": "期首商品6,000円を繰越商品から仕入へ、期末商品9,000円を仕入から繰越商品へ振り替えます。結果として仕入勘定の残高が売上原価を示します。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-007", "type": "fill_number", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 2, "srs": false,
+      "stem": "期首商品棚卸高6,000円、当期仕入高120,000円、期末商品棚卸高9,000円のとき、売上原価はいくらですか。",
+      "answer": { "value": 117000, "unit": "円" },
+      "explanation": "売上原価＝期首商品棚卸高＋当期仕入高−期末商品棚卸高＝6,000＋120,000−9,000＝117,000円です。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-008", "type": "mc", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 2, "srs": false,
+      "stem": "精算表の損益計算書欄と貸借対照表欄に共通して記入される項目はどれですか。",
+      "choices": ["繰越商品", "当期純利益", "支払手形", "建物"], "answer": 1, "shuffle": true,
+      "explanation": "当期純利益は、損益計算書欄では借方（差額）に、貸借対照表欄では貸方（繰越利益剰余金の増加として）に記入され、両者の金額は一致します。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-009", "type": "fill_number", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "単元テストで卒業と判定されるための正答率は何%以上ですか。",
+      "answer": { "value": 80, "unit": "%" },
+      "explanation": "本アプリの習熟基準では、単元テスト10問中80%以上で単元合格（この単元では卒業）となります。",
+      "lessonRef": "s1-u13-sec4"
+    },
+    {
+      "id": "q-s1-u13-010", "type": "tf", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "Stage1を卒業すると、次はStage2（2級商業簿記）とStage3（2級工業簿記）に進む。",
+      "answer": true,
+      "explanation": "3級範囲の卒業後は、2級商業簿記・2級工業簿記へと学習が続きます。",
+      "lessonRef": "s1-u13-sec4"
+    },
+    {
+      "id": "q-s1-u13-011", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "カエデ商事は、商品50,000円を売り上げ、代金のうち20,000円は他店振出しの小切手で受け取り、残りは掛けとした。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 20000 }, { "acc": "urikake", "amt": 30000 }], "cr": [{ "acc": "uriage", "amt": 50000 }], "alt": [] },
+      "explanation": "他人振出しの小切手は簿記上「現金」として扱います。残額は売掛金です。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-012", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "決算日に金庫を実査したところ、現金の帳簿残高より2,000円少なかった。原因は不明である。",
+      "answer": { "dr": [{ "acc": "zasson", "amt": 2000 }], "cr": [{ "acc": "cash", "amt": 2000 }], "alt": [] },
+      "explanation": "決算日に原因不明の現金不足は雑損として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-013", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ノゾミ商会は、かねて仕入先へ振り出していた約束手形80,000円が満期となり、当座預金口座から引き落とされた。",
+      "answer": { "dr": [{ "acc": "shiharai_tegata", "amt": 80000 }], "cr": [{ "acc": "toza_yokin", "amt": 80000 }], "alt": [] },
+      "explanation": "支払手形の満期決済では、支払手形（負債）を減少させ、当座預金の減少を計上します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-014", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "サクラ商事は、得意先が倒産したため、電子記録債権40,000円が回収不能となった。貸倒引当金の残高は60,000円ある。",
+      "answer": { "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 40000 }], "cr": [{ "acc": "denshi_saiken", "amt": 40000 }], "alt": [] },
+      "explanation": "引当金残高が貸倒額を上回るため、全額を貸倒引当金の取り崩しで処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-015", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "アオイ物産は、決算にあたり、取得原価500,000円・耐用年数10年・残存価額ゼロの備品について、定額法・間接法により1年分の減価償却費を計上した。",
+      "answer": { "dr": [{ "acc": "genka_shokyakuhi", "amt": 50000 }], "cr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 50000 }], "alt": [] },
+      "explanation": "減価償却費＝500,000÷10年＝50,000円。間接法では減価償却累計額を貸方に計上します。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-016", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ハルカ商事は建物の修繕を行い、代金100,000円を現金で支払った。このうち60,000円は建物の性能を向上させる改良分（資本的支出）、残り40,000円は原状回復のための修繕分（収益的支出）であった。",
+      "answer": { "dr": [{ "acc": "tatemono", "amt": 60000 }, { "acc": "shuzenhi", "amt": 40000 }], "cr": [{ "acc": "cash", "amt": 100000 }], "alt": [] },
+      "explanation": "資本的支出は資産（建物）の増加として、収益的支出は修繕費として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-017", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ミナト製作所は、株主総会で繰越利益剰余金を財源として、株主に配当金50,000円の支払いを決議し、あわせて利益準備金5,000円を積み立てた。",
+      "answer": { "dr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 55000 }], "cr": [{ "acc": "mibarai_haitokin", "amt": 50000 }, { "acc": "rieki_junbikin", "amt": 5000 }], "alt": [] },
+      "explanation": "配当決議時は、繰越利益剰余金を減少させ、未払配当金と利益準備金の積立てを同時に計上します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-018", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ノゾミ商会は、固定資産税60,000円の納税通知書を受け取り、現金で納付した。",
+      "answer": { "dr": [{ "acc": "sozei_koka", "amt": 60000 }], "cr": [{ "acc": "cash", "amt": 60000 }], "alt": [] },
+      "explanation": "固定資産税は租税公課として費用処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-019", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "サクラ商事は、決算にあたり法人税等の年税額が180,000円と確定した。すでに中間納付として仮払法人税等80,000円を計上している。",
+      "answer": { "dr": [{ "acc": "hojinzeito", "amt": 180000 }], "cr": [{ "acc": "karibarai_hojinzeito", "amt": 80000 }, { "acc": "mibarai_hojinzeito", "amt": 100000 }], "alt": [] },
+      "explanation": "法人税等180,000円を計上し、中間納付済みの80,000円を差し引いた残額100,000円を未払法人税等とします。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-020", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "アオイ物産は、決算にあたり、仮受消費税90,000円と仮払消費税60,000円を相殺し、納付額を確定させた（税抜方式）。",
+      "answer": { "dr": [{ "acc": "kariuke_shohizei", "amt": 90000 }], "cr": [{ "acc": "karibarai_shohizei", "amt": 60000 }, { "acc": "mibarai_shohizei", "amt": 30000 }], "alt": [] },
+      "explanation": "仮受消費税と仮払消費税を相殺し、差額を未払消費税とします。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-021", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ハルカ商事は、当期に発生した売掛金12,000円が得意先の倒産により回収不能となった。",
+      "answer": { "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 12000 }], "cr": [{ "acc": "urikake", "amt": 12000 }], "alt": [] },
+      "explanation": "当期に発生した債権の貸倒れは、引当金を使わず全額を貸倒損失として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-022", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ミナト製作所は、前期に貸倒れとして処理した売掛金のうち8,000円を、当期になって現金で回収した。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 8000 }], "cr": [{ "acc": "shokyaku_saiken_toritateeki", "amt": 8000 }], "alt": [] },
+      "explanation": "前期に貸倒処理した債権を当期に回収した場合は、償却債権取立益（収益）として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-023", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ノゾミ商会は、従業員の給料300,000円の支払いにあたり、所得税の源泉徴収分15,000円を差し引き、残額を普通預金から支払った。",
+      "answer": { "dr": [{ "acc": "kyuryo", "amt": 300000 }], "cr": [{ "acc": "shotokuzei_azukarikin", "amt": 15000 }, { "acc": "futsu_yokin", "amt": 285000 }], "alt": [] },
+      "explanation": "給料の総額を費用計上し、源泉徴収分は所得税預り金（負債）とし、差額を支払います。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-024", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "サクラ商事は、出張する従業員に旅費の概算額として現金30,000円を渡した。",
+      "answer": { "dr": [{ "acc": "karibaraikin", "amt": 30000 }], "cr": [{ "acc": "cash", "amt": 30000 }], "alt": [] },
+      "explanation": "内容や金額が確定していない支払いは、いったん仮払金として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-025", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "アオイ物産は、上記の出張から従業員が戻り、旅費の実際額は27,000円であったと報告を受け、仮払金との差額3,000円を現金で受け取った。",
+      "answer": { "dr": [{ "acc": "ryohi_kotsuhi", "amt": 27000 }, { "acc": "cash", "amt": 3000 }], "cr": [{ "acc": "karibaraikin", "amt": 30000 }], "alt": [] },
+      "explanation": "実際の旅費27,000円を費用計上し、概算払いとの差額3,000円は現金で返金を受けます。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-026", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ハルカ商事は、決算にあたり、未使用の収入印紙4,000円を貯蔵品に振り替えた。",
+      "answer": { "dr": [{ "acc": "chozohin", "amt": 4000 }], "cr": [{ "acc": "sozei_koka", "amt": 4000 }], "alt": [] },
+      "explanation": "未使用の収入印紙は貯蔵品（資産）に振り替え、租税公課（費用）を減少させます。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-027", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ミナト製作所は、決算にあたり、利息の未収分2,000円を計上した（現金の授受はまだない）。",
+      "answer": { "dr": [{ "acc": "mishu_shueki", "amt": 2000 }], "cr": [{ "acc": "uketori_risoku", "amt": 2000 }], "alt": [] },
+      "explanation": "当期に発生したが未回収の収益は、未収収益（資産）として計上します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-028", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ノゾミ商会は、決算にあたり、家賃の未払分6,000円を計上した（現金の授受はまだない）。",
+      "answer": { "dr": [{ "acc": "shiharai_yachin", "amt": 6000 }], "cr": [{ "acc": "mibarai_hiyo", "amt": 6000 }], "alt": [] },
+      "explanation": "当期に発生したが未払いの費用は、未払費用（負債）として計上します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-029", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 3, "srs": false,
+      "stem": "サクラ商事は、期末売掛金残高400,000円に対して2%の貸倒れを見積もる。すでに貸倒引当金の残高が5,000円ある（差額補充法）。",
+      "answer": { "dr": [{ "acc": "kashidaore_hikiatekin_kurire", "amt": 3000 }], "cr": [{ "acc": "kashidaore_hikiatekin", "amt": 3000 }], "alt": [] },
+      "explanation": "設定額＝400,000×2%＝8,000円。既存残高5,000円との差額3,000円を繰り入れます。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-030", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 3, "srs": false,
+      "stem": "アオイ物産は、8月1日に取得原価480,000円・耐用年数8年・残存価額ゼロの備品について、決算日（3月31日）に定額法・間接法で当期分（8ヶ月分）の減価償却費を月割計上した。",
+      "answer": { "dr": [{ "acc": "genka_shokyakuhi", "amt": 40000 }], "cr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 40000 }], "alt": [] },
+      "explanation": "年間の減価償却費＝480,000÷8年＝60,000円。8月から3月までの8ヶ月分＝60,000×8/12＝40,000円です。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-031", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ハルカ商事は、期首に取得原価300,000円・減価償却累計額180,000円の備品を100,000円で売却し、代金は現金で受け取った。",
+      "answer": { "dr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 180000 }, { "acc": "cash", "amt": 100000 }, { "acc": "kotei_shisan_baikyakuson", "amt": 20000 }], "cr": [{ "acc": "bihin", "amt": 300000 }], "alt": [] },
+      "explanation": "帳簿価額は300,000−180,000＝120,000円。売却価額100,000円は帳簿価額を下回るため、差額20,000円は固定資産売却損（借方）となります。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-032", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ミナト製作所は、期首に取得原価200,000円・減価償却累計額150,000円の備品を70,000円で売却し、代金は現金で受け取った。",
+      "answer": { "dr": [{ "acc": "genka_shokyaku_ruikeigaku", "amt": 150000 }, { "acc": "cash", "amt": 70000 }], "cr": [{ "acc": "bihin", "amt": 200000 }, { "acc": "kotei_shisan_baikyakueki", "amt": 20000 }], "alt": [] },
+      "explanation": "帳簿価額は200,000−150,000＝50,000円。売却価額70,000円との差額20,000円が固定資産売却益となります。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-033", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "ノゾミ商会は、他社が発行した商品券10,000円を、商品の売上代金として受け取った。",
+      "answer": { "dr": [{ "acc": "uketori_shohinken", "amt": 10000 }], "cr": [{ "acc": "uriage", "amt": 10000 }], "alt": [] },
+      "explanation": "他社発行の商品券を受け取ったときは受取商品券（資産）で処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-034", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "サクラ商事は、事務所を借りる契約にあたり、敷金50,000円を現金で差し入れた。",
+      "answer": { "dr": [{ "acc": "sashiire_hoshokin", "amt": 50000 }], "cr": [{ "acc": "cash", "amt": 50000 }], "alt": [] },
+      "explanation": "敷金など、退去時に返還される保証金は差入保証金（資産）として処理します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-035", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "アオイ物産は、増資を行い、新株を発行して現金500,000円の払込みを受けた。全額を資本金とする。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 500000 }], "cr": [{ "acc": "shihonkin", "amt": 500000 }], "alt": [] },
+      "explanation": "3級では原則として、株式の払込金額の全額を資本金とします。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-036", "type": "journal", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "ハルカ商事は、決算の結果、当期純利益150,000円を損益勘定から繰越利益剰余金勘定へ振り替えた。",
+      "answer": { "dr": [{ "acc": "soneki", "amt": 150000 }], "cr": [{ "acc": "kurikoshi_rieki_jyoyokin", "amt": 150000 }], "alt": [] },
+      "explanation": "当期純利益は損益勘定の貸方残高として計算され、繰越利益剰余金へ振り替えられます。",
+      "lessonRef": "s1-u13-sec3"
+    },
+    {
+      "id": "q-s1-u13-037", "type": "mc", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 2, "srs": false,
+      "stem": "3伝票制で、現金以外の取引（掛け取引など）を記入する伝票はどれですか。",
+      "choices": ["入金伝票", "出金伝票", "振替伝票", "仕訳日計表"], "answer": 2, "shuffle": true,
+      "explanation": "現金の受け払いを伴わない取引は振替伝票に記入します。",
+      "lessonRef": "s1-u13-sec2"
+    },
+    {
+      "id": "q-s1-u13-038", "type": "mc", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "掛けによる商品仕入れを記入する補助簿の組み合わせとして正しいものはどれですか。",
+      "choices": ["商品有高帳と買掛金元帳", "売掛金元帳のみ", "固定資産台帳と商品有高帳", "受取手形記入帳のみ"], "answer": 0, "shuffle": true,
+      "explanation": "商品の受け払いを記録する商品有高帳と、仕入先ごとの買掛金残高を管理する買掛金元帳の両方に記入します。",
+      "lessonRef": "s1-u13-sec1"
+    },
+    {
+      "id": "q-s1-u13-039", "type": "tf", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-shiwake"], "difficulty": 1, "srs": false,
+      "stem": "貸借対照表には資産・負債・純資産が、損益計算書には収益・費用が記載される。",
+      "answer": true,
+      "explanation": "s1-u01で学んだとおり、B/Sは財政状態、P/Lは経営成績を表す表です。",
+      "lessonRef": "s1-u13-sec1"
+    },
+    {
+      "id": "q-s1-u13-040", "type": "fill_number", "unitId": "s1-u13",
+      "topics": ["t-sokatsu-kessan"], "difficulty": 2, "srs": false,
+      "stem": "決算整理前の残高試算表で、資産合計が850,000円、負債合計が300,000円であった。純資産はいくらですか。",
+      "answer": { "value": 550000, "unit": "円" },
+      "explanation": "貸借対照表等式より、純資産＝資産−負債＝850,000−300,000＝550,000円です。",
+      "lessonRef": "s1-u13-sec3"
+    }
+  ]
+}

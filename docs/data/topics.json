@@ -63,6 +63,9 @@
     { "id": "t-shuyobo", "name": "主要簿（仕訳帳・総勘定元帳）", "unitId": "s1-u12" },
     { "id": "t-hojobo", "name": "補助簿（商品有高帳・売掛金元帳等の選択）", "unitId": "s1-u12" },
     { "id": "t-dempyo", "name": "3伝票制（入金伝票・出金伝票・振替伝票）", "unitId": "s1-u12" },
-    { "id": "t-shiwake-nikkeihyo", "name": "仕訳日計表の作成", "unitId": "s1-u12" }
+    { "id": "t-shiwake-nikkeihyo", "name": "仕訳日計表の作成", "unitId": "s1-u12" },
+
+    { "id": "t-sokatsu-shiwake", "name": "3級総まとめ：仕訳の総合演習", "unitId": "s1-u13" },
+    { "id": "t-sokatsu-kessan", "name": "3級総まとめ：決算・精算表の総合演習", "unitId": "s1-u13" }
   ]
 }
