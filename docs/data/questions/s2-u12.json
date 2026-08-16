@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u12",
+  "questions": [
+    {
+      "id": "q-s2-u12-001",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事の本店は、支店へ現金80,000円を送付した。本店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiten", "amt": 80000 }],
+        "cr": [{ "acc": "cash", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "本店から見ると、支店へ財産（現金）を渡したことで支店に対する「貸し」が増えます。この内部取引は支店勘定の借方に記入します。",
+      "lessonRef": "s2-u12-sec1"
+    },
+    {
+      "id": "q-s2-u12-002",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "上記の取引について、支店側の仕訳を答えなさい（現金80,000円を本店から受け取った）。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 80000 }],
+        "cr": [{ "acc": "honten", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "支店から見ると、本店から現金を受け取ったことで本店に対する「借り」が増えます。この内部取引は本店勘定の貸方に記入します。本店側の支店勘定（借方80,000円）と貸借逆で金額が一致します。",
+      "lessonRef": "s2-u12-sec1"
+    },
+    {
+      "id": "q-s2-u12-003",
+      "type": "mc",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "本店の帳簿の支店勘定と、支店の帳簿の本店勘定の関係について、正しいものはどれですか。",
+      "choices": [
+        "貸借が逆で、金額が必ず一致する",
+        "どちらも借方残高になる",
+        "無関係で一致するとは限らない",
+        "支店勘定は支店の帳簿にのみ設けられる"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "本店の帳簿の支店勘定と支店の帳簿の本店勘定は、内部取引を記帳するたびに同じ金額が貸借逆に記入されるため、常に貸借逆で金額が一致します。",
+      "lessonRef": "s2-u12-sec1"
+    },
+    {
+      "id": "q-s2-u12-004",
+      "type": "tf",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "本店の帳簿の支店勘定の残高と、支店の帳簿の本店勘定の残高は、貸借が逆で金額が一致する。",
+      "answer": true,
+      "explanation": "そのとおりです。本支店間の内部取引は、常に本店側で支店勘定、支店側で本店勘定に同額を貸借逆で記帳するため、両者の残高は必ず一致します。",
+      "lessonRef": "s2-u12-sec1"
+    },
+    {
+      "id": "q-s2-u12-005",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミナト製作所の本店は、支店へ原価60,000円の商品を発送した（振替価格＝原価）。本店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiten", "amt": 60000 }],
+        "cr": [{ "acc": "shiire", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "本店から見ると、支店へ商品という財産を渡したので支店勘定の借方に記入します。同時に、本店の帳簿上は商品（仕入）が減少するため、仕入を貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-006",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "上記の取引について、支店側の仕訳を答えなさい（原価60,000円の商品を本店から受け入れた）。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 60000 }],
+        "cr": [{ "acc": "honten", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "支店から見ると、本店から商品を受け入れたので仕入（借方）が増加し、その代金は本店に対する「借り」として本店勘定の貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-007",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所の支店が負担すべき広告宣伝費25,000円を、本店が現金で立替払いした。本店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiten", "amt": 25000 }],
+        "cr": [{ "acc": "cash", "amt": 25000 }],
+        "alt": []
+      },
+      "explanation": "本店が支店の代わりに現金を支払ったことで、支店に対する「貸し」が増えるため、支店勘定の借方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-008",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の取引について、支店側の仕訳を答えなさい（本店が広告宣伝費25,000円を立替払いした旨の通知を受けた）。",
+      "answer": {
+        "dr": [{ "acc": "kokoku_sendenhi", "amt": 25000 }],
+        "cr": [{ "acc": "honten", "amt": 25000 }],
+        "alt": []
+      },
+      "explanation": "支店側では、自ら負担すべき広告宣伝費（費用）が発生したので借方に記入し、その代金は本店が立て替えたため本店勘定の貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-009",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産の支店は、不要となった原価15,000円の商品を本店へ返送した。支店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "honten", "amt": 15000 }],
+        "cr": [{ "acc": "shiire", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "支店から見ると、本店へ商品を返送したので支店の商品（仕入）が減少し、本店に対する「借り」も減少します。本店勘定の借方、仕入の貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-010",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の取引について、本店側の仕訳を答えなさい（支店から原価15,000円の商品の返送を受けた）。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 15000 }],
+        "cr": [{ "acc": "shiten", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "本店から見ると、商品を受け入れたので仕入（借方）が増加し、支店に対する「貸し」が減少するため、支店勘定の貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-011",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "アオイ物産の支店は、本店へ現金40,000円を送金した。支店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "honten", "amt": 40000 }],
+        "cr": [{ "acc": "cash", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "支店から見ると、本店へ現金を渡したので本店に対する「借り」が減少します。本店勘定の借方、現金の貸方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-012",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-honten-shiten-kanjo"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "上記の取引について、本店側の仕訳を答えなさい（支店から現金40,000円の送金を受け取った）。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 40000 }],
+        "cr": [{ "acc": "shiten", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "本店から見ると、支店から現金を受け取ったので支店に対する「貸し」が減少します。支店勘定の貸方、現金の借方に記入します。",
+      "lessonRef": "s2-u12-sec2"
+    },
+    {
+      "id": "q-s2-u12-013",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "カエデ商事の支店は、決算の結果、当期純利益50,000円を計上した。支店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 50000 }],
+        "cr": [{ "acc": "honten", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "支店の当期純利益は、損益勘定から本店勘定の貸方へ振り替えます。支店から見れば、利益の分だけ本店に対する「貸し」が増えるイメージです。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-014",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "上記の取引について、本店側の仕訳を答えなさい（支店から当期純利益50,000円を計上した旨の通知を受けた）。",
+      "answer": {
+        "dr": [{ "acc": "shiten", "amt": 50000 }],
+        "cr": [{ "acc": "sogo_soneki", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "本店側では、支店勘定の借方で通知を受け入れ、会社全体の利益を集計する総合損益勘定の貸方に振り替えます。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-015",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "テトラ商事の支店は、決算の結果、当期純損失20,000円を計上した。支店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "honten", "amt": 20000 }],
+        "cr": [{ "acc": "soneki", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "当期純損失の場合は、当期純利益のときと貸借がすべて逆になります。本店勘定の借方、損益勘定の貸方に記入します。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-016",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の取引について、本店側の仕訳を答えなさい（支店から当期純損失20,000円を計上した旨の通知を受けた）。",
+      "answer": {
+        "dr": [{ "acc": "sogo_soneki", "amt": 20000 }],
+        "cr": [{ "acc": "shiten", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "純損失の場合、本店側では総合損益勘定の借方、支店勘定の貸方に記入します。純利益のときとは借方・貸方がすべて逆になる点に注意しましょう。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-017",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会の支店は、決算の結果、当期純利益70,000円を計上した。支店側の仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "soneki", "amt": 70000 }],
+        "cr": [{ "acc": "honten", "amt": 70000 }],
+        "alt": []
+      },
+      "explanation": "支店の当期純利益70,000円は、損益勘定から本店勘定の貸方へ振り替えます。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-018",
+      "type": "journal",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の取引について、本店側の仕訳を答えなさい（支店から当期純利益70,000円を計上した旨の通知を受けた）。",
+      "answer": {
+        "dr": [{ "acc": "shiten", "amt": 70000 }],
+        "cr": [{ "acc": "sogo_soneki", "amt": 70000 }],
+        "alt": []
+      },
+      "explanation": "本店側では、支店勘定の借方で受け入れ、総合損益勘定の貸方に振り替えます。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-019",
+      "type": "fill_number",
+      "unitId": "s2-u12",
+      "topics": ["t-shiten-son-eki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ物産の支店の当期の収益合計は380,000円、費用合計は340,000円であった。決算にあたり支店の損益勘定から本店勘定へ振り替える当期純利益はいくらですか。",
+      "answer": { "value": 40000, "unit": "円" },
+      "explanation": "支店の当期純利益は収益合計380,000円－費用合計340,000円＝40,000円です。この金額を本店勘定の貸方へ振り替えます。",
+      "lessonRef": "s2-u12-sec3"
+    },
+    {
+      "id": "q-s2-u12-020",
+      "type": "mc",
+      "unitId": "s2-u12",
+      "topics": ["t-honshiten-goben"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "本支店合併財務諸表を作成する際、本店と支店の個別財務諸表を単純合算した後に行う処理として正しいものはどれですか。",
+      "choices": [
+        "本店勘定と支店勘定を相殺消去する",
+        "支店の資産をすべて除外する",
+        "本店の収益をすべて除外する",
+        "本店勘定と支店勘定をそのまま合併後の貸借対照表に計上する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "本店勘定と支店勘定は会社内部だけの貸し借りであり、会社全体から見れば外部に対する資産・負債ではないため、単純合算後に相殺消去します。",
+      "lessonRef": "s2-u12-sec4"
+    },
+    {
+      "id": "q-s2-u12-021",
+      "type": "mc",
+      "unitId": "s2-u12",
+      "topics": ["t-honshiten-goben"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "本店の総合損益勘定に集約された支店の純損益について、本支店合併損益計算書における扱いとして正しいものはどれですか。",
+      "choices": [
+        "本店・支店それぞれの収益・費用を合算して当期純利益を算定するため、総合損益勘定自体は合併損益計算書に別掲されない",
+        "総合損益勘定の残高がそのまま合併損益計算書に別掲される",
+        "支店の純損益は合併損益計算書から除外する",
+        "本店の当期純利益だけを合併損益計算書に計上する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "総合損益勘定は本店の帳簿上で会社全体の当期純利益を集計するための勘定であり、合併損益計算書自体は本店・支店の収益・費用を合算して作成します。",
+      "lessonRef": "s2-u12-sec4"
+    },
+    {
+      "id": "q-s2-u12-022",
+      "type": "mc",
+      "unitId": "s2-u12",
+      "topics": ["t-honshiten-goben"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "本支店合併財務諸表の作成にあたり、相殺消去の対象となる科目の組み合わせとして正しいものはどれですか。",
+      "choices": [
+        "本店勘定（支店の帳簿）と支店勘定（本店の帳簿）",
+        "現金勘定（本店）と現金勘定（支店）",
+        "売上勘定（本店）と仕入勘定（支店）",
+        "資本金勘定（本店）と資本金勘定（支店）"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "相殺消去の対象は、会社内部だけの貸し借りを表す本店勘定・支店勘定です。現金・売上・仕入・資本金はそれぞれ会社外部との取引や会社全体の元手を表す科目なので、単純に合算します。",
+      "lessonRef": "s2-u12-sec4"
+    },
+    {
+      "id": "q-s2-u12-023",
+      "type": "tf",
+      "unitId": "s2-u12",
+      "topics": ["t-honshiten-goben"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "本支店合併財務諸表の作成にあたり、本店勘定と支店勘定は相殺消去しなければならない。",
+      "answer": true,
+      "explanation": "そのとおりです。本店勘定・支店勘定は会社内部の貸し借りにすぎず、会社全体の外部に対する資産・負債ではないため、合併財務諸表では相殺消去します。",
+      "lessonRef": "s2-u12-sec4"
+    },
+    {
+      "id": "q-s2-u12-024",
+      "type": "mc",
+      "unitId": "s2-u12",
+      "topics": ["t-honshiten-goben"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "本店から支店へ原価に利益を上乗せした振替価格で発送した商品が、支店の期末商品として一部残っている場合の基礎的な考え方として正しいものはどれですか。",
+      "choices": [
+        "支店の期末商品に含まれる内部利益（未実現利益）相当額は、合併財務諸表の作成にあたり除去する必要がある",
+        "内部利益は合併財務諸表においてもそのまま利益として計上してよい",
+        "内部利益は本店の帳簿上でのみ除去すればよく、支店側では処理不要である",
+        "内部利益の除去は3級の範囲であり、2級では扱わない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "振替価格に利益を上乗せしている場合、支店の期末商品に含まれる利益相当額は会社全体としてはまだ外部に販売しておらず実現していない利益（内部利益）です。合併財務諸表の作成では、この内部利益を除去する必要があります。",
+      "lessonRef": "s2-u12-sec4"
+    }
+  ]
+}
