@@ -145,6 +145,11 @@
 
     { "id": "t-romuhi-kihon", "name": "労務費の基本（賃金の支払いと消費）", "unitId": "s3-u03" },
     { "id": "t-chingin-chinritsu-sabaku", "name": "賃率差異", "unitId": "s3-u03" },
-    { "id": "t-keihi-kubun", "name": "経費の分類と消費（直接経費・間接経費）", "unitId": "s3-u03" }
+    { "id": "t-keihi-kubun", "name": "経費の分類と消費（直接経費・間接経費）", "unitId": "s3-u03" },
+
+    { "id": "t-kobetsu-genka", "name": "個別原価計算の仕組み（製造指図書ごとの原価集計）", "unitId": "s3-u04" },
+    { "id": "t-seizo-kansetsuhi-hairu", "name": "製造間接費の配賦（実際配賦・予定配賦）", "unitId": "s3-u04" },
+    { "id": "t-hairu-sabaku", "name": "製造間接費配賦差異の分析", "unitId": "s3-u04" },
+    { "id": "t-seihin-kansei", "name": "製品の完成と引渡し", "unitId": "s3-u04" }
   ]
 }

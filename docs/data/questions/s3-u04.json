@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s3-u04",
+  "questions": [
+    {
+      "id": "q-s3-u04-001",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "サクラ製作所は製造指図書No.101について、直接材料費200,000円、直接労務費150,000円、直接経費30,000円を消費し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 380000 }],
+        "cr": [{ "acc": "zairyo", "amt": 200000 }, { "acc": "chinginhi", "amt": 150000 }, { "acc": "keihi", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "特定の指図書のために直接発生した原価（直接材料費・直接労務費・直接経費）は、それぞれの発生源の勘定（材料・賃金・経費）から仕掛品勘定へそのまま振り替えます。200,000＋150,000＋30,000＝380,000円です。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-002",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ヒカリ工業は製造指図書No.205について、直接材料費120,000円、直接労務費80,000円を消費し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 200000 }],
+        "cr": [{ "acc": "zairyo", "amt": 120000 }, { "acc": "chinginhi", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "直接材料費120,000円と直接労務費80,000円は、いずれも指図書No.205のために直接発生した原価なので、そのまま仕掛品勘定の借方へ振り替えます。合計は120,000＋80,000＝200,000円です。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-003",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "アサヒ製作所は製造指図書No.310について、直接労務費90,000円、直接経費15,000円を消費し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 105000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 90000 }, { "acc": "keihi", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "直接労務費90,000円と直接経費15,000円は、いずれも指図書No.310のために直接発生した原価なので、そのまま仕掛品勘定の借方へ振り替えます。合計は90,000＋15,000＝105,000円です。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-004",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "個別原価計算はどのような生産形態に適していますか。",
+      "choices": [
+        "顧客からの注文に応じて種類の異なる製品を1つずつ製造する受注生産",
+        "同じ規格の製品を大量に連続して生産する見込生産",
+        "製造をまったく行わない商品の仕入販売のみ",
+        "会計期間ごとに一括して原価をまとめて計算する方法全般"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "個別原価計算は、顧客からの注文ごとに製造指図書を発行し、その指図書ごとに原価を集計する方法です。種類の異なる製品を個別に製造する受注生産に適しています。同じ規格の製品を大量生産する見込生産には、総合原価計算（s3-u06で学習）が用いられます。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-005",
+      "type": "tf",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "個別原価計算表（指図書別原価計算表）は、製造指図書ごとに直接材料費・直接労務費・直接経費・製造間接費を集計する表である。",
+      "answer": true,
+      "explanation": "そのとおりです。個別原価計算表は、製造指図書ごとに直接材料費・直接労務費・直接経費・配賦された製造間接費を集計し、指図書別の製造原価を計算する表です。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-006",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-kobetsu-genka"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "製造指図書No.202には、直接材料費180,000円、直接労務費120,000円、直接経費20,000円、配賦された製造間接費80,000円が集計されている。この指図書の製造原価合計はいくらですか。",
+      "answer": { "value": 400000, "unit": "円" },
+      "explanation": "指図書の製造原価は、直接材料費・直接労務費・直接経費・配賦された製造間接費の合計です。180,000＋120,000＋20,000＋80,000＝400,000円です。",
+      "lessonRef": "s3-u04-sec1"
+    },
+    {
+      "id": "q-s3-u04-007",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ製作所は当月の実際製造間接費発生額600,000円を、直接作業時間を基準に各指図書へ実際配賦し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 600000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 600000 }],
+        "alt": []
+      },
+      "explanation": "実際配賦では、実際に発生した製造間接費の全額を、配賦基準を用いて各指図書に割り振り、製造間接費勘定から仕掛品勘定へ振り替えます。（借）仕掛品600,000（貸）製造間接費600,000と仕訳します。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-008",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ヒカリ工業は当月の実際製造間接費発生額350,000円を、直接作業時間を基準に各指図書へ実際配賦し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 350000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 350000 }],
+        "alt": []
+      },
+      "explanation": "実際発生額350,000円の全額を、配賦基準を用いて各指図書に割り振り、製造間接費勘定から仕掛品勘定へ振り替えます。（借）仕掛品350,000（貸）製造間接費350,000と仕訳します。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-009",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アサヒ製作所は当月の実際製造間接費発生額720,000円を、機械稼働時間を基準に各指図書へ実際配賦し、仕掛品勘定へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 720000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 720000 }],
+        "alt": []
+      },
+      "explanation": "配賦基準は直接作業時間だけでなく機械稼働時間などを用いることもありますが、考え方は同じです。実際発生額720,000円の全額を製造間接費勘定から仕掛品勘定へ振り替えます。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-010",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "製造間接費を各指図書へ配賦する理由として最も適切なものはどれですか。",
+      "choices": [
+        "複数の指図書に共通してかかり、特定の指図書に直接跡づけられないため",
+        "直接材料費と同じ方法で個別に集計できるため",
+        "製造間接費は発生額がゼロだから配賦が不要なため",
+        "配賦を行うと決算処理が不要になるため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造間接費は複数の指図書に共通してかかる原価であり、直接材料費・直接労務費・直接経費のように特定の指図書へ直接跡づけることができません。そのため配賦基準を用いて各指図書へ割り振る必要があります。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-011",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サクラ製作所の当月の実際製造間接費発生額は500,000円、配賦基準となる直接作業時間の合計は1,000時間であった。実際配賦率（1時間あたりの金額）はいくらですか。",
+      "answer": { "value": 500, "unit": "円" },
+      "explanation": "実際配賦率＝実際製造間接費発生額÷配賦基準数値の合計です。500,000÷1,000＝500円/時間です。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-012",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "実際配賦率が500円/時間のとき、製造指図書No.301の直接作業時間200時間に対する実際配賦額はいくらですか。",
+      "answer": { "value": 100000, "unit": "円" },
+      "explanation": "配賦額＝実際配賦率×各指図書の配賦基準数値です。500×200＝100,000円です。",
+      "lessonRef": "s3-u04-sec2"
+    },
+    {
+      "id": "q-s3-u04-013",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ヒカリ工業は予定配賦率600円/時間を用いて、当月の実際直接作業時間300時間分の製造間接費を仕掛品へ予定配賦した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 180000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 180000 }],
+        "alt": []
+      },
+      "explanation": "予定配賦額＝予定配賦率×当月の実際の配賦基準数値です。600×300＝180,000円を仕掛品勘定の借方、製造間接費勘定の貸方に計上します。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-014",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "サクラ製作所は予定配賦率350円/時間を用いて、当月の実際直接作業時間500時間分の製造間接費を仕掛品へ予定配賦した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 175000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 175000 }],
+        "alt": []
+      },
+      "explanation": "予定配賦額＝350×500＝175,000円です。（借）仕掛品175,000（貸）製造間接費175,000と仕訳します。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-015",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アサヒ製作所は予定配賦率700円/時間を用いて、当月の実際直接作業時間320時間分の製造間接費を仕掛品へ予定配賦した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 224000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 224000 }],
+        "alt": []
+      },
+      "explanation": "予定配賦額＝700×320＝224,000円です。（借）仕掛品224,000（貸）製造間接費224,000と仕訳します。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-016",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "製造間接費の配賦に予定配賦率を用いる理由として最も適切なものはどれですか。",
+      "choices": [
+        "実際発生額の確定を待たずに、すみやかに製品原価を計算できるようにするため",
+        "実際の製造間接費発生額を少なく見せるため",
+        "決算整理の手続きを省略するため",
+        "製造間接費を仕掛品へ振り替える必要をなくすため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "実際発生額は月末や期末にならないと確定しません。予定配賦率を用いることで、実際発生額の確定を待たずにすみやかに製品原価を計算できます。決算整理の省略や発生額を少なく見せることとは関係ありません。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-017",
+      "type": "tf",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "予定配賦を用いると、実際発生額の確定を待たずに製品原価を計算できる。",
+      "answer": true,
+      "explanation": "そのとおりです。予定配賦率にあらかじめ決めておき、当月の実際の配賦基準数値を掛けることで、実際発生額の確定前に配賦額を計算できます。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-018",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-seizo-kansetsuhi-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ヒカリ工業の年間の製造間接費予算は2,400,000円、年間の予定直接作業時間は4,000時間である。予定配賦率（1時間あたりの金額）はいくらですか。",
+      "answer": { "value": 600, "unit": "円" },
+      "explanation": "予定配賦率＝年間の製造間接費予算÷年間の予定配賦基準数値です。2,400,000÷4,000＝600円/時間です。",
+      "lessonRef": "s3-u04-sec3"
+    },
+    {
+      "id": "q-s3-u04-019",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミライ製作所は予定配賦率を用いて製造間接費を計算しており、当月の予定配賦額は500,000円であった。月末に実際発生額を計算したところ480,000円であったため、差額を製造間接費配賦差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seizo_kansetsuhi", "amt": 20000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi_hairu_sabaku", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "予定配賦額500,000円が実際発生額480,000円を20,000円上回っているため、製造間接費を予定より少なく消費できた有利差異（貸方差異）です。（借）製造間接費20,000（貸）製造間接費配賦差異20,000と仕訳します。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-020",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "フジ工業の当月の予定配賦額は450,000円、実際発生額は470,000円であった。差額を製造間接費配賦差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seizo_kansetsuhi_hairu_sabaku", "amt": 20000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "実際発生額470,000円が予定配賦額450,000円を20,000円上回るため、予定より多く消費してしまった不利差異（借方差異）です。（借）製造間接費配賦差異20,000（貸）製造間接費20,000と仕訳します。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-021",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "サクラ製作所の当月の予定配賦額は620,000円、実際発生額は590,000円であった。差額を製造間接費配賦差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seizo_kansetsuhi", "amt": 30000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi_hairu_sabaku", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "予定配賦額620,000円が実際発生額590,000円を30,000円上回るため有利差異（貸方差異）です。（借）製造間接費30,000（貸）製造間接費配賦差異30,000と仕訳します。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-022",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "製造間接費配賦差異が製造間接費配賦差異勘定の貸方に生じた場合、それは何差異ですか。",
+      "choices": [
+        "有利差異（貸方差異）",
+        "不利差異（借方差異）",
+        "数量差異",
+        "時間差異"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造間接費配賦差異勘定の貸方に生じるのは、予定配賦額が実際発生額を上回った場合であり、これは製造間接費を予定より少なく消費できた有利差異（貸方差異）です。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-023",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "予算差異の説明として最も適切なものはどれですか。",
+      "choices": [
+        "実際操業度における予算許容額と実際発生額との差額から生じる差異",
+        "基準操業度と実際操業度の差に固定費率を掛けて計算する差異",
+        "直接材料費の消費価格の見積りと実際価格の違いから生じる差異",
+        "労務費の予定賃率と実際賃率の違いから生じる差異"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "予算差異は、実際操業度に対する予算許容額（変動費率×実際操業度＋固定費予算）と実際発生額との差額から生じる差異です。基準操業度と実際操業度の差から生じるのは操業度差異です。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-024",
+      "type": "tf",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "製造間接費配賦差異は、予算差異と操業度差異の2つに分析できる。",
+      "answer": true,
+      "explanation": "そのとおりです。配賦差異は発生原因によって、消費額の違いから生じる予算差異と、操業度（稼働状況）の違いから生じる操業度差異に分析できます。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-025",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "サクラ製作所は公式法変動予算により製造間接費を予定配賦している。変動費率は200円/時間、月間の固定費予算は100,000円、当月の実際直接作業時間は240時間、実際発生額は145,000円であった。予算差異の金額はいくらですか（有利・不利の区別は問わず、金額のみ答えなさい）。",
+      "answer": { "value": 3000, "unit": "円" },
+      "explanation": "予算許容額＝変動費率×実際操業度＋固定費予算＝200×240＋100,000＝148,000円です。予算差異＝予算許容額－実際発生額＝148,000－145,000＝3,000円です。実際発生額のほうが少ないため有利差異（貸方差異）となります。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-026",
+      "type": "fill_number",
+      "unitId": "s3-u04",
+      "topics": ["t-hairu-sabaku"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "サクラ製作所の月間の基準操業度（直接作業時間）は250時間、固定費率は400円/時間である。当月の実際直接作業時間が240時間であったとき、操業度差異の金額はいくらですか（有利・不利の区別は問わず、金額のみ答えなさい）。",
+      "answer": { "value": 4000, "unit": "円" },
+      "explanation": "操業度差異＝（実際操業度－基準操業度）×固定費率＝（240－250）×400＝△4,000円です。実際操業度が基準操業度を下回っているため不利差異（借方差異）となります。",
+      "lessonRef": "s3-u04-sec4"
+    },
+    {
+      "id": "q-s3-u04-027",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seihin-kansei"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "サクラ製作所は製造指図書No.101（製造原価380,000円）が完成したため、仕掛品から製品へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seihin", "amt": 380000 }],
+        "cr": [{ "acc": "shikakari_hin_kogyo", "amt": 380000 }],
+        "alt": []
+      },
+      "explanation": "指図書に集計された原価が確定し製品が完成すると、仕掛品勘定から製品勘定へ振り替えます。（借）製品380,000（貸）仕掛品380,000と仕訳します。",
+      "lessonRef": "s3-u04-sec5"
+    },
+    {
+      "id": "q-s3-u04-028",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seihin-kansei"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ヒカリ工業は製造指図書No.205にもとづく製品（原価300,000円）を得意先へ引き渡したため、製品から売上原価へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shiire_genka", "amt": 300000 }],
+        "cr": [{ "acc": "seihin", "amt": 300000 }],
+        "alt": []
+      },
+      "explanation": "完成した製品を得意先に引き渡すと、その製品の原価を製品勘定から売上原価勘定へ振り替えます。（借）売上原価300,000（貸）製品300,000と仕訳します。",
+      "lessonRef": "s3-u04-sec5"
+    },
+    {
+      "id": "q-s3-u04-029",
+      "type": "journal",
+      "unitId": "s3-u04",
+      "topics": ["t-seihin-kansei"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アサヒ製作所は製造指図書No.310にもとづく製品（原価250,000円）を得意先へ600,000円で販売し、代金は掛けとした。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "urikake", "amt": 600000 }, { "acc": "shiire_genka", "amt": 250000 }],
+        "cr": [{ "acc": "uriage", "amt": 600000 }, { "acc": "seihin", "amt": 250000 }],
+        "alt": []
+      },
+      "explanation": "製品の販売では、売価にもとづく売上の計上（借方売掛金・貸方売上）と、原価にもとづく売上原価への振替（借方売上原価・貸方製品）を同時に行います。売価600,000円、原価250,000円です。",
+      "lessonRef": "s3-u04-sec5"
+    },
+    {
+      "id": "q-s3-u04-030",
+      "type": "mc",
+      "unitId": "s3-u04",
+      "topics": ["t-seihin-kansei"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "工業簿記において、完成した製品が販売されるまでの勘定の流れとして正しいものはどれですか。",
+      "choices": [
+        "仕掛品→製品→売上原価",
+        "製品→仕掛品→売上原価",
+        "売上原価→仕掛品→製品",
+        "仕掛品→売上原価→製品"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造中の指図書の原価は仕掛品勘定に集計され、完成すると製品勘定へ振り替わります。その後、販売されると製品勘定から売上原価勘定へ振り替わります。仕掛品→製品→売上原価の順です。",
+      "lessonRef": "s3-u04-sec5"
+    }
+  ]
+}
