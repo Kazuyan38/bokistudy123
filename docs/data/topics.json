@@ -182,6 +182,8 @@
 
     { "id": "t-cbt-gaiyo", "name": "CBT試験の概要（テストセンター受験・電卓持参・即日結果通知）", "unitId": "s4-u01" },
     { "id": "t-jikan-haibun", "name": "90分の時間配分戦略（配点・解答順序）", "unitId": "s4-u01" },
-    { "id": "t-cbt-kaito-tips", "name": "CBT特有の操作のコツ（入力・見直し）", "unitId": "s4-u01" }
+    { "id": "t-cbt-kaito-tips", "name": "CBT特有の操作のコツ（入力・見直し）", "unitId": "s4-u01" },
+
+    { "id": "t-shiwake-tokkun", "name": "全範囲仕訳特訓", "unitId": "s4-u02" }
   ]
 }
