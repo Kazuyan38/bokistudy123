@@ -50,16 +50,17 @@ export async function renderMockList(app, container) {
 export async function renderMockIntro(app, container, mockId) {
   appRef = app;
   container.innerHTML = `<div class="spin"></div>`;
-  let mock;
+  let mock, idx;
   try {
-    mock = await loadJson(`data/mocks/${mockId}.json`);
+    [mock, idx] = await Promise.all([loadJson(`data/mocks/${mockId}.json`), loadJson("data/mocks/index.json")]);
   } catch (e) {
     container.innerHTML = `<p class="empty-note">模試データの読み込みに失敗しました</p>`;
     return;
   }
+  const title = idx.mocks.find((m) => m.id === mockId)?.title || mock.id;
   container.innerHTML = `
     <button class="btn btn-ghost btn-sm" onclick="location.hash='#mocks'">← 模試一覧</button>
-    <h1 class="page-title mt-16">${esc(mock.id)}</h1>
+    <h1 class="page-title mt-16">${esc(title)}</h1>
     <div class="card">
       <span class="card-title">出題構成</span>
       <div class="mt-8">${mock.sections.map((s) =>
@@ -70,15 +71,16 @@ export async function renderMockIntro(app, container, mockId) {
     <p class="muted">開始すると自動でタイマーが進みます。途中で中断しても記録は保存されません。時間になると自動的に採点されます。</p>
     <button class="btn btn-accent btn-block mt-16" id="start">模試を開始する</button>`;
 
-  container.querySelector("#start").onclick = () => startMock(app, container, mock);
+  container.querySelector("#start").onclick = () => startMock(app, container, mock, title);
 }
 
 /* ============================== 模試本体 ============================== */
 
-function startMock(app, container, mock) {
+function startMock(app, container, mock, title) {
   const flat = mock.sections.flatMap((s, si) => s.questions.map((q, qi) => ({ ...q, si, qi })));
   state = {
     mock,
+    title,
     flat,
     secIdx: 0,
     qIdx: 0,
@@ -293,7 +295,7 @@ function gradeOne(q, ans) {
 function finishMock(app, container, timedOut) {
   document.getElementById("calc-fab").hidden = true;
   closeNumpad();
-  const { mock } = state;
+  const { mock, title } = state;
   const sectionResults = mock.sections.map((sec) => {
     let earned = 0, total = 0;
     const items = sec.questions.map((q) => {
@@ -313,7 +315,7 @@ function finishMock(app, container, timedOut) {
 
   container.innerHTML = `
     <div class="set-result-hero">
-      <p class="muted">${esc(mock.id)}${timedOut ? "（時間切れで自動提出）" : ""}</p>
+      <p class="muted">${esc(title || mock.id)}${timedOut ? "（時間切れで自動提出）" : ""}</p>
       <div class="big num">${earned}<small> / ${total}点</small></div>
       <p class="muted num">正答率 ${pct}%</p>
       ${pass ? `<div class="pass-seal">合格ライン到達 ✓</div>` : `<p class="mt-8" style="color:var(--c-ng);font-weight:700">合格ラインまであと${mock.passScore - earned}点</p>`}
