@@ -162,6 +162,24 @@
     { "id": "oya_kabunushi_songai", "name": "親会社株主に帰属する当期純利益", "cat": "other", "grade": 2, "introducedIn": "s2-u13" },
 
     { "id": "urijyoukyaku_riekiyoku", "name": "未実現利益", "cat": "other", "grade": 2, "introducedIn": "s2-u14" },
-    { "id": "juzoku_kaisha_kabushiki_baikyakueki", "name": "子会社株式売却益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u14" }
+    { "id": "juzoku_kaisha_kabushiki_baikyakueki", "name": "子会社株式売却益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u14" },
+
+    { "id": "zairyo", "name": "材料", "cat": "asset", "grade": 2, "introducedIn": "s3-u02" },
+    { "id": "zairyohi", "name": "材料費", "cat": "other", "grade": 2, "introducedIn": "s3-u02" },
+    { "id": "zairyo_kakaku_sabaku", "name": "材料消費価格差異", "cat": "other", "grade": 2, "introducedIn": "s3-u02" },
+
+    { "id": "chinginhi", "name": "賃金", "cat": "other", "grade": 2, "introducedIn": "s3-u03" },
+    { "id": "keihi", "name": "経費", "cat": "other", "grade": 2, "introducedIn": "s3-u03" },
+    { "id": "chingin_chinritsu_sabaku", "name": "賃率差異", "cat": "other", "grade": 2, "introducedIn": "s3-u03" },
+
+    { "id": "shikakari_hin_kogyo", "name": "仕掛品", "cat": "asset", "grade": 2, "introducedIn": "s3-u04" },
+    { "id": "seizo_kansetsuhi", "name": "製造間接費", "cat": "other", "grade": 2, "introducedIn": "s3-u04" },
+    { "id": "seizo_kansetsuhi_hairu_sabaku", "name": "製造間接費配賦差異", "cat": "other", "grade": 2, "introducedIn": "s3-u04" },
+    { "id": "seihin", "name": "製品", "cat": "asset", "grade": 2, "introducedIn": "s3-u04" },
+
+    { "id": "hyojun_genka_sabaku", "name": "標準原価差異", "cat": "other", "grade": 2, "introducedIn": "s3-u09" },
+
+    { "id": "honsha", "name": "本社", "cat": "other", "grade": 2, "introducedIn": "s3-u08" },
+    { "id": "kojo", "name": "工場", "cat": "other", "grade": 2, "introducedIn": "s3-u08" }
   ]
 }
