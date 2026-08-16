@@ -178,6 +178,10 @@
     { "id": "t-zenbugenka-chokusetsu", "name": "全部原価計算と直接原価計算の違い（固定費の扱い）", "unitId": "s3-u10" },
     { "id": "t-henhi-koteihi", "name": "変動費と固定費の分解", "unitId": "s3-u10" },
     { "id": "t-genkakei-eigyoRieki", "name": "直接原価計算方式の損益計算書（貢献利益の計算）", "unitId": "s3-u10" },
-    { "id": "t-cvp-bunseki", "name": "損益分岐点分析（損益分岐点売上高・目標利益達成売上高・安全余裕率）", "unitId": "s3-u10" }
+    { "id": "t-cvp-bunseki", "name": "損益分岐点分析（損益分岐点売上高・目標利益達成売上高・安全余裕率）", "unitId": "s3-u10" },
+
+    { "id": "t-cbt-gaiyo", "name": "CBT試験の概要（テストセンター受験・電卓持参・即日結果通知）", "unitId": "s4-u01" },
+    { "id": "t-jikan-haibun", "name": "90分の時間配分戦略（配点・解答順序）", "unitId": "s4-u01" },
+    { "id": "t-cbt-kaito-tips", "name": "CBT特有の操作のコツ（入力・見直し）", "unitId": "s4-u01" }
   ]
 }
