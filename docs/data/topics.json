@@ -43,6 +43,10 @@
 
     { "id": "t-kabushiki-setsuritsu-zoshi", "name": "株式会社の設立・増資", "unitId": "s1-u08" },
     { "id": "t-kessan-rieki", "name": "当期純利益・純損失の振替", "unitId": "s1-u08" },
-    { "id": "t-haito-shobun", "name": "剰余金の配当と処分", "unitId": "s1-u08" }
+    { "id": "t-haito-shobun", "name": "剰余金の配当と処分", "unitId": "s1-u08" },
+
+    { "id": "t-sozei-koka", "name": "租税公課", "unitId": "s1-u09" },
+    { "id": "t-hojinzei", "name": "法人税、住民税及び事業税", "unitId": "s1-u09" },
+    { "id": "t-shohizei", "name": "消費税（税抜方式）", "unitId": "s1-u09" }
   ]
 }
