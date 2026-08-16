@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u10",
+  "questions": [
+    {
+      "id": "q-s2-u10-001",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-zeikoka-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は当期の貸倒引当金繰入200,000円のうち、税法上の繰入限度額150,000円を超える50,000円が損金として認められなかった。実効税率30%として、税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 15000 }],
+        "cr": [{ "acc": "hojinzeito_chosei", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "損金不算入となった50,000円は将来解消する将来減算一時差異です。50,000円×実効税率30%＝15,000円を繰延税金資産として計上し、同額を法人税等調整額（貸方）として計上します。",
+      "lessonRef": "s2-u10-sec1"
+    },
+    {
+      "id": "q-s2-u10-002",
+      "type": "mc",
+      "unitId": "s2-u10",
+      "topics": ["t-zeikoka-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "税効果会計の目的について正しいものはどれですか。",
+      "choices": [
+        "会計上の利益と税務上の課税所得のズレを調整し、税引前当期純利益と法人税等を合理的に対応させる",
+        "税務署に納める法人税等の金額そのものを減らす",
+        "減価償却費の計算方法を税法基準に統一する",
+        "消費税の納付額を圧縮する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "税効果会計は、会計上と税務上の認識時期の違いから生じる税金費用のズレを調整し、当期純利益をより実態に近い金額で表示するための処理です。実際に納付する法人税等の金額自体を減らすものではありません。",
+      "lessonRef": "s2-u10-sec1"
+    },
+    {
+      "id": "q-s2-u10-003",
+      "type": "mc",
+      "unitId": "s2-u10",
+      "topics": ["t-zeikoka-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "税効果会計の対象となる差異について正しいものはどれですか。",
+      "choices": [
+        "将来解消される一時差異のみが対象で、交際費の損金不算入額のような永久差異は対象外である",
+        "永久差異のみが対象である",
+        "一時差異・永久差異のいずれも同様に対象となる",
+        "会計上生じたすべての費用が対象となる"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "税効果会計の対象は、将来解消される一時差異のみです。交際費の損金不算入額のように将来も永久に解消しない永久差異は、税効果会計の対象にはなりません。",
+      "lessonRef": "s2-u10-sec1"
+    },
+    {
+      "id": "q-s2-u10-004",
+      "type": "tf",
+      "unitId": "s2-u10",
+      "topics": ["t-zeikoka-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "税効果会計は、会計上の費用・収益と税務上の損金・益金の認識時期の違いから生じる税金費用の期間的なズレを調整するために行われる。",
+      "answer": true,
+      "explanation": "そのとおりです。会計と税務の認識時期のズレ（一時差異）を調整し、税引前当期純利益と法人税等を合理的に対応させることが税効果会計の目的です。",
+      "lessonRef": "s2-u10-sec1"
+    },
+    {
+      "id": "q-s2-u10-005",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "決算にあたり、ハルカ商事は売掛金に対して貸倒引当金500,000円を差額補充法により繰り入れた。このうち税法上の繰入限度額400,000円を超える100,000円は損金として認められない。実効税率30%として、貸倒引当金の繰入と税効果の仕訳をあわせて行いなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "kashidaore_hikiatekin_kurire", "amt": 500000 },
+          { "acc": "zeikoka_kaikei_shisan", "amt": 30000 }
+        ],
+        "cr": [
+          { "acc": "kashidaore_hikiatekin", "amt": 500000 },
+          { "acc": "hojinzeito_chosei", "amt": 30000 }
+        ],
+        "alt": []
+      },
+      "explanation": "まず貸倒引当金繰入500,000円を計上します。このうち限度超過額100,000円は将来減算一時差異なので、100,000円×30%＝30,000円を繰延税金資産として計上し、法人税等調整額を貸方に計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-006",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "決算にあたり、ミナト製作所は備品について減価償却費300,000円を計上した（間接法）。このうち税法上の償却限度額240,000円を超える60,000円は損金として認められない。実効税率30%として、減価償却費の計上と税効果の仕訳をあわせて行いなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "genka_shokyakuhi", "amt": 300000 },
+          { "acc": "zeikoka_kaikei_shisan", "amt": 18000 }
+        ],
+        "cr": [
+          { "acc": "genka_shokyaku_ruikeigaku", "amt": 300000 },
+          { "acc": "hojinzeito_chosei", "amt": 18000 }
+        ],
+        "alt": []
+      },
+      "explanation": "減価償却費300,000円を計上したうえで、償却限度超過額60,000円（将来減算一時差異）に実効税率30%を掛けた18,000円を繰延税金資産として計上し、法人税等調整額を貸方に計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-007",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は当期の貸倒引当金繰入250,000円のうち、税法上の繰入限度額190,000円を超える60,000円が損金不算入となった。実効税率30%として、税効果会計の仕訳のみを行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 18000 }],
+        "cr": [{ "acc": "hojinzeito_chosei", "amt": 18000 }],
+        "alt": []
+      },
+      "explanation": "損金不算入額60,000円×実効税率30%＝18,000円を繰延税金資産として計上し、同額を法人税等調整額（貸方）として計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-008",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は当期の備品にかかる減価償却費のうち、税法上の償却限度額を80,000円超過した。実効税率30%として、税効果会計の仕訳のみを行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 24000 }],
+        "cr": [{ "acc": "hojinzeito_chosei", "amt": 24000 }],
+        "alt": []
+      },
+      "explanation": "償却限度超過額80,000円×実効税率30%＝24,000円を繰延税金資産として計上し、同額を法人税等調整額（貸方）として計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-009",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "決算にあたり、ノゾミ商会は次の2つの将来減算一時差異が生じた。①貸倒引当金繰入限度超過額40,000円　②減価償却費償却限度超過額60,000円。実効税率30%として、税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 30000 }],
+        "cr": [{ "acc": "hojinzeito_chosei", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "複数の将来減算一時差異は合算して処理します。一時差異の合計は40,000円＋60,000円＝100,000円で、これに実効税率30%を掛けた30,000円を繰延税金資産として計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-010",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ハルカ商事は当期に生じた将来減算一時差異120,000円（内容は貸倒引当金繰入限度超過額）について、実効税率30%を適用し税効果会計の仕訳を行った。この仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 36000 }],
+        "cr": [{ "acc": "hojinzeito_chosei", "amt": 36000 }],
+        "alt": []
+      },
+      "explanation": "将来減算一時差異120,000円×実効税率30%＝36,000円を繰延税金資産として計上し、同額を法人税等調整額（貸方）として計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-011",
+      "type": "mc",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "将来減算一時差異が生じた場合の税効果会計の処理として正しいものはどれですか。",
+      "choices": [
+        "繰延税金資産を計上し、法人税等調整額を貸方に計上して法人税等の負担額を減らす",
+        "繰延税金負債を計上し、法人税等調整額を借方に計上する",
+        "何も仕訳しない",
+        "直接、法人税等の金額を減額する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "将来減算一時差異が生じたときは、差異×実効税率の金額を繰延税金資産（借方）として計上し、法人税等調整額を貸方に計上します。",
+      "lessonRef": "s2-u10-sec2"
+    },
+    {
+      "id": "q-s2-u10-012",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "前期末、ハルカ商事は貸倒引当金の繰入限度超過額80,000円について繰延税金資産24,000円（実効税率30%）を計上していた。当期にこの売掛金の貸倒れが確定し、税務上も損金として認められたため、一時差異が解消した。税効果会計の仕訳を行いなさい（貸倒れそのものの仕訳は考慮しなくてよい）。",
+      "answer": {
+        "dr": [{ "acc": "hojinzeito_chosei", "amt": 24000 }],
+        "cr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 24000 }],
+        "alt": []
+      },
+      "explanation": "一時差異が解消したため、計上していた繰延税金資産24,000円を取り崩します。借方に法人税等調整額を計上し、その期の法人税等の負担額を増やします。",
+      "lessonRef": "s2-u10-sec3"
+    },
+    {
+      "id": "q-s2-u10-013",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "前期末、ミナト製作所は備品の減価償却費償却限度超過額50,000円について繰延税金資産15,000円（実効税率30%）を計上していた。当期にこの備品を売却し、償却限度超過額に対応する一時差異が解消した。税効果会計の仕訳を行いなさい（売却そのものの仕訳は考慮しなくてよい）。",
+      "answer": {
+        "dr": [{ "acc": "hojinzeito_chosei", "amt": 15000 }],
+        "cr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "備品の売却により一時差異が解消したため、計上していた繰延税金資産15,000円を取り崩します。借方に法人税等調整額、貸方に繰延税金資産を計上します。",
+      "lessonRef": "s2-u10-sec3"
+    },
+    {
+      "id": "q-s2-u10-014",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "前期末、アオイ物産は貸倒引当金繰入限度超過額150,000円について繰延税金資産45,000円（実効税率30%）を計上していた。当期にこのうち90,000円に対応する売掛金の貸倒れが確定し、税務上も損金と認められた。解消した一時差異に対応する税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "hojinzeito_chosei", "amt": 27000 }],
+        "cr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 27000 }],
+        "alt": []
+      },
+      "explanation": "解消したのは150,000円のうち90,000円分だけです。90,000円×実効税率30%＝27,000円分の繰延税金資産を取り崩します。残り60,000円分（繰延税金資産18,000円）は解消しておらず、そのまま残ります。",
+      "lessonRef": "s2-u10-sec3"
+    },
+    {
+      "id": "q-s2-u10-015",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "前期末、カエデ商事は減価償却費償却限度超過額40,000円について繰延税金資産12,000円（実効税率30%）を計上していた。当期にこの一時差異がすべて解消した。税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "hojinzeito_chosei", "amt": 12000 }],
+        "cr": [{ "acc": "zeikoka_kaikei_shisan", "amt": 12000 }],
+        "alt": []
+      },
+      "explanation": "一時差異がすべて解消したため、計上していた繰延税金資産12,000円を全額取り崩します。",
+      "lessonRef": "s2-u10-sec3"
+    },
+    {
+      "id": "q-s2-u10-016",
+      "type": "mc",
+      "unitId": "s2-u10",
+      "topics": ["t-shonin-sagaku"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "将来減算一時差異が解消したときの税効果会計の処理として正しいものはどれですか。",
+      "choices": [
+        "計上していた繰延税金資産を取り崩し、法人税等調整額を借方に計上する",
+        "繰延税金資産をさらに追加計上する",
+        "繰越利益剰余金を直接減額する",
+        "何も仕訳しない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "一時差異が解消すると、その部分は会計と税務のズレがなくなるため、計上していた繰延税金資産を取り崩します。借方に法人税等調整額を計上します。",
+      "lessonRef": "s2-u10-sec3"
+    },
+    {
+      "id": "q-s2-u10-017",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は決算にあたり、その他有価証券（取得原価800,000円）を時価900,000円に評価替えした。全部純資産直入法により、実効税率30%を適用した税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken", "amt": 100000 }],
+        "cr": [
+          { "acc": "zeikoka_kaikei_fusai", "amt": 30000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 70000 }
+        ],
+        "alt": []
+      },
+      "explanation": "評価差額は900,000円－800,000円＝100,000円（評価益）です。評価益の場合は繰延税金負債を計上します。100,000円×30%＝30,000円が繰延税金負債、残り70,000円がその他有価証券評価差額金です。",
+      "lessonRef": "s2-u10-sec4"
+    },
+    {
+      "id": "q-s2-u10-018",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は決算にあたり、その他有価証券（取得原価600,000円）を時価520,000円に評価替えした。全部純資産直入法により、実効税率30%を適用した税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "zeikoka_kaikei_shisan", "amt": 24000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 56000 }
+        ],
+        "cr": [{ "acc": "sonota_yukashoken", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "評価差額は600,000円－520,000円＝80,000円（評価損）です。評価損の場合は繰延税金資産を計上します。80,000円×30%＝24,000円が繰延税金資産、残り56,000円がその他有価証券評価差額金（借方）です。",
+      "lessonRef": "s2-u10-sec4"
+    },
+    {
+      "id": "q-s2-u10-019",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は決算にあたり、その他有価証券（取得原価1,000,000円）を時価1,150,000円に評価替えした。全部純資産直入法により、実効税率30%を適用した税効果会計の仕訳を行いなさい。",
+      "answer": {
+        "dr": [{ "acc": "sonota_yukashoken", "amt": 150000 }],
+        "cr": [
+          { "acc": "zeikoka_kaikei_fusai", "amt": 45000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 105000 }
+        ],
+        "alt": []
+      },
+      "explanation": "評価差額は1,150,000円－1,000,000円＝150,000円（評価益）です。150,000円×30%＝45,000円が繰延税金負債、残り105,000円がその他有価証券評価差額金です。",
+      "lessonRef": "s2-u10-sec4"
+    },
+    {
+      "id": "q-s2-u10-020",
+      "type": "journal",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "ハルカ商事は前期末に、その他有価証券の評価替え（評価益100,000円、繰延税金負債30,000円、その他有価証券評価差額金70,000円）を計上していた。全部純資産直入法では翌期首に取得原価へ戻す洗い替え処理を行う。翌期首の仕訳を行いなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "zeikoka_kaikei_fusai", "amt": 30000 },
+          { "acc": "sonota_yukashoken_hyokasabaku", "amt": 70000 }
+        ],
+        "cr": [{ "acc": "sonota_yukashoken", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "洗い替え処理では、前期末の評価替え仕訳の逆仕訳を行い、その他有価証券・繰延税金負債・その他有価証券評価差額金をすべて元の取得原価の状態に戻します。",
+      "lessonRef": "s2-u10-sec4"
+    },
+    {
+      "id": "q-s2-u10-021",
+      "type": "tf",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "その他有価証券を評価益で評価替えする場合、税効果相当額は繰延税金負債として計上し、残額をその他有価証券評価差額金に計上する。",
+      "answer": true,
+      "explanation": "そのとおりです。評価益の場合は将来売却時の税負担増を見込んで繰延税金負債を計上し、税効果を控除した純額をその他有価証券評価差額金とします。",
+      "lessonRef": "s2-u10-sec4"
+    },
+    {
+      "id": "q-s2-u10-022",
+      "type": "mc",
+      "unitId": "s2-u10",
+      "topics": ["t-sonota-yukashoken-zeikoka"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "その他有価証券の評価差額に税効果会計を適用した場合の記述として正しいものはどれですか。",
+      "choices": [
+        "評価益の場合は繰延税金負債、評価損の場合は繰延税金資産を計上し、純額をその他有価証券評価差額金とする",
+        "評価益・評価損にかかわらず必ず繰延税金資産を計上する",
+        "税効果部分は必ず損益計算書の法人税等調整額に計上される",
+        "その他有価証券評価差額金には税効果会計を適用しない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "その他有価証券の評価差額に税効果を適用する場合、評価益では繰延税金負債、評価損では繰延税金資産を計上し、その他有価証券評価差額金は税効果控除後の純額で計上します。法人税等調整額は使いません。",
+      "lessonRef": "s2-u10-sec4"
+    }
+  ]
+}
