@@ -172,8 +172,8 @@
     { "id": "keihi", "name": "経費", "cat": "other", "grade": 2, "introducedIn": "s3-u03" },
     { "id": "chingin_chinritsu_sabaku", "name": "賃率差異", "cat": "other", "grade": 2, "introducedIn": "s3-u03" },
 
-    { "id": "shikakari_hin_kogyo", "name": "仕掛品", "cat": "asset", "grade": 2, "introducedIn": "s3-u04" },
-    { "id": "seizo_kansetsuhi", "name": "製造間接費", "cat": "other", "grade": 2, "introducedIn": "s3-u04" },
+    { "id": "shikakari_hin_kogyo", "name": "仕掛品", "cat": "asset", "grade": 2, "introducedIn": "s3-u02" },
+    { "id": "seizo_kansetsuhi", "name": "製造間接費", "cat": "other", "grade": 2, "introducedIn": "s3-u02" },
     { "id": "seizo_kansetsuhi_hairu_sabaku", "name": "製造間接費配賦差異", "cat": "other", "grade": 2, "introducedIn": "s3-u04" },
     { "id": "seihin", "name": "製品", "cat": "asset", "grade": 2, "introducedIn": "s3-u04" },
 

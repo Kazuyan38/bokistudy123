@@ -137,6 +137,10 @@
 
     { "id": "t-kogyo-boki-gainen", "name": "工業簿記と商業簿記の違い", "unitId": "s3-u01" },
     { "id": "t-genka-bunrui", "name": "原価の分類（形態別・製品との関連）", "unitId": "s3-u01" },
-    { "id": "t-kanjo-renraku", "name": "原価計算の勘定連絡図", "unitId": "s3-u01" }
+    { "id": "t-kanjo-renraku", "name": "原価計算の勘定連絡図", "unitId": "s3-u01" },
+
+    { "id": "t-zairyo-kounyu", "name": "材料の購入と受入れ", "unitId": "s3-u02" },
+    { "id": "t-zairyo-shohi", "name": "材料の消費（直接費・間接費、先入先出法・平均法）", "unitId": "s3-u02" },
+    { "id": "t-zairyo-kakaku-sabaku", "name": "材料消費価格差異", "unitId": "s3-u02" }
   ]
 }
