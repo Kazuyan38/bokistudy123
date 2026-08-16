@@ -66,6 +66,10 @@
     { "id": "t-shiwake-nikkeihyo", "name": "仕訳日計表の作成", "unitId": "s1-u12" },
 
     { "id": "t-sokatsu-shiwake", "name": "3級総まとめ：仕訳の総合演習", "unitId": "s1-u13" },
-    { "id": "t-sokatsu-kessan", "name": "3級総まとめ：決算・精算表の総合演習", "unitId": "s1-u13" }
+    { "id": "t-sokatsu-kessan", "name": "3級総まとめ：決算・精算表の総合演習", "unitId": "s1-u13" },
+
+    { "id": "t-uriage-waribiki", "name": "売上割戻・仕入割戻", "unitId": "s2-u01" },
+    { "id": "t-shunyu-ninshiki", "name": "収益認識の基礎（契約資産・返金負債）", "unitId": "s2-u01" },
+    { "id": "t-yakumu-shueki", "name": "役務収益・役務原価", "unitId": "s2-u01" }
   ]
 }

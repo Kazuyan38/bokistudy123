@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u01",
+  "questions": [
+    {
+      "id": "q-s2-u01-001", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": true,
+      "stem": "ハルカ商事は、得意先アオイ物産との間で、一定数量以上を購入した場合に売上割戻を行う契約をしている。今期、アオイ物産への掛け売上高が基準数量に達したため、売上割戻2,000円を認め、掛け代金と相殺した。",
+      "answer": { "dr": [{ "acc": "uriage_wari_biki", "amt": 2000 }], "cr": [{ "acc": "urikake", "amt": 2000 }], "alt": [] },
+      "explanation": "売上割戻は、得意先が一定数量・金額以上を購入した際に代金の一部を減額するものです。3級で学んだ「返品」が商品そのものを返す処理であるのに対し、売上割戻は商品はそのままで代金だけを減額します。相手方への支払義務である売掛金を減らすことで、実質的に受取額を減らします。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-002", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": false,
+      "stem": "ミナト製作所は、得意先への売上割戻400円を現金で支払った。",
+      "answer": { "dr": [{ "acc": "uriage_wari_biki", "amt": 400 }], "cr": [{ "acc": "cash", "amt": 400 }], "alt": [] },
+      "explanation": "現金で返金する場合は、売上割戻（借方）に対して現金の減少（貸方）を計上します。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-003", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": true,
+      "stem": "アオイ物産は、仕入先ハルカ商事から、大量仕入れを行ったことにより仕入割戻3,000円を受け、買掛金と相殺した。",
+      "answer": { "dr": [{ "acc": "kaikake", "amt": 3000 }], "cr": [{ "acc": "shiire_wari_biki", "amt": 3000 }], "alt": [] },
+      "explanation": "仕入割戻は、大量に仕入れたことなどにより仕入先から代金の一部を減額してもらうものです。支払義務である買掛金（負債）を減らし、仕入割戻を貸方に計上します。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-004", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": false,
+      "stem": "サクラ商事は、仕入先から仕入割戻1,500円を現金で受け取った。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 1500 }], "cr": [{ "acc": "shiire_wari_biki", "amt": 1500 }], "alt": [] },
+      "explanation": "現金で受け取った場合は、現金の増加（借方）と仕入割戻の計上（貸方）を記入します。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-005", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 2, "srs": false,
+      "stem": "ノゾミ商会は、得意先カエデ商事に対する売上割戻5,000円を計上し、次回の掛け代金請求から差し引くこととした。",
+      "answer": { "dr": [{ "acc": "uriage_wari_biki", "amt": 5000 }], "cr": [{ "acc": "urikake", "amt": 5000 }], "alt": [] },
+      "explanation": "差し引く方法が「即時に相殺」でも「次回請求からの控除」でも、代金を減額する相手勘定は売掛金であり、処理内容は同じです。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-006", "type": "mc", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": false,
+      "stem": "売上割戻についての説明として正しいものはどれですか。",
+      "choices": ["商品の品違いにより商品そのものを返送してもらう処理である", "一定数量・金額以上の購入者に対して代金の一部を減額する処理である", "販売のためにかかった運賃を売上から差し引く処理である", "得意先の倒産により売掛金が回収不能になった処理である"],
+      "answer": 1, "shuffle": true,
+      "explanation": "商品そのものの返送（返品）とは異なり、売上割戻は代金の一部を減額するだけで、商品の受け渡しは変わりません。",
+      "lessonRef": "s2-u01-sec1"
+    },
+    {
+      "id": "q-s2-u01-007", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": true,
+      "stem": "ミナト製作所は、得意先へ商品A(60,000円)と商品B(40,000円)をセットで販売する契約を結び、商品Aのみを引き渡した。商品Bを引き渡すまでは代金を請求できない契約となっている。",
+      "answer": { "dr": [{ "acc": "keiyaku_shisan", "amt": 60000 }], "cr": [{ "acc": "uriage", "amt": 60000 }], "alt": [] },
+      "explanation": "商品Aの引渡しにより履行義務を果たしたため、売上（収益）を計上します。ただし代金を請求できる権利はまだ確定していない（商品Bの引渡しが条件）ため、売掛金ではなく契約資産（資産）で処理します。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-008", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 3, "srs": true,
+      "stem": "上記の契約について、後日ミナト製作所は商品B(40,000円)を引き渡し、これにより代金100,000円を無条件に請求できる権利が確定した。",
+      "answer": { "dr": [{ "acc": "urikake", "amt": 100000 }], "cr": [{ "acc": "keiyaku_shisan", "amt": 60000 }, { "acc": "uriage", "amt": 40000 }], "alt": [] },
+      "explanation": "商品Bの引渡しにより両方の履行義務が完了し、代金を無条件に請求できる権利（売掛金）が確定します。すでに計上していた契約資産60,000円を売掛金に振り替えるとともに、商品B分の売上40,000円を新たに計上します。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-009", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "アオイ物産は、商品700,000円を販売し、代金は掛けとした。この商品には返品権が付いており、過去の実績から5%相当額が返品されると見込まれるため、収益は返品見込み分を除いた金額で計上する。",
+      "answer": { "dr": [{ "acc": "urikake", "amt": 700000 }], "cr": [{ "acc": "uriage", "amt": 665000 }, { "acc": "henkin_fusai", "amt": 35000 }], "alt": [] },
+      "explanation": "返品が見込まれる場合、その分は将来返金する義務があるため売上には計上せず、返金負債（負債）として区分します。売掛金は代金の総額（700,000円）で計上します。返品見込み額＝700,000×5%＝35,000円です。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-010", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "上記のうち、実際に商品30,000円分が返品され、アオイ物産は掛け代金の減額として処理した。",
+      "answer": { "dr": [{ "acc": "henkin_fusai", "amt": 30000 }], "cr": [{ "acc": "urikake", "amt": 30000 }], "alt": [] },
+      "explanation": "実際に返品が生じたときは、あらかじめ計上していた返金負債を取り崩し、売掛金を減額します。すでに返品見込み分を除いて売上を計上しているため、売上には影響しません。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-011", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": true,
+      "stem": "ハルカ商事は、商品400,000円を販売し、代金は現金で受け取った。このうち返品が見込まれる8,000円相当分は返金負債として区分する。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 400000 }], "cr": [{ "acc": "uriage", "amt": 392000 }, { "acc": "henkin_fusai", "amt": 8000 }], "alt": [] },
+      "explanation": "返金負債は現金販売でも同様に区分します。受け取った現金は全額計上しますが、収益は返品見込み分（8,000円）を除いた392,000円とします。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-012", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "上記のハルカ商事について、返品期限までに返品が発生しなかったため、返金負債8,000円を取り崩し、売上に振り替えた。",
+      "answer": { "dr": [{ "acc": "henkin_fusai", "amt": 8000 }], "cr": [{ "acc": "uriage", "amt": 8000 }], "alt": [] },
+      "explanation": "返品期限が過ぎて返品されなかった場合は、不要になった返金負債を取り崩して売上（収益）に振り替えます。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-013", "type": "mc", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "契約資産の説明として最も適切なものはどれですか。",
+      "choices": ["商品の対価を受け取る権利が無条件に確定しており、代金を請求できる状態", "履行義務の一部を果たしたが、対価を受け取る権利がまだ無条件には確定していない状態", "将来商品を返品されたときに備えて計上する負債", "決算整理でのみ用いる仮の勘定科目"],
+      "answer": 1, "shuffle": true,
+      "explanation": "契約資産は、履行義務は果たしたものの、対価を請求できる権利がまだ無条件には確定していない場合に計上する資産です。無条件に確定すれば売掛金に振り替えます。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-014", "type": "tf", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 1, "srs": false,
+      "stem": "返金負債は、将来発生すると見込まれる返品に備えて、あらかじめ売上から控除しておく金額を負債として計上するものである。",
+      "answer": true,
+      "explanation": "返金負債は、返品が見込まれる分の代金を将来返金する義務として負債に計上し、その分は売上に含めません。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-015", "type": "fill_number", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "ミナト製作所は商品500,000円を販売し、代金は掛けとした。返品権付きで、過去の実績から4%相当額の返品が見込まれる。このとき計上する売上（収益）はいくらですか。",
+      "answer": { "value": 480000, "unit": "円" },
+      "explanation": "返品見込み分500,000×4%＝20,000円を除いた480,000円が売上として計上する金額です。残りの20,000円は返金負債とします。",
+      "lessonRef": "s2-u01-sec2"
+    },
+    {
+      "id": "q-s2-u01-016", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": true,
+      "stem": "ツバサトラベルは、企画中の海外ツアーについて、ツアー実施前に現地手配費用60,000円を現金で支払った。この費用はツアー実施（サービス提供完了）時に原価として計上する。",
+      "answer": { "dr": [{ "acc": "shikakari_hin", "amt": 60000 }], "cr": [{ "acc": "cash", "amt": 60000 }], "alt": [] },
+      "explanation": "サービス提供が完了する前に発生した費用は、いったん仕掛品（資産）として計上し、あとでサービス提供が完了した時点で役務原価に振り替えます。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-017", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": true,
+      "stem": "上記のツアーが実施され（サービス提供完了）、仕掛品60,000円を役務原価に振り替えた。",
+      "answer": { "dr": [{ "acc": "yakumu_genka", "amt": 60000 }], "cr": [{ "acc": "shikakari_hin", "amt": 60000 }], "alt": [] },
+      "explanation": "サービス提供が完了したら、それまで仕掛品としていた費用を役務原価（費用）に振り替えます。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-018", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": true,
+      "stem": "上記のツアー代金100,000円を、実施後に得意先から現金で受け取り、役務収益を計上した。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 100000 }], "cr": [{ "acc": "yakumu_shueki", "amt": 100000 }], "alt": [] },
+      "explanation": "サービスの提供が完了した時点で、対価を役務収益（収益）として計上します。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-019", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": true,
+      "stem": "ツバサトラベルは、別のツアーについて、実施前にツアー代金80,000円を得意先から現金で受け取った。",
+      "answer": { "dr": [{ "acc": "cash", "amt": 80000 }], "cr": [{ "acc": "maeukekin", "amt": 80000 }], "alt": [] },
+      "explanation": "サービス提供前に受け取った代金は、前受金（負債）として処理します。まだ役務収益は計上できません。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-020", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 2, "srs": true,
+      "stem": "上記のツアーが実施され、前受金80,000円を役務収益に振り替えた。",
+      "answer": { "dr": [{ "acc": "maeukekin", "amt": 80000 }], "cr": [{ "acc": "yakumu_shueki", "amt": 80000 }], "alt": [] },
+      "explanation": "サービス提供が完了した時点で、前受金を取り崩して役務収益（収益）を計上します。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-021", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": false,
+      "stem": "アオイ経営研究所は、コンサルティング業務の実施前に、外部専門家への報酬50,000円を普通預金から支払った。この報酬はサービス提供完了時に原価として計上する方針である。",
+      "answer": { "dr": [{ "acc": "shikakari_hin", "amt": 50000 }], "cr": [{ "acc": "futsu_yokin", "amt": 50000 }], "alt": [] },
+      "explanation": "サービス提供完了前の費用は、支払方法にかかわらずいったん仕掛品として計上します。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-022", "type": "mc", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 2, "srs": false,
+      "stem": "サービス業における役務原価の説明として正しいものはどれですか。",
+      "choices": ["サービス提供前に発生した費用をすべてその場で費用計上したもの", "サービス提供が完了した時点で、仕掛品から振り替えて計上する費用", "サービスの対価として受け取った収益そのもの", "決算時にのみ発生する未払費用"],
+      "answer": 1, "shuffle": true,
+      "explanation": "サービス提供完了前の費用はいったん仕掛品（資産）として計上し、サービス提供完了時に役務原価（費用）へ振り替えます。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-023", "type": "mc", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": false,
+      "stem": "仕掛品の説明として最も適切なものはどれですか。",
+      "choices": ["完成して販売可能となった商品", "サービス提供完了前に発生した、まだ費用化されていない支出額（資産）", "将来支払う予定の給料の見積額", "得意先から受け取った手付金"],
+      "answer": 1, "shuffle": true,
+      "explanation": "仕掛品は、サービス提供が完了するまでの間、発生した費用を一時的にプールしておく資産の勘定です。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-024", "type": "tf", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": false,
+      "stem": "サービス業では、サービスの提供が完了する前に受け取った代金は、その時点で役務収益として計上する。",
+      "answer": false,
+      "explanation": "サービス提供前に受け取った代金は前受金（負債）として処理し、サービス提供が完了した時点で役務収益に振り替えます。",
+      "lessonRef": "s2-u01-sec3"
+    },
+    {
+      "id": "q-s2-u01-025", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki"], "difficulty": 1, "srs": true,
+      "stem": "カエデ商事は、得意先の期中の掛け購入額が基準を超えたため、売上割戻6,000円を認め、掛け代金と相殺した。",
+      "answer": { "dr": [{ "acc": "uriage_wari_biki", "amt": 6000 }], "cr": [{ "acc": "urikake", "amt": 6000 }], "alt": [] },
+      "explanation": "この単元で学んだ売上割戻の基本パターンです。得意先への代金請求権である売掛金を減額します。",
+      "lessonRef": "s2-u01-sec4"
+    },
+    {
+      "id": "q-s2-u01-026", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-shunyu-ninshiki"], "difficulty": 2, "srs": false,
+      "stem": "ハルカ商事は、商品Xと商品Yをセットで販売する契約のうち、まず商品X(90,000円)を引き渡した。代金は商品Yの引渡し完了後に一括請求する契約であるため、契約資産として計上した。",
+      "answer": { "dr": [{ "acc": "keiyaku_shisan", "amt": 90000 }], "cr": [{ "acc": "uriage", "amt": 90000 }], "alt": [] },
+      "explanation": "対価の請求権がまだ無条件に確定していないため、売掛金ではなく契約資産として計上します。",
+      "lessonRef": "s2-u01-sec4"
+    },
+    {
+      "id": "q-s2-u01-027", "type": "journal", "unitId": "s2-u01",
+      "topics": ["t-yakumu-shueki"], "difficulty": 1, "srs": false,
+      "stem": "ミナトコンサルティングは、コンサルティング業務が完了し、あらかじめ受け取っていた前受金70,000円を役務収益に振り替えた。",
+      "answer": { "dr": [{ "acc": "maeukekin", "amt": 70000 }], "cr": [{ "acc": "yakumu_shueki", "amt": 70000 }], "alt": [] },
+      "explanation": "サービス提供完了時に前受金を役務収益へ振り替える、この単元の代表パターンです。",
+      "lessonRef": "s2-u01-sec4"
+    },
+    {
+      "id": "q-s2-u01-028", "type": "mc", "unitId": "s2-u01",
+      "topics": ["t-uriage-waribiki", "t-shunyu-ninshiki", "t-yakumu-shueki"], "difficulty": 2, "srs": false,
+      "stem": "この単元で学んだ内容として誤っているものはどれですか。",
+      "choices": ["売上割戻は、商品そのものを返送してもらう返品とは異なる処理である", "契約資産は、対価を請求する権利が無条件に確定した時点で計上する", "仕掛品は、サービス提供完了前の費用を一時的に計上する資産である", "返金負債は、将来の返品見込み分を売上から除いて負債計上したものである"],
+      "answer": 1, "shuffle": true,
+      "explanation": "契約資産は、対価を請求する権利が「まだ無条件には確定していない」時点で計上します。無条件に確定した時点では売掛金に振り替えます。",
+      "lessonRef": "s2-u01-sec4"
+    }
+  ]
+}
