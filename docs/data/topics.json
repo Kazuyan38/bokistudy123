@@ -159,6 +159,11 @@
     { "id": "t-sogo-genka-gainen", "name": "総合原価計算の考え方（個別原価計算との違い）", "unitId": "s3-u06" },
     { "id": "t-tsuika-ritsu", "name": "材料費・加工費の投入パターンと完成品換算量", "unitId": "s3-u06" },
     { "id": "t-heikinho", "name": "平均法による月末仕掛品原価の計算", "unitId": "s3-u06" },
-    { "id": "t-sakitoshirero-ho", "name": "先入先出法による月末仕掛品原価の計算", "unitId": "s3-u06" }
+    { "id": "t-sakitoshirero-ho", "name": "先入先出法による月末仕掛品原価の計算", "unitId": "s3-u06" },
+
+    { "id": "t-koteibetsu-sogo", "name": "工程別総合原価計算の基礎", "unitId": "s3-u07" },
+    { "id": "t-kumibetsu-sogo", "name": "組別総合原価計算の基礎", "unitId": "s3-u07" },
+    { "id": "t-toukyubetsu-sogo", "name": "等級別総合原価計算の基礎", "unitId": "s3-u07" },
+    { "id": "t-shison-genson", "name": "仕損・減損の処理（度外視法の基礎）", "unitId": "s3-u07" }
   ]
 }
