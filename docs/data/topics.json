@@ -103,6 +103,10 @@
     { "id": "t-shuzen-hikiatekin", "name": "修繕引当金", "unitId": "s2-u07" },
     { "id": "t-taishoku-kyufu", "name": "退職給付引当金", "unitId": "s2-u07" },
     { "id": "t-shohin-hosho", "name": "商品保証引当金", "unitId": "s2-u07" },
-    { "id": "t-shoyo-hikiatekin", "name": "賞与引当金", "unitId": "s2-u07" }
+    { "id": "t-shoyo-hikiatekin", "name": "賞与引当金", "unitId": "s2-u07" },
+
+    { "id": "t-gaika-torihiki", "name": "外貨建取引の記帳（取引発生時レートでの円換算）", "unitId": "s2-u08" },
+    { "id": "t-gaika-kessan", "name": "決算時の換算替えと決済時の為替差損益", "unitId": "s2-u08" },
+    { "id": "t-gaika-yoyaku", "name": "為替予約の基礎（振当処理）", "unitId": "s2-u08" }
   ]
 }
