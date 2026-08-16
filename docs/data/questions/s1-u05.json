@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u05",
+  "questions": [
+    {
+      "id": "q-s1-u05-001",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、取引先ミナト製作所に現金50,000円を貸し付け、借用証書を受け取った。",
+      "answer": {
+        "dr": [{ "acc": "kashitsukekin", "amt": 50000 }],
+        "cr": [{ "acc": "cash", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "現金を貸し付けると、将来その代金を返してもらう権利（資産）が生じるため、借方は貸付金の増加50,000円。現金（資産）が減るので貸方は現金50,000円です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-002",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、ミナト製作所への貸付金50,000円を、利息1,000円とともに現金で回収した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 51000 }],
+        "cr": [
+          { "acc": "kashitsukekin", "amt": 50000 },
+          { "acc": "uketori_risoku", "amt": 1000 }
+        ],
+        "alt": []
+      },
+      "explanation": "現金は元金と利息の合計51,000円が増えるので借方は現金51,000円。元金部分は貸付金（資産）の減少50,000円、利息部分は受取利息（収益）の発生1,000円として、貸方で区別して記入します。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-003",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、取引先に現金30,000円を貸し付け、借用証書の代わりに約束手形を受け取った。",
+      "answer": {
+        "dr": [{ "acc": "tegata_kashitsukekin", "amt": 30000 }],
+        "cr": [{ "acc": "cash", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "借用証書の代わりに約束手形を用いて貸し付けたときは、通常の貸付金と区別して資産の勘定「手形貸付金」を用います。現金（資産）が減るので貸方は現金30,000円です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-004",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ノゾミ商会は、取引銀行から現金40,000円を借り入れ、借用証書を渡した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 40000 }],
+        "cr": [{ "acc": "kariire", "amt": 40000 }],
+        "alt": []
+      },
+      "explanation": "現金を借り入れると、将来その代金を返す義務（負債）が生じるため、貸方は借入金の増加40,000円。現金（資産）が増えるので借方は現金40,000円です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-005",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ノゾミ商会は、借入金40,000円を利息800円とともに現金で返済した。",
+      "answer": {
+        "dr": [
+          { "acc": "kariire", "amt": 40000 },
+          { "acc": "shiharai_risoku", "amt": 800 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 40800 }],
+        "alt": []
+      },
+      "explanation": "元金部分40,000円は借入金（負債）の減少として借方に記入します。利息部分800円は支払利息（費用）の発生として借方に記入します。現金は合計40,800円減少するので貸方です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-006",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、取引銀行から現金60,000円を借り入れ、借用証書の代わりに約束手形を振り出して渡した。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 60000 }],
+        "cr": [{ "acc": "tegata_kariirekin", "amt": 60000 }],
+        "alt": []
+      },
+      "explanation": "借用証書の代わりに約束手形を振り出して借り入れたときは、通常の借入金と区別して負債の勘定「手形借入金」を用います。現金（資産）が増えるので借方は現金60,000円です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-007",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "借用証書の代わりに約束手形を用いて金銭の貸し借りを行った場合に用いる勘定科目の組み合わせとして正しいものはどれですか。",
+      "choices": [
+        "貸す側は手形貸付金、借りる側は手形借入金",
+        "貸す側は手形借入金、借りる側は手形貸付金",
+        "貸す側も借りる側も、通常の貸付金・借入金のまま変わらない",
+        "貸す側は受取手形、借りる側は支払手形"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "手形を用いて貸し付けた側は資産の勘定「手形貸付金」、借り入れた側は負債の勘定「手形借入金」を用います。通常の貸付金・借入金と区別して記帳する点がポイントです。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-008",
+      "type": "tf",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "貸付金を利息とともに回収したとき、受け取った利息は受取利息（収益）として処理する。",
+      "answer": true,
+      "explanation": "そのとおりです。回収した金額のうち、元金部分は貸付金の減少、利息部分は受取利息（収益）の発生として区別して記帳します。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-009",
+      "type": "fill_number",
+      "unitId": "s1-u05",
+      "topics": ["t-kashi-kari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "元金150,000円を年利率4%、貸付期間9か月（月割計算）で貸し付けた。この貸付けにかかる利息はいくらですか。",
+      "answer": { "value": 4500, "unit": "円" },
+      "explanation": "利息は「元金×年利率×借用期間（月数）÷12か月」で計算します。150,000×4%×9か月÷12か月＝4,500円です。",
+      "lessonRef": "s1-u05-sec1"
+    },
+    {
+      "id": "q-s1-u05-010",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-mishu-mibarai"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、取引の仲介による手数料8,000円を後日受け取ることになった。商品売買以外の取引のため、未収入金勘定で処理する。",
+      "answer": {
+        "dr": [{ "acc": "mishunyukin", "amt": 8000 }],
+        "cr": [{ "acc": "uketori_tesuryo", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "手数料の受け取りは商品売買ではないため、売掛金ではなく未収入金（資産）を用います。手数料の発生は貸方に受取手数料（収益）8,000円として記入します。",
+      "lessonRef": "s1-u05-sec2"
+    },
+    {
+      "id": "q-s1-u05-011",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-mishu-mibarai"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミナト製作所は、広告用チラシの制作を外部業者に依頼し、代金6,000円は月末に支払うこととした。商品の仕入ではないため、未払金勘定で処理する。",
+      "answer": {
+        "dr": [{ "acc": "kokoku_sendenhi", "amt": 6000 }],
+        "cr": [{ "acc": "miharaikin", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "広告制作は商品の仕入ではないため、買掛金ではなく未払金（負債）を用います。広告宣伝費（費用）の発生6,000円を借方に記入します。",
+      "lessonRef": "s1-u05-sec2"
+    },
+    {
+      "id": "q-s1-u05-012",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-mishu-mibarai"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "未収入金・未払金と、売掛金・買掛金の違いに関する説明として正しいものはどれですか。",
+      "choices": [
+        "未収入金・未払金は商品売買以外の取引から生じた債権債務であり、売掛金・買掛金は商品売買から生じた債権債務である",
+        "未収入金・未払金は商品売買から生じた債権債務であり、売掛金・買掛金は商品売買以外の取引から生じた債権債務である",
+        "未収入金は負債、未払金は資産の勘定である",
+        "売掛金・買掛金には利息が付くが、未収入金・未払金には付かない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "売掛金・買掛金は商品の売買から生じる債権債務であるのに対し、未収入金・未払金は土地の売却や手数料の受け取りなど、商品売買以外の取引から生じる債権債務です。",
+      "lessonRef": "s1-u05-sec2"
+    },
+    {
+      "id": "q-s1-u05-013",
+      "type": "tf",
+      "unitId": "s1-u05",
+      "topics": ["t-mishu-mibarai"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "備品の売却など、商品売買以外の取引で生じた代金を後日受け取る権利は、未収入金勘定で処理する。",
+      "answer": true,
+      "explanation": "そのとおりです。商品以外のものの売買によって生じた代金の未回収分は、売掛金ではなく未収入金（資産）で処理します。",
+      "lessonRef": "s1-u05-sec2"
+    },
+    {
+      "id": "q-s1-u05-014",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、従業員が負担すべき生命保険料3,000円を、一時的に現金で立て替えて支払った。",
+      "answer": {
+        "dr": [{ "acc": "tatekaekin", "amt": 3000 }],
+        "cr": [{ "acc": "cash", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "本来は従業員が負担すべき金額を会社が一時的に立て替えたので、後で返してもらう権利（資産）である立替金の増加3,000円を借方に記入します。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-015",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミナト製作所は、従業員への給料300,000円の支払いにあたり、源泉所得税18,000円と社会保険料12,000円を差し引いた残額を普通預金口座から支払った。",
+      "answer": {
+        "dr": [{ "acc": "kyuryo", "amt": 300000 }],
+        "cr": [
+          { "acc": "shotokuzei_azukarikin", "amt": 18000 },
+          { "acc": "shakai_hoken_azukarikin", "amt": 12000 },
+          { "acc": "futsu_yokin", "amt": 270000 }
+        ],
+        "alt": []
+      },
+      "explanation": "給料は総額300,000円を費用として借方に計上します。天引きした所得税・社会保険料は、後日納付するまで会社が一時的に預かる負債として、所得税預り金18,000円・社会保険料預り金12,000円を貸方に記入します。実際に支払う金額は差し引いた残額270,000円です。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-016",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、給料から天引きしていた社会保険料の従業員負担分12,000円に、会社負担分の社会保険料12,000円（法定福利費）を加え、合計24,000円を現金で納付した。",
+      "answer": {
+        "dr": [
+          { "acc": "shakai_hoken_azukarikin", "amt": 12000 },
+          { "acc": "hotei_fukurihi", "amt": 12000 }
+        ],
+        "cr": [{ "acc": "cash", "amt": 24000 }],
+        "alt": []
+      },
+      "explanation": "従業員から預かっていた社会保険料預り金12,000円は納付により消滅するので借方に記入します。会社が負担する分は費用の勘定「法定福利費」12,000円として借方に計上します。現金は合計24,000円減少します。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-017",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ノゾミ商会は、給料から天引きしていた源泉所得税18,000円を、税務署に現金で納付した。",
+      "answer": {
+        "dr": [{ "acc": "shotokuzei_azukarikin", "amt": 18000 }],
+        "cr": [{ "acc": "cash", "amt": 18000 }],
+        "alt": []
+      },
+      "explanation": "天引きした時点で計上していた負債の勘定「所得税預り金」が、納付によって消滅するので借方に記入します。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-018",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事はアオイ物産から商品50,000円を掛けで仕入れた。同時に、先方（仕入先）負担の引取運賃2,000円を現金で立て替えて支払い、立替金勘定で処理した。",
+      "answer": {
+        "dr": [
+          { "acc": "shiire", "amt": 50000 },
+          { "acc": "tatekaekin", "amt": 2000 }
+        ],
+        "cr": [
+          { "acc": "kaikake", "amt": 50000 },
+          { "acc": "cash", "amt": 2000 }
+        ],
+        "alt": []
+      },
+      "explanation": "商品の仕入50,000円は借方に仕入として計上します。先方負担の引取運賃を当方が立て替えて支払ったので、後で買掛金の決済時に差し引く権利として立替金（資産）2,000円を借方に計上します。買掛金から直接差し引く方法とは別に、立替金勘定でいったん資産計上する方法です。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-019",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "給料の支払いにあたり、源泉所得税や社会保険料の従業員負担分を天引きして一時的に預かる際に用いる勘定科目の分類として正しいものはどれですか。",
+      "choices": [
+        "負債の勘定である預り金",
+        "資産の勘定である預り金",
+        "費用の勘定である預り金",
+        "収益の勘定である預り金"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "天引きした所得税や社会保険料は、後日会社が国などへ納付するまで一時的に預かっているお金であり、将来支払う義務を表す負債の勘定です。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-020",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-tatekae-azukari"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "社会保険料のうち、会社が負担する分を処理する勘定科目として正しいものはどれですか。",
+      "choices": [
+        "法定福利費（費用）",
+        "社会保険料預り金（負債）",
+        "給料（費用）",
+        "立替金（資産）"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "社会保険料は従業員負担分と会社負担分があり、従業員負担分は社会保険料預り金（負債）、会社負担分は費用の勘定「法定福利費」で処理します。",
+      "lessonRef": "s1-u05-sec3"
+    },
+    {
+      "id": "q-s1-u05-021",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、従業員の出張にあたり、旅費の概算額として現金20,000円を仮払いした。",
+      "answer": {
+        "dr": [{ "acc": "karibaraikin", "amt": 20000 }],
+        "cr": [{ "acc": "cash", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "金額も内容もまだ確定していない支出なので、費用ではなく資産の勘定「仮払金」でいったん処理します。現金（資産）が減るので貸方は現金20,000円です。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-022",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "出張から戻った従業員から旅費交通費の精算報告を受け、実際にかかった旅費は18,000円であり、仮払金との差額2,000円を現金で受け取った。",
+      "answer": {
+        "dr": [
+          { "acc": "ryohi_kotsuhi", "amt": 18000 },
+          { "acc": "cash", "amt": 2000 }
+        ],
+        "cr": [{ "acc": "karibaraikin", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "実際にかかった旅費18,000円を旅費交通費（費用）として借方に計上します。概算払い20,000円との差額2,000円は使わなかった分なので現金で受け取り、借方に記入します。貸方は仮払金20,000円を全額取り崩します。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-023",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "出張から戻った従業員から旅費交通費の精算報告を受け、実際にかかった旅費は23,000円であり、仮払金との差額3,000円を現金で追加支払いした。",
+      "answer": {
+        "dr": [{ "acc": "ryohi_kotsuhi", "amt": 23000 }],
+        "cr": [
+          { "acc": "karibaraikin", "amt": 20000 },
+          { "acc": "cash", "amt": 3000 }
+        ],
+        "alt": []
+      },
+      "explanation": "実際にかかった旅費23,000円を旅費交通費（費用）として借方に計上します。仮払金は20,000円しかなかったので全額を貸方で取り崩し、不足する3,000円は現金で追加支払いしたので貸方に現金3,000円を記入します。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-024",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "出張中の従業員から当座預金口座に10,000円の振込みがあったが、その内容は不明であったため、仮受金として処理した。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 10000 }],
+        "cr": [{ "acc": "kariukekin", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "入金の内容が確定していないため、正しい勘定科目に振り替えるまでは負債の勘定「仮受金」でいったん処理します。当座預金（資産）が増えるので借方は当座預金10,000円です。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-025",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "上記の当座預金口座への振込み10,000円は、得意先アオイ物産に対する売掛金の回収であることが判明した。",
+      "answer": {
+        "dr": [{ "acc": "kariukekin", "amt": 10000 }],
+        "cr": [{ "acc": "urikake", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "内容が判明したので、仮受金（負債）を取り崩して借方に記入し、正しい勘定科目である売掛金（資産）の減少を貸方に記入します。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-026",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "内容や金額が確定していない支出を一時的に処理する勘定科目として正しいものはどれですか。",
+      "choices": [
+        "仮払金（資産）",
+        "前払金（資産）",
+        "未払金（負債）",
+        "立替金（資産）"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "出張旅費の概算払いのように、金額や内容がまだ確定していない支出は、資産の勘定「仮払金」でいったん処理し、後日内容確定後に正しい勘定科目へ振り替えます。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-027",
+      "type": "tf",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "内容が不明な入金を一時的に処理する仮受金は、負債の勘定である。",
+      "answer": true,
+      "explanation": "そのとおりです。内容が判明するまでの間、いったん代金を預かっている状態と考えるため、仮受金は負債の勘定です。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-028",
+      "type": "fill_number",
+      "unitId": "s1-u05",
+      "topics": ["t-karibarai-kariuke"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "従業員に旅費の概算額として25,000円を仮払いしていたところ、実際の旅費は21,000円であった。精算にあたり、現金で受け取る差額はいくらですか。",
+      "answer": { "value": 4000, "unit": "円" },
+      "explanation": "仮払いした25,000円から実際にかかった旅費21,000円を差し引いた4,000円が使わなかった分であり、現金で受け取ります。",
+      "lessonRef": "s1-u05-sec4"
+    },
+    {
+      "id": "q-s1-u05-029",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は商品30,000円を売り上げ、代金として他店発行の商品券30,000円を受け取った。",
+      "answer": {
+        "dr": [{ "acc": "uketori_shohinken", "amt": 30000 }],
+        "cr": [{ "acc": "uriage", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "他店が発行した商品券を受け取ったときは、発行元に買取りを請求して現金化する権利として資産の勘定「受取商品券」を借方に計上します。貸方は売上（収益）30,000円です。",
+      "lessonRef": "s1-u05-sec5"
+    },
+    {
+      "id": "q-s1-u05-030",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "かねて受け取っていた他店発行の商品券20,000円について発行元に精算を請求し、同額が普通預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "futsu_yokin", "amt": 20000 }],
+        "cr": [{ "acc": "uketori_shohinken", "amt": 20000 }],
+        "alt": []
+      },
+      "explanation": "発行元への精算請求により受取商品券が現金化されるので、資産の勘定「受取商品券」の減少20,000円を貸方に記入します。普通預金（資産）が増えるので借方は普通預金20,000円です。",
+      "lessonRef": "s1-u05-sec5"
+    },
+    {
+      "id": "q-s1-u05-031",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は、事務所の賃借契約にあたり、敷金として差入保証金100,000円を現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "sashiire_hoshokin", "amt": 100000 }],
+        "cr": [{ "acc": "cash", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "敷金は退去時に原則として返還されるお金なので、費用ではなく資産の勘定「差入保証金」を借方に計上します。現金（資産）が減るので貸方は現金100,000円です。",
+      "lessonRef": "s1-u05-sec5"
+    },
+    {
+      "id": "q-s1-u05-032",
+      "type": "journal",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "事務所を退去するにあたり、差入保証金100,000円のうち原状回復費用20,000円が差し引かれ、残額80,000円が普通預金口座に返金された。",
+      "answer": {
+        "dr": [
+          { "acc": "futsu_yokin", "amt": 80000 },
+          { "acc": "zappi", "amt": 20000 }
+        ],
+        "cr": [{ "acc": "sashiire_hoshokin", "amt": 100000 }],
+        "alt": []
+      },
+      "explanation": "差入保証金100,000円は全額取り崩すので貸方に記入します。差し引かれた原状回復費用20,000円は費用として借方に、返金された80,000円は普通預金（資産）の増加として借方に記入します。",
+      "lessonRef": "s1-u05-sec5"
+    },
+    {
+      "id": "q-s1-u05-033",
+      "type": "mc",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "他店（自社以外）が発行した商品券を、自社の商品販売の代金として受け取ったときに用いる勘定科目として正しいものはどれですか。",
+      "choices": [
+        "受取商品券（資産）",
+        "前受金（負債）",
+        "売掛金（資産）",
+        "仮受金（負債）"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "他店発行の商品券は、発行元に買取りを請求して現金化する権利を表す資産の勘定「受取商品券」で処理します。",
+      "lessonRef": "s1-u05-sec5"
+    },
+    {
+      "id": "q-s1-u05-034",
+      "type": "fill_number",
+      "unitId": "s1-u05",
+      "topics": ["t-shohinken-hoshokin"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "商品8,000円を売り上げ、代金として他店発行の商品券10,000円を受け取り、差額を現金でおつりとして支払った。支払ったおつりの金額はいくらですか。",
+      "answer": { "value": 2000, "unit": "円" },
+      "explanation": "受け取った商品券10,000円と実際の売上代金8,000円との差額10,000－8,000＝2,000円を、おつりとして現金で支払います。",
+      "lessonRef": "s1-u05-sec5"
+    }
+  ]
+}

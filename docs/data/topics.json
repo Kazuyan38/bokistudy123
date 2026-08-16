@@ -24,6 +24,12 @@
     { "id": "t-tegata-uragaki", "name": "手形の裏書譲渡", "unitId": "s1-u04" },
     { "id": "t-tegata-waribiki", "name": "手形の割引", "unitId": "s1-u04" },
     { "id": "t-tegata-futarai", "name": "手形の不渡り", "unitId": "s1-u04" },
-    { "id": "t-denshi-saiken", "name": "電子記録債権・債務", "unitId": "s1-u04" }
+    { "id": "t-denshi-saiken", "name": "電子記録債権・債務", "unitId": "s1-u04" },
+
+    { "id": "t-kashi-kari-tegata", "name": "貸付金・借入金（手形付き含む）", "unitId": "s1-u05" },
+    { "id": "t-mishu-mibarai", "name": "未収入金・未払金", "unitId": "s1-u05" },
+    { "id": "t-tatekae-azukari", "name": "立替金・預り金（給与天引き含む）", "unitId": "s1-u05" },
+    { "id": "t-karibarai-kariuke", "name": "仮払金・仮受金", "unitId": "s1-u05" },
+    { "id": "t-shohinken-hoshokin", "name": "受取商品券・差入保証金", "unitId": "s1-u05" }
   ]
 }
