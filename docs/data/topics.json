@@ -107,6 +107,11 @@
 
     { "id": "t-gaika-torihiki", "name": "外貨建取引の記帳（取引発生時レートでの円換算）", "unitId": "s2-u08" },
     { "id": "t-gaika-kessan", "name": "決算時の換算替えと決済時の為替差損益", "unitId": "s2-u08" },
-    { "id": "t-gaika-yoyaku", "name": "為替予約の基礎（振当処理）", "unitId": "s2-u08" }
+    { "id": "t-gaika-yoyaku", "name": "為替予約の基礎（振当処理）", "unitId": "s2-u08" },
+
+    { "id": "t-zoshi-oubo", "name": "株式申込証拠金・増資の応用", "unitId": "s2-u09" },
+    { "id": "t-jyoyokin-shobun", "name": "剰余金の配当と処分の応用", "unitId": "s2-u09" },
+    { "id": "t-kesu-hendo", "name": "株主資本の計数変動", "unitId": "s2-u09" },
+    { "id": "t-gappei", "name": "合併の基礎", "unitId": "s2-u09" }
   ]
 }

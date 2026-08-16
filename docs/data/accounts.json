@@ -144,6 +144,7 @@
     { "id": "gaika_urikake", "name": "外貨建売掛金", "cat": "asset", "grade": 2, "introducedIn": "s2-u08" },
 
     { "id": "sonota_shihon_jyoyokin", "name": "その他資本剰余金", "cat": "equity", "grade": 2, "introducedIn": "s2-u09" },
+    { "id": "shihon_junbikin", "name": "資本準備金", "cat": "equity", "grade": 2, "introducedIn": "s2-u09" },
     { "id": "shinkabu_yoyakuken", "name": "新株予約権", "cat": "equity", "grade": 2, "introducedIn": "s2-u09" },
 
     { "id": "zeikoka_kaikei_shisan", "name": "繰延税金資産", "cat": "asset", "grade": 2, "introducedIn": "s2-u10" },
