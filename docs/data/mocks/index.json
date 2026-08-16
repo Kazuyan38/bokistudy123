@@ -9,7 +9,7 @@
     { "id": "mock-206", "title": "2級模試 第6回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "available" },
     { "id": "mock-207", "title": "2級模試 第7回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "available" },
     { "id": "mock-208", "title": "2級模試 第8回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "available" },
-    { "id": "mock-209", "title": "2級模試 第9回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" },
+    { "id": "mock-209", "title": "2級模試 第9回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "available" },
     { "id": "mock-210", "title": "2級模試 第10回", "grade": 2, "timeLimitMin": 90, "passScore": 70, "status": "planned" }
   ]
 }
