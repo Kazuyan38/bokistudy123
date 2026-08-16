@@ -150,6 +150,10 @@
     { "id": "t-kobetsu-genka", "name": "個別原価計算の仕組み（製造指図書ごとの原価集計）", "unitId": "s3-u04" },
     { "id": "t-seizo-kansetsuhi-hairu", "name": "製造間接費の配賦（実際配賦・予定配賦）", "unitId": "s3-u04" },
     { "id": "t-hairu-sabaku", "name": "製造間接費配賦差異の分析", "unitId": "s3-u04" },
-    { "id": "t-seihin-kansei", "name": "製品の完成と引渡し", "unitId": "s3-u04" }
+    { "id": "t-seihin-kansei", "name": "製品の完成と引渡し", "unitId": "s3-u04" },
+
+    { "id": "t-bumonbetsu-gainen", "name": "部門別原価計算の目的（製造部門・補助部門）", "unitId": "s3-u05" },
+    { "id": "t-daichoku-hairu", "name": "第1次集計（部門個別費・部門共通費の配賦）", "unitId": "s3-u05" },
+    { "id": "t-hojo-bumon-haifu", "name": "第2次集計（補助部門費の配賦：直接配賦法・相互配賦法）", "unitId": "s3-u05" }
   ]
 }

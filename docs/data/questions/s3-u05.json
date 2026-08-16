@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s3-u05",
+  "questions": [
+    {
+      "id": "q-s3-u05-001",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-bumonbetsu-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "次のうち、製造部門に分類されるものはどれですか。",
+      "choices": [
+        "切削部（材料を切断・加工する部門）",
+        "動力部（工場内へ電力を供給する部門）",
+        "修繕部（機械設備を修理する部門）",
+        "工場事務部（労務管理などを行う部門）"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造部門は、切削部のように製品を直接加工する部門です。動力部・修繕部・工場事務部はいずれも製造部門の作業を補助する補助部門に分類されます。",
+      "lessonRef": "s3-u05-sec1"
+    },
+    {
+      "id": "q-s3-u05-002",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-bumonbetsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち補助部門に分類されないものはどれですか。",
+      "choices": [
+        "動力部",
+        "修繕部",
+        "組立部",
+        "工場事務部"
+      ],
+      "answer": 2,
+      "shuffle": true,
+      "explanation": "組立部は部品を組み立てて製品を直接加工する製造部門です。動力部・修繕部・工場事務部は製造部門の作業を補助する補助部門に分類されます。",
+      "lessonRef": "s3-u05-sec1"
+    },
+    {
+      "id": "q-s3-u05-003",
+      "type": "tf",
+      "unitId": "s3-u05",
+      "topics": ["t-bumonbetsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "製造部門とは、材料の切断や部品の組立てなど、製品を直接加工する部門である。",
+      "answer": true,
+      "explanation": "そのとおりです。製造部門は、切削部・組立部のように製品を直接加工する部門です。",
+      "lessonRef": "s3-u05-sec1"
+    },
+    {
+      "id": "q-s3-u05-004",
+      "type": "tf",
+      "unitId": "s3-u05",
+      "topics": ["t-bumonbetsu-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "補助部門は、製品を直接加工せず、動力供給や設備の修理など製造部門の作業を補助する部門である。",
+      "answer": true,
+      "explanation": "そのとおりです。補助部門は自ら製品を加工するのではなく、動力部の電力供給や修繕部の設備修理のように、製造部門の作業を支える部門です。",
+      "lessonRef": "s3-u05-sec1"
+    },
+    {
+      "id": "q-s3-u05-005",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-bumonbetsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "部門別原価計算を行う目的として最も適切なものはどれですか。",
+      "choices": [
+        "工場を製造部門と補助部門に分けて原価を集計し、より正確に製品原価へ配賦するため",
+        "部門ごとに異なる決算日を設定するため",
+        "補助部門の従業員数を減らすため",
+        "製造間接費を配賦せずに済ませるため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造間接費を工場全体でひとまとめに配賦すると原価がぼやけてしまいます。部門ごとに分けて集計し配賦することで、より精緻な製品原価の計算が可能になります。",
+      "lessonRef": "s3-u05-sec1"
+    },
+    {
+      "id": "q-s3-u05-006",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "トウカイ工業の部門共通費である建物減価償却費120,000円を、各部門の床面積（切削部400㎡・組立部300㎡・動力部200㎡・修繕部100㎡、合計1,000㎡）を基準に配賦する。床面積1㎡あたりの配賦率はいくらですか。",
+      "answer": { "value": 120, "unit": "円" },
+      "explanation": "配賦率＝部門共通費÷配賦基準数値の合計です。120,000÷1,000＝120円/㎡です。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-007",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "上記の配賦率（120円/㎡）をもとに、切削部（床面積400㎡）に配賦される建物減価償却費はいくらですか。",
+      "answer": { "value": 48000, "unit": "円" },
+      "explanation": "配賦額＝配賦率×各部門の配賦基準数値です。120×400＝48,000円です。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-008",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "配賦率120円/㎡をもとに、組立部（床面積300㎡）に配賦される建物減価償却費はいくらですか。",
+      "answer": { "value": 36000, "unit": "円" },
+      "explanation": "配賦額＝配賦率×各部門の配賦基準数値です。120×300＝36,000円です。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-009",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "切削部の部門個別費300,000円に、配賦された建物減価償却費48,000円を加えた、切削部の第1次集計後の部門費はいくらですか。",
+      "answer": { "value": 348000, "unit": "円" },
+      "explanation": "第1次集計後の部門費＝部門個別費＋部門共通費配賦額です。300,000＋48,000＝348,000円です。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-010",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "部門個別費と部門共通費の説明として正しいものはどれですか。",
+      "choices": [
+        "部門個別費は特定の部門にのみ発生する原価で、そのまま各部門に賦課する",
+        "部門個別費は必ず配賦基準を用いて各部門に配分する",
+        "部門共通費は特定の部門にのみ発生するため、そのまま賦課する",
+        "部門共通費と部門個別費はどちらも配賦基準を用いて配分する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "部門個別費は特定の部門にのみ発生するため、そのまま賦課します。複数の部門にまたがって発生する部門共通費は、配賦基準を用いて各部門に配分します。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-011",
+      "type": "tf",
+      "unitId": "s3-u05",
+      "topics": ["t-daichoku-hairu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "部門共通費は、複数の部門に共通して発生する原価であるため、床面積や従業員数などの配賦基準を用いて各部門に配分する。",
+      "answer": true,
+      "explanation": "そのとおりです。部門共通費はどの部門にいくらかかったか直接には分からないため、実態に近い配賦基準を用いて配分します。",
+      "lessonRef": "s3-u05-sec2"
+    },
+    {
+      "id": "q-s3-u05-012",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "サガミ製作所は直接配賦法を用いている。動力部費104,000円を、動力供給量（切削部600kwh・組立部400kwh、合計1,000kwh。補助部門相互間の用役授受は無視する）を基準に配賦する。配賦率（1kwhあたり）はいくらですか。",
+      "answer": { "value": 104, "unit": "円" },
+      "explanation": "直接配賦法では製造部門分の配賦基準数値のみを合計します。配賦率＝104,000÷1,000＝104円/kwhです。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-013",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "上記の配賦率（104円/kwh）をもとに、切削部（動力供給量600kwh）に配賦される動力部費はいくらですか。",
+      "answer": { "value": 62400, "unit": "円" },
+      "explanation": "配賦額＝配賦率×各製造部門の配賦基準数値です。104×600＝62,400円です。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-014",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "サガミ製作所の修繕部費62,000円を、修繕時間（切削部30時間・組立部20時間、合計50時間）を基準に直接配賦法で配賦する。組立部に配賦される修繕部費はいくらですか。",
+      "answer": { "value": 24800, "unit": "円" },
+      "explanation": "配賦率＝62,000÷50＝1,240円/時間です。組立部への配賦額＝1,240×20＝24,800円です。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-015",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "切削部の第1次集計後の部門費400,000円に、動力部費の配賦額62,400円と修繕部費の配賦額37,200円を加えた、切削部の製造部門費（最終集計額）はいくらですか。",
+      "answer": { "value": 499600, "unit": "円" },
+      "explanation": "製造部門費（最終集計額）＝第1次集計後の部門費＋補助部門費の配賦額の合計です。400,000＋62,400＋37,200＝499,600円です。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-016",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "直接配賦法の特徴として正しいものはどれですか。",
+      "choices": [
+        "補助部門費を製造部門にのみ配賦し、補助部門間の用役の授受は無視する",
+        "補助部門費を他の補助部門にも配賦し、複数回にわたり計算を繰り返す",
+        "補助部門費は配賦せず、そのまま補助部門の原価として据え置く",
+        "製造部門費を補助部門に逆配賦する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "直接配賦法は、補助部門費を製造部門にのみ配賦する簡便な方法です。補助部門どうしが用役をやり取りしている事実は無視して計算します。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-017",
+      "type": "journal",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "サガミ製作所は、直接配賦法により最終的に集計された切削部の製造部門費499,600円と組立部の製造部門費366,400円を、それぞれ仕掛品勘定へ振り替えた。この取引を仕訳しなさい（部門の区別は考慮せず、合計額で仕訳しなさい）。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 866000 }],
+        "cr": [{ "acc": "seizo_kansetsuhi", "amt": 866000 }],
+        "alt": []
+      },
+      "explanation": "各製造部門に最終集計された部門費は、製造間接費勘定から仕掛品勘定へ振り替えます。499,600＋366,400＝866,000円です。（借）仕掛品866,000（貸）製造間接費866,000と仕訳します。",
+      "lessonRef": "s3-u05-sec3"
+    },
+    {
+      "id": "q-s3-u05-018",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "ノザキ工業は相互配賦法（簡便法）を用いている。動力部費120,000円を、動力供給量（切削部300kwh・組立部200kwh・修繕部100kwh、合計600kwh）を基準に第1次配賦する。配賦率（1kwhあたり）はいくらですか。",
+      "answer": { "value": 200, "unit": "円" },
+      "explanation": "相互配賦法の第1次配賦では、他の補助部門も含めた合計で配賦率を計算します。配賦率＝120,000÷600＝200円/kwhです。",
+      "lessonRef": "s3-u05-sec4"
+    },
+    {
+      "id": "q-s3-u05-019",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "上記の配賦率（200円/kwh）をもとに、第1次配賦で修繕部（動力供給量100kwh）に配賦される動力部費はいくらですか。",
+      "answer": { "value": 20000, "unit": "円" },
+      "explanation": "第1次配賦では製造部門だけでなく他の補助部門にも配賦します。修繕部への配賦額＝200×100＝20,000円です。",
+      "lessonRef": "s3-u05-sec4"
+    },
+    {
+      "id": "q-s3-u05-020",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "ノザキ工業の修繕部費80,000円を、修繕時間（切削部25時間・組立部15時間・動力部10時間、合計50時間）を基準に第1次配賦する。第1次配賦で動力部に配賦される修繕部費はいくらですか。",
+      "answer": { "value": 16000, "unit": "円" },
+      "explanation": "配賦率＝80,000÷50＝1,600円/時間です。動力部への配賦額＝1,600×10＝16,000円です。",
+      "lessonRef": "s3-u05-sec4"
+    },
+    {
+      "id": "q-s3-u05-021",
+      "type": "fill_number",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "第2次配賦（簡便法）では、第1次配賦で補助部門どうしがやり取りした金額を、製造部門のみに配賦する。動力部が修繕部から受け入れた16,000円を、動力部の製造部門間配賦比率（切削部:組立部＝300kwh:200kwh＝3:2）で配賦するとき、切削部に配賦される金額はいくらですか。",
+      "answer": { "value": 9600, "unit": "円" },
+      "explanation": "16,000円を3:2の比率で配分します。切削部への配賦額＝16,000×3/5＝9,600円です。",
+      "lessonRef": "s3-u05-sec4"
+    },
+    {
+      "id": "q-s3-u05-022",
+      "type": "mc",
+      "unitId": "s3-u05",
+      "topics": ["t-hojo-bumon-haifu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "相互配賦法（簡便法）の特徴として正しいものはどれですか。",
+      "choices": [
+        "補助部門間の用役の授受も考慮し、第1次配賦で他の補助部門にも配賦したうえで、第2次配賦で製造部門のみに配賦する",
+        "補助部門費を最初から製造部門にのみ配賦し、補助部門間の授受は無視する",
+        "補助部門費をすべて修繕費として処理する",
+        "製造部門費を補助部門へ再配賦する"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "相互配賦法（簡便法）は、第1次配賦で補助部門間の用役の授受も考慮して他の補助部門にも配賦し、第2次配賦でその受入額を製造部門のみに配賦する2段階の方法です。",
+      "lessonRef": "s3-u05-sec4"
+    }
+  ]
+}
