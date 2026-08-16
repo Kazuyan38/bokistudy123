@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stages": [
+    {
+      "id": 1,
+      "title": "3級範囲（商業簿記の基礎）",
+      "units": [
+        { "id": "s1-u01", "title": "簿記の基礎", "prereq": [], "estMinutes": 60, "status": "available" },
+        { "id": "s1-u02", "title": "商品売買", "prereq": ["s1-u01"], "estMinutes": 70, "status": "available" },
+        { "id": "s1-u03", "title": "現金・預金", "prereq": ["s1-u02"], "estMinutes": 60, "status": "available" },
+        { "id": "s1-u04", "title": "手形・電子記録債権", "prereq": ["s1-u03"], "estMinutes": 50, "status": "planned" },
+        { "id": "s1-u05", "title": "その他の債権債務", "prereq": ["s1-u04"], "estMinutes": 70, "status": "planned" },
+        { "id": "s1-u06", "title": "有形固定資産", "prereq": ["s1-u05"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u07", "title": "貸倒れと貸倒引当金", "prereq": ["s1-u06"], "estMinutes": 50, "status": "planned" },
+        { "id": "s1-u08", "title": "株式会社の資本", "prereq": ["s1-u07"], "estMinutes": 50, "status": "planned" },
+        { "id": "s1-u09", "title": "税金", "prereq": ["s1-u08"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u10", "title": "経過勘定", "prereq": ["s1-u09"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u11", "title": "決算手続", "prereq": ["s1-u10"], "estMinutes": 90, "status": "planned" },
+        { "id": "s1-u12", "title": "帳簿と伝票", "prereq": ["s1-u11"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u13", "title": "3級総合演習・卒業判定", "prereq": ["s1-u12"], "estMinutes": 120, "status": "planned" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2級 商業簿記",
+      "units": [
+        { "id": "s2-u01", "title": "商品売買の応用と収益認識", "prereq": ["s1-u13"], "estMinutes": 70, "status": "planned" },
+        { "id": "s2-u02", "title": "銀行勘定調整表", "prereq": ["s2-u01"], "estMinutes": 60, "status": "planned" },
+        { "id": "s2-u03", "title": "手形・電子記録債権の応用", "prereq": ["s2-u02"], "estMinutes": 60, "status": "planned" },
+        { "id": "s2-u04", "title": "有価証券", "prereq": ["s2-u03"], "estMinutes": 80, "status": "planned" },
+        { "id": "s2-u05", "title": "有形固定資産の応用", "prereq": ["s2-u04"], "estMinutes": 90, "status": "planned" },
+        { "id": "s2-u06", "title": "リース取引・無形固定資産", "prereq": ["s2-u05"], "estMinutes": 70, "status": "planned" },
+        { "id": "s2-u07", "title": "引当金", "prereq": ["s2-u06"], "estMinutes": 60, "status": "planned" },
+        { "id": "s2-u08", "title": "外貨建取引", "prereq": ["s2-u07"], "estMinutes": 60, "status": "planned" },
+        { "id": "s2-u09", "title": "株式会社の純資産", "prereq": ["s2-u08"], "estMinutes": 80, "status": "planned" },
+        { "id": "s2-u10", "title": "税効果会計", "prereq": ["s2-u09"], "estMinutes": 70, "status": "planned" },
+        { "id": "s2-u11", "title": "決算と財務諸表", "prereq": ["s2-u10"], "estMinutes": 90, "status": "planned" },
+        { "id": "s2-u12", "title": "本支店会計", "prereq": ["s2-u11"], "estMinutes": 60, "status": "planned" },
+        { "id": "s2-u13", "title": "連結会計I（資本連結）", "prereq": ["s2-u12"], "estMinutes": 90, "status": "planned" },
+        { "id": "s2-u14", "title": "連結会計II（成果連結・連結精算表）", "prereq": ["s2-u13"], "estMinutes": 90, "status": "planned" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "2級 工業簿記",
+      "units": [
+        { "id": "s3-u01", "title": "工業簿記の基礎", "prereq": ["s1-u13"], "estMinutes": 60, "status": "planned" },
+        { "id": "s3-u02", "title": "材料費", "prereq": ["s3-u01"], "estMinutes": 60, "status": "planned" },
+        { "id": "s3-u03", "title": "労務費・経費", "prereq": ["s3-u02"], "estMinutes": 60, "status": "planned" },
+        { "id": "s3-u04", "title": "個別原価計算", "prereq": ["s3-u03"], "estMinutes": 80, "status": "planned" },
+        { "id": "s3-u05", "title": "部門別原価計算", "prereq": ["s3-u04"], "estMinutes": 70, "status": "planned" },
+        { "id": "s3-u06", "title": "総合原価計算I", "prereq": ["s3-u05"], "estMinutes": 80, "status": "planned" },
+        { "id": "s3-u07", "title": "総合原価計算II", "prereq": ["s3-u06"], "estMinutes": 80, "status": "planned" },
+        { "id": "s3-u08", "title": "工業簿記の財務諸表・本社工場会計", "prereq": ["s3-u07"], "estMinutes": 60, "status": "planned" },
+        { "id": "s3-u09", "title": "標準原価計算", "prereq": ["s3-u08"], "estMinutes": 80, "status": "planned" },
+        { "id": "s3-u10", "title": "直接原価計算とCVP分析", "prereq": ["s3-u09"], "estMinutes": 80, "status": "planned" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "2級 CBT対策",
+      "units": [
+        { "id": "s4-u01", "title": "CBT操作・時間配分戦略", "prereq": ["s2-u14", "s3-u10"], "estMinutes": 30, "status": "planned" },
+        { "id": "s4-u02", "title": "仕訳特訓（全範囲）", "prereq": ["s4-u01"], "estMinutes": 300, "status": "planned" },
+        { "id": "s4-u03", "title": "2級形式模試", "prereq": ["s4-u02"], "estMinutes": 900, "status": "planned" }
+      ]
+    }
+  ]
+}

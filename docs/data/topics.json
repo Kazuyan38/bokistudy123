@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "topics": [
+    { "id": "t-goyoso", "name": "簿記の5要素", "unitId": "s1-u01" },
+    { "id": "t-bspl", "name": "貸借対照表と損益計算書", "unitId": "s1-u01" },
+    { "id": "t-shiwake", "name": "仕訳のルール", "unitId": "s1-u01" },
+    { "id": "t-tenki", "name": "転記と勘定", "unitId": "s1-u01" },
+    { "id": "t-boki-junkan", "name": "簿記一巡の流れ", "unitId": "s1-u01" },
+
+    { "id": "t-sanbunpo", "name": "三分法", "unitId": "s1-u02" },
+    { "id": "t-kake-torihiki", "name": "掛け取引", "unitId": "s1-u02" },
+    { "id": "t-henpin", "name": "返品", "unitId": "s1-u02" },
+    { "id": "t-shokakari", "name": "諸掛（当方負担・先方負担）", "unitId": "s1-u02" },
+    { "id": "t-maebarai-maeuke", "name": "前払金・前受金", "unitId": "s1-u02" },
+    { "id": "t-credit-urikake", "name": "クレジット売掛金", "unitId": "s1-u02" },
+
+    { "id": "t-genkin-hani", "name": "現金の範囲（通貨代用証券）", "unitId": "s1-u03" },
+    { "id": "t-genkin-kabusoku", "name": "現金過不足", "unitId": "s1-u03" },
+    { "id": "t-toza-yokin", "name": "当座預金・当座借越", "unitId": "s1-u03" },
+    { "id": "t-koguchi-genkin", "name": "小口現金", "unitId": "s1-u03" },
+    { "id": "t-yokin-shurui", "name": "預金の種類", "unitId": "s1-u03" }
+  ]
+}

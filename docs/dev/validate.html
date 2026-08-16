@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BokiStudy コンテンツ検証</title>
+<style>
+  body { font-family: "Zen Kaku Gothic New", sans-serif; background: #F7F5F0; color: #1F2433; max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.7; }
+  h1 { font-size: 1.2rem; }
+  .ok { color: #2E7D5B; font-weight: 700; }
+  .err { color: #C0504D; }
+  .warn { color: #8a6a1f; }
+  li { font-size: .85rem; margin-bottom: 4px; }
+  .summary { background: #fff; border-radius: 12px; padding: 14px 18px; margin: 16px 0; box-shadow: 0 2px 8px rgba(27,42,74,.08); }
+</style>
+</head>
+<body>
+<h1>BokiStudy コンテンツ検証</h1>
+<p>スキーマ・ID重複・参照切れを一括チェックします（tools/validate.mjs と同等）。</p>
+<div id="out"><p>検証中…</p></div>
+<script>
+(async () => {
+  const errors = [], warns = [];
+  const err = (m) => errors.push(m);
+  const warn = (m) => warns.push(m);
+  const load = async (p) => {
+    const r = await fetch("../" + p);
+    if (!r.ok) throw new Error(`${p}: HTTP ${r.status}`);
+    return r.json();
+  };
+  const QTYPES = ["journal", "mc", "tf", "fill_number"];
+  const FIGKINDS = ["journal", "taccount", "bspl", "flow", "worksheet", "calcbox"];
+  const CATS = ["asset", "liability", "equity", "revenue", "expense", "other"];
+
+  try {
+    const [curriculum, accountsDoc, topicsDoc] = await Promise.all([
+      load("data/curriculum.json"), load("data/accounts.json"), load("data/topics.json"),
+    ]);
+
+    const unitOrder = new Map(); let order = 0;
+    for (const st of curriculum.stages) for (const u of st.units) {
+      if (unitOrder.has(u.id)) err(`curriculum: 単元ID重複 ${u.id}`);
+      unitOrder.set(u.id, order++);
+      if (!["available", "planned"].includes(u.status)) err(`curriculum: ${u.id} status不正`);
+    }
+    for (const st of curriculum.stages) for (const u of st.units)
+      for (const p of u.prereq) if (!unitOrder.has(p)) err(`curriculum: ${u.id} prereq "${p}" が不明`);
+
+    const accountIds = new Map();
+    for (const a of accountsDoc.accounts) {
+      if (accountIds.has(a.id)) err(`accounts: ID重複 ${a.id}`);
+      accountIds.set(a.id, a);
+      if (!CATS.includes(a.cat)) err(`accounts: ${a.id} cat不正`);
+      if (!unitOrder.has(a.introducedIn)) err(`accounts: ${a.id} introducedIn不明`);
+    }
+    const topicIds = new Map();
+    for (const t of topicsDoc.topics) {
+      if (topicIds.has(t.id)) err(`topics: ID重複 ${t.id}`);
+      topicIds.set(t.id, t);
+    }
+
+    const globalQids = new Set();
+    const avail = curriculum.stages.flatMap((s) => s.units).filter((u) => u.status === "available");
+    for (const unit of avail) {
+      const uid = unit.id;
+      let lesson, qdoc;
+      try { lesson = await load(`data/lessons/${uid}.json`); } catch (e) { err(String(e.message)); continue; }
+      try { qdoc = await load(`data/questions/${uid}.json`); } catch (e) { err(String(e.message)); continue; }
+
+      const qids = new Map(); let srsCount = 0;
+      for (const q of qdoc.questions || []) {
+        const tag = `${uid} ${q.id}`;
+        if (globalQids.has(q.id)) err(`${tag}: 問題ID全体重複`);
+        globalQids.add(q.id); qids.set(q.id, q);
+        if (!q.id?.startsWith(`q-${uid}-`)) err(`${tag}: ID規則違反`);
+        if (!QTYPES.includes(q.type)) { err(`${tag}: type不正`); continue; }
+        if (!q.stem?.trim()) err(`${tag}: stem空`);
+        if (!q.explanation?.trim()) err(`${tag}: explanation空`);
+        if (![1,2,3].includes(q.difficulty)) err(`${tag}: difficulty不正`);
+        if (!Array.isArray(q.topics) || !q.topics.length) err(`${tag}: topics空`);
+        else for (const t of q.topics) if (!topicIds.has(t)) err(`${tag}: 論点 ${t} 不明`);
+        if (q.srs === true) srsCount++;
+        if (q.type === "journal") {
+          const side = (arr, name, ctx) => {
+            if (!Array.isArray(arr) || !arr.length) { err(`${ctx}: ${name}空`); return 0; }
+            let s = 0;
+            for (const l of arr) {
+              const a = accountIds.get(l.acc);
+              if (!a) err(`${ctx}: 科目 ${l.acc} 不明`);
+              else if ((unitOrder.get(a.introducedIn) ?? 999) > unitOrder.get(uid)) err(`${ctx}: ${a.name} は未学習科目`);
+              if (!Number.isInteger(l.amt) || l.amt <= 0) err(`${ctx}: 金額不正`);
+              else s += l.amt;
+            }
+            return s;
+          };
+          [q.answer, ...(q.answer?.alt || [])].forEach((ans, i) => {
+            const ctx = `${tag}${i ? ` alt${i-1}` : ""}`;
+            const d = side(ans.dr, "借方", ctx), c = side(ans.cr, "貸方", ctx);
+            if (d !== c) err(`${ctx}: 貸借不一致 ${d}≠${c}`);
+          });
+        } else if (q.type === "mc") {
+          if (!Array.isArray(q.choices) || q.choices.length < 3) err(`${tag}: choices不足`);
+          else if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.choices.length) err(`${tag}: answer不正`);
+        } else if (q.type === "tf") {
+          if (typeof q.answer !== "boolean") err(`${tag}: answerはboolean`);
+        } else if (q.type === "fill_number") {
+          if (typeof q.answer?.value !== "number") err(`${tag}: answer.value不正`);
+        }
+      }
+      if (srsCount < 8 || srsCount > 15) warn(`${uid}: コアカード${srsCount}問（推奨8〜15）`);
+
+      const secIds = new Set();
+      for (const sec of lesson.sections || []) {
+        const tag = `${uid} ${sec.id}`;
+        if (secIds.has(sec.id)) err(`${tag}: セクションID重複`);
+        secIds.add(sec.id);
+        for (const t of sec.topics || []) if (!topicIds.has(t)) err(`${tag}: 論点 ${t} 不明`);
+        for (const b of sec.blocks || []) {
+          if (!["text","figure","example"].includes(b.type)) err(`${tag}: block不正`);
+          if (b.type === "figure" && !FIGKINDS.includes(b.figure?.kind)) err(`${tag}: figure kind不正`);
+        }
+        for (const cq of sec.checkpoint || []) if (!qids.has(cq)) err(`${tag}: checkpoint ${cq} 不明`);
+        if (!sec.checkpoint || sec.checkpoint.length < 2 || sec.checkpoint.length > 4) warn(`${tag}: checkpoint数 ${sec.checkpoint?.length ?? 0}（推奨2〜4）`);
+      }
+      for (const q of qdoc.questions || [])
+        if (q.lessonRef && !secIds.has(q.lessonRef)) err(`${uid} ${q.id}: lessonRef不明`);
+    }
+  } catch (e) {
+    err(`致命的エラー: ${e.message}`);
+  }
+
+  const out = document.getElementById("out");
+  out.innerHTML = `
+    <div class="summary">${errors.length === 0
+      ? `<span class="ok">✅ 検証OK</span>（警告 ${warns.length}件）`
+      : `<span class="err">❌ エラー ${errors.length}件</span> / 警告 ${warns.length}件`}</div>
+    <ul>${errors.map((e) => `<li class="err">✗ ${e}</li>`).join("")}
+        ${warns.map((w) => `<li class="warn">⚠ ${w}</li>`).join("")}</ul>`;
+})();
+</script>
+</body>
+</html>
