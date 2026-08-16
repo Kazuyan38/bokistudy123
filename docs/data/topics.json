@@ -168,6 +168,11 @@
 
     { "id": "t-seizo-genka-hokokusho", "name": "製造原価報告書の作成", "unitId": "s3-u08" },
     { "id": "t-kogyo-zaimu-shohyo", "name": "工業簿記の損益計算書・貸借対照表", "unitId": "s3-u08" },
-    { "id": "t-honsha-kojo-kaikei", "name": "本社工場会計（本社勘定・工場勘定による記帳）", "unitId": "s3-u08" }
+    { "id": "t-honsha-kojo-kaikei", "name": "本社工場会計（本社勘定・工場勘定による記帳）", "unitId": "s3-u08" },
+
+    { "id": "t-hyojun-genka-gainen", "name": "標準原価計算の目的（原価管理のための事前設定原価）", "unitId": "s3-u09" },
+    { "id": "t-genka-hyojun-settei", "name": "標準原価カードの作成（標準直接材料費・標準直接労務費・標準製造間接費）", "unitId": "s3-u09" },
+    { "id": "t-sabaku-bunseki-zairyo-romu", "name": "直接材料費差異・直接労務費差異の分析（価格差異・数量差異、賃率差異・時間差異）", "unitId": "s3-u09" },
+    { "id": "t-sabaku-bunseki-kansetsuhi", "name": "製造間接費差異の分析（予算差異・能率差異・操業度差異）", "unitId": "s3-u09" }
   ]
 }

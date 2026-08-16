@@ -337,7 +337,7 @@
             "s3-u08"
           ],
           "estMinutes": 80,
-          "status": "planned"
+          "status": "available"
         },
         {
           "id": "s3-u10",
