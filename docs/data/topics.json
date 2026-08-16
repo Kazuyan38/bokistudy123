@@ -39,6 +39,10 @@
 
     { "id": "t-kashidaore-settei", "name": "貸倒引当金の設定・差額補充法", "unitId": "s1-u07" },
     { "id": "t-kashidaore-hassei", "name": "貸倒れの発生（前期発生分・当期発生分）", "unitId": "s1-u07" },
-    { "id": "t-kashidaore-toritate", "name": "償却債権取立益", "unitId": "s1-u07" }
+    { "id": "t-kashidaore-toritate", "name": "償却債権取立益", "unitId": "s1-u07" },
+
+    { "id": "t-kabushiki-setsuritsu-zoshi", "name": "株式会社の設立・増資", "unitId": "s1-u08" },
+    { "id": "t-kessan-rieki", "name": "当期純利益・純損失の振替", "unitId": "s1-u08" },
+    { "id": "t-haito-shobun", "name": "剰余金の配当と処分", "unitId": "s1-u08" }
   ]
 }
