@@ -155,6 +155,13 @@
     { "id": "shiten", "name": "支店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" },
     { "id": "sogo_soneki", "name": "総合損益", "cat": "other", "grade": 2, "introducedIn": "s2-u12" },
 
-    { "id": "denshi_saiken_baikyakuson", "name": "電子記録債権売却損", "cat": "expense", "grade": 2, "introducedIn": "s2-u03" }
+    { "id": "denshi_saiken_baikyakuson", "name": "電子記録債権売却損", "cat": "expense", "grade": 2, "introducedIn": "s2-u03" },
+
+    { "id": "hishihai_kabunushi_mochibun", "name": "非支配株主持分", "cat": "equity", "grade": 2, "introducedIn": "s2-u13" },
+    { "id": "hishihai_kabunushi_songai", "name": "非支配株主に帰属する当期純利益", "cat": "expense", "grade": 2, "introducedIn": "s2-u13" },
+    { "id": "oya_kabunushi_songai", "name": "親会社株主に帰属する当期純利益", "cat": "other", "grade": 2, "introducedIn": "s2-u13" },
+
+    { "id": "urijyoukyaku_riekiyoku", "name": "未実現利益", "cat": "other", "grade": 2, "introducedIn": "s2-u14" },
+    { "id": "juzoku_kaisha_kabushiki_baikyakueki", "name": "子会社株式売却益", "cat": "revenue", "grade": 2, "introducedIn": "s2-u14" }
   ]
 }
