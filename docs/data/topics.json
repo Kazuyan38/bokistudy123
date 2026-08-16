@@ -141,6 +141,10 @@
 
     { "id": "t-zairyo-kounyu", "name": "材料の購入と受入れ", "unitId": "s3-u02" },
     { "id": "t-zairyo-shohi", "name": "材料の消費（直接費・間接費、先入先出法・平均法）", "unitId": "s3-u02" },
-    { "id": "t-zairyo-kakaku-sabaku", "name": "材料消費価格差異", "unitId": "s3-u02" }
+    { "id": "t-zairyo-kakaku-sabaku", "name": "材料消費価格差異", "unitId": "s3-u02" },
+
+    { "id": "t-romuhi-kihon", "name": "労務費の基本（賃金の支払いと消費）", "unitId": "s3-u03" },
+    { "id": "t-chingin-chinritsu-sabaku", "name": "賃率差異", "unitId": "s3-u03" },
+    { "id": "t-keihi-kubun", "name": "経費の分類と消費（直接経費・間接経費）", "unitId": "s3-u03" }
   ]
 }

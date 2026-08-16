@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s3-u03",
+  "questions": [
+    {
+      "id": "q-s3-u03-001",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "フジ工業は当月分の賃金1,200,000円を現金で支払った。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chinginhi", "amt": 1200000 }],
+        "cr": [{ "acc": "cash", "amt": 1200000 }],
+        "alt": []
+      },
+      "explanation": "工員に賃金を支払ったときは、費用の勘定「賃金」の借方に計上します。（借）賃金1,200,000（貸）現金1,200,000と仕訳します。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-002",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミライ製作所は当月分の賃金1,500,000円について、源泉所得税120,000円と社会保険料80,000円を控除した残額を現金で支払った。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chinginhi", "amt": 1500000 }],
+        "cr": [{ "acc": "shotokuzei_azukarikin", "amt": 120000 }, { "acc": "shakai_hoken_azukarikin", "amt": 80000 }, { "acc": "cash", "amt": 1300000 }],
+        "alt": []
+      },
+      "explanation": "賃金の総額1,500,000円をいったん賃金勘定の借方に計上し、控除した源泉所得税・社会保険料はそれぞれ所得税預り金・社会保険料預り金として貸方に計上します。実際に支払う現金は1,500,000－120,000－80,000＝1,300,000円です。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-003",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "フジ工業は当月分の賃金900,000円を普通預金口座から支払った。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chinginhi", "amt": 900000 }],
+        "cr": [{ "acc": "futsu_yokin", "amt": 900000 }],
+        "alt": []
+      },
+      "explanation": "支払方法が普通預金であっても、賃金の借方計上という考え方は変わりません。（借）賃金900,000（貸）普通預金900,000と仕訳します。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-004",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "フジ工業は当月、特定の製品Aの製造に従事した直接工の直接作業分の賃金600,000円を消費した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 600000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 600000 }],
+        "alt": []
+      },
+      "explanation": "直接工が特定の製品Aのために直接作業した分の賃金は直接労務費です。直接労務費はそのまま仕掛品勘定の借方に振り替え、貸方は減少した賃金勘定とします。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-005",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミライ製作所は当月、間接工の賃金250,000円および直接工の間接作業分の賃金50,000円、合計300,000円を消費した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seizo_kansetsuhi", "amt": 300000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 300000 }],
+        "alt": []
+      },
+      "explanation": "間接工の賃金や、直接工であっても機械の保守など複数の製品に共通する間接作業分の賃金は間接労務費です。間接労務費はいったん製造間接費勘定の借方に集計し、貸方は減少した賃金勘定とします。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-006",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "フジ工業は当月の賃金消費額900,000円のうち、直接工の直接作業分700,000円は仕掛品へ、間接工の賃金等200,000円は製造間接費へ、それぞれ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 700000 }, { "acc": "seizo_kansetsuhi", "amt": 200000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 900000 }],
+        "alt": []
+      },
+      "explanation": "1回の消費に直接労務費と間接労務費の両方が含まれる場合は、直接労務費を仕掛品、間接労務費を製造間接費にそれぞれ振り替え、貸方には賃金の合計額700,000＋200,000＝900,000円を計上します。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-007",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "フジ工業は予定賃率を用いて労務費を計算しており、当月の予定消費額は800,000円であった。月末に実際消費額を計算したところ770,000円であったため、差額を賃率差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chinginhi", "amt": 30000 }],
+        "cr": [{ "acc": "chingin_chinritsu_sabaku", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "予定消費額800,000円が実際消費額770,000円を30,000円上回っているため、賃金を予定より少なく消費できた有利差異（貸方差異）です。（借）賃金30,000（貸）賃率差異30,000と仕訳します。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-008",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ミライ製作所の当月賃金の予定消費額は650,000円、実際消費額は680,000円であった。差額を賃率差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chingin_chinritsu_sabaku", "amt": 30000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "実際消費額680,000円が予定消費額650,000円を30,000円上回るため、予定より多く消費してしまった不利差異（借方差異）です。（借）賃率差異30,000（貸）賃金30,000と仕訳します。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-009",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "フジ工業の当月賃金の予定消費額は500,000円、実際消費額は470,000円であった。差額を賃率差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chinginhi", "amt": 30000 }],
+        "cr": [{ "acc": "chingin_chinritsu_sabaku", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "予定消費額500,000円が実際消費額470,000円を30,000円上回るため有利差異（貸方差異）です。（借）賃金30,000（貸）賃率差異30,000と仕訳します。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-010",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミライ製作所の当月賃金の予定消費額は400,000円、実際消費額は430,000円であった。差額を賃率差異勘定に振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "chingin_chinritsu_sabaku", "amt": 30000 }],
+        "cr": [{ "acc": "chinginhi", "amt": 30000 }],
+        "alt": []
+      },
+      "explanation": "実際消費額430,000円が予定消費額400,000円を30,000円上回るため不利差異（借方差異）です。（借）賃率差異30,000（貸）賃金30,000と仕訳します。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-011",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "フジ工業は外注加工賃（直接経費）80,000円を現金で支払い、経費として計上した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "keihi", "amt": 80000 }],
+        "cr": [{ "acc": "cash", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "経費が発生したときは、材料費・賃金と同じように、いったん経費勘定の借方に計上します。（借）経費80,000（貸）現金80,000と仕訳します。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-012",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "フジ工業は、計上済みの外注加工賃80,000円を、特定の製品向けの直接経費として仕掛品へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 80000 }],
+        "cr": [{ "acc": "keihi", "amt": 80000 }],
+        "alt": []
+      },
+      "explanation": "外注加工賃のように特定の製品のためだけに発生する経費は直接経費です。直接経費はそのまま仕掛品勘定の借方に振り替え、貸方は減少した経費勘定とします。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-013",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミライ製作所は当月分の工場の機械修繕費（間接経費）45,000円について、代金は翌月払いとして経費に計上した。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "keihi", "amt": 45000 }],
+        "cr": [{ "acc": "miharaikin", "amt": 45000 }],
+        "alt": []
+      },
+      "explanation": "修繕費のように代金の支払いが後日となる経費も、発生時にいったん経費勘定の借方に計上し、貸方には未払金を計上します。（借）経費45,000（貸）未払金45,000と仕訳します。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-014",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミライ製作所は、計上済みの機械修繕費45,000円を、複数の製品に共通する間接経費として製造間接費へ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "seizo_kansetsuhi", "amt": 45000 }],
+        "cr": [{ "acc": "keihi", "amt": 45000 }],
+        "alt": []
+      },
+      "explanation": "工場全体で共通に発生する修繕費は間接経費です。間接経費はいったん製造間接費勘定の借方に集計し、貸方は減少した経費勘定とします。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-015",
+      "type": "journal",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "フジ工業は当月、直接経費（外注加工賃）60,000円と間接経費（工場減価償却費等）90,000円、合計150,000円の経費を消費した。直接経費は仕掛品へ、間接経費は製造間接費へ、それぞれ振り替えた。この取引を仕訳しなさい。",
+      "answer": {
+        "dr": [{ "acc": "shikakari_hin_kogyo", "amt": 60000 }, { "acc": "seizo_kansetsuhi", "amt": 90000 }],
+        "cr": [{ "acc": "keihi", "amt": 150000 }],
+        "alt": []
+      },
+      "explanation": "1回の消費に直接経費と間接経費の両方が含まれる場合は、直接経費を仕掛品、間接経費を製造間接費にそれぞれ振り替え、貸方には経費の合計額60,000＋90,000＝150,000円を計上します。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-016",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち直接経費に分類されるものはどれですか。",
+      "choices": [
+        "特定の製品の加工のためだけに外部業者へ支払った外注加工賃",
+        "工場建物全体にかかる減価償却費",
+        "工場全体で使用する電力にかかる電力料",
+        "工場全体を対象とした火災保険料"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "外注加工賃は、特定の製品のためだけに発生する経費であるため直接経費に分類されます。工場建物の減価償却費・電力料・火災保険料は複数の製品に共通してかかるため間接経費です。",
+      "lessonRef": "s3-u03-sec3"
+    },
+    {
+      "id": "q-s3-u03-017",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "次のうち間接経費に分類されるものはどれですか。",
+      "choices": [
+        "工場全体で共通にかかる水道光熱費",
+        "特定の製品のためだけの外注加工賃",
+        "特定の製品のためだけに支払った特許権使用料",
+        "特定の製品向けの外部への加工委託費"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "水道光熱費は工場全体で共通に発生し、特定の製品に跡づけられないため間接経費です。外注加工賃や特定の製品専用の特許権使用料・加工委託費は、特定の製品のためだけに発生するため直接経費に分類されます。",
+      "lessonRef": "s3-u03-sec3"
+    },
+    {
+      "id": "q-s3-u03-018",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "経費の説明として最も適切なものはどれですか。",
+      "choices": [
+        "材料費・労務費のいずれにも当てはまらない、それ以外のすべての原価要素",
+        "材料の消費額のみを指す原価要素",
+        "直接工の賃金のみを指す原価要素",
+        "販売費及び一般管理費とまったく同じ意味の原価要素"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "製造原価は材料費・労務費・経費の3つに分類され、経費とはそのうち材料費にも労務費にも当てはまらない、それ以外のすべての原価要素をまとめた呼び方です。",
+      "lessonRef": "s3-u03-sec3"
+    },
+    {
+      "id": "q-s3-u03-019",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-keihi-kubun"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "電力料や水道料のように、メーターの測定値をもとに当月の消費額を計算する経費を何と呼びますか。",
+      "choices": [
+        "測定経費",
+        "支払経費",
+        "月割経費",
+        "見積経費"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "電力料・水道料・ガス代のようにメーターの測定値から当月分を計算する経費を測定経費といいます。外注加工賃・修繕費のように支払額をそのまま用いるものは支払経費、減価償却費・保険料のように年間額を月割りするものは月割経費です。",
+      "lessonRef": "s3-u03-sec4"
+    },
+    {
+      "id": "q-s3-u03-020",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "次のうち間接労務費に分類されるものはどれですか。",
+      "choices": [
+        "間接工の賃金",
+        "特定の製品の直接作業を行う直接工の賃金",
+        "特定の製品のためだけの外注加工賃",
+        "特定の製品のためだけの主要材料の消費額"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "間接工の賃金は、複数の製品に共通してかかり特定の製品に跡づけられないため間接労務費です。直接工の直接作業分の賃金は直接労務費、外注加工賃は経費、主要材料の消費額は材料費に分類されます。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-021",
+      "type": "mc",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "労務費の計算に予定賃率を用いる理由として最も適切なものはどれですか。",
+      "choices": [
+        "実際消費賃率の確定を待たずに、すみやかに製品原価を計算できるようにするため",
+        "実際の賃金支払額を少なく見せるため",
+        "従業員の給与を減額するため",
+        "決算整理の手続きを省略するため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "実際の消費賃率は月末にならないと確定しません。予定賃率を用いることで、月末を待たずにすみやかに製品原価を計算できます。給与の減額や決算整理の省略とは関係ありません。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-022",
+      "type": "tf",
+      "unitId": "s3-u03",
+      "topics": ["t-romuhi-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "直接工が特定の製品の製造のために直接作業した分の賃金は、直接労務費として仕掛品勘定に振り替える。",
+      "answer": true,
+      "explanation": "そのとおりです。直接工が特定の製品のために直接作業した分の賃金は直接労務費であり、そのまま仕掛品勘定の借方に振り替えます。",
+      "lessonRef": "s3-u03-sec1"
+    },
+    {
+      "id": "q-s3-u03-023",
+      "type": "tf",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "賃率差異が賃率差異勘定の借方に生じた場合、それは有利差異である。",
+      "answer": false,
+      "explanation": "誤りです。賃率差異勘定の借方に生じるのは、実際消費額が予定消費額を上回った場合であり、これは賃金を予定より多く消費してしまった不利差異（借方差異）です。有利差異は貸方に生じます。",
+      "lessonRef": "s3-u03-sec2"
+    },
+    {
+      "id": "q-s3-u03-024",
+      "type": "fill_number",
+      "unitId": "s3-u03",
+      "topics": ["t-chingin-chinritsu-sabaku"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "フジ工業の当月賃金の予定消費額は900,000円、実際消費額は850,000円であった。賃率差異の金額はいくらですか（有利・不利の区別は問わず、金額のみ答えなさい）。",
+      "answer": { "value": 50000, "unit": "円" },
+      "explanation": "賃率差異の金額は「予定消費額－実際消費額」の絶対値で計算します。900,000－850,000＝50,000円です。予定消費額のほうが大きいため、この差異は有利差異（貸方差異）となります。",
+      "lessonRef": "s3-u03-sec2"
+    }
+  ]
+}
