@@ -154,6 +154,11 @@
 
     { "id": "t-bumonbetsu-gainen", "name": "部門別原価計算の目的（製造部門・補助部門）", "unitId": "s3-u05" },
     { "id": "t-daichoku-hairu", "name": "第1次集計（部門個別費・部門共通費の配賦）", "unitId": "s3-u05" },
-    { "id": "t-hojo-bumon-haifu", "name": "第2次集計（補助部門費の配賦：直接配賦法・相互配賦法）", "unitId": "s3-u05" }
+    { "id": "t-hojo-bumon-haifu", "name": "第2次集計（補助部門費の配賦：直接配賦法・相互配賦法）", "unitId": "s3-u05" },
+
+    { "id": "t-sogo-genka-gainen", "name": "総合原価計算の考え方（個別原価計算との違い）", "unitId": "s3-u06" },
+    { "id": "t-tsuika-ritsu", "name": "材料費・加工費の投入パターンと完成品換算量", "unitId": "s3-u06" },
+    { "id": "t-heikinho", "name": "平均法による月末仕掛品原価の計算", "unitId": "s3-u06" },
+    { "id": "t-sakitoshirero-ho", "name": "先入先出法による月末仕掛品原価の計算", "unitId": "s3-u06" }
   ]
 }
