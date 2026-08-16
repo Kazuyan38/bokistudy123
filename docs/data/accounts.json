@@ -92,6 +92,8 @@
     { "id": "mibarai_hiyo", "name": "未払費用", "cat": "liability", "grade": 3, "introducedIn": "s1-u10" },
 
     { "id": "chozohin", "name": "貯蔵品", "cat": "asset", "grade": 3, "introducedIn": "s1-u11" },
+    { "id": "kurikoshi_shohin", "name": "繰越商品", "cat": "asset", "grade": 3, "introducedIn": "s1-u11" },
+    { "id": "shiire_genka", "name": "売上原価", "cat": "expense", "grade": 3, "introducedIn": "s1-u11" },
     { "id": "soneki", "name": "損益", "cat": "other", "grade": 3, "introducedIn": "s1-u08" }
   ]
 }
