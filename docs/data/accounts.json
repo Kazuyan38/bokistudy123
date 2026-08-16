@@ -149,6 +149,8 @@
     { "id": "hojinzeito_chosei", "name": "法人税等調整額", "cat": "expense", "grade": 2, "introducedIn": "s2-u10" },
 
     { "id": "honten", "name": "本店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" },
-    { "id": "shiten", "name": "支店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" }
+    { "id": "shiten", "name": "支店", "cat": "other", "grade": 2, "introducedIn": "s2-u12" },
+
+    { "id": "denshi_saiken_baikyakuson", "name": "電子記録債権売却損", "cat": "expense", "grade": 2, "introducedIn": "s2-u03" }
   ]
 }

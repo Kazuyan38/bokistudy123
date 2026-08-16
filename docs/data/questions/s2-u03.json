@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u03",
+  "questions": [
+    {
+      "id": "q-s2-u03-001",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-uragaki-2"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、仕入先ミナト製作所に対する買掛金9,000円の支払いにあたり、かねて受け取っていた約束手形2枚（4,000円と5,000円）をまとめて裏書譲渡した。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 9000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 4000 }, { "acc": "uketori_tegata", "amt": 5000 }],
+        "alt": [
+          { "dr": [{ "acc": "kaikake", "amt": 9000 }], "cr": [{ "acc": "uketori_tegata", "amt": 9000 }] }
+        ]
+      },
+      "explanation": "買掛金（負債）が9,000円減るので借方は買掛金9,000円。裏書譲渡した2枚の手形の合計額だけ受取手形（資産）が減少するため、貸方は受取手形4,000円と5,000円（合計9,000円）です。複数枚まとめて処理しても、貸借は必ず一致します。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-002",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-uragaki-2"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、仕入先カエデ商事に対する買掛金7,000円のうち、5,000円は保有する約束手形の裏書譲渡で、残り2,000円は現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 7000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 5000 }, { "acc": "cash", "amt": 2000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）の減少7,000円が借方です。支払手段が2つに分かれているため、貸方は裏書譲渡した分の受取手形（資産）の減少5,000円と、現金（資産）の減少2,000円に分けて記入します。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-003",
+      "type": "mc",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-uragaki-2"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "手形を裏書譲渡した人が、その手形が後日不渡りになった場合に、被裏書人から手形金額の支払いを求められる可能性がある責任を何といいますか。",
+      "choices": ["遡求義務（保証債務）", "先取特権", "留置権", "相殺権"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "手形を裏書譲渡すると、その手形が不渡りになった場合に、裏書人が支払いを肩代わりする責任（遡求義務・保証債務）を負う可能性があります。2級では詳細な仕訳までは扱いませんが、裏書譲渡には潜在的な責任が伴うことを理解しておきましょう。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-004",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ミナト製作所は、額面90,000円・満期日までの日数73日の約束手形を、年利率5%で銀行に割り引き、割引料を差し引かれた手取金が当座預金口座に入金された。割引料は1年365日で日割計算する。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 89100 }, { "acc": "tegata_baikyakuson", "amt": 900 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 90000 }],
+        "alt": []
+      },
+      "explanation": "割引料＝90,000円×5%×73日÷365日＝900円。手取金＝90,000－900＝89,100円を借方の当座預金に、割引料900円を借方の手形売却損に計上し、貸方は受取手形の減少90,000円です。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-005",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "アオイ物産は、額面50,000円・満期日までの日数73日の約束手形を、年利率8%で銀行に割り引いた。割引料は1年365日で日割計算し、手取金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 49200 }, { "acc": "tegata_baikyakuson", "amt": 800 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 50000 }],
+        "alt": []
+      },
+      "explanation": "割引料＝50,000円×8%×73日÷365日＝800円。手取金＝50,000－800＝49,200円を当座預金、割引料800円を手形売却損として借方に計上します。貸方は受取手形の減少50,000円です。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-006",
+      "type": "mc",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "手形の割引料を日割計算するときの計算式として正しいものはどれですか。",
+      "choices": [
+        "手形金額×年利率×割引日数÷365日",
+        "手形金額×年利率×割引日数÷12か月",
+        "手形金額÷年利率×割引日数",
+        "手形金額×年利率÷割引日数×365日"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "割引料は、手形金額に年利率を掛けたうえで、割り引いた日から満期日までの日数分だけ365日で按分して求めます。「手形金額×年利率×割引日数÷365日」が正しい計算式です。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-007",
+      "type": "fill_number",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "額面120,000円・満期日までの日数73日の約束手形を、年利率5%で割り引いた。割引料は1年365日で日割計算するといくらになりますか。",
+      "answer": { "value": 1200, "unit": "円" },
+      "explanation": "割引料＝120,000円×5%×73日÷365日＝1,200円です。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-008",
+      "type": "tf",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "手形の割引料は、割り引いた日から満期日までの日数分の利息相当額として計算される。",
+      "answer": true,
+      "explanation": "そのとおりです。割引料は、満期日前に手形を資金化したことの対価であり、割引日から満期日までの日数分の利息相当額として日割計算します。",
+      "lessonRef": "s2-u03-sec1"
+    },
+    {
+      "id": "q-s2-u03-009",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ミナト製作所は、保有する電子記録債権8,000円を、仕入先に対する買掛金8,000円の支払いに充てるため、譲渡記録を行った。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 8000 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）の減少8,000円が借方です。譲渡記録により電子記録債権に対する権利が相手に移るため、貸方は電子記録債権（資産）の減少8,000円です。手形の裏書譲渡と同じ考え方です。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-010",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ハルカ商事は、資金調達のため、保有する電子記録債権10,000円を9,700円で譲渡し、譲渡代金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 9700 }, { "acc": "denshi_saiken_baikyakuson", "amt": 300 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "譲渡代金9,700円を当座預金に計上し、額面金額10,000円との差額300円は費用の勘定「電子記録債権売却損」として借方に計上します。貸方は電子記録債権（資産）の減少10,000円です。手形の割引と同じ構造です。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-011",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、保有する電子記録債権15,000円を14,600円で譲渡し、譲渡代金が当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 14600 }, { "acc": "denshi_saiken_baikyakuson", "amt": 400 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 15000 }],
+        "alt": []
+      },
+      "explanation": "譲渡代金14,600円を当座預金、額面15,000円との差額400円を電子記録債権売却損として借方に計上します。貸方は電子記録債権の減少15,000円です。「額面金額＝譲渡代金＋電子記録債権売却損」で検算できます。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-012",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "カエデ商事は、仕入先に対する買掛金11,000円の支払いのため、電子記録債権8,000円を譲渡記録により充当し、残額は現金で支払った。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 11000 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 8000 }, { "acc": "cash", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）の減少11,000円が借方です。支払手段が2つに分かれるため、貸方は電子記録債権の減少8,000円と、現金の減少3,000円（11,000－8,000）に分けて記入します。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-013",
+      "type": "mc",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "電子記録債権を譲渡した際に生じる「電子記録債権売却損」の分類として正しいものはどれですか。",
+      "choices": ["費用", "資産", "負債", "収益"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "電子記録債権売却損は、額面金額より低い金額で譲渡し資金化したことの対価であり、費用の勘定です。手形の割引における手形売却損と同じ性質です。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-014",
+      "type": "tf",
+      "unitId": "s2-u03",
+      "topics": ["t-denshi-saiken-jyoto"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "電子記録債権を譲渡記録により第三者への支払いに充てた場合、譲渡した金額だけ電子記録債権が減少する。",
+      "answer": true,
+      "explanation": "そのとおりです。譲渡記録を行うと、その金額分の電子記録債権に対する権利が相手に移るため、電子記録債権（資産）が減少します。",
+      "lessonRef": "s2-u03-sec2"
+    },
+    {
+      "id": "q-s2-u03-015",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "得意先ノゾミ商会振出しの約束手形20,000円が満期日に決済されなかったため、手形金額に加え、償還請求のための費用800円（現金で支払い済み）と期日後利息200円をあわせて不渡手形勘定に振り替えた。",
+      "answer": {
+        "dr": [{ "acc": "fuwatari_tegata", "amt": 21000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 20000 }, { "acc": "cash", "amt": 800 }, { "acc": "uketori_risoku", "amt": 200 }],
+        "alt": []
+      },
+      "explanation": "不渡手形（資産）の増加は、手形金額20,000円＋償還請求費用800円＋期日後利息200円＝21,000円です。貸方は、受取手形の減少20,000円、立て替え払いした現金の減少800円、収益である受取利息200円に分けて記入します。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-016",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "得意先カエデ商事振出しの約束手形15,000円が不渡りとなり、償還請求費用500円を現金で支払うとともに、期日後利息100円をあわせて不渡手形勘定に振り替えた。",
+      "answer": {
+        "dr": [{ "acc": "fuwatari_tegata", "amt": 15600 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 15000 }, { "acc": "cash", "amt": 500 }, { "acc": "uketori_risoku", "amt": 100 }],
+        "alt": []
+      },
+      "explanation": "不渡手形は15,000＋500＋100＝15,600円。貸方は受取手形の減少15,000円、現金の減少500円、受取利息（収益）100円です。3つの要素を漏れなく合算する点がポイントです。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-017",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "かねて不渡手形として計上していた18,000円について、得意先から現金で全額の支払いを受けた。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 18000 }],
+        "cr": [{ "acc": "fuwatari_tegata", "amt": 18000 }],
+        "alt": []
+      },
+      "explanation": "現金（資産）の増加18,000円が借方、不渡手形（資産）の減少18,000円が貸方です。回収できたときは、内訳を分けずに不渡手形の残高全額を取り崩します。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-018",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "かねて不渡手形として計上していた12,000円について、得意先の倒産により回収不能であることが判明したため、貸倒れとして処理した。なお、貸倒引当金の残高は9,000円である。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 9000 }, { "acc": "kashidaore_sonshitsu", "amt": 3000 }],
+        "cr": [{ "acc": "fuwatari_tegata", "amt": 12000 }],
+        "alt": []
+      },
+      "explanation": "まず貸倒引当金の残高9,000円を充当し、不足する12,000－9,000＝3,000円は貸倒損失（費用）として借方に計上します。貸方は不渡手形（資産）の減少12,000円です。3級で学んだ貸倒れの処理と同じ考え方です。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-019",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "かねて不渡手形として計上していた6,000円について回収不能と判明し、貸倒れとして処理した。なお、貸倒引当金の残高は10,000円である。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_hikiatekin", "amt": 6000 }],
+        "cr": [{ "acc": "fuwatari_tegata", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "貸倒引当金の残高10,000円が不渡手形6,000円を上回るため、全額を貸倒引当金の取崩しで処理できます。貸倒損失を計上する必要はありません。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-020",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "かねて不渡手形として計上していた4,000円について回収不能と判明し、貸倒れとして処理した。なお、貸倒引当金の残高はない。",
+      "answer": {
+        "dr": [{ "acc": "kashidaore_sonshitsu", "amt": 4000 }],
+        "cr": [{ "acc": "fuwatari_tegata", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "貸倒引当金の残高がないため、充当できる金額はありません。不渡手形4,000円の全額を貸倒損失（費用）として借方に計上します。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-021",
+      "type": "mc",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "手形が不渡りとなり不渡手形勘定に振り替える金額に、通常含まれないものはどれですか。",
+      "choices": ["手形金額", "償還請求のための費用", "期日後の利息", "満期日前の割引料"],
+      "answer": 3,
+      "shuffle": true,
+      "explanation": "割引料は、満期日前に手形を銀行で現金化する際に生じる費用であり、不渡りとは関係ありません。不渡手形には、手形金額・償還請求費用・期日後利息の3つを合算して計上します。",
+      "lessonRef": "s2-u03-sec3"
+    },
+    {
+      "id": "q-s2-u03-022",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-uragaki-2", "t-denshi-saiken-jyoto"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は商品16,000円を仕入れ、代金のうち10,000円はかねて受け取っていた約束手形を裏書譲渡し、残り6,000円は電子記録債権の譲渡記録により支払った。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 16000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 10000 }, { "acc": "denshi_saiken", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "仕入時は費用の勘定「仕入」を借方に16,000円計上します。支払いは2つの手段に分かれるため、貸方は受取手形の減少10,000円と、電子記録債権の減少6,000円に分けて記入します。合計は仕入額と一致します。",
+      "lessonRef": "s2-u03-sec4"
+    },
+    {
+      "id": "q-s2-u03-023",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-tegata-waribiki-2"],
+      "difficulty": 3,
+      "srs": true,
+      "stem": "ミナト製作所は、額面55,000円・満期日までの日数146日の約束手形を、年利率5%で銀行に割り引いた。割引料は1年365日で日割計算し、手取金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 53900 }, { "acc": "tegata_baikyakuson", "amt": 1100 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 55000 }],
+        "alt": []
+      },
+      "explanation": "割引料＝55,000円×5%×146日÷365日＝1,100円。手取金＝55,000－1,100＝53,900円を当座預金、割引料1,100円を手形売却損として借方に計上します。貸方は受取手形の減少55,000円です。",
+      "lessonRef": "s2-u03-sec4"
+    },
+    {
+      "id": "q-s2-u03-024",
+      "type": "journal",
+      "unitId": "s2-u03",
+      "topics": ["t-fuwatari-tegata"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "アオイ物産は、かねて不渡手形として計上していた9,500円（元の手形金額9,000円、償還請求費用300円、期日後利息200円を含む）について、得意先から現金で全額の支払いを受けた。",
+      "answer": {
+        "dr": [{ "acc": "cash", "amt": 9500 }],
+        "cr": [{ "acc": "fuwatari_tegata", "amt": 9500 }],
+        "alt": []
+      },
+      "explanation": "現金（資産）の増加9,500円が借方、不渡手形（資産）の減少9,500円が貸方です。不渡手形に含まれる手形金額・償還請求費用・期日後利息の内訳を分ける必要はなく、残高全額を取り崩します。",
+      "lessonRef": "s2-u03-sec4"
+    }
+  ]
+}

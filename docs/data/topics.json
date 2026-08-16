@@ -74,6 +74,11 @@
 
     { "id": "t-ginko-kanjo-chosei", "name": "銀行勘定調整表の作成", "unitId": "s2-u02" },
     { "id": "t-mitsuchaku-genkin", "name": "未取立小切手・未取付小切手など銀行側の時間差項目", "unitId": "s2-u02" },
-    { "id": "t-kigyou-gawa-shusei", "name": "企業側の仕訳修正（未渡小切手・連絡未通知・誤記入）", "unitId": "s2-u02" }
+    { "id": "t-kigyou-gawa-shusei", "name": "企業側の仕訳修正（未渡小切手・連絡未通知・誤記入）", "unitId": "s2-u02" },
+
+    { "id": "t-tegata-uragaki-2", "name": "手形の裏書譲渡の応用", "unitId": "s2-u03" },
+    { "id": "t-tegata-waribiki-2", "name": "手形の割引の応用", "unitId": "s2-u03" },
+    { "id": "t-denshi-saiken-jyoto", "name": "電子記録債権の譲渡", "unitId": "s2-u03" },
+    { "id": "t-fuwatari-tegata", "name": "不渡手形の応用", "unitId": "s2-u03" }
   ]
 }
