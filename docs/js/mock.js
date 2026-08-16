@@ -89,7 +89,6 @@ function startMock(app, container, mock, title) {
     remainingSec: mock.timeLimitMin * 60,
     timerId: null,
   };
-  document.getElementById("calc-fab").hidden = false;
   state.timerId = setInterval(() => tick(app, container), 1000);
   renderMockScreen(app, container);
 }
@@ -293,7 +292,6 @@ function gradeOne(q, ans) {
 }
 
 function finishMock(app, container, timedOut) {
-  document.getElementById("calc-fab").hidden = true;
   closeNumpad();
   const { mock, title } = state;
   const sectionResults = mock.sections.map((sec) => {

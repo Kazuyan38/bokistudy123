@@ -136,10 +136,7 @@ export function runSession(opts) {
   const total = questions.length;
   const requeue = mode !== "test"; // テスト以外は誤答をセッション内再出題
 
-  document.getElementById("calc-fab").hidden = false;
-
   function finish(aborted = false) {
-    document.getElementById("calc-fab").hidden = true;
     closeNumpad();
     const correct = [...firstResult.values()].filter(Boolean).length;
     const wrongQids = [...firstResult.entries()].filter(([, ok]) => !ok).map(([qid]) => qid);

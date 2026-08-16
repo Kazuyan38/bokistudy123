@@ -7,7 +7,6 @@ import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
 import { renderMockList, renderMockIntro } from "./mock.js";
 import { renderStats } from "./stats.js";
-import { initCalc, renderCalcPage, closeCalc } from "./calc.js";
 import { esc } from "./render/figures.js";
 
 const screen = () => document.getElementById("screen");
@@ -130,7 +129,6 @@ async function boot() {
     const failed = results.filter((r) => r.status === "rejected");
     if (failed.length) console.warn("一部コンテンツの読み込みに失敗:", failed);
 
-    initCalc();
     window.addEventListener("hashchange", route);
     route();
     backupReminder();
@@ -154,8 +152,6 @@ function backupReminder() {
 /* ============================== ルーター ============================== */
 
 function route() {
-  closeCalc();
-  document.getElementById("calc-fab").hidden = true;
   const hash = location.hash || "#home";
   const [path, ...args] = hash.slice(1).split("/");
 
@@ -178,7 +174,6 @@ function route() {
   else if (path === "mocks") renderMockList(app, s);
   else if (path === "mock-intro") renderMockIntro(app, s, args[0]);
   else if (path === "stats") renderStats(app, s);
-  else if (path === "calc") { renderCalcPage(s); }
   else if (path === "settings") renderSettings(s);
   else renderHome(s);
 }
@@ -515,12 +510,6 @@ function renderSettings(container) {
         <textarea class="io-area" id="import-area" placeholder="バックアップJSONを貼り付け"></textarea>
         <button class="btn btn-ghost btn-block mt-8" id="import-btn">復元する</button>
       </details>
-    </div>
-
-    <div class="card">
-      <span class="card-title">電卓</span>
-      <p class="card-sub">実務電卓に近い操作の12桁電卓。ドリル中は右下のボタンからいつでも開けます。</p>
-      <button class="btn btn-ghost btn-block mt-16" onclick="location.hash='#calc'">電卓を開く</button>
     </div>
 
     <div class="card">
