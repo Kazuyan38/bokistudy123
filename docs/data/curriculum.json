@@ -10,7 +10,7 @@
         { "id": "s1-u03", "title": "現金・預金", "prereq": ["s1-u02"], "estMinutes": 60, "status": "available" },
         { "id": "s1-u04", "title": "手形・電子記録債権", "prereq": ["s1-u03"], "estMinutes": 50, "status": "available" },
         { "id": "s1-u05", "title": "その他の債権債務", "prereq": ["s1-u04"], "estMinutes": 70, "status": "available" },
-        { "id": "s1-u06", "title": "有形固定資産", "prereq": ["s1-u05"], "estMinutes": 60, "status": "planned" },
+        { "id": "s1-u06", "title": "有形固定資産", "prereq": ["s1-u05"], "estMinutes": 60, "status": "available" },
         { "id": "s1-u07", "title": "貸倒れと貸倒引当金", "prereq": ["s1-u06"], "estMinutes": 50, "status": "planned" },
         { "id": "s1-u08", "title": "株式会社の資本", "prereq": ["s1-u07"], "estMinutes": 50, "status": "planned" },
         { "id": "s1-u09", "title": "税金", "prereq": ["s1-u08"], "estMinutes": 60, "status": "planned" },

@@ -30,6 +30,11 @@
     { "id": "t-mishu-mibarai", "name": "未収入金・未払金", "unitId": "s1-u05" },
     { "id": "t-tatekae-azukari", "name": "立替金・預り金（給与天引き含む）", "unitId": "s1-u05" },
     { "id": "t-karibarai-kariuke", "name": "仮払金・仮受金", "unitId": "s1-u05" },
-    { "id": "t-shohinken-hoshokin", "name": "受取商品券・差入保証金", "unitId": "s1-u05" }
+    { "id": "t-shohinken-hoshokin", "name": "受取商品券・差入保証金", "unitId": "s1-u05" },
+
+    { "id": "t-kotei-shisan-shutoku", "name": "有形固定資産の取得原価", "unitId": "s1-u06" },
+    { "id": "t-genka-shokyaku", "name": "減価償却（定額法・間接法）", "unitId": "s1-u06" },
+    { "id": "t-kotei-shisan-baikyaku", "name": "固定資産の売却", "unitId": "s1-u06" },
+    { "id": "t-shihonteki-shishutsu", "name": "資本的支出と収益的支出", "unitId": "s1-u06" }
   ]
 }
