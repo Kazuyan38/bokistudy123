@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s2-u13",
+  "questions": [
+    {
+      "id": "q-s2-u13-001",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-renketsu-gainen"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "親会社が子会社を連結の対象とするかどうかを判断する基準として、最も適切なものはどれですか。",
+      "choices": [
+        "子会社の議決権の過半数を親会社が保有し、支配していること",
+        "子会社の資本金が親会社より少額であること",
+        "子会社と親会社の決算日が同じであること",
+        "子会社が親会社と同じ業種であること"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "連結の対象となるかどうかは、原則として議決権の過半数（50%超）を保有して支配しているかどうかで判断します。資本金の大小や業種の一致、決算日の一致は判断基準ではありません。",
+      "lessonRef": "s2-u13-sec1"
+    },
+    {
+      "id": "q-s2-u13-002",
+      "type": "tf",
+      "unitId": "s2-u13",
+      "topics": ["t-renketsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結財務諸表は、親会社の個別財務諸表をそのまま公表用に用いたものである。",
+      "answer": false,
+      "explanation": "連結財務諸表は、親会社と子会社を1つの企業集団とみなして個別財務諸表を合算し、連結修正仕訳を加えて作成するものであり、親会社の個別財務諸表そのものではありません。",
+      "lessonRef": "s2-u13-sec1"
+    },
+    {
+      "id": "q-s2-u13-003",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-renketsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結財務諸表を作成する目的として、最も適切なものはどれですか。",
+      "choices": [
+        "企業集団全体の財政状態・経営成績を、あたかも1つの会社であるかのように示すため",
+        "親会社の税負担を軽減するため",
+        "子会社の個別財務諸表の作成を省略するため",
+        "子会社の株主総会の議決権を減らすため"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "連結財務諸表は、法律上は別会社である親会社・子会社を経済的に1つの企業集団とみなし、その全体の財政状態・経営成績を示すために作成します。",
+      "lessonRef": "s2-u13-sec1"
+    },
+    {
+      "id": "q-s2-u13-004",
+      "type": "tf",
+      "unitId": "s2-u13",
+      "topics": ["t-renketsu-gainen"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "連結財務諸表は、親会社の個別財務諸表と子会社の個別財務諸表を単純に合算するだけで作成できる。",
+      "answer": false,
+      "explanation": "単純に合算するだけでなく、投資と資本の相殺消去をはじめとする連結修正仕訳を加える必要があります。連結修正仕訳は個々の会社の帳簿には記入されない、連結財務諸表を作成するためだけの特別な仕訳です。",
+      "lessonRef": "s2-u13-sec1"
+    },
+    {
+      "id": "q-s2-u13-005",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-shihon-renketsu"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "P社はS社株式100%を500,000円で取得した。取得日のS社の資本は資本金400,000円、繰越利益剰余金100,000円であった。連結修正仕訳（投資と資本の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 400000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 100000 }
+        ],
+        "cr": [{ "acc": "kogaisha_kabushiki", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "S社の資本の内訳（資本金400,000円・繰越利益剰余金100,000円）を借方に、親会社の投資額（子会社株式500,000円）を貸方に記入して相殺消去します。投資額と子会社の資本がちょうど一致するため、のれんは生じません。",
+      "lessonRef": "s2-u13-sec2"
+    },
+    {
+      "id": "q-s2-u13-006",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-shihon-renketsu"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "P社はS社株式100%を800,000円で取得した。取得日のS社の資本は資本金600,000円、繰越利益剰余金200,000円であった。連結修正仕訳（投資と資本の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 600000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 200000 }
+        ],
+        "cr": [{ "acc": "kogaisha_kabushiki", "amt": 800000 }],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は600,000円＋200,000円＝800,000円で、投資額800,000円とちょうど一致します。資本の内訳を借方に、子会社株式を貸方に記入して相殺消去します。",
+      "lessonRef": "s2-u13-sec2"
+    },
+    {
+      "id": "q-s2-u13-007",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-shihon-renketsu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社株式100%を500,000円で取得した。取得日のS社の資本は資本金300,000円、利益準備金50,000円、繰越利益剰余金150,000円であった。連結修正仕訳（投資と資本の相殺消去）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 300000 },
+          { "acc": "rieki_junbikin", "amt": 50000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 150000 }
+        ],
+        "cr": [{ "acc": "kogaisha_kabushiki", "amt": 500000 }],
+        "alt": []
+      },
+      "explanation": "子会社の資本は資本金だけでなく、利益準備金・繰越利益剰余金などすべての内訳を合計します。300,000円＋50,000円＋150,000円＝500,000円で投資額と一致するため、それぞれの内訳を借方に、子会社株式を貸方に記入して相殺消去します。",
+      "lessonRef": "s2-u13-sec2"
+    },
+    {
+      "id": "q-s2-u13-008",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-shihon-renketsu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "100%子会社に対する資本連結（投資と資本の相殺消去）の連結修正仕訳で、貸方に計上する科目はどれですか。",
+      "choices": ["子会社株式", "のれん", "非支配株主持分", "資本金"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "親会社の投資額は子会社株式として個別財務諸表の借方に計上されています。連結修正仕訳ではこれを取り消すため、貸方に子会社株式を記入します。",
+      "lessonRef": "s2-u13-sec2"
+    },
+    {
+      "id": "q-s2-u13-009",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-shihon-renketsu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "支配獲得日において、親会社の投資額と子会社の資本（親会社持分相当額）がちょうど等しい場合に生じるものはどれですか。",
+      "choices": [
+        "のれんは生じない",
+        "必ずのれんが計上される",
+        "必ず非支配株主持分が計上される",
+        "子会社株式の評価損が生じる"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "のれんは投資額が子会社の資本（親会社持分相当額）を上回る場合に生じる差額です。両者がちょうど等しい場合、差額はゼロなのでのれんは生じません。",
+      "lessonRef": "s2-u13-sec2"
+    },
+    {
+      "id": "q-s2-u13-010",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社株式100%を600,000円で取得した。取得日のS社の資本は資本金400,000円、繰越利益剰余金100,000円であった。連結修正仕訳（投資と資本の相殺消去、のれんの計上を含む）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 400000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 100000 },
+          { "acc": "goodwill", "amt": 100000 }
+        ],
+        "cr": [{ "acc": "kogaisha_kabushiki", "amt": 600000 }],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は400,000円＋100,000円＝500,000円です。投資額600,000円がこれを100,000円上回るため、差額をのれん（借方）として計上し、貸借を一致させます。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-011",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "上記の連結修正仕訳で計上したのれん100,000円を、取得後10年間にわたり定額法で償却する。1年分ののれん償却の連結修正仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "goodwill_shokyakuhi", "amt": 10000 }],
+        "cr": [{ "acc": "goodwill", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "のれんは20年以内の効果の及ぶ期間にわたって定額法などで規則的に償却します。100,000円÷10年＝10,000円を、のれん償却（借方）とのれんの減少（貸方）として計上します。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-012",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "P社はS社株式100%を950,000円で取得した。取得日のS社の資本は資本金700,000円、繰越利益剰余金150,000円であった。連結修正仕訳（投資と資本の相殺消去、のれんの計上を含む）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 700000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 150000 },
+          { "acc": "goodwill", "amt": 100000 }
+        ],
+        "cr": [{ "acc": "kogaisha_kabushiki", "amt": 950000 }],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は700,000円＋150,000円＝850,000円です。投資額950,000円との差額100,000円をのれんとして借方に計上します。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-013",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "連結修正仕訳で計上したのれん200,000円を、取得後20年間にわたり定額法で償却する。1年分ののれん償却の連結修正仕訳を答えなさい。",
+      "answer": {
+        "dr": [{ "acc": "goodwill_shokyakuhi", "amt": 10000 }],
+        "cr": [{ "acc": "goodwill", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "200,000円÷20年＝10,000円を、1年分ののれん償却として借方に、のれんの減少として貸方に計上します。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-014",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "投資額（子会社株式の取得価額）が子会社の資本（親会社持分相当額）を上回る場合に生じる差額の処理として正しいものはどれですか。",
+      "choices": [
+        "借方に「のれん」として計上し、取得後に規則的に償却する",
+        "貸方に「非支配株主持分」として計上する",
+        "差額はそのまま利益として計上する",
+        "差額は無視してよい"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "投資額が子会社の資本を上回る差額は「のれん」として借方に計上し、20年以内の効果の及ぶ期間にわたって定額法などで規則的に償却します。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-015",
+      "type": "tf",
+      "unitId": "s2-u13",
+      "topics": ["t-goodwill-renketsu"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "のれんは、20年以内のその効果の及ぶ期間にわたって定額法などにより規則的に償却する。",
+      "answer": true,
+      "explanation": "そのとおりです。のれんは取得しただけで終わらず、20年以内の効果の及ぶ期間にわたって定額法などにより規則的に償却し、償却額はのれん償却として費用計上します。",
+      "lessonRef": "s2-u13-sec3"
+    },
+    {
+      "id": "q-s2-u13-016",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-hishihai-kabunushi"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社株式80%を480,000円で取得した。取得日のS社の資本は資本金500,000円、繰越利益剰余金100,000円であった。連結修正仕訳（投資と資本の相殺消去、非支配株主持分の計上を含む）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 500000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 100000 }
+        ],
+        "cr": [
+          { "acc": "kogaisha_kabushiki", "amt": 480000 },
+          { "acc": "hishihai_kabunushi_mochibun", "amt": 120000 }
+        ],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は600,000円です。親会社持分（80%）は600,000円×80%＝480,000円で投資額と一致するためのれんは生じません。非支配株主持分は600,000円×20%＝120,000円を貸方に計上します。",
+      "lessonRef": "s2-u13-sec4"
+    },
+    {
+      "id": "q-s2-u13-017",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-hishihai-kabunushi"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "P社はS社株式90%を540,000円で取得した。取得日のS社の資本は資本金400,000円、繰越利益剰余金200,000円であった。連結修正仕訳（投資と資本の相殺消去、非支配株主持分の計上を含む）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 400000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 200000 }
+        ],
+        "cr": [
+          { "acc": "kogaisha_kabushiki", "amt": 540000 },
+          { "acc": "hishihai_kabunushi_mochibun", "amt": 60000 }
+        ],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は600,000円です。親会社持分（90%）は600,000円×90%＝540,000円で投資額と一致するためのれんは生じません。非支配株主持分は600,000円×10%＝60,000円を貸方に計上します。",
+      "lessonRef": "s2-u13-sec4"
+    },
+    {
+      "id": "q-s2-u13-018",
+      "type": "journal",
+      "unitId": "s2-u13",
+      "topics": ["t-hishihai-kabunushi"],
+      "difficulty": 3,
+      "srs": false,
+      "stem": "P社はS社株式70%を300,000円で取得した。取得日のS社の資本は資本金300,000円、繰越利益剰余金100,000円であった。連結修正仕訳（投資と資本の相殺消去、のれんの計上・非支配株主持分の計上を含む）を答えなさい。",
+      "answer": {
+        "dr": [
+          { "acc": "shihonkin", "amt": 300000 },
+          { "acc": "kurikoshi_rieki_jyoyokin", "amt": 100000 },
+          { "acc": "goodwill", "amt": 20000 }
+        ],
+        "cr": [
+          { "acc": "kogaisha_kabushiki", "amt": 300000 },
+          { "acc": "hishihai_kabunushi_mochibun", "amt": 120000 }
+        ],
+        "alt": []
+      },
+      "explanation": "S社の資本合計は400,000円です。親会社持分（70%）は400,000円×70%＝280,000円ですが、投資額は300,000円のため差額20,000円をのれんとして借方に計上します。非支配株主持分は親会社の投資額とは関係なく、子会社の資本合計に非支配株主の持分割合を掛けて計算します。400,000円×30%＝120,000円です。",
+      "lessonRef": "s2-u13-sec4"
+    },
+    {
+      "id": "q-s2-u13-019",
+      "type": "mc",
+      "unitId": "s2-u13",
+      "topics": ["t-hishihai-kabunushi"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "P社がS社株式の100%を取得した場合と、80%のみを取得した場合との違いとして正しいものはどれですか。",
+      "choices": [
+        "100%取得では非支配株主持分は生じないが、80%取得では非支配株主持分（残り20%相当）が貸方に計上される",
+        "100%取得の方がのれんは必ず大きくなる",
+        "80%取得の場合はのれんが計上されることはない",
+        "取得割合にかかわらず、連結修正仕訳の内容はまったく変わらない"
+      ],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "100%取得の場合は子会社の資本すべてが親会社の持分となるため非支配株主持分は生じません。100%未満の取得では、親会社持分を超える部分を非支配株主持分として貸方に計上します。のれんの発生は取得割合ではなく、投資額と親会社持分相当額の大小関係で決まります。",
+      "lessonRef": "s2-u13-sec4"
+    },
+    {
+      "id": "q-s2-u13-020",
+      "type": "tf",
+      "unitId": "s2-u13",
+      "topics": ["t-hishihai-kabunushi"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "非支配株主持分は、子会社の資本のうち親会社の持分割合を超える部分に対応する金額であり、連結貸借対照表の純資産の部に計上される。",
+      "answer": true,
+      "explanation": "そのとおりです。非支配株主持分は、親会社以外の株主が保有する子会社の資本の持分であり、連結貸借対照表の純資産の部に区分して貸方に計上します。",
+      "lessonRef": "s2-u13-sec4"
+    }
+  ]
+}
