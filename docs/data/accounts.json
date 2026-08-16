@@ -40,6 +40,8 @@
     { "id": "shiharai_tegata", "name": "支払手形", "cat": "liability", "grade": 3, "introducedIn": "s1-u04" },
     { "id": "denshi_saiken", "name": "電子記録債権", "cat": "asset", "grade": 3, "introducedIn": "s1-u04" },
     { "id": "denshi_saimu", "name": "電子記録債務", "cat": "liability", "grade": 3, "introducedIn": "s1-u04" },
+    { "id": "tegata_baikyakuson", "name": "手形売却損", "cat": "expense", "grade": 3, "introducedIn": "s1-u04" },
+    { "id": "fuwatari_tegata", "name": "不渡手形", "cat": "asset", "grade": 3, "introducedIn": "s1-u04" },
 
     { "id": "kashitsukekin", "name": "貸付金", "cat": "asset", "grade": 3, "introducedIn": "s1-u05" },
     { "id": "tegata_kashitsukekin", "name": "手形貸付金", "cat": "asset", "grade": 3, "introducedIn": "s1-u05" },

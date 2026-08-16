@@ -18,6 +18,12 @@
     { "id": "t-genkin-kabusoku", "name": "現金過不足", "unitId": "s1-u03" },
     { "id": "t-toza-yokin", "name": "当座預金・当座借越", "unitId": "s1-u03" },
     { "id": "t-koguchi-genkin", "name": "小口現金", "unitId": "s1-u03" },
-    { "id": "t-yokin-shurui", "name": "預金の種類", "unitId": "s1-u03" }
+    { "id": "t-yokin-shurui", "name": "預金の種類", "unitId": "s1-u03" },
+
+    { "id": "t-tegata-kihon", "name": "約束手形の基本（振出・受取・決済）", "unitId": "s1-u04" },
+    { "id": "t-tegata-uragaki", "name": "手形の裏書譲渡", "unitId": "s1-u04" },
+    { "id": "t-tegata-waribiki", "name": "手形の割引", "unitId": "s1-u04" },
+    { "id": "t-tegata-futarai", "name": "手形の不渡り", "unitId": "s1-u04" },
+    { "id": "t-denshi-saiken", "name": "電子記録債権・債務", "unitId": "s1-u04" }
   ]
 }

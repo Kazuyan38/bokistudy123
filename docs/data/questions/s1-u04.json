@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "unitId": "s1-u04",
+  "questions": [
+    {
+      "id": "q-s1-u04-001",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "ハルカ商事は、アオイ物産に対する買掛金4,000円の支払いのため、約束手形を振り出した。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 4000 }],
+        "cr": [{ "acc": "shiharai_tegata", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）が減るので借方に買掛金4,000円。約束手形を振り出すと、将来手形代金を支払う義務（負債）を負うため、貸方は支払手形の増加4,000円です。現金や当座預金は動かない点に注意しましょう。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-002",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ミナト製作所は商品6,000円を仕入れ、代金として約束手形を振り出して渡した。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 6000 }],
+        "cr": [{ "acc": "shiharai_tegata", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "仕入時は費用の勘定「仕入」を借方に計上します。代金の支払いに約束手形を用いたので、貸方は支払手形（負債）の増加6,000円です。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-003",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "アオイ物産は、ハルカ商事に対する売掛金5,000円の回収として、ハルカ商事振出しの約束手形を受け取った。",
+      "answer": {
+        "dr": [{ "acc": "uketori_tegata", "amt": 5000 }],
+        "cr": [{ "acc": "urikake", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "手形を受け取ると、将来代金を受け取る権利（資産）を得るため、借方は受取手形5,000円。売掛金（資産）が減るので貸方は売掛金5,000円です。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-004",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "ノゾミ商会は商品8,000円を売り上げ、代金として得意先振出しの約束手形を受け取った。",
+      "answer": {
+        "dr": [{ "acc": "uketori_tegata", "amt": 8000 }],
+        "cr": [{ "acc": "uriage", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "商品を売り上げたので貸方は売上（収益）8,000円。代金として約束手形を受け取ったので、借方は受取手形（資産）の増加8,000円です。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-005",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "約束手形を振り出して代金を支払った側が計上する勘定科目の分類として正しいものはどれですか。",
+      "choices": ["負債の勘定である支払手形", "資産の勘定である支払手形", "負債の勘定である受取手形", "資産の勘定である受取手形"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "手形を振り出した側は将来代金を支払う義務を負うため、負債の勘定「支払手形」を計上します。逆に手形を受け取った側は、将来代金を受け取る権利を得るため、資産の勘定「受取手形」を計上します。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-006",
+      "type": "tf",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "約束手形を受け取ったときは、資産の勘定である受取手形の増加として処理する。",
+      "answer": true,
+      "explanation": "そのとおりです。手形を受け取ると将来代金を受け取る権利を得るため、資産の勘定「受取手形」の増加として借方に記入します。",
+      "lessonRef": "s1-u04-sec1"
+    },
+    {
+      "id": "q-s1-u04-007",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "満期日、かねて受け取っていた約束手形7,000円が決済され、当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 7000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "当座預金（資産）が増えるので借方に当座預金7,000円。手形代金を受け取ったことで権利が消滅するため、貸方は受取手形（資産）の減少7,000円です。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-008",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "満期日、かねて振り出していた約束手形4,000円が決済され、当座預金口座から引き落とされた。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_tegata", "amt": 4000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "手形代金の支払義務が消滅するため、借方は支払手形（負債）の減少4,000円。当座預金から引き落とされたので、貸方は当座預金（資産）の減少4,000円です。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-009",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "満期日、ミナト製作所が振り出した約束手形9,000円が決済され、当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 9000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 9000 }],
+        "alt": []
+      },
+      "explanation": "当座預金（資産）の増加9,000円が借方、受取手形（資産）の減少9,000円が貸方です。手形が満期日に無事決済されたときは金額の増減だけを記帳すればよく、3級の範囲では利息付き手形は扱いません。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-010",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "満期日、アオイ物産が振り出していた約束手形6,000円が決済され、当座預金口座から引き落とされた。",
+      "answer": {
+        "dr": [{ "acc": "shiharai_tegata", "amt": 6000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "支払手形（負債）の減少6,000円が借方、当座預金（資産）の減少6,000円が貸方です。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-011",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "手形の満期日に、受取手形が無事決済され当座預金口座に入金されたときの仕訳として正しいものはどれですか。",
+      "choices": ["（借）当座預金／（貸）受取手形", "（借）受取手形／（貸）当座預金", "（借）当座預金／（貸）支払手形", "（借）支払手形／（貸）当座預金"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "決済により当座預金（資産）が増え、受取手形（資産）は権利消滅により減少するので、借方に当座預金、貸方に受取手形を記入します。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-012",
+      "type": "fill_number",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-kihon"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "支払手形勘定の残高が12,000円あるとき、そのうち満期日を迎えた5,000円が当座預金口座から決済された。決済後の支払手形勘定の残高は何円ですか。",
+      "answer": { "value": 7000, "unit": "円" },
+      "explanation": "決済により支払手形は5,000円減少します。12,000－5,000＝7,000円が決済後の残高です。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-013",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-futarai"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "得意先カエデ商事振出しの約束手形3,000円が、満期日に決済されず不渡りとなったため、不渡手形勘定に振り替えた。",
+      "answer": {
+        "dr": [{ "acc": "fuwatari_tegata", "amt": 3000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 3000 }],
+        "alt": []
+      },
+      "explanation": "手形が不渡りになると、通常の受取手形とは区別して管理する必要があるため、資産の勘定「受取手形」を減らし、同じく資産の勘定「不渡手形」に振り替えます。不渡手形は、後日振出人などに代金を請求する権利を表します。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-014",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-futarai"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "手形の不渡りに関する説明として最も適切なものはどれですか。",
+      "choices": ["満期日に手形代金が決済されないこと", "満期日前に手形を銀行で現金化すること", "手形を裏面に署名して第三者に譲渡すること", "手形を振り出す前に代金を前払いすること"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "不渡りとは、振出人の資金不足などにより満期日に手形代金が決済されないことです。満期日前の現金化は割引、裏面への署名による譲渡は裏書譲渡であり、不渡りとは異なります。",
+      "lessonRef": "s1-u04-sec2"
+    },
+    {
+      "id": "q-s1-u04-015",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、仕入先ノゾミ商会に対する買掛金5,000円の支払いにあたり、かねて受け取っていた約束手形5,000円を裏書譲渡した。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 5000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）が減るので借方は買掛金5,000円。裏書譲渡により手形に対する権利が相手に移るため、貸方は受取手形（資産）の減少5,000円です。新たに手形を振り出したわけではないので、支払手形は増加しません。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-016",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は商品7,000円を仕入れ、代金として、かねて受け取っていた約束手形を裏書譲渡した。",
+      "answer": {
+        "dr": [{ "acc": "shiire", "amt": 7000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "仕入時は費用の勘定「仕入」を借方に計上します。支払手段として保有する手形を裏書譲渡したので、貸方は受取手形（資産）の減少7,000円です。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-017",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、カエデ商事に対する買掛金9,000円の支払いのため、かねて受け取っていた約束手形9,000円を裏書譲渡した。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 9000 }],
+        "cr": [{ "acc": "uketori_tegata", "amt": 9000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）の減少9,000円が借方、受取手形（資産）の減少9,000円が貸方です。裏書譲渡は保有する手形をそのまま支払手段として使う取引である点を押さえましょう。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-018",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "受取手形を裏書譲渡して仕入代金の支払いに充てたとき、貸方に記入する勘定科目はどれですか。",
+      "choices": ["受取手形", "支払手形", "仕入", "現金"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "裏書譲渡をすると手形に対する権利が相手に移るため、資産の勘定「受取手形」を貸方に記入して減少させます。借方には支払いの目的に応じた勘定（この場合は仕入）を記入します。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-019",
+      "type": "tf",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "受取手形を裏書譲渡したときは、新たに支払手形を計上する。",
+      "answer": false,
+      "explanation": "誤りです。裏書譲渡は、すでに保有している受取手形をそのまま支払い手段として使う取引であり、新たに手形を振り出すわけではないため、支払手形は増加しません。減少するのは受取手形です。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-020",
+      "type": "fill_number",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-uragaki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "受取手形勘定の残高が15,000円あるとき、そのうち8,000円を仕入代金の支払いのために裏書譲渡した。裏書譲渡後の受取手形勘定の残高は何円ですか。",
+      "answer": { "value": 7000, "unit": "円" },
+      "explanation": "裏書譲渡により受取手形は8,000円減少します。15,000－8,000＝7,000円が裏書譲渡後の残高です。",
+      "lessonRef": "s1-u04-sec3"
+    },
+    {
+      "id": "q-s1-u04-021",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、額面6,000円の約束手形を銀行で割り引き、割引料200円を差し引かれた手取金が当座預金口座に入金された。",
+      "answer": {
+        "dr": [
+          { "acc": "toza_yokin", "amt": 5800 },
+          { "acc": "tegata_baikyakuson", "amt": 200 }
+        ],
+        "cr": [{ "acc": "uketori_tegata", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "手形金額6,000円から割引料200円を差し引いた手取金5,800円が当座預金に入金されるので借方は当座預金5,800円。差し引かれた割引料200円は費用の勘定「手形売却損」として借方に計上します。手形に対する権利は銀行に移るため、貸方は受取手形（資産）の減少6,000円です。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-022",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、額面10,000円の約束手形を銀行で割り引き、割引料400円を差し引かれた残額が当座預金口座に入金された。",
+      "answer": {
+        "dr": [
+          { "acc": "toza_yokin", "amt": 9600 },
+          { "acc": "tegata_baikyakuson", "amt": 400 }
+        ],
+        "cr": [{ "acc": "uketori_tegata", "amt": 10000 }],
+        "alt": []
+      },
+      "explanation": "手取金は10,000－400＝9,600円で借方は当座預金9,600円。割引料400円は手形売却損（費用）として借方に計上します。貸方は受取手形の減少10,000円で、借方合計10,000円と一致します。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-023",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、額面8,000円の約束手形を銀行で割り引き、割引料300円を差し引かれた手取金は当座預金口座に入金された。",
+      "answer": {
+        "dr": [
+          { "acc": "toza_yokin", "amt": 7700 },
+          { "acc": "tegata_baikyakuson", "amt": 300 }
+        ],
+        "cr": [{ "acc": "uketori_tegata", "amt": 8000 }],
+        "alt": []
+      },
+      "explanation": "手取金7,700円（8,000－300）を当座預金、割引料300円を手形売却損として借方に計上し、受取手形8,000円を貸方に記入します。「手形金額＝手取金＋割引料」の関係で検算しましょう。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-024",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "手形の割引を行ったときに借方に計上する「手形売却損」の分類として正しいものはどれですか。",
+      "choices": ["費用", "資産", "負債", "収益"],
+      "answer": 0,
+      "shuffle": true,
+      "explanation": "手形売却損は、満期日前に手形を資金化したことの対価として差し引かれる金額であり、費用の勘定です。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-025",
+      "type": "tf",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "手形の割引を行うと、割り引いた手形の額面金額だけ受取手形が減少する。",
+      "answer": true,
+      "explanation": "そのとおりです。割引を行うと手形に対する権利が銀行に移るため、額面金額の全額について受取手形（資産）を減少させます。銀行から受け取る手取金は額面から割引料を差し引いた金額ですが、貸方の受取手形は額面金額で記入します。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-026",
+      "type": "fill_number",
+      "unitId": "s1-u04",
+      "topics": ["t-tegata-waribiki"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "額面12,000円の約束手形を銀行で割り引き、手取金11,500円が当座預金口座に入金された。このとき手形売却損として計上する金額は何円ですか。",
+      "answer": { "value": 500, "unit": "円" },
+      "explanation": "手形金額12,000円と手取金11,500円の差額12,000－11,500＝500円が割引料であり、手形売却損として借方に計上します。",
+      "lessonRef": "s1-u04-sec4"
+    },
+    {
+      "id": "q-s1-u04-027",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "ハルカ商事は、アオイ物産に対する売掛金4,000円について、取引銀行を通じて電子記録債権の発生記録を行った。",
+      "answer": {
+        "dr": [{ "acc": "denshi_saiken", "amt": 4000 }],
+        "cr": [{ "acc": "urikake", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "発生記録により、売掛金として持っていた権利が電子記録債権に切り替わります。資産の勘定「電子記録債権」の増加4,000円が借方、売掛金（資産）の減少4,000円が貸方です。",
+      "lessonRef": "s1-u04-sec5"
+    },
+    {
+      "id": "q-s1-u04-028",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 2,
+      "srs": true,
+      "stem": "アオイ物産は、ハルカ商事に対する買掛金4,000円について、電子記録債務の発生記録が行われた旨の通知を受けた。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 4000 }],
+        "cr": [{ "acc": "denshi_saimu", "amt": 4000 }],
+        "alt": []
+      },
+      "explanation": "発生記録により、買掛金として負っていた義務が電子記録債務に切り替わります。買掛金（負債）の減少4,000円が借方、電子記録債務（負債）の増加4,000円が貸方です。",
+      "lessonRef": "s1-u04-sec5"
+    },
+    {
+      "id": "q-s1-u04-029",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "ミナト製作所は、保有する電子記録債権5,000円を、仕入先への買掛金5,000円の支払いに充てるため、譲渡記録を行った。",
+      "answer": {
+        "dr": [{ "acc": "kaikake", "amt": 5000 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 5000 }],
+        "alt": []
+      },
+      "explanation": "買掛金（負債）の減少5,000円が借方です。譲渡記録により電子記録債権に対する権利が相手に移るため、貸方は電子記録債権（資産）の減少5,000円です。手形の裏書譲渡と同じ考え方です。",
+      "lessonRef": "s1-u04-sec5"
+    },
+    {
+      "id": "q-s1-u04-030",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 1,
+      "srs": true,
+      "stem": "決済日、ノゾミ商会が保有していた電子記録債権6,000円が決済され、当座預金口座に入金された。",
+      "answer": {
+        "dr": [{ "acc": "toza_yokin", "amt": 6000 }],
+        "cr": [{ "acc": "denshi_saiken", "amt": 6000 }],
+        "alt": []
+      },
+      "explanation": "決済日には決済用口座間で自動的に払込みが行われます。当座預金（資産）の増加6,000円が借方、電子記録債権（資産）の減少6,000円が貸方です。",
+      "lessonRef": "s1-u04-sec5"
+    },
+    {
+      "id": "q-s1-u04-031",
+      "type": "journal",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 1,
+      "srs": false,
+      "stem": "決済日、カエデ商事の電子記録債務7,000円が決済され、当座預金口座から引き落とされた。",
+      "answer": {
+        "dr": [{ "acc": "denshi_saimu", "amt": 7000 }],
+        "cr": [{ "acc": "toza_yokin", "amt": 7000 }],
+        "alt": []
+      },
+      "explanation": "電子記録債務（負債）の減少7,000円が借方、当座預金（資産）の減少7,000円が貸方です。決済は自動的に行われるため、手形のように新たな手続きは不要です。",
+      "lessonRef": "s1-u04-sec5"
+    },
+    {
+      "id": "q-s1-u04-032",
+      "type": "mc",
+      "unitId": "s1-u04",
+      "topics": ["t-denshi-saiken"],
+      "difficulty": 2,
+      "srs": false,
+      "stem": "電子記録債権（でんさい）に関する説明として適切でないものはどれですか。",
+      "choices": [
+        "紙の手形と異なり、発生・譲渡・決済が電子データの記録によって行われる",
+        "印紙税の負担や紛失・盗難のリスクを軽減できる",
+        "譲渡記録を行うと、電子記録債権は減少する",
+        "発生記録には取引銀行を通じた手続きが不要である"
+      ],
+      "answer": 3,
+      "shuffle": true,
+      "explanation": "電子記録債権の発生記録・譲渡記録・決済記録は、電子債権記録機関のシステム上で、取引銀行を通じて行われます。「取引銀行を通じた手続きが不要である」という記述が誤りです。",
+      "lessonRef": "s1-u04-sec5"
+    }
+  ]
+}
