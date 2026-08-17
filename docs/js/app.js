@@ -1,7 +1,7 @@
 // app.js — 起動・ルーティング・ホーム/マップ/単元/ドリル/テスト/設定
 // 学習フローの設計は DESIGN.md §1・§5 が正本
 
-import { Store, todayStr } from "./store.js";
+import { Store, Users, todayStr } from "./store.js";
 import { dueQueue, dueCount } from "./srs.js";
 import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
@@ -97,7 +97,43 @@ async function loadJson(path) {
   return res.json();
 }
 
+function renderProfileGate(container) {
+  const users = Users.list();
+  container.innerHTML = `
+    <div class="home-head"><div class="home-brand">BokiStudy<small>簿記2級への道</small></div></div>
+    <div class="card">
+      <span class="card-title">${users.length ? "だれが使いますか？" : "はじめまして"}</span>
+      <p class="card-sub mt-8">${users.length
+        ? "同じ端末を複数人で使う場合、プロフィールごとに学習記録が分かれます。"
+        : "学習記録を分けて管理するため、まずプロフィール名を入力してください。"}</p>
+      ${users.length ? `<div class="mt-16">${users.map((u) =>
+        `<button class="unit-row" style="width:100%;text-align:left" data-uid="${u.id}">
+          <div class="unit-mark current">👤</div>
+          <div class="unit-title">${esc(u.name)}</div>
+        </button>`).join("")}</div>` : ""}
+      <div class="setting-row" style="border:none;padding-top:${users.length ? "14px" : "0"}">
+        <input type="text" id="new-name" placeholder="新しいプロフィール名" maxlength="20" style="flex:1;border:1.5px solid var(--c-line);border-radius:10px;padding:10px 12px;background:var(--c-card)">
+      </div>
+      <button class="btn btn-accent btn-block" id="new-profile">この名前ではじめる</button>
+    </div>`;
+
+  container.querySelectorAll("[data-uid]").forEach((btn) => {
+    btn.onclick = () => { Users.switchTo(btn.dataset.uid); location.reload(); };
+  });
+  const nameInput = container.querySelector("#new-name");
+  container.querySelector("#new-profile").onclick = () => {
+    const name = nameInput.value.trim();
+    if (!name) { nameInput.focus(); return; }
+    Users.create(name);
+    location.reload();
+  };
+}
+
 async function boot() {
+  if (!Users.activeId()) {
+    renderProfileGate(screen());
+    return;
+  }
   screen().innerHTML = `<div class="spin"></div>`;
   try {
     const [curriculum, accountsDoc, topicsDoc] = await Promise.all([
@@ -540,8 +576,26 @@ function bindExamSelects(container) {
 function renderSettings(container) {
   const p = Store.profile;
   const plan = computePlan(app);
+  const activeUser = Users.active();
+  const otherUsers = Users.list().filter((u) => u.id !== Users.activeId());
   container.innerHTML = `
     <h1 class="page-title">設定</h1>
+
+    <div class="card">
+      <span class="card-title">プロフィール</span>
+      <div class="setting-row">
+        <label>現在のプロフィール</label>
+        <span class="num">${esc(activeUser?.name || "")}</span>
+      </div>
+      <button class="btn btn-ghost btn-block mt-8" id="rename-profile">名前を変更</button>
+      ${otherUsers.length ? `<p class="muted mt-16 mb-8">切り替え</p>${otherUsers.map((u) =>
+        `<button class="unit-row" style="width:100%;text-align:left" data-switch="${u.id}">
+          <div class="unit-mark current">👤</div><div class="unit-title">${esc(u.name)}</div>
+        </button>`).join("")}` : ""}
+      <button class="btn btn-ghost btn-block mt-16" id="add-profile">新しいプロフィールを追加</button>
+      <button class="btn btn-ghost btn-block mt-8" id="delete-profile" style="color:var(--c-ng);border-color:var(--c-ng-soft)">このプロフィールを削除</button>
+    </div>
+
     <div class="card">
       <div class="setting-row">
         <label>1日の目標（問）</label>
@@ -581,6 +635,27 @@ function renderSettings(container) {
     </div>
     <p class="muted center">BokiStudy v0.1 — 学習科学ベースの簿記2級対策</p>`;
 
+  container.querySelector("#rename-profile").onclick = () => {
+    const name = prompt("新しいプロフィール名", activeUser?.name || "");
+    if (!name || !name.trim()) return;
+    Users.rename(Users.activeId(), name.trim());
+    renderSettings(container);
+  };
+  container.querySelectorAll("[data-switch]").forEach((btn) => {
+    btn.onclick = () => { Users.switchTo(btn.dataset.switch); location.reload(); };
+  });
+  container.querySelector("#add-profile").onclick = () => {
+    const name = prompt("新しいプロフィール名を入力してください");
+    if (!name || !name.trim()) return;
+    Users.create(name.trim());
+    location.reload();
+  };
+  container.querySelector("#delete-profile").onclick = () => {
+    if (!confirm(`プロフィール「${activeUser?.name}」の学習記録をすべて削除します。よろしいですか？`)) return;
+    if (!confirm("本当によろしいですか？この操作は取り消せません。")) return;
+    Users.remove(Users.activeId());
+    location.reload();
+  };
   container.querySelector("#goal").onchange = (e) => {
     const v = Math.max(10, Math.min(60, Number(e.target.value) || 20));
     Store.setProfile({ dailyGoal: v });

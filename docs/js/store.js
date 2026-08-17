@@ -1,25 +1,14 @@
 // store.js — localStorage永続化・進捗・統計・バックアップ
 // キー設計は DESIGN.md §4.8 が正本
+// 同じ端末を複数人で使う場合に備え、データはプロフィール（Users）単位で名前空間化する
 
-const KEYS = {
-  profile: "boki.v1.profile",
-  progress: "boki.v1.progress",
-  srs: "boki.v1.srs",
-  stats: "boki.v1.stats",
-  mocks: "boki.v1.mocks",
-};
+const APP_PREFIX = "boki.v1";
+const USERS_KEY = `${APP_PREFIX}.users`;
+const BASE_NAMES = ["profile", "progress", "srs", "stats", "mocks"];
+const LEGACY_KEYS = Object.fromEntries(BASE_NAMES.map((n) => [n, `${APP_PREFIX}.${n}`]));
 
-function load(key, def) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return structuredClone(def);
-    return { ...structuredClone(def), ...JSON.parse(raw) };
-  } catch {
-    return structuredClone(def);
-  }
-}
-function persist(key, val) {
-  localStorage.setItem(key, JSON.stringify(val));
+function nsKey(userId, base) {
+  return `${APP_PREFIX}.${userId}.${base}`;
 }
 
 export function todayStr(offsetDays = 0) {
@@ -27,6 +16,90 @@ export function todayStr(offsetDays = 0) {
   d.setDate(d.getDate() + offsetDays);
   const p = (n) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+function loadUsers() {
+  try {
+    const raw = localStorage.getItem(USERS_KEY);
+    if (!raw) return { schemaVersion: 1, list: [], activeId: null };
+    return { schemaVersion: 1, list: [], activeId: null, ...JSON.parse(raw) };
+  } catch {
+    return { schemaVersion: 1, list: [], activeId: null };
+  }
+}
+function persistUsers() {
+  localStorage.setItem(USERS_KEY, JSON.stringify(usersState));
+}
+function newUserId() {
+  return `u${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+}
+
+const usersState = loadUsers();
+
+// 旧バージョン（プロフィール機能導入前）のデータが端末に残っていれば、
+// 最初のプロフィールとして自動的に引き継ぐ
+(function migrateLegacyIfNeeded() {
+  if (usersState.list.length > 0) return;
+  const hasLegacy = Object.values(LEGACY_KEYS).some((k) => localStorage.getItem(k) != null);
+  if (!hasLegacy) return;
+  const id = newUserId();
+  for (const [base, key] of Object.entries(LEGACY_KEYS)) {
+    const raw = localStorage.getItem(key);
+    if (raw != null) {
+      localStorage.setItem(nsKey(id, base), raw);
+      localStorage.removeItem(key);
+    }
+  }
+  usersState.list.push({ id, name: "マイプロフィール", createdAt: todayStr() });
+  usersState.activeId = id;
+  persistUsers();
+})();
+
+export const Users = {
+  list() { return usersState.list; },
+  activeId() { return usersState.activeId; },
+  active() { return usersState.list.find((u) => u.id === usersState.activeId) || null; },
+  create(name) {
+    const id = newUserId();
+    usersState.list.push({ id, name: name || "新しいプロフィール", createdAt: todayStr() });
+    usersState.activeId = id;
+    persistUsers();
+    return id;
+  },
+  switchTo(id) {
+    if (!usersState.list.some((u) => u.id === id)) return;
+    usersState.activeId = id;
+    persistUsers();
+  },
+  rename(id, name) {
+    const u = usersState.list.find((x) => x.id === id);
+    if (u && name) { u.name = name; persistUsers(); }
+  },
+  remove(id) {
+    usersState.list = usersState.list.filter((u) => u.id !== id);
+    if (usersState.activeId === id) usersState.activeId = usersState.list[0]?.id || null;
+    persistUsers();
+    for (const base of BASE_NAMES) localStorage.removeItem(nsKey(id, base));
+  },
+};
+
+function currentUserId() { return usersState.activeId; }
+
+function load(base, def) {
+  const uid = currentUserId();
+  if (!uid) return structuredClone(def);
+  try {
+    const raw = localStorage.getItem(nsKey(uid, base));
+    if (!raw) return structuredClone(def);
+    return { ...structuredClone(def), ...JSON.parse(raw) };
+  } catch {
+    return structuredClone(def);
+  }
+}
+function persist(base, val) {
+  const uid = currentUserId();
+  if (!uid) return;
+  localStorage.setItem(nsKey(uid, base), JSON.stringify(val));
 }
 
 const DEFAULTS = {
@@ -44,11 +117,11 @@ const DEFAULTS = {
 };
 
 const state = {
-  profile: load(KEYS.profile, DEFAULTS.profile),
-  progress: load(KEYS.progress, DEFAULTS.progress),
-  srs: load(KEYS.srs, DEFAULTS.srs),
-  stats: load(KEYS.stats, DEFAULTS.stats),
-  mocks: load(KEYS.mocks, DEFAULTS.mocks),
+  profile: load("profile", DEFAULTS.profile),
+  progress: load("progress", DEFAULTS.progress),
+  srs: load("srs", DEFAULTS.srs),
+  stats: load("stats", DEFAULTS.stats),
+  mocks: load("mocks", DEFAULTS.mocks),
 };
 
 export const Store = {
@@ -56,7 +129,7 @@ export const Store = {
   get profile() { return state.profile; },
   setProfile(patch) {
     Object.assign(state.profile, patch);
-    persist(KEYS.profile, state.profile);
+    persist("profile", state.profile);
   },
 
   // ---- 単元進捗 ----
@@ -69,14 +142,14 @@ export const Store = {
   markSectionDone(unitId, secId) {
     const u = this.unit(unitId);
     if (!u.lessonDone.includes(secId)) u.lessonDone.push(secId);
-    persist(KEYS.progress, state.progress);
+    persist("progress", state.progress);
   },
   isLessonComplete(unitId, sectionCount) {
     return this.unit(unitId).lessonDone.length >= sectionCount;
   },
   markSrsIntroduced(unitId) {
     this.unit(unitId).srsIntroduced = true;
-    persist(KEYS.progress, state.progress);
+    persist("progress", state.progress);
   },
   recordTest(unitId, pct) {
     const u = this.unit(unitId);
@@ -85,7 +158,7 @@ export const Store = {
       u.passed = true;
       u.passedAt = todayStr();
     }
-    persist(KEYS.progress, state.progress);
+    persist("progress", state.progress);
     return u.passed;
   },
   isPassed(unitId) { return !!state.progress.units[unitId]?.passed; },
@@ -99,7 +172,7 @@ export const Store = {
   srsCard(cardId) { return state.srs.cards[cardId] || null; },
   srsSet(cardId, card) {
     state.srs.cards[cardId] = card;
-    persist(KEYS.srs, state.srs);
+    persist("srs", state.srs);
   },
   srsAll() { return state.srs.cards; },
   srsIntroduce(qids) {
@@ -109,7 +182,7 @@ export const Store = {
         state.srs.cards[qid] = { ef: 2.5, ivl: 0, reps: 0, lapses: 0, due: today };
       }
     }
-    persist(KEYS.srs, state.srs);
+    persist("srs", state.srs);
   },
 
   // ---- 解答統計 ----
@@ -128,7 +201,7 @@ export const Store = {
     s.questions[qid].attempts++;
     if (correct) s.questions[qid].correct++;
     this._updateStreak();
-    persist(KEYS.stats, state.stats);
+    persist("stats", state.stats);
   },
   todayCount() {
     const d = state.stats.days[todayStr()];
@@ -154,7 +227,7 @@ export const Store = {
   // ---- 模試 ----
   recordMock(result) {
     state.mocks.results.push(result);
-    persist(KEYS.mocks, state.mocks);
+    persist("mocks", state.mocks);
   },
   mockResults() { return state.mocks.results; },
 
@@ -163,23 +236,24 @@ export const Store = {
     return JSON.stringify({
       exported: new Date().toISOString(),
       app: "BokiStudy",
+      profileName: Users.active()?.name || null,
       data: state,
     }, null, 2);
   },
   importAll(json) {
     const parsed = JSON.parse(json);
     if (!parsed?.data?.profile || !parsed?.data?.srs) throw new Error("バックアップ形式が不正です");
-    for (const k of Object.keys(KEYS)) {
-      if (parsed.data[k]) {
-        state[k] = parsed.data[k];
-        persist(KEYS[k], state[k]);
+    for (const base of BASE_NAMES) {
+      if (parsed.data[base]) {
+        state[base] = parsed.data[base];
+        persist(base, state[base]);
       }
     }
   },
   resetAll() {
-    for (const k of Object.keys(KEYS)) {
-      state[k] = structuredClone(DEFAULTS[k]);
-      localStorage.removeItem(KEYS[k]);
+    for (const base of BASE_NAMES) {
+      state[base] = structuredClone(DEFAULTS[base]);
+      persist(base, state[base]);
     }
   },
 
