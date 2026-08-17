@@ -7,6 +7,7 @@ import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
 import { renderMockList, renderMockIntro } from "./mock.js";
 import { renderStats } from "./stats.js";
+import { computePlan, renderPlanCard, planStatusLabel } from "./plan.js";
 import { esc } from "./render/figures.js";
 
 const screen = () => document.getElementById("screen");
@@ -69,7 +70,7 @@ const app = {
   celebrate({ title, body, actions = [] }) {
     const ov = document.getElementById("overlay");
     const confetti = Array.from({ length: 18 }, (_, i) => {
-      const colors = ["#C89B3C", "#1B2A4A", "#2E7D5B", "#E8C97A", "#3D5A80"];
+      const colors = ["#D9AE55", "#6E90C9", "#55B885", "#E8C77A", "#6C93CC"];
       return `<i class="confetti" style="left:${5 + Math.random() * 90}%;background:${colors[i % colors.length]};animation-delay:${Math.random() * .5}s"></i>`;
     }).join("");
     ov.innerHTML = `<div class="overlay-card">${confetti}
@@ -213,8 +214,10 @@ function renderHome(container) {
       </div>
     </div>
 
+    ${renderPlanCard(computePlan(app), { compact: true })}
+
     <a href="#review" class="card card-tappable menu-row" style="display:flex">
-      <div class="menu-num" style="background:var(--c-accent-soft);color:#8a6a1f">①</div>
+      <div class="menu-num" style="background:var(--c-accent-soft);color:var(--c-accent-ink)">①</div>
       <div class="grow">
         <div class="card-title">今日の復習${due ? ` <span class="num" style="color:var(--c-accent)">${due}枚</span>` : ""}</div>
         <div class="card-sub">${due ? "忘れかけた頃が、いちばん記憶に残るタイミングです" : "今日の復習はありません"}</div>
@@ -223,7 +226,7 @@ function renderHome(container) {
     </a>
 
     ${cur ? `<a href="${cur.done < cur.total ? `#lesson/${cur.id}/${cur.done}` : `#unit/${cur.id}`}" class="card card-tappable menu-row" style="display:flex">
-      <div class="menu-num" style="background:#EDF2F7;color:var(--c-debit)">②</div>
+      <div class="menu-num" style="background:var(--c-bg2);color:var(--c-debit)">②</div>
       <div class="grow">
         <div class="card-title">続きのレッスン</div>
         <div class="card-sub">${esc(cur.title)}（セクション ${cur.done}/${cur.total}${cur.done >= cur.total ? "・テストに挑戦" : ""}）</div>
@@ -277,7 +280,7 @@ function renderMap(container) {
           const inner = `${mark}
             <div><div class="unit-title">${esc(u.title)}</div>
             <div class="unit-meta">${planned ? "近日追加（Claudeに作成を依頼できます）" : `${u.id} ・ 約${u.estMinutes}分`}</div></div>
-            ${acc != null ? `<span class="unit-acc num" style="color:${acc >= 80 ? "var(--c-ok)" : acc >= 50 ? "#8a6a1f" : "var(--c-ng)"}">${acc}%</span>` : ""}`;
+            ${acc != null ? `<span class="unit-acc num" style="color:${acc >= 80 ? "var(--c-ok)" : acc >= 50 ? "var(--c-accent-ink)" : "var(--c-ng)"}">${acc}%</span>` : ""}`;
           return planned || (!unlocked && !passed)
             ? `<div class="unit-row ${cls}">${inner}</div>`
             : `<a href="#unit/${u.id}" class="unit-row">${inner}</a>`;
@@ -477,8 +480,66 @@ function startTest(container, unitId) {
 
 /* ============================== 設定 ============================== */
 
+function daysInMonth(y, m) { return new Date(y, m, 0).getDate(); }
+
+function examDateSelectsHTML(examDate) {
+  const [ey, em, ed] = examDate ? examDate.split("-").map(Number) : [null, null, null];
+  const thisYear = new Date().getFullYear();
+  const years = [thisYear, thisYear + 1, thisYear + 2, thisYear + 3];
+  const yearOpts = `<option value="">未設定</option>` +
+    years.map((y) => `<option value="${y}" ${y === ey ? "selected" : ""}>${y}年</option>`).join("");
+  const monthOpts = Array.from({ length: 12 }, (_, i) => i + 1)
+    .map((m) => `<option value="${m}" ${m === em ? "selected" : ""}>${m}月</option>`).join("");
+  const dMax = ey && em ? daysInMonth(ey, em) : 31;
+  const curDay = ed ? Math.min(ed, dMax) : 1;
+  const dayOpts = Array.from({ length: dMax }, (_, i) => i + 1)
+    .map((d) => `<option value="${d}" ${d === curDay ? "selected" : ""}>${d}日</option>`).join("");
+  return `<div class="date-select-row">
+    <select class="y" id="exam-y">${yearOpts}</select>
+    <select class="m" id="exam-m" ${ey ? "" : "disabled"}>${monthOpts}</select>
+    <select class="d" id="exam-d" ${ey ? "" : "disabled"}>${dayOpts}</select>
+  </div>`;
+}
+
+function bindExamSelects(container) {
+  const y = container.querySelector("#exam-y");
+  const m = container.querySelector("#exam-m");
+  const d = container.querySelector("#exam-d");
+
+  const rebuildDayOptions = () => {
+    const yy = Number(y.value), mm = Number(m.value);
+    const max = daysInMonth(yy, mm);
+    const cur = Math.min(Number(d.value) || 1, max);
+    d.innerHTML = Array.from({ length: max }, (_, i) => i + 1)
+      .map((day) => `<option value="${day}" ${day === cur ? "selected" : ""}>${day}日</option>`).join("");
+  };
+
+  const persist = () => {
+    if (!y.value) {
+      Store.setProfile({ examDate: null });
+      app.toast("目標受験日を解除しました");
+    } else {
+      const p2 = (n) => String(n).padStart(2, "0");
+      Store.setProfile({ examDate: `${y.value}-${p2(m.value)}-${p2(d.value)}` });
+      app.toast("目標受験日を設定しました。学習計画を更新します");
+    }
+    renderSettings(container);
+  };
+
+  y.onchange = () => {
+    if (y.value && !m.value) m.value = "1";
+    m.disabled = !y.value;
+    d.disabled = !y.value;
+    if (y.value) rebuildDayOptions();
+    persist();
+  };
+  m.onchange = () => { rebuildDayOptions(); persist(); };
+  d.onchange = persist;
+}
+
 function renderSettings(container) {
   const p = Store.profile;
+  const plan = computePlan(app);
   container.innerHTML = `
     <h1 class="page-title">設定</h1>
     <div class="card">
@@ -487,10 +548,13 @@ function renderSettings(container) {
         <input type="number" id="goal" min="10" max="60" step="5" value="${p.dailyGoal}">
       </div>
       <div class="setting-row">
-        <label>試験日（任意）</label>
-        <input type="date" id="exam" value="${p.examDate || ""}">
+        <label>目標受験日（任意）</label>
+        ${examDateSelectsHTML(p.examDate)}
       </div>
+      <p class="muted mt-8">CBTは好きな日時を予約できます。目標日を設定すると、復習間隔の調整と学習ペースの診断に使われます。</p>
     </div>
+
+    ${renderPlanCard(plan)}
 
     <div class="card">
       <span class="card-title">Claudeに質問する</span>
@@ -522,12 +586,14 @@ function renderSettings(container) {
     Store.setProfile({ dailyGoal: v });
     app.toast(`1日の目標を${v}問にしました`);
   };
-  container.querySelector("#exam").onchange = (e) => {
-    Store.setProfile({ examDate: e.target.value || null });
-    app.toast(e.target.value ? "試験日を設定しました。復習間隔を試験に合わせます" : "試験日を解除しました");
-  };
+  bindExamSelects(container);
   container.querySelector("#copy-summary").onclick = async () => {
-    await navigator.clipboard.writeText(Store.summaryMarkdown(app));
+    let text = Store.summaryMarkdown(app);
+    if (plan) {
+      const { label } = planStatusLabel(plan.overallStatus);
+      text += `\n- 目標受験日: ${plan.examDate}（残り${plan.daysLeft}日・${label}）`;
+    }
+    await navigator.clipboard.writeText(text);
     app.toast("サマリーをコピーしました。Claudeに貼り付けて質問できます");
   };
   container.querySelector("#export-copy").onclick = async () => {

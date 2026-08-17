@@ -89,6 +89,11 @@ export const Store = {
     return u.passed;
   },
   isPassed(unitId) { return !!state.progress.units[unitId]?.passed; },
+  passedUnitsInfo() {
+    return Object.entries(state.progress.units)
+      .filter(([, u]) => u.passed)
+      .map(([unitId, u]) => ({ unitId, passedAt: u.passedAt }));
+  },
 
   // ---- SRS ----
   srsCard(cardId) { return state.srs.cards[cardId] || null; },

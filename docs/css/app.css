@@ -386,6 +386,25 @@ input, select, textarea { font-family: inherit; font-size: 1rem; color: inherit;
   border: 1.5px solid var(--c-line); border-radius: 10px; padding: 8px 10px; width: 130px;
   font-size: .9rem; background: var(--c-card); text-align: right;
 }
+.date-select-row { display: flex; align-items: center; gap: 5px; }
+.date-select-row select {
+  border: 1.5px solid var(--c-line); border-radius: 10px; padding: 8px 6px;
+  font-size: .85rem; background: var(--c-card); text-align: center;
+}
+.date-select-row select.y { width: 80px; }
+.date-select-row select.m, .date-select-row select.d { width: 58px; }
+.plan-card .plan-badge {
+  display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: .82rem;
+  border-radius: 999px; padding: 5px 13px; margin-bottom: 10px;
+}
+.plan-badge.go { background: var(--c-ok-soft); color: var(--c-ok); }
+.plan-badge.onTrack { background: var(--c-ok-soft); color: var(--c-ok); }
+.plan-badge.behind { background: var(--c-accent-soft); color: var(--c-accent-ink); }
+.plan-badge.urgent, .plan-badge.overdue { background: var(--c-ng-soft); color: var(--c-ng); }
+.plan-badge.mockPhase { background: var(--c-accent-soft); color: var(--c-accent-ink); }
+.plan-badge.starting { background: var(--c-bg2); color: var(--c-sub); }
+.plan-reasons { margin-top: 8px; padding-left: 1.1em; font-size: .82rem; color: var(--c-sub); }
+.plan-reasons li { margin-bottom: 3px; }
 .io-area { width: 100%; min-height: 110px; border: 1.5px solid var(--c-line); border-radius: 10px; padding: 10px; font-size: .74rem; font-family: var(--f-num); margin-top: 8px; background: var(--c-bg2); color: var(--c-ink); }
 
 /* ---------- 画面内テンキー ---------- */

@@ -2,6 +2,7 @@
 
 import { Store, todayStr } from "./store.js";
 import { dueCount, overdueCount } from "./srs.js";
+import { computePlan, renderPlanCard } from "./plan.js";
 import { esc } from "./render/figures.js";
 
 function accClass(acc, answered) {
@@ -51,8 +52,12 @@ export function renderStats(app, container) {
   });
   const weak = topicCells.filter((t) => t.answered >= 4).sort((a, b) => a.acc - b.acc).slice(0, 5);
 
+  const plan = computePlan(app);
+
   container.innerHTML = `
     <h1 class="page-title">分析</h1>
+
+    ${plan ? renderPlanCard(plan) : `<div class="card"><span class="card-title">学習計画</span><p class="card-sub mt-8">設定画面で目標受験日を登録すると、合格ラインまでの学習ペース診断がここに表示されます。</p><button class="btn btn-ghost btn-block mt-16" id="go-settings">設定を開く</button></div>`}
 
     <div class="stat-grid">
       <div class="stat-tile"><div class="v num">${streak.current}<small>日</small></div><div class="k">連続学習（最高 ${streak.best}日）</div></div>
@@ -100,4 +105,5 @@ export function renderStats(app, container) {
   `;
 
   container.querySelector("#weak-drill")?.addEventListener("click", () => (location.hash = "#drill/mix"));
+  container.querySelector("#go-settings")?.addEventListener("click", () => (location.hash = "#settings"));
 }
