@@ -76,7 +76,14 @@ export async function renderMockIntro(app, container, mockId) {
 
 /* ============================== 模試本体 ============================== */
 
+/** 模試を中断してタイマーを止める。ハッシュ遷移で画面を離れたとき用（記録は保存しない） */
+export function abortMock() {
+  if (state?.timerId) clearInterval(state.timerId);
+  state = null;
+}
+
 function startMock(app, container, mock, title) {
+  abortMock();
   const flat = mock.sections.flatMap((s, si) => s.questions.map((q, qi) => ({ ...q, si, qi })));
   state = {
     mock,

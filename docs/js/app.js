@@ -5,9 +5,10 @@ import { Store, Users, todayStr } from "./store.js";
 import { dueQueue, dueCount } from "./srs.js";
 import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
-import { renderMockList, renderMockIntro } from "./mock.js";
+import { renderMockList, renderMockIntro, abortMock } from "./mock.js";
 import { renderStats } from "./stats.js";
 import { computePlan, renderPlanCard, planStatusLabel, recommendedDailyGoal } from "./plan.js";
+import { renderRef, renderVocab } from "./ref.js";
 import { esc } from "./render/figures.js";
 
 const screen = () => document.getElementById("screen");
@@ -192,6 +193,7 @@ function backupReminder() {
 /* ============================== ルーター ============================== */
 
 function route() {
+  abortMock(); // 模試中に画面遷移した場合、タイマーを確実に破棄する（記録は保存されない仕様）
   const hash = location.hash || "#home";
   const [path, ...args] = hash.slice(1).split("/");
 
@@ -213,6 +215,8 @@ function route() {
   else if (path === "test") startTest(s, args[0]);
   else if (path === "mocks") renderMockList(app, s);
   else if (path === "mock-intro") renderMockIntro(app, s, args[0]);
+  else if (path === "ref") renderRef(app, s);
+  else if (path === "vocab") renderVocab(app, s);
   else if (path === "stats") renderStats(app, s);
   else if (path === "settings") renderSettings(s);
   else renderHome(s);
@@ -281,7 +285,11 @@ function renderHome(container) {
       </div>
       <span class="chev">›</span>
     </a>
-    <p class="muted center mt-16">①→②→③の順で進めるのがおすすめです（約25〜30分）</p>`;
+    <p class="muted center mt-16">①→②→③の順で進めるのがおすすめです（約25〜30分）</p>
+    <div class="unit-actions mt-16">
+      <button class="btn btn-ghost" onclick="location.hash='#ref'">重要事項集</button>
+      <button class="btn btn-ghost" onclick="location.hash='#vocab'">単語テスト</button>
+    </div>`;
 }
 
 /* ============================== 学習マップ ============================== */
