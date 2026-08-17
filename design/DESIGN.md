@@ -288,15 +288,32 @@ ID規則: 問題 `q-{unitId}-{連番3桁}`／模試 `mock-{級}{連番2桁}`／�
 - 模試UI: タイマー常時表示（残り5分で警告色）、大問タブ＋設問ナビ（未回答/回答済み/見直しフラグを色分け）、時間切れで自動提出、終了時に大問別スコア・合格ライン判定をlocalStorageへ保存（`boki.v1.mocks`）
 - 単元 s4-u03 のレッスンページから「2級模試に挑戦する」ボタンで模試一覧（`#mocks`）へ遷移する導線
 
+### 4.7b keypoints.json（重要事項集）
+
+全単元の要点を1項目1エントリで集約したデータ。`#ref`（検索付き一覧）と `#vocab`（エンドレス単語テスト）の正本。
+
+```json
+{ "schemaVersion": 1, "points": [
+  { "id": "kp-{unitId}-{連番2桁}", "unitId": "s1-u01", "title": "簿記の5要素", "body": "1〜2文の要点説明" }
+] }
+```
+
+- 検索は title＋body＋単元タイトルの部分一致（クライアントサイド）
+- 単語テストは①重要事項の意味当て（titleに対する正しいbodyを4択から選ぶ、誤答肢は同Stageから抽出）②勘定科目の5要素分類（accounts.jsonのcatがother以外の科目）を50%ずつ無限に出題。解答は `Store.recordAnswer` で日次学習量にカウント
+- レッスン本文にない論点（棚卸減耗損・契約負債・固定費調整等）もここでカバーする
+
 ### 4.8 localStorage 設計
+
+プロフィール（複数ユーザー）対応のため、キーは `boki.v1.{userId}.{name}` 形式で名前空間化。`boki.v1.users` にプロフィール一覧とアクティブIDを保存。
 
 | キー | 内容 |
 |---|---|
-| `boki.v1.profile` | 目標試験日、1日目標（デフォルト20問、10〜60可変）、設定 |
-| `boki.v1.progress` | 単元ごと `{ lessonDone: [secId], testBest, passed, passedAt }` |
-| `boki.v1.srs` | カードID → `{ ef, ivl, reps, lapses, due }` |
-| `boki.v1.stats` | 日別 `{ date, answered, correct, minutes }`、論点別成績、ストリーク、休息チケット（月2枚） |
-| `boki.v1.mocks` | 模試結果履歴（大問別スコア） |
+| `boki.v1.users` | `{ list: [{id, name, createdAt}], activeId }` |
+| `boki.v1.{uid}.profile` | 目標受験日、1日目標（受験日から自動算出）、設定 |
+| `boki.v1.{uid}.progress` | 単元ごと `{ lessonDone: [secId], testBest, passed, passedAt }` |
+| `boki.v1.{uid}.srs` | カードID → `{ ef, ivl, reps, lapses, due }` |
+| `boki.v1.{uid}.stats` | 日別 `{ date, answered, correct, minutes }`、論点別成績、ストリーク、休息チケット（月2枚） |
+| `boki.v1.{uid}.mocks` | 模試結果履歴（大問別スコア） |
 
 - 全キーに schemaVersion を含め、起動時マイグレーション関数を通す
 - **バックアップ**: 設定画面から全データJSONをダウンロード/コピー。インポートは貼り付け＋確認ダイアログ。週1回のエクスポートをアプリがリマインド
@@ -308,9 +325,9 @@ ID規則: 問題 `q-{unitId}-{連番3桁}`／模試 `mock-{級}{連番2桁}`／�
 
 ### 5.1 ルーティング（ハッシュSPA）
 
-`#home` `#map` `#lesson/{unitId}/{secIdx}` `#drill/{mode}` `#review` `#test/{unitId}` `#mock/{mockId}` `#stats` `#settings`
+`#home` `#map` `#lesson/{unitId}/{secIdx}` `#drill/{mode}` `#review` `#test/{unitId}` `#mocks` `#mock-intro/{mockId}` `#ref` `#vocab` `#stats` `#settings`
 
-下部固定ナビ5タブ: ホーム／学習（マップ）／復習／分析／設定。
+下部固定ナビ5タブ: ホーム／学習（マップ）／復習／分析／設定。重要事項集・単語テストへはホームのボタンから遷移。
 
 ### 5.2 主要画面
 
@@ -319,6 +336,8 @@ ID規則: 問題 `q-{unitId}-{連番3桁}`／模試 `mock-{級}{連番2桁}`／�
 - **ドリル**: 1問ずつ即時採点→解説→次へ。10問1セット。誤答はセッション内再出題
 - **仕訳UI**: 借方/貸方の行（科目チップ＋金額）、行追加、科目パネル（カテゴリタブ＋検索、学習済み科目のみ）、画面内テンキー
 - **分析**: 単元別習熟ヒートマップ、論点カバレッジマップ、弱点論点Top5、期日超過カード数、日別学習量
+- **重要事項集**（`#ref`）: 全単元の要点をキーワード検索できる一覧。1項目＝単元タグ＋タイトル＋1〜2文の説明
+- **単語テスト**（`#vocab`）: エンドレス形式。重要事項の意味当てと勘定科目の5要素分類をランダムに無限出題。セッション中の解答数・正解数・連続正解を表示し、終了時にサマリー。解答は日次学習量にカウント
 - **電卓**: アプリには内蔵しない。本番CBTでは持参した実物の電卓を使うため、普段のドリル・模試学習でも同じ電卓を手元に置いて計算する運用とする
 
 ### 5.3 デザインシステム

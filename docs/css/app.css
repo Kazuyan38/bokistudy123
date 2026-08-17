@@ -461,6 +461,25 @@ input, select, textarea { font-family: inherit; font-size: 1rem; color: inherit;
   100% { transform: translateY(320px) rotate(540deg); opacity: 0; }
 }
 
+/* ---------- 重要事項集・単語テスト ---------- */
+.search-input {
+  width: 100%; min-height: 48px; border: 1.5px solid var(--c-line); border-radius: 12px;
+  padding: 0 14px; background: var(--c-card); font-size: .95rem; margin-bottom: 8px;
+}
+.search-input:focus { outline: none; border-color: var(--c-primary); }
+.kp-item { padding: 14px 16px; margin-bottom: 10px; }
+.kp-unit {
+  display: inline-block; font-size: .66rem; color: var(--c-sub); background: var(--c-bg2);
+  border-radius: 999px; padding: 2px 10px; font-weight: 600;
+}
+.kp-title { font-weight: 700; margin-top: 7px; font-size: .95rem; }
+.kp-body { font-size: .85rem; color: var(--c-ink); margin-top: 4px; line-height: 1.75; }
+.vocab-score {
+  display: flex; gap: 16px; justify-content: center; margin-bottom: 12px;
+  font-size: .84rem; color: var(--c-sub); font-weight: 600;
+}
+.vocab-score .num { color: var(--c-accent); font-weight: 700; }
+
 /* ---------- 補助 ---------- */
 .center { text-align: center; }
 .mt-8 { margin-top: 8px; } .mt-16 { margin-top: 16px; } .mt-24 { margin-top: 24px; } .mb-8 { margin-bottom: 8px; }
