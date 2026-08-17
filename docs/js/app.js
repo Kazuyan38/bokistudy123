@@ -7,7 +7,7 @@ import { runSession, renderSetResult } from "./quiz.js";
 import { renderLesson } from "./lesson.js";
 import { renderMockList, renderMockIntro } from "./mock.js";
 import { renderStats } from "./stats.js";
-import { computePlan, renderPlanCard, planStatusLabel } from "./plan.js";
+import { computePlan, renderPlanCard, planStatusLabel, recommendedDailyGoal } from "./plan.js";
 import { esc } from "./render/figures.js";
 
 const screen = () => document.getElementById("screen");
@@ -165,6 +165,9 @@ async function boot() {
     ]));
     const failed = results.filter((r) => r.status === "rejected");
     if (failed.length) console.warn("一部コンテンツの読み込みに失敗:", failed);
+
+    const goal = recommendedDailyGoal(app);
+    if (Store.profile.dailyGoal !== goal) Store.setProfile({ dailyGoal: goal });
 
     window.addEventListener("hashchange", route);
     route();
@@ -487,6 +490,7 @@ function startTest(container, unitId) {
       const wasPassed = Store.isPassed(unitId);
       Store.recordTest(unitId, pct);
       const nowPassed = Store.isPassed(unitId);
+      if (!wasPassed && nowPassed) Store.setProfile({ dailyGoal: recommendedDailyGoal(app) });
 
       renderSetResult(container, {
         title: `${unit.title} 単元テスト`, correct: r.correct, total: r.total, wrongQids: r.wrongQids,
@@ -557,8 +561,9 @@ function bindExamSelects(container) {
     } else {
       const p2 = (n) => String(n).padStart(2, "0");
       Store.setProfile({ examDate: `${y.value}-${p2(m.value)}-${p2(d.value)}` });
-      app.toast("目標受験日を設定しました。学習計画を更新します");
+      app.toast("目標受験日を設定しました。1日の目標を再計算します");
     }
+    Store.setProfile({ dailyGoal: recommendedDailyGoal(app) });
     renderSettings(container);
   };
 
@@ -599,9 +604,10 @@ function renderSettings(container) {
     <div class="card">
       <div class="setting-row">
         <label>1日の目標（問）</label>
-        <input type="number" id="goal" min="10" max="60" step="5" value="${p.dailyGoal}">
+        <span class="num">${p.dailyGoal}問</span>
       </div>
-      <div class="setting-row">
+      <p class="muted mt-8">目標受験日から逆算して、アプリが自動で調整します。手動では変更できません。</p>
+      <div class="setting-row mt-8">
         <label>目標受験日（任意）</label>
         ${examDateSelectsHTML(p.examDate)}
       </div>
@@ -655,11 +661,6 @@ function renderSettings(container) {
     if (!confirm("本当によろしいですか？この操作は取り消せません。")) return;
     Users.remove(Users.activeId());
     location.reload();
-  };
-  container.querySelector("#goal").onchange = (e) => {
-    const v = Math.max(10, Math.min(60, Number(e.target.value) || 20));
-    Store.setProfile({ dailyGoal: v });
-    app.toast(`1日の目標を${v}問にしました`);
   };
   bindExamSelects(container);
   container.querySelector("#copy-summary").onclick = async () => {

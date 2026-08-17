@@ -6,6 +6,10 @@ import { overdueCount } from "./srs.js";
 const MOCK_WINDOW = 3;      // GO判定は直近何回の模試を見るか
 const MIN_BUFFER_DAYS = 14; // 模試周回・最終見直しに最低限確保する日数
 
+const DEFAULT_DAILY_GOAL = 20; // 目標受験日が未設定のときの既定値
+const MIN_DAILY_GOAL = 10;
+const MAX_DAILY_GOAL = 60;
+
 function daysBetween(fromStr, toStr) {
   return Math.round((new Date(toStr) - new Date(fromStr)) / 86400000);
 }
@@ -92,6 +96,25 @@ export function computePlan(app) {
     requiredPacePerWeek, actualPacePerWeek, paceStatus,
     mock, overallStatus,
   };
+}
+
+/**
+ * 目標受験日から逆算した「1日に解くべき問題数」の目安。
+ * ユーザーが手入力する代わりに、残り単元の問題数を残り日数で割って算出する。
+ */
+export function recommendedDailyGoal(app) {
+  const plan = computePlan(app);
+  if (!plan) return DEFAULT_DAILY_GOAL;
+  if (plan.unitsRemaining === 0) return MIN_DAILY_GOAL + 5; // 模試・復習中心フェーズは控えめに
+
+  const remainingQuestions = app.availableUnits()
+    .filter((u) => !Store.isPassed(u.id))
+    .reduce((sum, u) => sum + (app.questionsByUnit[u.id]?.length || 0), 0);
+  if (!remainingQuestions) return DEFAULT_DAILY_GOAL;
+
+  const days = Math.max(plan.unitDeadlineDays, 1);
+  const raw = Math.ceil(remainingQuestions / days);
+  return Math.min(MAX_DAILY_GOAL, Math.max(MIN_DAILY_GOAL, raw));
 }
 
 export function planStatusLabel(status) {
