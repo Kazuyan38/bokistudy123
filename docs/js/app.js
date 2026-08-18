@@ -308,7 +308,8 @@ function renderMap(container) {
     return a ? Math.round((c / a) * 100) : null;
   };
 
-  container.innerHTML = `<h1 class="page-title">学習マップ</h1>` +
+  container.innerHTML = `<h1 class="page-title">学習マップ</h1>
+    <p class="muted mb-8">🔒は推奨する学習順の目安です。タップすれば内容を先に見ることもできます。</p>` +
     app.curriculum.stages.map((st) => {
       const passedCount = st.units.filter((u) => Store.isPassed(u.id)).length;
       return `<div class="stage-block">
@@ -328,9 +329,9 @@ function renderMap(container) {
             <div><div class="unit-title">${esc(u.title)}</div>
             <div class="unit-meta">${planned ? "近日追加（Claudeに作成を依頼できます）" : `${u.id} ・ 約${u.estMinutes}分`}</div></div>
             ${acc != null ? `<span class="unit-acc num" style="color:${acc >= 80 ? "var(--c-ok)" : acc >= 50 ? "var(--c-accent-ink)" : "var(--c-ng)"}">${acc}%</span>` : ""}`;
-          return planned || (!unlocked && !passed)
+          return planned
             ? `<div class="unit-row ${cls}">${inner}</div>`
-            : `<a href="#unit/${u.id}" class="unit-row">${inner}</a>`;
+            : `<a href="#unit/${u.id}" class="unit-row ${cls}">${inner}</a>`;
         }).join("")}
       </div>`;
     }).join("");
@@ -347,10 +348,12 @@ function renderUnit(container, unitId) {
   const secDone = prog.lessonDone.length;
   const secTotal = lesson.sections.length;
   const lessonComplete = secDone >= secTotal;
+  const ahead = !passed && !app.isUnlocked(unit);
 
   container.innerHTML = `
     <button class="btn btn-ghost btn-sm" onclick="location.hash='#map'">← 学習マップ</button>
     <h1 class="page-title mt-16">${esc(unit.title)} ${passed ? `<span class="badge-done">合格済み ✓</span>` : ""}</h1>
+    ${ahead ? `<div class="card" style="background:var(--c-bg2)"><p class="card-sub">🔒 推奨する学習順ではまだ先の単元です。内容は自由に見られますが、前提単元（${unit.prereq.map((id) => esc(app.unitById(id)?.title || id)).join("・")}）を先に終えるのがおすすめです。</p></div>` : ""}
     <div class="card">
       <span class="card-title">レッスン</span>
       <div class="lesson-prog mt-8">${lesson.sections.map((s) =>
