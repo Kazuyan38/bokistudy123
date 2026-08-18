@@ -61,7 +61,7 @@ export const Users = {
   active() { return usersState.list.find((u) => u.id === usersState.activeId) || null; },
   create(name) {
     const id = newUserId();
-    usersState.list.push({ id, name: name || "新しいプロフィール", createdAt: todayStr() });
+    usersState.list.push({ id, name: (name || "新しいプロフィール").slice(0, 20), createdAt: todayStr() });
     usersState.activeId = id;
     persistUsers();
     return id;
@@ -73,7 +73,7 @@ export const Users = {
   },
   rename(id, name) {
     const u = usersState.list.find((x) => x.id === id);
-    if (u && name) { u.name = name; persistUsers(); }
+    if (u && name) { u.name = name.slice(0, 20); persistUsers(); }
   },
   remove(id) {
     usersState.list = usersState.list.filter((u) => u.id !== id);
